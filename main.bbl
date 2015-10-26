@@ -41,7 +41,6 @@
   }
   \strng{namehash}{AAS+1}
   \strng{fullhash}{AASWJSBMGSJ1}
-  \field{labelyear}{1998}
   \field{sortinit}{A}
   \field{abstract}{%
   Operating a laser diode in an extended cavity which provides
@@ -64,47 +63,22 @@
   \field{year}{1998}
 \endentry
 
-\entry{Reference1}{article}{}
-  \name{author}{3}{}{%
+\entry{TelemanRepThry}{misc}{}
+  \name{author}{1}{}{%
     {{}%
-     {Hawthorn}{H.}%
-     {C.~J.}{C.~J.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Weber}{W.}%
-     {K.~P.}{K.~P.}%
-     {}{}%
-     {}{}}%
-    {{}%
-     {Scholten}{S.}%
-     {R.~E.}{R.~E.}%
+     {Teleman}{T.}%
+     {Constantin}{C.}%
      {}{}%
      {}{}}%
   }
-  \strng{namehash}{HCJWKPSRE1}
-  \strng{fullhash}{HCJWKPSRE1}
-  \field{labelyear}{2001}
-  \field{sortinit}{H}
-  \field{abstract}{%
-  We have developed an enhanced Littrow configuration extended cavity diode
-  laser (ECDL) that can be tuned without changing the direction of the output
-  beam. The output of a conventional Littrow ECDL is reflected from a plane
-  mirror fixed parallel to the tuning diffraction grating. Using a free-space
-  Michelson wavemeter to measure the laser wavelength, we can tune the laser
-  over a range greater than 10 nm without any alteration of alignment.%
-  }
-  \field{number}{12}
-  \field{pages}{4477\bibrangedash 4479}
-  \field{title}{Littrow Configuration Tunable External Cavity Diode Laser with
-  Fixed Direction Output Beam}
+  \strng{namehash}{TC1}
+  \strng{fullhash}{TC1}
+  \field{sortinit}{T}
+  \field{title}{Representation Theory}
   \verb{url}
-  \verb http://link.aip.org/link/?RSI/72/4477/1
+  \verb https://math.berkeley.edu/~teleman/math/RepThry.pdf
   \endverb
-  \field{volume}{72}
-  \field{journaltitle}{Review of Scientific Instruments}
-  \field{month}{12}
-  \field{year}{2001}
+  \field{year}{2005}
 \endentry
 
 \entry{Reference2}{article}{}
@@ -123,7 +97,6 @@
   \keyw{Diode Laser}
   \strng{namehash}{WCEHL1}
   \strng{fullhash}{WCEHL1}
-  \field{labelyear}{1991}
   \field{sortinit}{W}
   \field{abstract}{%
   We present a review of the use of diode lasers in atomic physics with an
