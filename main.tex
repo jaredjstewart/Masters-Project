@@ -73,9 +73,13 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 \hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
 
 
-
+%----------------------------------------------------------------------------------------
+%	AMSTHM Environment/Numbering Configuration added by Jared Stewart
+%----------------------------------------------------------------------------------------
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+\newtheorem{prop}[thm]{Proposition} % definition numbers are dependent on theorem numbers
+\newtheorem{lemma}[thm]{Lemma} % definition numbers are dependent on theorem numbers
 
 \theoremstyle{definition}
 \newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
@@ -198,7 +202,7 @@ The acknowledgements and the people to thank go here, don't forget to include yo
 % Uncomment the lines as you write the chapters
 
 \input{Chapters/Chapter1}
-%\input{Chapters/Chapter2} 
+\input{Chapters/Chapter2} 
 %\input{Chapters/Chapter3}
 %\input{Chapters/Chapter4} 
 %\input{Chapters/Chapter5} 
