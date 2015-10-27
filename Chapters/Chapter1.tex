@@ -11,24 +11,44 @@
 %----------------------------------------------------------------------------------------
 \section{Definition of a Representation}
 
+\begin{defn}\label{def-grp-action}
+A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi : G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+\begin{align}
+\label{grp-action-axiom-1}&id_G \cdot  x = x && \forall x \in X\\
+\label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
+\end{align}
+\end{defn}
+\begin{note}
+We could define the concept of a \textit{right} group action, where we multiply the set elements by group elements on the right instead of on the left.  We shall use the term \textit{group action} throughout to mean a \textit{left} group action.
+\end{note}
+
 \begin{defn}
-\label{rep1}
+\label{repdef1}
 A \textbf{linear representation} of a group $G$ on a vector space $V$  is a group homomorphism from $G$ to $GL(V)$, the general linear group on V. \end{defn}
  
  %More explicitly, a representation is a map $\rho : G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
 
-\begin{defn}\label{rep2}A \textbf{linear representation} $\rho$ of a group $G$ on a vector space $V$ over a field $F$ is a group action of $G$ on $V$ which preserves the linear structure of $V$.  That is, 
-\begin{enumerate}
-\item  $\rho(g)(v_1+v_2)=\rho(g)(v_1)+\rho(g)(v_2) \quad  \forall g \in G, v_1, v_2 \in V$
-\item $\rho(g)(kv) = k \cdot \rho(g)v \quad \forall g \in G, v \in V, k \in F$
-\end{enumerate}
+\begin{defn}\label{repdef2}A \textbf{linear representation} $\rho$ of a group $G$ on a vector space $V$ over a field $F$ is a group action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
+\begin{align}
+\label{rep-axiom-1}&\rho(g)(v_1+v_2)=\rho(g)(v_1)+\rho(g)(v_2) \quad && \forall g \in G, v_1, v_2 \in V \\
+\label{rep-axiom-2}&\rho(g)(kv) = k \cdot \rho(g)v \quad && \forall g \in G, v \in V, k \in F
+\end{align}
  \end{defn}
  
  \begin{prop}
-The definitions of a linear representation given in \ref{rep1} and \ref{rep2} are equivalent.
+The definitions of a linear representation given in \ref{repdef1} and \ref{repdef2} are equivalent.
  \end{prop}
  \begin{proof}
- $(\rightarrow)$  Suppose we have
+ $(\rightarrow)$  Suppose that we have a homomorphism $\varphi : G \to GL(V)$.  We can define an action of $G$ on $V$ by taking: \[g \cdot v = \varphi(g)(v) \quad \forall g \in G, v \in V.\]
+We verify that indeed we have obtained group action.
+
+\ref{grp-action-axiom-1} For any $v \in V$, we have: $ id_G \cdot v = \varphi(id_G) (v)= id_V (v) = v$. 
+
+\ref{grp-action-axiom-2} For any $v \in eV$ and $g,h$ in $G$ we have: $(gh) \cdot v = \varphi(gh) (v) = (\varphi(g) \varphi(h)) (v)= \varphi(g) (\varphi(h) (v))= g \cdot (h \cdot v)$.\\
+Next, we check that this action preserves the linear structure of V.\\
+\ref{rep-axiom-1} For any $g \in G$, $v_1, v_2 \in V$ we have: $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$
+
+
  \end{proof}
 
 %-----------------------------------
