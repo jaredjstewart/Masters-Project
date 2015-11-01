@@ -9,7 +9,7 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section{Definition of a Representation}
+\section {Group Actions}
 
 \begin{defn}\label{def-grp-action}
 A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi : G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
@@ -19,9 +19,36 @@ A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\
 \end{align}
 \end{defn}
 \begin{note}
-We could define the concept of a \textit{right} group action, where we multiply the set elements by group elements on the right instead of on the left.  We shall use the term \textit{group action} throughout to mean a \textit{left} group action.
+We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
 \end{note}
 
+Suppose the group $G$ acts on a set $X$.  For any fixed element $g \in G$, we have an associated map $\sigma_g : X \to X$ given by $\sigma_g (x) = g \cdot x$.
+\begin{prop}
+The map $\sigma_g$ is a \textit{permutation} of the set $X$.
+\end{prop}
+\begin{proof}
+We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse map, namely $\sigma_{g^{-1}}$. Observe that for any $x \in X$, we have
+\begin{align*}
+(\sigma_{g^{-1}} \circ \sigma_g) (x) &= \sigma_{g^{-1}} ( \sigma_g (x) && \text{(by definition of function composition)} \\
+					&= g^{-1} \cdot (g \cdot x) && \text{(by definition of $\sigma_g$ and $\sigma_{g^{-1}}$)} \\
+					&= (g^{-1}g) \cdot x &&\text{(by axiom \ref{grp-action-axiom-1} of an action)} \\
+					&= id_G \cdot x \\
+					&= x &&\text{(by axiom \ref{grp-action-axiom-2} of an action)}.
+\end{align*}
+Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  We conclude that, having a two-sided inverse, $\sigma_g$ is a permutation of $X$.
+\end{proof}
+
+
+\begin{prop} 
+\leavevmode
+\begin{enumerate}
+\item The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g$ is a group homomorphism.
+\item The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
+\end{enumerate}
+\end{prop}
+
+
+\section{Definition of a Representation}
 \begin{defn}
 \label{repdef1}
 A \textbf{linear representation} of a group $G$ on a vector space $V$  is a group homomorphism from $G$ to $GL(V)$, the general linear group on V. \end{defn}
