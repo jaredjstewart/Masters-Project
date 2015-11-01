@@ -5,14 +5,14 @@
 \contentsline {chapter}{Acknowledgements}{v}{Doc-Start}
 \contentsline {chapter}{\numberline {1}Basics of Representation Theory}{1}{chapter.2}
 \contentsline {section}{\numberline {1.1}Group Actions}{1}{section.3}
-\contentsline {section}{\numberline {1.2}Definition of a Representation}{1}{section.11}
-\contentsline {subsection}{\numberline {1.2.1}Subsection 1}{2}{subsection.17}
-\contentsline {subsection}{\numberline {1.2.2}Subsection 2}{2}{subsection.19}
-\contentsline {section}{\numberline {1.3}Main Section 2}{2}{section.22}
-\contentsline {chapter}{\numberline {2}Spaghetti}{5}{chapter.24}
-\contentsline {section}{\numberline {2.1}Definition of a Representation AGAIN}{5}{section.25}
-\contentsline {subsection}{\numberline {2.1.1}Subsection 1}{5}{subsection.30}
-\contentsline {subsection}{\numberline {2.1.2}Subsection 2}{5}{subsection.33}
-\contentsline {section}{\numberline {2.2}Main Section 2}{6}{section.36}
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{7}{appendix.38}
-\contentsline {chapter}{Bibliography}{9}{appendix*.39}
+\contentsline {section}{\numberline {1.2}Definition of a Representation}{2}{section.10}
+\contentsline {subsection}{\numberline {1.2.1}Subsection 1}{2}{subsection.16}
+\contentsline {subsection}{\numberline {1.2.2}Subsection 2}{3}{subsection.18}
+\contentsline {section}{\numberline {1.3}Main Section 2}{3}{section.21}
+\contentsline {chapter}{\numberline {2}Spaghetti}{5}{chapter.23}
+\contentsline {section}{\numberline {2.1}Definition of a Representation AGAIN}{5}{section.24}
+\contentsline {subsection}{\numberline {2.1.1}Subsection 1}{5}{subsection.29}
+\contentsline {subsection}{\numberline {2.1.2}Subsection 2}{5}{subsection.32}
+\contentsline {section}{\numberline {2.2}Main Section 2}{6}{section.35}
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{7}{appendix.37}
+\contentsline {chapter}{Bibliography}{9}{appendix*.38}

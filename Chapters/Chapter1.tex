@@ -22,8 +22,8 @@ A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\
 We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
 \end{note}
 
-Suppose the group $G$ acts on a set $X$.  For any fixed element $g \in G$, we have an associated map $\sigma_g : X \to X$ given by $\sigma_g (x) = g \cdot x$.
-\begin{prop}
+In this section, let the group $G$ acts on a set $X$.  For any fixed element $g \in G$, we have an associated map $\sigma_g : X \to X$ given by $\sigma_g (x) = g \cdot x$.
+\begin{prop}\label{sigma-is-a-permutation}
 The map $\sigma_g$ is a \textit{permutation} of the set $X$.
 \end{prop}
 \begin{proof}
@@ -35,16 +35,28 @@ We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse m
 					&= id_G \cdot x \\
 					&= x &&\text{(by axiom \ref{grp-action-axiom-2} of an action)}.
 \end{align*}
-Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  We conclude that, having a two-sided inverse, $\sigma_g$ is a permutation of $X$.
+Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  Having a two-sided inverse, we conslude that $\sigma_g$ is a permutation of $X$.
+\end{proof}
+
+\begin{prop}
+The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g$ is a group homomorphism.
+\end{prop}
+\begin{proof}
+Let $\varphi : G \to S_X$ be defined by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$. For every $x \in X$ 
+
+\begin{align*}
+\varphi(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\varphi$)} \\
+			&= (g_1 g_2) \cdot x && \text{(by definition of $\sigma_{g_1 g_2}$)} \\
+			&= g_1 \cdot (g_2 \cdot x) && \text{(by axiom \ref{grp-action-axiom-1} of an action)} \\
+			&= \sigma_{g_1} ( \sigma{g_2} (x) && \text{(by definition of $\sigma_{g_1}$ and  $\sigma{g_2}$)} \\
+			&= (\varphi(g_1) \circ \varphi(g_2)) (x) && \text{(by definition of $\varphi$)}.
+\end{align*}
+Since their values agree on every element $x \in X$, these two permutations are equal.
 \end{proof}
 
 
 \begin{prop} 
-\leavevmode
-\begin{enumerate}
-\item The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g$ is a group homomorphism.
-\item The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
-\end{enumerate}
+The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
 \end{prop}
 
 
