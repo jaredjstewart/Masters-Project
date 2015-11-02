@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  2 NOV 2015 10:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  2 NOV 2015 12:35
 entering extended mode
 **main.tex
 (main.tex
@@ -1121,15 +1121,15 @@ Chapter 1.
  1. Basics of Representation Theory
 --------------------
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 12.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 15.
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 19.
 [1
 
-]
+] [2]
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 102.
- [2]) (Chapters/Chapter2.tex [3] [4
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 118.
+) (Chapters/Chapter2.tex [3] [4
 
 ]
 Chapter 2.
@@ -1164,17 +1164,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 233.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 233.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 233.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F1D2F503C09D73225B393A9DDB348DAF;2092.
+(rerunfilecheck)             Checksum: 40D1EA5F18D9109CAEDB0D5296F97EAB;2092.
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 26826 strings out of 493673
- 480021 string characters out of 3141529
- 634989 words of memory out of 3000000
- 29863 multiletter control sequences out of 15000+200000
+ 26830 strings out of 493673
+ 480093 string characters out of 3141529
+ 635989 words of memory out of 3000000
+ 29866 multiletter control sequences out of 15000+200000
  30324 words of font info for 76 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 47i,13n,49p,10377b,1611s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,13n,49p,10377b,1669s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
@@ -1189,9 +1189,9 @@ pe1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/
 palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatin
 o/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (19 pages, 210453 bytes).
+Output written on main.pdf (19 pages, 212520 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 306 PDF objects out of 1000 (max. 8388607)
+ 61 named destinations out of 1000 (max. 500000)
  121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

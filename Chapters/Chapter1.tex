@@ -9,8 +9,12 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section {Group Actions}
 
+%----------------------------------------------------------------------------------------
+%	Group Actions
+%
+\section {Group Actions}
+%----------------------------------------------------------------------------------------
 \begin{defn}\label{def-grp-action}
 A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi : G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
 \begin{align}
@@ -22,9 +26,9 @@ A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\
 We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
 \end{note}
 
-In this section, let the group $G$ acts on a set $X$.  For any fixed element $g \in G$, we have an associated map $\sigma_g : X \to X$ given by $\sigma_g (x) = g \cdot x$.
+
 \begin{prop}\label{sigma-is-a-permutation}
-The map $\sigma_g$ is a \textit{permutation} of the set $X$.
+Let $G$ act on the set $X$.  For any fixed $g \in G$, the map $\sigma_g$ from $X$ into $X$ defined by $\sigma_g (x) = g \cdot x$ is a \textit{permutation} of the set $X$, i.e. $\sigma_g \in S_X$.
 \end{prop}
 \begin{proof}
 We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse map, namely $\sigma_{g^{-1}}$. Observe that for any $x \in X$, we have
@@ -38,63 +42,75 @@ We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse m
 Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  Having a two-sided inverse, we conslude that $\sigma_g$ is a permutation of $X$.
 \end{proof}
 
-\begin{prop}
-The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g$ is a group homomorphism.
+\begin{prop}\label{action-yields-hom}
+Let $G$ act on the set $X$. The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
 \end{prop}
 \begin{proof}
-Let $\varphi : G \to S_X$ be defined by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$. For every $x \in X$ 
+Define the map $\varphi : G \to S_X$ by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$ for any $g_1, g_2 \in G$.  Observe that
 
 \begin{align*}
 \varphi(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\varphi$)} \\
 			&= (g_1 g_2) \cdot x && \text{(by definition of $\sigma_{g_1 g_2}$)} \\
 			&= g_1 \cdot (g_2 \cdot x) && \text{(by axiom \ref{grp-action-axiom-1} of an action)} \\
-			&= \sigma_{g_1} ( \sigma{g_2} (x) && \text{(by definition of $\sigma_{g_1}$ and  $\sigma{g_2}$)} \\
-			&= (\varphi(g_1) \circ \varphi(g_2)) (x) && \text{(by definition of $\varphi$)}.
+			&= \sigma_{g_1} ( \sigma_{g_2} (x)) && \text{(by definition of $\sigma_{g_1}$ and  $\sigma{g_2}$)} \\
+			&= \varphi(g_1) ( \varphi(g_2) (x)) && \text{(by definition of $\varphi$)}\\
+			&= (\varphi(g_1) \circ \varphi(g_2)) (x) && \text{(by definition of function composition)}.
 \end{align*}
-Since their values agree on every element $x \in X$, these two permutations are equal.
+Since the values of $\varphi(g_1 g_2)$ and $\varphi(g_1) \circ \varphi(g_2)$ agree on every element $x \in X$, these two permutations are equal. We conclude that $\varphi$ is a homomorphism, since $g_1$ and $g_2$ were arbitrary elements of $G$.
 \end{proof}
 
 
-\begin{prop} 
+\begin{prop} \label{hom-yields-action}
+Any homomorphism $\psi$ from the group $G$ into the symmetric group on $S_X$ on a set $X$ gives rise to an action of $G$ on $X$, defined by taking $g \cdot x = \psi(g)(x)$.
+\end{prop}
+\begin{proof}
+Suppose  that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define a map from $G \times X$ to $X$  by $g \cdot x = \psi(g)(x)$. We verify that this map satisfies the definition of a group action of $G$ on $X$:
+\\ (axiom \ref{grp-action-axiom-1}) \quad $id_G \cdot x = \psi(id_G)(x) = id_X(x) = x$
+\\(axiom \ref{grp-action-axiom-2}) \quad $(gh) \cdot x = \psi(gh)(x) = (\psi(g)\psi(h))(x) = \psi(g)(\psi(h)(x)) = g \cdot (h \cdot x)$
+\end{proof}
+
+\begin{prop} \label{equivalence-of-actions}
 The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
 \end{prop}
 \begin{proof}
-We have seen already that any action of $G$ on the set $X$ gives rise to a homomorphism from $G$ into $S_X$.  Suppose conversely that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define a map from $G \times X$ to $X$  by $g \cdot x = \psi(g)(x)$. We verify that this map satisfies the definition of a group action of $G$ on $X$:
-\\ (property \ref{grp-action-axiom-1}) \quad $id_G \cdot x = \psi(id_G)(x) = id_X(x) = x$
-\\(property \ref{grp-action-axiom-2}) \quad $(gh) \cdot x = \psi(gh)(x) = (\psi(g)\psi(h))(x) = \psi(g)(\psi(h)(x)) = g \cdot (h \cdot x)$
+By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomorphism from $G$ into $S_X$.    Conversely, any homomorphism from $G$ into $S_X$ establishes an action of $G$ on $X$ by Proposition \ref{hom-yields-action}.
 \end{proof}
 
+%Todo: add examples?
 
+%----------------------------------------------------------------------------------------
+%	Definition of a Representation
+%
 \section{Definition of a Representation}
+%----------------------------------------------------------------------------------------
+
 \begin{defn}
-\label{repdef1}
+\label{rep-def-1}
 A \textbf{linear representation} of a group $G$ on a vector space $V$  is a group homomorphism from $G$ to $GL(V)$, the general linear group on V. \end{defn}
  
  %More explicitly, a representation is a map $\rho : G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
 
-\begin{defn}\label{repdef2}A \textbf{linear representation} $\rho$ of a group $G$ on a vector space $V$ over a field $F$ is a group action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
+\begin{defn}\label{rep-def-2}A \textbf{linear representation} of a group $G$ on a vector space $V$ over a field $F$ is an action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
 \begin{align}
-\label{rep-axiom-1}&\rho(g)(v_1+v_2)=\rho(g)(v_1)+\rho(g)(v_2) \quad && \forall g \in G, v_1, v_2 \in V \\
-\label{rep-axiom-2}&\rho(g)(kv) = k \cdot \rho(g)v \quad && \forall g \in G, v \in V, k \in F
+\label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
+\label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
 \end{align}
  \end{defn}
  
  \begin{prop}
-The definitions of a linear representation given in \ref{repdef1} and \ref{repdef2} are equivalent.
+The definitions of a linear representation given in \ref{rep-def-1} and \ref{rep-def-2} above are equivalent.
  \end{prop}
  \begin{proof}
- $(\rightarrow)$  Suppose that we have a homomorphism $\varphi : G \to GL(V)$.  We can define an action of $G$ on $V$ by taking: \[g \cdot v = \varphi(g)(v) \quad \forall g \in G, v \in V.\]
-We verify that indeed we have obtained group action.
-
-(property \ref{grp-action-axiom-1}) \quad For any $v \in V$, we have: $ id_G \cdot v = \varphi(id_G) (v)= id_V (v) = v$. 
-
-(property \ref{grp-action-axiom-2}) \quad For any $v \in eV$ and $g,h$ in $G$ we have: $(gh) \cdot v = \varphi(gh) (v) = (\varphi(g) \varphi(h)) (v)= \varphi(g) (\varphi(h) (v))= g \cdot (h \cdot v)$.\\
-Next, we check that this action preserves the linear structure of V.
-
-\ref{rep-axiom-1} For any $g \in G$, $v_1, v_2 \in V$ we have: $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$
-
-
+%\leavevmode
+ \begin{itemize}
+\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\varphi : G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \varphi(g)(v)$.  We check that this action preserves the linear structure of V.
+\\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
+\\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \varphi(g)(kv) = k (\varphi(g)(v)) = k (g \cdot v)$.
+\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of definition \ref{rep-def-2}.  
+\end{itemize}
  \end{proof}
+
+
 
 %-----------------------------------
 %	SUBSECTION 1
