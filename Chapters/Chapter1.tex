@@ -16,7 +16,7 @@
 \section {Group Actions}
 %----------------------------------------------------------------------------------------
 \begin{defn}\label{def-grp-action}
-A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi : G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
 \begin{align}
 \label{grp-action-axiom-1}&id_G \cdot  x = x && \forall x \in X\\
 \label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
@@ -46,7 +46,7 @@ Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse
 Let $G$ act on the set $X$. The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
 \end{prop}
 \begin{proof}
-Define the map $\varphi : G \to S_X$ by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$ for any $g_1, g_2 \in G$.  Observe that
+Define the map $\varphi \colon G \to S_X$ by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$ for any $g_1, g_2 \in G$.  Observe that
 
 \begin{align*}
 \varphi(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\varphi$)} \\
@@ -76,21 +76,21 @@ The actions of $G$ on the set $X$ are in bijective correspondence with the homom
 By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomorphism from $G$ into $S_X$.    Conversely, any homomorphism from $G$ into $S_X$ establishes an action of $G$ on $X$ by Proposition \ref{hom-yields-action}.
 \end{proof}
 
-%Todo: add examples?
+%Todo\colon add examples?
 
 %----------------------------------------------------------------------------------------
-%	Definition of a Representation
+%	The Definition of a Representation
 %
-\section{Definition of a Representation}
+\section{The Definition of a Representation}
 %----------------------------------------------------------------------------------------
 
 \begin{defn}
 \label{rep-def-1}
-A \textbf{linear representation} of a group $G$ on a vector space $V$  is a group homomorphism from $G$ to $GL(V)$, the general linear group on V. \end{defn}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\varphi\colon G \to GL(V)$. \end{defn}
  
- %More explicitly, a representation is a map $\rho : G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
+ %More explicitly, a representation is a map $\rho \colon G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
 
-\begin{defn}\label{rep-def-2}A \textbf{linear representation} of a group $G$ on a vector space $V$ over a field $F$ is an action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
+\begin{defn}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is any action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
 \begin{align}
 \label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
 \label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
@@ -103,10 +103,10 @@ The definitions of a linear representation given in \ref{rep-def-1} and \ref{rep
  \begin{proof}
 %\leavevmode
  \begin{itemize}
-\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\varphi : G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \varphi(g)(v)$.  We check that this action preserves the linear structure of V.
+\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\varphi \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \varphi(g)(v)$.  We check that this action preserves the linear structure of V.
 \\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
 \\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \varphi(g)(kv) = k (\varphi(g)(v)) = k (g \cdot v)$.
-\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\varphi : G \to S_V$ given by $\varphi(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\varphi(G)$ of $G$ under $\varphi$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$ we have
+\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\varphi \colon G \to S_V$ given by $\varphi(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\varphi(G)$ of $G$ under $\varphi$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$ we have
 \begin{align*}
 \sigma_g (kv) &= g \cdot (kv) && \text{(by definition of $\sigma_g$)} \\
 		&= k (g \cdot v) && \text{(by property \ref{rep-axiom-1})} \\
@@ -118,7 +118,22 @@ Also, for any $v_1, v_2 \in V$ we have
 		&= g \cdot v_1 + g \cdot v_2 && \text{(by property \ref{rep-axiom-2})} \\
 		&= \sigma_g(v_1) + \sigma_g(v_2) && \text{(by definition of $\sigma_g$)}.
 \end{align*}
-Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a homomorphism $\varphi : G \to GL(V)$.
+Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a homomorphism $\varphi \colon G \to GL(V)$.
 
 \end{itemize}
  \end{proof}
+ \begin{defn}Let $G$ be a group, let $F$ be a field, let $V$ be a vector space over $F$, and let $\varphi \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of $V$ over $F$.  
+ \end{defn}
+% ============== Examples of Representations ===========%
+ \begin{example}
+ \begin{enumerate}
+\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\varphi \colon G \to GL(V)$ defined by $\varphi(g) = Id_V$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
+
+\item If a finite group $G$ acts on a finite set $X$ and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. Note that $G$ permutes the basis elements of $V$. 
+
+\item A fundamental special case of a permutation representation is given by a finite group acting on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see that this representation encodes information about all other representations of $G$.
+
+\item 
+
+\end{enumerate}
+ \end{example}
