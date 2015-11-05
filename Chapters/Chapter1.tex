@@ -127,13 +127,13 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
 % ============== Examples of Representations ===========%
  \begin{example}
  \begin{enumerate}
-\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\varphi \colon G \to GL(V)$ defined by $\varphi(g) = Id_V$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
+\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\varphi \colon G \to GL(V)$ defined by $\varphi(g) = 1$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
 
 \item If a finite group $G$ acts on a finite set $X$ and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. Note that $G$ permutes the basis elements of $V$. 
 
 \item A fundamental special case of a permutation representation is given by a finite group acting on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see that this representation encodes information about all other representations of $G$.
 
-\item 
+\item For any symmetric group $S_n$ the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\varphi \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\varphi(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\varphi \colon G \to GL(\mathbb{C})$ by letting $\varphi(g) = 1$ if $g \in H$ and $\varphi(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
 \end{enumerate}
  \end{example}
