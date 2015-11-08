@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  8 NOV 2015 10:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  8 NOV 2015 11:22
 entering extended mode
 **C:/Users/Jared/Documents/Masters-Project/main.tex
 (C:/Users/Jared/Documents/Masters-Project/main.tex
@@ -1139,16 +1139,16 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 19.
 [1
 
-] [2]) (Chapters/Chapter2.tex [3] [4
-
-]
+] [2] [3]) (Chapters/Chapter2.tex [4]
 Chapter 2.
 --------------------
  2. Spaghetti
 --------------------
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ppl/b/n' tried instead on input line 29.
-[5]) (Appendices/AppendixA.tex [6]
+[5
+
+]) (Appendices/AppendixA.tex [6]
 Appendix A.
 --------------------
  A. Appendix Title Here
@@ -1198,7 +1198,7 @@ rw/palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/upl
 r8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb
 >
-Output written on main.pdf (17 pages, 218421 bytes).
+Output written on main.pdf (17 pages, 219570 bytes).
 PDF statistics:
  309 PDF objects out of 1000 (max. 8388607)
  60 named destinations out of 1000 (max. 500000)

@@ -141,7 +141,14 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
 %=========Homomorphisms===================%
 
 \begin{defn}
-A \textbf{homomorphism} between two representations $\varphi_1 \colon G \to GL(V)$ and $\varphi_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. such that $\psi ( \varphi_1 (g)(v)) = \varphi_2(g) (\psi(v))$ for all $v \in V$.  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
+A \textbf{homomorphism} between two representations $\varphi_1 \colon G \to GL(V)$ and $\varphi_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. such that \[ \psi ( \varphi_1 (g)(v)) = \varphi_2(g) (\psi(v)) \quad \forall v \in V, g \in G \]  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
 \end{defn}
+\begin{note}
+If we have an isomorphism $\psi$ between representations $(\varphi_1, V)$ and $(\varphi_2, W)$ we can rewrite the compatibility relation as $\varphi_2(g) = \psi \circ \varphi_1(g) \circ \psi^{-1}$ for all $g \in G$.
+\end{note}
+\begin{note}
+Given any representation $\varphi$ of $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.   %Any n-dim reprn isomorphic to a reprn on GL_N(C) (teleman)
+%then 2nd paragraph look at alex bartel page 4
+\end{note}
 
 
