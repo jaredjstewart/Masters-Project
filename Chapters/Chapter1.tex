@@ -172,6 +172,38 @@ The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}
 We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\varphi \colon \mathbb{Z} \to GL_n$.  For $\varphi$ to be a group homomorphism requires that $\varphi(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\varphi(n) = \varphi( 1 + \ldots + 1) = \varphi(1)^n$.  Thus $\varphi$ is completely determined by the matrix $\varphi(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
 \end{example}
 
+\begin{example}[Representations of the cyclic group of order $n$]
+We shall classify all representations of the cyclic group $G = {1= g^n, g, \ldots, g^{n-1}}$ of order $n$. Consider a representation $\varphi \colon G \to GL(V)$.  As in the previous example, we know that $\varphi(1) = \text{Id}$ and $\varphi(g^k) = \varphi(g)^k$.  Thus our representation $\varphi$ is determined completely by the linear transformation $\varphi(g)$.   It will be helpful to fix a basis of $V$ so that we may view $\varphi(g)$ as a matrix $A$.  Recall from linear algebra that there exists a basis in which $\varphi(g)$ takes the \textit{Jordan normal form}.
+
+\[ A = \begin{bmatrix}
+    J_1 & 0 & \dots  &0 \\
+  0 & J_2  & \dots & 0 \\
+    \vdots & \vdots  & \ddots & \vdots \\
+    0& 0&  \dots  & J_m
+\end{bmatrix} \]
+where each \textit{Jordan block} $J_k$ takes the form 
+\[J_k =  \begin{bmatrix}
+    \lambda & 1&0& \dots  &0 & 0 \\
+     0 &\lambda& 1& \ddots & 0  & 0 \\
+     0 & 0 & \lambda & \ddots& 0  & 0 \\
+     0 & 0 & 0 & \ddots & 1 & 0 \\
+    \vdots & \ddots & \ddots & \ddots & \ddots  & 1\\
+    0& 0& 0 & \dots  & 0  &\lambda
+\end{bmatrix}. \]
+Now $A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n$ is of the form 
+
+\[ J_k^n = \begin{bmatrix}
+    1 & 0 & \dots  &0 \\
+  0 & 1  & \dots & 0 \\
+    \vdots & \vdots  & \ddots & \vdots \\
+    0& 0&  \dots  & 1
+\end{bmatrix}.\]
+
+
+\end{example}
+
+
+
 
 
 
