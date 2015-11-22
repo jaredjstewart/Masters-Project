@@ -190,7 +190,21 @@ where each \textit{Jordan block} $J_k$ takes the form
     \vdots & \ddots & \ddots & \ddots & \ddots  & 1\\
     0& 0& 0 & \dots  & 0  &\lambda
 \end{bmatrix}. \]
-Now $A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n$ is of the form 
+Now $I = A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  
+\begin{lemma}
+Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the position $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
+\end{lemma}
+\begin{proof}
+(By induction.)
+\begin{itemize}
+\item \textit{Base case} This is simply the definition of $N$.
+\item \textit{Inductive step} Suppose that the lemma holds for $N^p$.  We compute the $(i,j)$ entry of $N^{p+1}$.
+\[ (N^{p+1})_{i,j} = \sum_{k=1}^{n} (N^{p})_{i,k} N_{k, j} = (N^p)_{i, i +p} N_{i +p, j} = N_{i +p, j} =\begin{cases} 
+      1 & \text{if}  j = i + (p +1) \\
+      0 & \text{otherwise} \\
+   \end{cases}  \]
+\end{itemize}
+\end{proof}
 
 \[ J_k^n = \begin{bmatrix}
     1 & 0 & \dots  &0 \\
