@@ -1,9 +1,0 @@
-\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\defcounter {refsection}{0}\relax 
-\select@language {english}
-\contentsline {chapter}{Acknowledgements}{iii}{Doc-Start}
-\contentsline {chapter}{\numberline {1}Basic Notions of Representation Theory}{1}{chapter.2}
-\contentsline {section}{\numberline {1.1}Group Actions}{1}{section.3}
-\contentsline {section}{\numberline {1.2}The Definition of a Representation}{2}{section.11}
-\contentsline {section}{\numberline {1.3}Representations of Cyclic Groups}{4}{section.25}
-\contentsline {chapter}{Bibliography}{7}{chapter*.28}
