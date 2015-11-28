@@ -164,7 +164,7 @@ The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}
 
 
 %----------------------------------------------------------------------------------------
-%	The Definition of a Representation
+%	Representations of Cyclic Groups
 %
 \section{Representations of Cyclic Groups}
 %----------------------------------------------------------------------------------------
@@ -190,42 +190,32 @@ where each \textit{Jordan block} $J_k$ takes the form
     \vdots & \ddots & \ddots & \ddots & \ddots  & 1\\
     0& 0& 0 & \dots  & 0  &\lambda
 \end{bmatrix}. \]
-Now $I = A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  
+Now $I = A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
+\[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n \].  
 \begin{lemma}
 Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the positions $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
-\end{lemma}
+
 \begin{proof}
 (By induction.)
 \begin{itemize}
 \item \textit{Base case} This is simply the definition of $N$.
-\item \textit{Inductive step} Suppose that the lemma holds for $N^p$.  We compute the $(i,j)$ entry of $N^{p+1}$.
+\item \textit{Inductive step} Suppose that the lemma holds for $N^p$.  We compute the $(i,j)$ entry of $N^{p+1}$:
 \[ (N^{p+1})_{i,j} = \sum_{k=1}^{n} (N^{p})_{i,k} N_{k, j} = (N^p)_{i, i +p} N_{i +p, j} = N_{i +p, j} =\begin{cases} 
       1 & \text{if}  j = i + (p +1) \\
       0 & \text{otherwise} \\
    \end{cases}  \]
 \end{itemize}
 \end{proof}
+\end{lemma}
 
-Now we have $\text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots$.
+Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k > 0$ would yield some non-zero non-diagonal entries (in the positions $(i,j)$ where $j= i + k$) and hence our sum could not equal the identity matrix.  We must conclude that $N = 0$, and $J_k = \lambda ^n$ is a $1 \times 1$ block.  Thus $\varphi(g)$ is a diagonal matrix with $n$th roots of unity as diagonal entries. 
 
-
-\[ J_k^n = \begin{bmatrix}
-    1 & 0 & \dots  &0 \\
-  0 & 1  & \dots & 0 \\
-    \vdots & \vdots  & \ddots & \vdots \\
-    0& 0&  \dots  & 1
-\end{bmatrix}.\]
-
-
+To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (in the right choice of basis) as $m \times m$ diagonal matrices with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\varphi(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
 \end{example}
 
+\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G, w \in W$.  Note that $W$ effects a representation of $G$ under the action $\varphi(g) \restriction_W$.
+\end{defn}
 
-
-
-
-
- %Any n-dim reprn isomorphic to a reprn on GL_N(C) (teleman)
-%then 2nd paragraph look at alex bartel page 4
 
 
 
