@@ -192,7 +192,7 @@ where each \textit{Jordan block} $J_k$ takes the form
 \end{bmatrix}. \]
 Now $I = A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  
 \begin{lemma}
-Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the position $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
+Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the positions $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
 \end{lemma}
 \begin{proof}
 (By induction.)
@@ -206,7 +206,8 @@ Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any in
 \end{itemize}
 \end{proof}
 
-Now we have $\text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda^n \text{Id} + \binom{n}{1} \lamdba^{n -1} N + \binom{n}{2} \lambda^{n-2} N^2 + \ldots$.
+Now we have $\text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots$.
+
 
 \[ J_k^n = \begin{bmatrix}
     1 & 0 & \dots  &0 \\
