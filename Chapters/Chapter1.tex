@@ -216,6 +216,13 @@ To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group
 \begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G, w \in W$.  Note that $W$ effects a representation of $G$ under the action $\varphi(g) \restriction_W$.
 \end{defn}
 
+From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ naturally by $g (v + W) = \varphi(g)(v)+ W$.  It remains to see that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$ so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined.
+
+\begin{defn}
+Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \varphi(g)(v) + W$.
+\end{defn}
+
+
 
 
 
