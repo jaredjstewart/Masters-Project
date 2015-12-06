@@ -6,4 +6,4 @@
 \contentsline {section}{\numberline {1.1}Group Actions}{1}{section.3}
 \contentsline {section}{\numberline {1.2}The Definition of a Representation}{2}{section.11}
 \contentsline {section}{\numberline {1.3}Representations of Cyclic Groups}{4}{section.25}
-\contentsline {chapter}{Bibliography}{7}{chapter*.32}
+\contentsline {chapter}{Bibliography}{7}{chapter*.36}

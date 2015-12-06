@@ -138,7 +138,7 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
 
 \item If a finite group $G$ acts on a finite set $X$ and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. Note that $G$ permutes the basis elements of $V$. 
 
-\item A fundamental special case of a permutation representation is given by a finite group acting on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see that this representation encodes information about all other representations of $G$.
+\item A fundamental special case of a permutation representation is given by a finite group acting on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
 
 \item For any symmetric group $S_n$ the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\varphi \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\varphi(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\varphi \colon G \to GL(\mathbb{C})$ by letting $\varphi(g) = 1$ if $g \in H$ and $\varphi(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
@@ -216,20 +216,36 @@ To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group
 \begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G, w \in W$.  Note that $W$ effects a representation of $G$ under the action $\varphi(g) \restriction_W$.
 \end{defn}
 
-From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ naturally by $g (v + W) = \varphi(g)(v)+ W$.  It remains to see that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$ so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined.
+From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \varphi(g)(v)+ W$.  We must that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$ so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined.
 
 \begin{defn}
-Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \varphi(g)(v) + W$.
+Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$, with the action $g( v + W) = \varphi(g)(v) + W$.
 \end{defn}
 
-We know recall from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
+We recall also from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
 
 \begin{defn}
-Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a representation of $G$ called the \textbf{direct sum representation} with the action $g (v_1, v_2) = (g \cdot  v_1, g \cdot v_2)$.
+Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a representation of $G$ called the \textbf{direct sum representation}, with the action $g (v_1, v_2) = (g \cdot  v_1, g \cdot v_2)$.
 \end{defn}
 
 
 \begin{defn}
 A representation is called \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
 \end{defn}
+
+\begin{example}
+\begin{enumerate}
+\item Any irreducible representation is completely reducible.
+\item Any $1$-dimensional representations has no proper subspaces, and is thus irreducible.
+\end{enumerate}
+\end{example}
+
+\begin{defn}
+A representation $\varphi$ of $G$ on a complex vector space $V$ is said to be \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle | \rangle$ which is preserved by the action of $G$
+\end{defn}
+
+
+
+
+%\cite[Theorem 5.1] {ConradMinPoly}
 

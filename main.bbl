@@ -33,6 +33,23 @@
   \field{year}{2014}
 \endentry
 
+\entry{ConradMinPoly}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Conrad}{C.}%
+     {Keith}{K.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{CK1}
+  \strng{fullhash}{CK1}
+  \field{sortinit}{C}
+  \field{howpublished}{\url{http://www.math.uconn.edu/~kconrad/blurbs/linmultialg/minpolyandappns.pdf}}
+  \field{note}{Online; accessed 12 December 2015}
+  \field{title}{The Minimal Polynomial and Some Applications}
+  \field{year}{2014}
+\endentry
+
 \entry{dummit2003abstract}{book}{}
   \name{author}{2}{}{%
     {{}%
