@@ -259,13 +259,19 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 		&=  \varphi(g_2 g_1) && \text{(since $G$ is abeilian)} \\
 		&= \varphi(g_2) \varphi(g_1) && \text{(since $\varphi$ is a homomorphism)}.
 \end{align*}
-Thus the matrices $\left\{ \varphi(g)\right\}$ commute.  We can apply \ref{simultaneous} to conclude that $\left\{ \varphi(g)\right\}$ are simultaneously diagonalizable.
-
+Thus the matrices $\left\{ \varphi(g)\right\}$ commute, so we can apply \ref{simultaneous} to conclude that $\left\{ \varphi(g)\right\}$ are simultaneously diagonalizable. This basis $\left\{ e_1, ..., e_k \right\}$ yields the decomposition $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$.
 \end{proof}
 
-
-
-
+We recall the following definition from linear algebra:
+\begin{defn}
+Let $V$ be a complex vector space.  A \textbf{Hermitian inner product} on $V$ is a map $\langle \cdot{,}\cdot \rangle \colon  V \times V \to \mathbb{C}$ that satisfies the following properties for all  $u, v, w \in V$ and $c \in \mathbb{C}$:
+\begin{enumerate}
+\item  $\langle u + v, w \rangle = \langle u , w \rangle + \langle v, w \rangle$.
+\item $\langle c u, v \rangle = c \langle u, v \rangle$.
+\item $\langle u , v \rangle = \overline{\langle v , u \rangle }$.
+\item $\langle v, v \rangle \geq 0$ with equality if and only if $v = 0$.
+\end{enumerate}
+\end{defn}
 \begin{defn}
 A representation $\varphi$ of $G$ on a complex vector space $V$ is said to be \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle | \rangle$ which is preserved by the action of $G$
 \end{defn}
