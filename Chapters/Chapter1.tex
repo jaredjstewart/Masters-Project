@@ -272,10 +272,19 @@ Let $V$ be a complex vector space.  A \textbf{Hermitian inner product} on $V$ is
 \item $\langle v, v \rangle \geq 0$ with equality if and only if $v = 0$.
 \end{enumerate}
 \end{defn}
+
 \begin{defn}
-A representation $\varphi$ of $G$ on a complex vector space $V$ is said to be \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle | \rangle$ which is preserved by the action of $G$
+A representation $\varphi$ of $G$ on a complex vector space $V$ is said to be \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle \cdot{,}\cdot \rangle$ which is preserved by the action of $G$, that is, 
+\[ \langle v , w \rangle = \langle \varphi(g)(v) , \varphi(g)(w) \rangle \quad \forall v,w \in V, g \in G. \]
+A representation is \textbf{unitarisable} if it can be equipped with such a product (even without one being specified).
 \end{defn}
 
+\begin{lemma}
+Let $V$ be a unitary representation of $G$ and let $W \subseteq V$ be a $G$-invariant subspace.  Then the orthogonal complement (TYPESET THIS) is also $G$-invariant.
+\end{lemma}
+\begin{proof}
+Choose arbitrary elements $v \in W (PERP)$ and $g \in G$.  We need to show that $gv \in W(PERP)$.  Now for any $w \in W$, we have $\langle v,w \rangle = 0$.  Thus $\langle gv, gw \rangle = g \overline{g} \langle v , w \rangle = 0$ for any $w \in W$.  Notice that $w' = gw \in W$ since $W$ is $G$-invariant.  This implies that $ \langle gv, w' \rangle =0$, i.e. $gv \in W(PERP)$.
+\end{proof}
 
 
 
