@@ -263,13 +263,13 @@ Thus the matrices $\left\{ \varphi(g)\right\}$ commute, so we can apply \ref{sim
 \end{proof}
 
 We recall the following definition from linear algebra:
-\begin{defn}
+\begin{defn} \label{hip}
 Let $V$ be a complex vector space.  A \textbf{Hermitian inner product} on $V$ is a map $\langle \cdot{,}\cdot \rangle \colon  V \times V \to \mathbb{C}$ that satisfies the following properties for all  $u, v, w \in V$ and $c \in \mathbb{C}$:
 \begin{enumerate}
-\item  $\langle u + v, w \rangle = \langle u , w \rangle + \langle v, w \rangle$.
-\item $\langle c u, v \rangle = c \langle u, v \rangle$.
-\item $\langle u , v \rangle = \overline{\langle v , u \rangle }$.
-\item $\langle v, v \rangle \geq 0$ with equality if and only if $v = 0$.
+\item \label{hip-1}  $\langle u + v, w \rangle = \langle u , w \rangle + \langle v, w \rangle$.
+\item \label{hip-2} $\langle c u, v \rangle = c \langle u, v \rangle$.
+\item \label{hip-3} $\langle u , v \rangle = \overline{\langle v , u \rangle }$.
+\item \label{hip-4} $\langle v, v \rangle \geq 0$ with equality if and only if $v = 0$.
 \end{enumerate}
 \end{defn}
 
@@ -279,11 +279,35 @@ A representation $\varphi$ of $G$ on a complex vector space $V$ is said to be \t
 A representation is \textbf{unitarisable} if it can be equipped with such a product (even without one being specified).
 \end{defn}
 
+\begin{thm} [Weyl's unitary trick] Finite-dimensional represenations of finite groups are unitarisable.
+\end {thm}
+\begin{proof}
+Take any Hermetian inner product on V, say $\langle \cdot{,}\cdot \rangle'$.  We define a new inner product on V by \textit{averaging over} $G$:
+\[ \langle v {,}w  \rangle \defeq \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g)v {,} \varphi(g)w \rangle'. \]
+
+This new inner product satifies properties \ref{hip-1},  \ref{hip-2}, and  \ref{hip-3} of Definition \ref{hip} by linearity.  It remains to check positivity (\ref{hip-4}).  Clearly $\langle v {,} v \rangle = 0$ when $v =0$, since each term of the sum will equal zero.  In the case where $v \neq 0$,  observe that
+
+\[ \langle v {,} v \rangle =\frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g)v {,} \varphi(g)v \rangle' \geq 0\]
+
+since each term of the sum is non-negative by the positivity of $\langle \cdot{,}\cdot \rangle'$.  The only problem would occur if each term of this sum is equal to zero.  But $\langle \varphi(e) v {,} \varphi(e) v \rangle ' = \langle v {,} v\rangle' > 0$.  Thus $\langle v {,} v \rangle > 0$.  
+
+Finally, we show that our new inner product is $G$-invariant.  For any $h \in G$, we have
+\begin{align*}
+\langle \varphi(h) v {,} \varphi(h) w  \rangle &= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g) \varphi(h)v {,}\varphi(g) \varphi(h)w \rangle' \\
+&= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(gh)v {,} \varphi(gh)w \rangle' && \text{(since $\varphi$ is a homomorphism)} \\
+&= \frac{1}{|G|} \mathlarger{\sum}_{k \in G} \langle \varphi(k)v {,} \varphi(k)w \rangle' && \text{(by a change of variables)}\\
+&= \langle v {,} w \rangle.
+\end{align*}
+
+
+
+\end{proof}
+
 \begin{lemma}
-Let $V$ be a unitary representation of $G$ and let $W \subseteq V$ be a $G$-invariant subspace.  Then the orthogonal complement (TYPESET THIS) is also $G$-invariant.
+Let $V$ be a unitary representation of $G$ and let $W \subseteq V$ be a $G$-invariant subspace.  Then the orthogonal complement $W^\perp$ is also $G$-invariant.
 \end{lemma}
 \begin{proof}
-Choose arbitrary elements $v \in W (PERP)$ and $g \in G$.  We need to show that $gv \in W(PERP)$.  Now for any $w \in W$, we have $\langle v,w \rangle = 0$.  Thus $\langle gv, gw \rangle = g \overline{g} \langle v , w \rangle = 0$ for any $w \in W$.  Notice that $w' = gw \in W$ since $W$ is $G$-invariant.  This implies that $ \langle gv, w' \rangle =0$, i.e. $gv \in W(PERP)$.
+Choose arbitrary elements $v \in W^\perp$ and $g \in G$.  We need to show that $gv \in W^\perp$.  Now for any $w \in W$, we have $\langle v,w \rangle = 0$.  Thus $\langle gv, gw \rangle = g \overline{g} \langle v , w \rangle = 0$ for any $w \in W$.  Notice that $w' = gw \in W$ since $W$ is $G$-invariant.  This implies that $ \langle gv, w' \rangle =0$, i.e. $gv \in W^\perp$.
 \end{proof}
 
 
