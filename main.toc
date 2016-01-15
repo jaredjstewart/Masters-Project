@@ -6,4 +6,6 @@
 \contentsline {section}{\numberline {1.1}Group Actions}{1}{section.3}
 \contentsline {section}{\numberline {1.2}The Definition of a Representation}{2}{section.11}
 \contentsline {section}{\numberline {1.3}Representations of Cyclic Groups}{4}{section.25}
-\contentsline {chapter}{Bibliography}{9}{chapter*.46}
+\contentsline {section}{\numberline {1.4}Constructions from Linear Algebra}{6}{section.29}
+\contentsline {section}{\numberline {1.5}Complete Reducibility}{6}{section.33}
+\contentsline {chapter}{Bibliography}{9}{chapter*.50}
