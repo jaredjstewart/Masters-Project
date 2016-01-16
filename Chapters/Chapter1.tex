@@ -324,5 +324,27 @@ Every complex representation of a finite group is completely reducible.
 \begin{proof}
 Any such representation is unitarisable y by Theorem \ref{weyl-unitary-trick}.  We can then apply Theorem \ref{full-red-of-unitary-reps} to obtain full reduciblility.
 \end{proof}
-%\cite[Theorem 5.1] {ConradMinPoly}
+
+
+\section{Schur's Lemma}
+\begin{thm}\label{schur-lemma-over-c}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible $G$-representation over $\mathbb{C}$, then evey linear operator $\phi \colon V \to V$ commuting with $G$ is a scalar.
+\end{thm}
+\begin{proof}
+Let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so by irreducibility $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
+\end{proof}
+
+\begin{defn}
+Given two representations $V$ and $W$, we write $\textbf{Hom}^G(V,W)$ to  denote the vector space of \textit{intertwining operators} from $V$ to $W$, i.e. the linear operators from $V$ to $W$ which commute with the action of $G$.  In other words, this is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$.
+\end{defn}
+
+\begin{cor}
+If $V$ and $W$ are irreducible, the space $\text{Hom}^G(V,W)$ is $1$-dimensional if the representations are isomorphic, and ${0}$ otherwise.  In the first case, any non-zero map is an isomorphism.
+\end{cor}
+\begin{proof}
+Let $0 \neq \phi \in \text{Hom}^G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v) = 0$ implies that  $\phi (gv) = g  \phi(v) = g  0 =0$, i.e. $ gv \in \text{ker}(\phi)$. Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi (gw) = g \phi(w) = gv$, i.e. $gv \in \text{im}(\phi)$.  Thus $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant.  
+
+Irreducibility yields $\text{ker}(\phi) = 0 $ or $V$ and $\text{im}(\phi) = 0$ or  $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi) = 0$.  This means that $\phi$ is injective,  $\text{im}(\phi) = W$, and $\phi$ is an isomorphism. 
+
+Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi$ is an intertwining operator from $V$ to $V$.  We apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.
+\end{proof}
 

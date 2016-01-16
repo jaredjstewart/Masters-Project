@@ -16,6 +16,23 @@
   {}
 \endgroup
 
+\entry{AlexBartelRepThry}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Bartel}{B.}%
+     {Alex}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{BA1}
+  \strng{fullhash}{BA1}
+  \field{sortinit}{B}
+  \field{howpublished}{\url{https://math.berkeley.edu/~teleman/math/RepThry.pdf}}
+  \field{note}{Online; accessed 11 November 2015}
+  \field{title}{Introduction to representation theory of finite groups}
+  \field{year}{2014}
+\endentry
+
 \entry{ConradMinPoly}{misc}{}
   \name{author}{1}{}{%
     {{}%
@@ -31,6 +48,84 @@
   \field{note}{Online; accessed 12 December 2015}
   \field{title}{The Minimal Polynomial and Some Applications}
   \field{year}{2014}
+\endentry
+
+\entry{MathDrBob}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Donley}{D.}%
+     {Robert}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DR1}
+  \strng{fullhash}{DR1}
+  \field{sortinit}{D}
+  \field{howpublished}{\url{http://www.ureddit.com/class/34878/introduction-to-group-representations}}
+  \field{note}{Online; accessed 5 January 2015}
+  \field{title}{Introduction to Group Representations}
+  \field{year}{2012}
+\endentry
+
+\entry{dummit2003abstract}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Dummit}{D.}%
+     {D.S.}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Foote}{F.}%
+     {R.M.}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Wiley}%
+  }
+  \strng{namehash}{DDFR1}
+  \strng{fullhash}{DDFR1}
+  \field{sortinit}{D}
+  \field{isbn}{9780471433347}
+  \field{title}{Abstract Algebra}
+  \verb{url}
+  \verb https://books.google.com/books?id=KJDBQgAACAAJ
+  \endverb
+  \field{year}{2003}
+\endentry
+
+\entry{Kao}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Kao}{K.}%
+     {Daphne}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{KD1}
+  \strng{fullhash}{KD1}
+  \field{sortinit}{K}
+  \field{howpublished}{\url{http://www.math.uchicago.edu/~may/VIGRE/VIGRE2010/REUPapers/Kao.pdf}}
+  \field{note}{Online; accessed 5 January 2015}
+  \field{title}{Representations of the Symmetric Group}
+  \field{year}{2010}
+\endentry
+
+\entry{TelemanRepThry}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Teleman}{T.}%
+     {Constantin}{C.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{TC1}
+  \strng{fullhash}{TC1}
+  \field{sortinit}{T}
+  \field{howpublished}{\url{https://math.berkeley.edu/~teleman/math/RepThry.pdf}}
+  \field{note}{Online; accessed 11 November 2015}
+  \field{title}{Representation Theory}
+  \field{year}{2005}
 \endentry
 
 \lossort
