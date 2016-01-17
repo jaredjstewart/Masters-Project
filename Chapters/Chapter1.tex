@@ -338,13 +338,25 @@ Given two representations $V$ and $W$, we write $\textbf{Hom}^G(V,W)$ to  denote
 \end{defn}
 
 \begin{cor}
-If $V$ and $W$ are irreducible, the space $\text{Hom}^G(V,W)$ is $1$-dimensional if the representations are isomorphic, and ${0}$ otherwise.  In the first case, any non-zero map is an isomorphism.
+If $V$ and $W$ are irreducible, the space $\text{Hom}^G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}^G(V,W=\{0\}$.
 \end{cor}
 \begin{proof}
 Let $0 \neq \phi \in \text{Hom}^G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v) = 0$ implies that  $\phi (gv) = g  \phi(v) = g  0 =0$, i.e. $ gv \in \text{ker}(\phi)$. Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi (gw) = g \phi(w) = gv$, i.e. $gv \in \text{im}(\phi)$.  Thus $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant.  
 
 Irreducibility yields $\text{ker}(\phi) = 0 $ or $V$ and $\text{im}(\phi) = 0$ or  $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi) = 0$.  This means that $\phi$ is injective,  $\text{im}(\phi) = W$, and $\phi$ is an isomorphism. 
 
-Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi$ is an intertwining operator from $V$ to $V$.  We apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.
+Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi$ is also an intertwining operator from $V$ to $V$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.
 \end{proof}
 
+More definitions are required before we can state a more general Schur's Lemma (not restricted to just $\mathbb{C}$).
+
+\begin{defn}
+An \textbf{algebra} over a field $K$ is a ring with unit, containing a distinguished copy of $K$ that commutes with every algebra element, and with $1 \in K$ begin the algebra unit.  A \textbf{division ring} is a ring where every non-zero element is invertible, and a \textbf{division algebra} is a division ring which is also a $K$-algebra.
+\end{defn}
+
+\begin{defn}
+Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} $\text{End}^G(V)$ is the space of linear self-maps $\phi \colon V \to V$ which commute with the group action, that is, $\varphi(g) \circ \phi = \phi \circ \varphi(g) \quad \forall g \in G$.  The addition is the usual addition of linear maps (pointwise), and the multiplication is function composition.  The distinguished copy of $K$ is given by $K \text{Id}$.
+\end{defn}
+
+\begin{thm}\label{schur-lemma}[Schur's Lemma] If $V$ is an irreducible finite-dimensional representation of $G$ over $K$, then $\text{End}^G(V)$ is a finite-dimensional division algebra over $K$.
+\end{thm}
