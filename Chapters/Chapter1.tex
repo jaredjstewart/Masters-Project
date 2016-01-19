@@ -30,22 +30,22 @@ We could likewise define the concept of a \textit{right} group action, where the
 
 
 \begin{prop}\label{sigma-is-a-permutation}
-Let $G$ act on the set $X$.  For any fixed $g \in G$, the map $\sigma_g$ from $X$ into $X$ defined by $\sigma_g (x) = g \cdot x$ is a \textit{permutation} of the set $X$, i.e. $\sigma_g \in S_X$.
+Let $G$ act on the set $X$.  For any fixed $g \in G$, the map $\sigma_g$ from $X$ into $X$ defined by $\sigma_g (x) = g \cdot x$ is a \textit{permutation} of the set $X$.  That is, $\sigma_g \in S_X$.
 \end{prop}
 \begin{proof}
 We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse map, namely $\sigma_{g^{-1}}$. Observe that for any $x \in X$, we have
 \begin{align*}
-(\sigma_{g^{-1}} \circ \sigma_g) (x) &= \sigma_{g^{-1}} ( \sigma_g (x) && \text{(by definition of function composition)} \\
+(\sigma_{g^{-1}} \circ \sigma_g) (x) &= \sigma_{g^{-1}} ( \sigma_g (x)  \\
 					&= g^{-1} \cdot (g \cdot x) && \text{(by definition of $\sigma_g$ and $\sigma_{g^{-1}}$)} \\
 					&= (g^{-1}g) \cdot x &&\text{(by axiom \ref{grp-action-axiom-1} of an action)} \\
 					&= 1 \cdot x \\
 					&= x &&\text{(by axiom \ref{grp-action-axiom-2} of an action)}.
 \end{align*}
-Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  Having a two-sided inverse, we conslude that $\sigma_g$ is a permutation of $X$.
+Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  Having a two-sided inverse, we conclude that $\sigma_g$ is a permutation of $X$.
 \end{proof}
 
 \begin{prop}\label{action-yields-hom}
-Let $G$ act on the set $X$. The map from $G$ to the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
+Let $G$ act on the set $X$. The map from $G$ into the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
 \end{prop}
 \begin{proof}
 Define the map $\varphi \colon G \to S_X$ by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$ for any $g_1, g_2 \in G$.  Observe that
@@ -63,7 +63,7 @@ Since the values of $\varphi(g_1 g_2)$ and $\varphi(g_1) \circ \varphi(g_2)$ agr
 
 
 \begin{prop} \label{hom-yields-action}
-Any homomorphism $\psi$ from the group $G$ into the symmetric group on $S_X$ on a set $X$ gives rise to an action of $G$ on $X$, defined by taking $g \cdot x = \psi(g)(x)$.
+Any homomorphism $\psi$ from the group $G$ into the symmetric group $S_X$ on a set $X$ gives rise to an action of $G$ on $X$, defined by taking $g \cdot x = \psi(g)(x)$.
 \end{prop}
 \begin{proof}
 Suppose  that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define a map from $G \times X$ to $X$  by $g \cdot x = \psi(g)(x)$. We verify that this map satisfies the definition of a group action of $G$ on $X$:
@@ -71,9 +71,9 @@ Suppose  that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define 
 \\(axiom \ref{grp-action-axiom-2}) \quad $(gh) \cdot x = \psi(gh)(x) = (\psi(g)\psi(h))(x) = \psi(g)(\psi(h)(x)) = g \cdot (h \cdot x)$
 \end{proof}
 
-\begin{prop} \label{equivalence-of-actions}
+\begin{cor} \label{equivalence-of-actions}
 The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
-\end{prop}
+\end{cor}
 \begin{proof}
 By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomorphism from $G$ into $S_X$.    Conversely, any homomorphism from $G$ into $S_X$ establishes an action of $G$ on $X$ by Proposition \ref{hom-yields-action}.
 \end{proof}
@@ -92,7 +92,7 @@ Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. 
  
  %More explicitly, a representation is a map $\rho \colon G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
 
-\begin{defn}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is any action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
+\begin{defn}[Alternative definition] \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is any action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
 \begin{align}
 \label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
 \label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
@@ -113,7 +113,7 @@ The definitions of a linear representation given in \ref{rep-def-1} and \ref{rep
 \item[$(\rightarrow)$]  Suppose that we have a homomorphism $\varphi \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \varphi(g)(v)$.  We check that this action preserves the linear structure of V.
 \\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
 \\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \varphi(g)(kv) = k (\varphi(g)(v)) = k (g \cdot v)$.
-\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\varphi \colon G \to S_V$ given by $\varphi(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\varphi(G)$ of $G$ under $\varphi$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$ we have
+\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\varphi \colon G \to S_V$ given by $\varphi(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\varphi(G)$ of $G$ under $\varphi$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$, we have
 \begin{align*}
 \sigma_g (kv) &= g \cdot (kv) && \text{(by definition of $\sigma_g$)} \\
 		&= k (g \cdot v) && \text{(by property \ref{rep-axiom-1})} \\
@@ -136,11 +136,11 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
  \begin{enumerate}
 \item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\varphi \colon G \to GL(V)$ defined by $\varphi(g) = 1$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
 
-\item If a finite group $G$ acts on a finite set $X$ and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. Note that $G$ permutes the basis elements of $V$. 
+\item If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$.  
 
-\item A fundamental special case of a permutation representation is given by a finite group acting on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
+\item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This representation is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
 
-\item For any symmetric group $S_n$ the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\varphi \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\varphi(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\varphi \colon G \to GL(\mathbb{C})$ by letting $\varphi(g) = 1$ if $g \in H$ and $\varphi(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
+\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\varphi \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\varphi(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\varphi \colon G \to GL(\mathbb{C})$ by letting $\varphi(g) = 1$ if $g \in H$ and $\varphi(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
 \end{enumerate}
  \end{example}
@@ -148,15 +148,15 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
 %=========Homomorphisms===================%
 
 \begin{defn}
-A \textbf{homomorphism} between two representations $\varphi_1 \colon G \to GL(V)$ and $\varphi_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. such that \[ \psi ( \varphi_1 (g)(v)) = \varphi_2(g) (\psi(v)) \quad \forall v \in V, g \in G \]  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
+A \textbf{homomorphism} between two representations $\varphi_1 \colon G \to GL(V)$ and $\varphi_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. a map $\psi$ such that \[ \psi ( \varphi_1 (g)(v)) = \varphi_2(g) (\psi(v)) \quad \forall v \in V, g \in G \]  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
 \end{defn}
 \begin{note}
 If we have representations $(\varphi_1, V)$ and $(\varphi_2, W)$ and an isomorphism of vector spaces $\psi \colon V \to W$ then we can rewrite the compatibility requirement above as $\varphi_2(g) = \psi \circ \varphi_1(g) \circ \psi^{-1}$ for all $g \in G$.
 \end{note}
 
-Given any representation $(\varphi, V)$ of $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  We obtain a representation $\phi$ of $G$ on $F^n$ by defining $\phi = \psi \circ \varphi(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to the original representation $(\varphi, V)$. In particular we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
+Given any representation $(\varphi, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \varphi(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\varphi, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
 
-Suppose that we have two representations $\varphi \colon G \to GL_n(F)$ and $\phi \colon G \to GL_m(F)$ given by $\varphi(g) = X_g$ and $\phi(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\varphi \colon G \to GL_n(F)$ and $\phi \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\varphi(g) = A \phi(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
+Suppose that we have two representations $\varphi_1 \colon G \to GL_n(F)$ and $\varphi_2 \colon G \to GL_m(F)$ given by $\varphi_1(g) = X_g$ and $\varphi_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\varphi_1 \colon G \to GL_n(F)$ and $\varphi_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\varphi_1(g) = A \varphi_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
 \begin{prop}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
 \end{prop}
@@ -169,19 +169,19 @@ The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}
 \section{Representations of Cyclic Groups}
 %----------------------------------------------------------------------------------------
 \begin{example}[Representations of $\mathbb{Z}$]
-We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\varphi \colon \mathbb{Z} \to GL_n$.  For $\varphi$ to be a group homomorphism requires that $\varphi(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\varphi(n) = \varphi( 1 + \ldots + 1) = \varphi(1)^n$.  Thus $\varphi$ is completely determined by the matrix $\varphi(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
+We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\varphi \colon \mathbb{Z} \to GL_n (\mathbb{C})$.  For $\varphi$ to be a group homomorphism requires that $\varphi(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\varphi(n) = \varphi( 1 + \ldots + 1) = \varphi(1)^n$.  Thus $\varphi$ is completely determined by the matrix $\varphi(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
 \end{example}
 
 \begin{example}[Representations of the cyclic group of order $n$]
-We shall classify all representations of the cyclic group $G = {1= g^n, g, \ldots, g^{n-1}}$ of order $n$. Consider a representation $\varphi \colon G \to GL(V)$.  As in the previous example, we know that $\varphi(1) = \text{Id}$ and $\varphi(g^k) = \varphi(g)^k$.  Thus our representation $\varphi$ is determined completely by the linear transformation $\varphi(g)$.   It will be helpful to fix a basis of $V$ so that we may view $\varphi(g)$ as a matrix $A$.  Recall from linear algebra that there exists a basis in which $\varphi(g)$ takes the \textit{Jordan normal form}.
+We shall classify all representations of the cyclic group $G = \{ g, g^2, \ldots, g^{n-1}, g^n=1\}$ of order $n$. Consider a representation $\varphi \colon G \to GL(V)$.  As in the previous example, we know that $\varphi(1) = \text{Id}$ and $\varphi(g^k) = \varphi(g)^k$.  Thus our representation $\varphi$ is determined completely by the linear transformation $\varphi(g)$.   It will be helpful to fix a basis of $V$ so that we may view $\varphi(g)$ as a matrix.  Recall from linear algebra that there exists a basis in which $\varphi(g)$ takes the \textit{Jordan canonical form}
 
-\[ A = \begin{bmatrix}
+\[ \varphi(g) = \begin{bmatrix}
     J_1 & 0 & \dots  &0 \\
   0 & J_2  & \dots & 0 \\
     \vdots & \vdots  & \ddots & \vdots \\
     0& 0&  \dots  & J_m
 \end{bmatrix} \]
-where each \textit{Jordan block} $J_k$ takes the form 
+where each \textit{Jordan block} $J_k$ is of the form 
 \[J_k =  \begin{bmatrix}
     \lambda & 1&0& \dots  &0 & 0 \\
      0 &\lambda& 1& \ddots & 0  & 0 \\
@@ -190,49 +190,50 @@ where each \textit{Jordan block} $J_k$ takes the form
     \vdots & \ddots & \ddots & \ddots & \ddots  & 1\\
     0& 0& 0 & \dots  & 0  &\lambda
 \end{bmatrix}. \]
-Now $I = A^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
-\[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n \].  
+Now $I = \varphi(g)^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block $J_k$ as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
+\[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n \]. The following lemma will show that in fact $N=0$. 
 \begin{lemma}
 Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the positions $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
 
 \begin{proof}
 (By induction.)
-\begin{itemize}
-\item \textit{Base case} This is simply the definition of $N$.
-\item \textit{Inductive step} Suppose that the lemma holds for $N^p$.  We compute the $(i,j)$ entry of $N^{p+1}$:
+
+ {\textit{Base case:}} This is simply the definition of $N$.
+
+ \textit{Inductive step:} Suppose that the lemma holds for $N^p$.  We compute the $(i,j)$ entry of $N^{p+1}$:
 \[ (N^{p+1})_{i,j} = \sum_{k=1}^{n} (N^{p})_{i,k} N_{k, j} = (N^p)_{i, i +p} N_{i +p, j} = N_{i +p, j} =\begin{cases} 
       1 & \text{if}  j = i + (p +1) \\
       0 & \text{otherwise} \\
    \end{cases}  \]
-\end{itemize}
+
 \end{proof}
 \end{lemma}
 
-Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k > 0$ would yield some non-zero non-diagonal entries (in the positions $(i,j)$ where $j= i + k$) and hence our sum could not equal the identity matrix.  We must conclude that $N = 0$, and $J_k = \lambda ^n$ is a $1 \times 1$ block.  Thus $\varphi(g)$ is a diagonal matrix with $n$th roots of unity as diagonal entries. 
+Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k > 0$ would yield some non-zero non-diagonal entries (in the positions $(i,j)$ where $j= i + k$) and hence our sum could not equal the identity matrix.  We must conclude that $N = 0$, $J_k = \lambda \text{Id}$ is a $1 \times 1$ block, and $J_k ^n = \lambda ^ n \text{Id}$.  Thus $\varphi(g)$ is a diagonal matrix with $n$th roots of unity as diagonal entries. 
 
-To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (in the right choice of basis) as $m \times m$ diagonal matrices with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\varphi(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
+To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (with the right choice of basis) as $m \times m$ diagonal matrices all with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\varphi(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
 \end{example}
 
 \section{Constructions from Linear Algebra}
-\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G, w \in W$.  Note that $W$ effects a representation of $G$ under the action $\varphi(g) \restriction_W$.
+\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\varphi(g) \restriction_W$.
 \end{defn}
 
-From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \varphi(g)(v)+ W$.  We must that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$ so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined.
+From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \varphi(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
 
 \begin{defn}
-Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$, with the action $g( v + W) = \varphi(g)(v) + W$.
+Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \varphi(g)(v) + W$.
 \end{defn}
 
-We recall also from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
+Recall also from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
 
 \begin{defn}
-Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a representation of $G$ called the \textbf{direct sum representation}, with the action $g (v_1, v_2) = (g \cdot  v_1, g \cdot v_2)$.
+Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a representation of $G$ called the \textbf{direct sum representation} of $V_1$ and $V_2$ with the action $g (v_1, v_2) = (g \cdot  v_1, g \cdot v_2)$.
 \end{defn}
 
 
 \section{Complete Reducibility and Unitarity}
 \begin{defn}
-A representation is called \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
+A representation is said to be \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
 \end{defn}
 
 \begin{example}
@@ -245,7 +246,7 @@ A representation is called \textbf{irreducible} if it contains no proper invaria
 \begin{thm}\label{simultaneous} If $A_1, A_2, \ldots, A_r$ are linear operators on $V$ and each $A_i$ is diagonalizable, they are simultaneously diagonalizable if and only if they commute.
 \end{thm}
 \begin{proof}
- See \cite[Theorem 5.1] {ConradMinPoly}.
+ See Conrad \cite[Theorem 5.1] {ConradMinPoly}.
 \end{proof}
 
 \begin{thm} Every complex representation of a finite abelian group is completely reducible, and every irreducible representation is $1$-dimensional.  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  17 JAN 2016 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  19 JAN 2016 14:03
 entering extended mode
 **C:/Users/Jared/Documents/Masters-Project/main.tex
 (C:/Users/Jared/Documents/Masters-Project/main.tex
@@ -1138,57 +1138,49 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `OT1/ppl/b/it' tried instead on input line 21.
 [1
 
-] [2] [3] [4]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 201.
-
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
-File: omsppl.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 201.
- [5] [6]
+] [2] [3] [4] [5] [6]
 LaTeX Font Info:    Calculating math sizes for size <13.13995> on input line 28
-7.
+8.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.13995> not available
-(Font)              size <12> substituted on input line 287.
+(Font)              size <12> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <6.56998> not available
-(Font)              size <7> substituted on input line 287.
+(Font)              size <7> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <13.13995> not available
-(Font)              size <12> substituted on input line 287.
+(Font)              size <12> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <6.56998> not available
-(Font)              size <7> substituted on input line 287.
+(Font)              size <7> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <13.13995> not available
-(Font)              size <12> substituted on input line 287.
+(Font)              size <12> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <6.56998> not available
-(Font)              size <7> substituted on input line 287.
+(Font)              size <7> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <13.13995> not available
-(Font)              size <12> substituted on input line 287.
+(Font)              size <12> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <6.56998> not available
-(Font)              size <7> substituted on input line 287.
+(Font)              size <7> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <13.13995> not available
-(Font)              size <12> substituted on input line 287.
+(Font)              size <12> substituted on input line 288.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <6.56998> not available
-(Font)              size <7> substituted on input line 287.
+(Font)              size <7> substituted on input line 288.
 
 [7] [8]) [9] [10
 
@@ -1220,10 +1212,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 26797 strings out of 493673
- 477804 string characters out of 3141530
+ 26777 strings out of 493673
+ 477452 string characters out of 3141530
  628757 words of memory out of 3000000
- 29785 multiletter control sequences out of 15000+200000
+ 29768 multiletter control sequences out of 15000+200000
  36984 words of font info for 106 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  47i,16n,49p,10418b,1736s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1245,7 +1237,7 @@ ype1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palati
 no/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8
 a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (17 pages, 279315 bytes).
+Output written on main.pdf (17 pages, 279901 bytes).
 PDF statistics:
  351 PDF objects out of 1000 (max. 8388607)
  81 named destinations out of 1000 (max. 500000)
