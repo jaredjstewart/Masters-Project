@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  19 JAN 2016 14:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.9.13)  7 FEB 2016 11:27
 entering extended mode
 **C:/Users/Jared/Documents/Masters-Project/main.tex
 (C:/Users/Jared/Documents/Masters-Project/main.tex
@@ -1203,7 +1203,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B8CD90A4D70ACA490C766304B554EF0B;1644.
+(rerunfilecheck)             Checksum: 3A093938076B489B0A083A55CF3A228F;1960.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1212,10 +1212,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 26777 strings out of 493673
- 477452 string characters out of 3141530
+ 26785 strings out of 493673
+ 477522 string characters out of 3141530
  628757 words of memory out of 3000000
- 29768 multiletter control sequences out of 15000+200000
+ 29770 multiletter control sequences out of 15000+200000
  36984 words of font info for 106 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  47i,16n,49p,10418b,1736s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1237,9 +1237,9 @@ ype1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
 /palatino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palati
 no/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8
 a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (17 pages, 279901 bytes).
+Output written on main.pdf (17 pages, 282793 bytes).
 PDF statistics:
- 351 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
- 73 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 89 words of extra memory for PDF output out of 10000 (max. 10000000)
 

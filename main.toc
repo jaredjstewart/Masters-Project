@@ -9,4 +9,6 @@
 \contentsline {section}{\numberline {1.4}Constructions from Linear Algebra}{6}{section.29}
 \contentsline {section}{\numberline {1.5}Complete Reducibility and Unitarity}{6}{section.33}
 \contentsline {section}{\numberline {1.6}Schur's Lemma}{8}{section.50}
-\contentsline {chapter}{Bibliography}{11}{chapter*.57}
+\contentsline {section}{\numberline {1.7}Isotypical Decomposition}{9}{section.57}
+\contentsline {section}{\numberline {1.8}Character Theory}{9}{section.58}
+\contentsline {chapter}{Bibliography}{11}{chapter*.63}
