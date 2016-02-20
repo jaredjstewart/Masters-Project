@@ -18,7 +18,7 @@
 \section {Group Actions}
 %----------------------------------------------------------------------------------------
 \begin{defn}\label{def-grp-action}
-A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\varphi \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
 \begin{align}
 \label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
 \label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
@@ -48,17 +48,17 @@ Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse
 Let $G$ act on the set $X$. The map from $G$ into the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
 \end{prop}
 \begin{proof}
-Define the map $\varphi \colon G \to S_X$ by $\varphi (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\varphi(g_1 g_2) = \varphi(g_1) \circ \varphi(g_2)$ for any $g_1, g_2 \in G$.  Observe that
+Define the map $\rho \colon G \to S_X$ by $\rho (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\rho(g_1 g_2) = \rho(g_1) \circ \rho(g_2)$ for any $g_1, g_2 \in G$.  Observe that
 
 \begin{align*}
-\varphi(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\varphi$)} \\
+\rho(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\rho$)} \\
 			&= (g_1 g_2) \cdot x && \text{(by definition of $\sigma_{g_1 g_2}$)} \\
 			&= g_1 \cdot (g_2 \cdot x) && \text{(by axiom \ref{grp-action-axiom-1} of an action)} \\
 			&= \sigma_{g_1} ( \sigma_{g_2} (x)) && \text{(by definition of $\sigma_{g_1}$ and  $\sigma{g_2}$)} \\
-			&= \varphi(g_1) ( \varphi(g_2) (x)) && \text{(by definition of $\varphi$)}\\
-			&= (\varphi(g_1) \circ \varphi(g_2)) (x) && \text{(by definition of function composition)}.
+			&= \rho(g_1) ( \rho(g_2) (x)) && \text{(by definition of $\rho$)}\\
+			&= (\rho(g_1) \circ \rho(g_2)) (x) && \text{(by definition of function composition)}.
 \end{align*}
-Since the values of $\varphi(g_1 g_2)$ and $\varphi(g_1) \circ \varphi(g_2)$ agree on every element $x \in X$, these two permutations are equal. We conclude that $\varphi$ is a homomorphism, since $g_1$ and $g_2$ were arbitrary elements of $G$.
+Since the values of $\rho(g_1 g_2)$ and $\rho(g_1) \circ \rho(g_2)$ agree on every element $x \in X$, these two permutations are equal. We conclude that $\rho$ is a homomorphism, since $g_1$ and $g_2$ were arbitrary elements of $G$.
 \end{proof}
 
 
@@ -96,7 +96,7 @@ Equivalent representations are fundamentally "the same" in some sense, but to ma
 
 \begin{defn}
 \label{rep-def-1}
-Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\varphi\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
  
 
 
@@ -119,10 +119,10 @@ The definitions of a linear representation given in \ref{rep-def-1} and \ref{rep
  \begin{proof}
 %\leavevmode
  \begin{itemize}
-\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\varphi \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \varphi(g)(v)$.  We check that this action preserves the linear structure of V.
-\\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \varphi(g) (v_1 + v_2) = \varphi(g)(v_1) + \varphi(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
-\\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \varphi(g)(kv) = k (\varphi(g)(v)) = k (g \cdot v)$.
-\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\varphi \colon G \to S_V$ given by $\varphi(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\varphi(G)$ of $G$ under $\varphi$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$, we have
+\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\rho \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \rho(g)(v)$.  We check that this action preserves the linear structure of V.
+\\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \rho(g) (v_1 + v_2) = \rho(g)(v_1) + \rho(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
+\\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \rho(g)(kv) = k (\rho(g)(v)) = k (g \cdot v)$.
+\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\rho \colon G \to S_V$ given by $\rho(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\rho(G)$ of $G$ under $\rho$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$, we have
 \begin{align*}
 \sigma_g (kv) &= g \cdot (kv) && \text{(by definition of $\sigma_g$)} \\
 		&= k (g \cdot v) && \text{(by property \ref{rep-axiom-1})} \\
@@ -134,22 +134,22 @@ Also, for any $v_1, v_2 \in V$ we have
 		&= g \cdot v_1 + g \cdot v_2 && \text{(by property \ref{rep-axiom-2})} \\
 		&= \sigma_g(v_1) + \sigma_g(v_2) && \text{(by definition of $\sigma_g$)}.
 \end{align*}
-Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a homomorphism $\varphi \colon G \to GL(V)$.
+Thus $\sigma_g$ is linear, and $\rho(G) \subset GL(V)$ proves that we  have a homomorphism $\rho \colon G \to GL(V)$.
 
 \end{itemize}
  \end{proof}
- \begin{defn}Let $G$ be a group, let $F$ be a field, let $V$ be a vector space over $F$, and let $\varphi \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of $V$ over $F$.  
+ \begin{defn}Let $G$ be a group, let $F$ be a field, let $V$ be a vector space over $F$, and let $\rho \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of $V$ over $F$.  
  \end{defn}
 % ============== Examples of Representations ===========%
  \begin{example}
  \begin{enumerate}
-\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\varphi \colon G \to GL(V)$ defined by $\varphi(g) = 1$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
+\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = 1$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
 
 \item If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$.  
 
 \item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This representation is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
 
-\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\varphi \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\varphi(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\varphi \colon G \to GL(\mathbb{C})$ by letting $\varphi(g) = 1$ if $g \in H$ and $\varphi(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
+\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
 \end{enumerate}
  \end{example}
@@ -157,15 +157,15 @@ Thus $\sigma_g$ is linear, and $\varphi(G) \subset GL(V)$ proves that we  have a
 %=========Homomorphisms===================%
 
 \begin{defn}
-A \textbf{homomorphism} between two representations $\varphi_1 \colon G \to GL(V)$ and $\varphi_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. a map $\psi$ such that \[ \psi ( \varphi_1 (g)(v)) = \varphi_2(g) (\psi(v)) \quad \forall v \in V, g \in G \]  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
+A \textbf{homomorphism} between two representations $\rho_1 \colon G \to GL(V)$ and $\rho_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. a map $\psi$ such that \[ \psi ( \rho_1 (g)(v)) = \rho_2(g) (\psi(v)) \quad \forall v \in V, g \in G \]  An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
 \end{defn}
 \begin{note}
-If we have representations $(\varphi_1, V)$ and $(\varphi_2, W)$ and an isomorphism of vector spaces $\psi \colon V \to W$ then we can rewrite the compatibility requirement above as $\varphi_2(g) = \psi \circ \varphi_1(g) \circ \psi^{-1}$ for all $g \in G$.
+If we have representations $(\rho_1, V)$ and $(\rho_2, W)$ and an isomorphism of vector spaces $\psi \colon V \to W$ then we can rewrite the compatibility requirement above as $\rho_2(g) = \psi \circ \rho_1(g) \circ \psi^{-1}$ for all $g \in G$.
 \end{note}
 
-Given any representation $(\varphi, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \varphi(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\varphi, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
+Given any representation $(\rho, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\rho, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
 
-Suppose that we have two representations $\varphi_1 \colon G \to GL_n(F)$ and $\varphi_2 \colon G \to GL_m(F)$ given by $\varphi_1(g) = X_g$ and $\varphi_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\varphi_1 \colon G \to GL_n(F)$ and $\varphi_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\varphi_1(g) = A \varphi_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
+Suppose that we have two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_m(F)$ given by $\rho_1(g) = X_g$ and $\rho_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\rho_1(g) = A \rho_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
 \begin{prop}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
 \end{prop}
@@ -178,13 +178,13 @@ The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}
 \section{Representations of Cyclic Groups}
 %----------------------------------------------------------------------------------------
 \begin{example}[Representations of $\mathbb{Z}$]
-We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\varphi \colon \mathbb{Z} \to GL_n (\mathbb{C})$.  For $\varphi$ to be a group homomorphism requires that $\varphi(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\varphi(n) = \varphi( 1 + \ldots + 1) = \varphi(1)^n$.  Thus $\varphi$ is completely determined by the matrix $\varphi(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
+We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\rho \colon \mathbb{Z} \to GL_n (\mathbb{C})$.  For $\rho$ to be a group homomorphism requires that $\rho(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\rho(n) = \rho( 1 + \ldots + 1) = \rho(1)^n$.  Thus $\rho$ is completely determined by the matrix $\rho(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
 \end{example}
 
 \begin{example}[Representations of the cyclic group of order $n$]
-We shall classify all representations of the cyclic group $G = \{ g, g^2, \ldots, g^{n-1}, g^n=1\}$ of order $n$. Consider a representation $\varphi \colon G \to GL(V)$.  As in the previous example, we know that $\varphi(1) = \text{Id}$ and $\varphi(g^k) = \varphi(g)^k$.  Thus our representation $\varphi$ is determined completely by the linear transformation $\varphi(g)$.   It will be helpful to fix a basis of $V$ so that we may view $\varphi(g)$ as a matrix.  Recall from linear algebra that there exists a basis in which $\varphi(g)$ takes the \textit{Jordan canonical form}
+We shall classify all representations of the cyclic group $G = \{ g, g^2, \ldots, g^{n-1}, g^n=1\}$ of order $n$. Consider a representation $\rho \colon G \to GL(V)$.  As in the previous example, we know that $\rho(1) = \text{Id}$ and $\rho(g^k) = \rho(g)^k$.  Thus our representation $\rho$ is determined completely by the linear transformation $\rho(g)$.   It will be helpful to fix a basis of $V$ so that we may view $\rho(g)$ as a matrix.  Recall from linear algebra that there exists a basis in which $\rho(g)$ takes the \textit{Jordan canonical form}
 
-\[ \varphi(g) = \begin{bmatrix}
+\[ \rho(g) = \begin{bmatrix}
     J_1 & 0 & \dots  &0 \\
   0 & J_2  & \dots & 0 \\
     \vdots & \vdots  & \ddots & \vdots \\
@@ -199,7 +199,7 @@ where each \textit{Jordan block} $J_k$ is of the form
     \vdots & \ddots & \ddots & \ddots & \ddots  & 1\\
     0& 0& 0 & \dots  & 0  &\lambda
 \end{bmatrix}. \]
-Now $I = \varphi(g)^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block $J_k$ as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
+Now $I = \rho(g)^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block $J_k$ as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
 \[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n \]. The following lemma will show that in fact $N=0$. 
 \begin{lemma}
 Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the positions $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
@@ -218,19 +218,19 @@ Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any in
 \end{proof}
 \end{lemma}
 
-Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k > 0$ would yield some non-zero non-diagonal entries (in the positions $(i,j)$ where $j= i + k$) and hence our sum could not equal the identity matrix.  We must conclude that $N = 0$, $J_k = \lambda \text{Id}$ is a $1 \times 1$ block, and $J_k ^n = \lambda ^ n \text{Id}$.  Thus $\varphi(g)$ is a diagonal matrix with $n$th roots of unity as diagonal entries. 
+Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k > 0$ would yield some non-zero non-diagonal entries (in the positions $(i,j)$ where $j= i + k$) and hence our sum could not equal the identity matrix.  We must conclude that $N = 0$, $J_k = \lambda \text{Id}$ is a $1 \times 1$ block, and $J_k ^n = \lambda ^ n \text{Id}$.  Thus $\rho(g)$ is a diagonal matrix with $n$th roots of unity as diagonal entries. 
 
-To summarize, every $m$-dimensional representation $\varphi$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (with the right choice of basis) as $m \times m$ diagonal matrices all with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\varphi(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
+To summarize, every $m$-dimensional representation $\rho$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (with the right choice of basis) as $m \times m$ diagonal matrices all with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\rho(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
 \end{example}
 
 \section{Constructions from Linear Algebra}
-\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\varphi(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\varphi(g) \restriction_W$.
+\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
 \end{defn}
 
-From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \varphi(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\varphi(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\varphi(g)(v) + W$ and $\varphi(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
+From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \rho(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\rho(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\rho(g)(v) + W$ and $\rho(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
 
 \begin{defn}
-Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \varphi(g)(v) + W$.
+Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \rho(g)(v) + W$.
 \end{defn}
 
 Recall also from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
@@ -261,16 +261,16 @@ A representation is said to be \textbf{irreducible} if it contains no proper inv
 \begin{thm} Every complex representation of a finite abelian group is completely reducible into irreducible representations of dimension $1$.  
 \end {thm}
 \begin{proof}
-Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\varphi(g)^n = Id$.    Hence the minimal polynomial of $\varphi(g)$ divides  $x^n -1$.  Recall that $x^n-1$ has $n$ distinct roots over $\mathbb{C}$, which are generated by taking powers of $\xi = e^{\frac{2 \pi i}{n}}$.  This means that the minimal polynomial $\varphi(g)$ factors into linear factors only over $\mathbb{C}$ so that $\varphi(g)$ is diagonalizable.  We conclude that each $\varphi(g)$ is (separately) diagonalizable since $g \in G$ was arbitrary.
+Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    Hence the minimal polynomial of $\rho(g)$ divides  $x^n -1$.  Recall that $x^n-1$ has $n$ distinct roots over $\mathbb{C}$, which are generated by taking powers of $\xi = e^{\frac{2 \pi i}{n}}$.  This means that the minimal polynomial $\rho(g)$ factors into linear factors only over $\mathbb{C}$ so that $\rho(g)$ is diagonalizable.  We conclude that each $\rho(g)$ is (separately) diagonalizable since $g \in G$ was arbitrary.
 
 Now, given any two elements $g_1, g_2 \in G$ we have 
 
 \begin{align*}
-\varphi(g_1) \varphi(g_2)&= \varphi(g_1 g_2)&& \text{(since $\varphi$ is a homomorphism)} \\
-		&=  \varphi(g_2 g_1) && \text{(since $G$ is abeilian)} \\
-		&= \varphi(g_2) \varphi(g_1) && \text{(since $\varphi$ is a homomorphism)}.
+\rho(g_1) \rho(g_2)&= \rho(g_1 g_2)&& \text{(since $\rho$ is a homomorphism)} \\
+		&=  \rho(g_2 g_1) && \text{(since $G$ is abeilian)} \\
+		&= \rho(g_2) \rho(g_1) && \text{(since $\rho$ is a homomorphism)}.
 \end{align*}
-Thus the matrices $\left\{ \varphi(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \varphi(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
+Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
 We recall the following definition from linear algebra:
@@ -285,8 +285,8 @@ Let $V$ be a complex vector space.  A \textbf{Hermitian inner product} on $V$ is
 \end{defn}
 
 \begin{defn}
-A representation $\varphi$ of $G$ on a complex vector space $V$ is \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle \cdot{,}\cdot \rangle$ which is preserved by the action of $G$, that is, 
-\[ \langle v , w \rangle = \langle \varphi(g)(v) , \varphi(g)(w) \rangle \quad \forall v,w \in V, g \in G. \]
+A representation $\rho$ of $G$ on a complex vector space $V$ is \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle \cdot{,}\cdot \rangle$ which is preserved by the action of $G$, that is, 
+\[ \langle v , w \rangle = \langle \rho(g)(v) , \rho(g)(w) \rangle \quad \forall v,w \in V, g \in G. \]
 A representation is said to be \textbf{unitarisable} if it can be equipped with such a product (even without one being specified).
 \end{defn}
 
@@ -294,19 +294,19 @@ A representation is said to be \textbf{unitarisable} if it can be equipped with 
 \end {thm}
 \begin{proof}
 Take any Hermetian inner product on V, say $\langle \cdot{,}\cdot \rangle'$.  We define a new inner product on V by \textit{averaging over} $G$:
-\[ \langle v {,}w  \rangle \defeq \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g)v {,} \varphi(g)w \rangle'. \]
+\[ \langle v {,}w  \rangle \defeq \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g)v {,} \rho(g)w \rangle'. \]
 
 This new inner product satifies properties \ref{hip-1},  \ref{hip-2}, and  \ref{hip-3} of Definition \ref{hip} by linearity.  It remains to check positivity (\ref{hip-4}).  Clearly $\langle v {,} v \rangle = 0$ when $v =0$, since each term of the sum will equal zero.  In the case where $v \neq 0$,  observe that
 
-\[ \langle v {,} v \rangle =\frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g)v {,} \varphi(g)v \rangle' \geq 0\]
+\[ \langle v {,} v \rangle =\frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g)v {,} \rho(g)v \rangle' \geq 0\]
 
-since each term of the sum is non-negative by the positivity of $\langle \cdot{,}\cdot \rangle'$.  The only problem would occur if each term of this sum is equal to zero.  But $\langle \varphi(e) v {,} \varphi(e) v \rangle ' = \langle v {,} v\rangle' > 0$.  Thus $\langle v {,} v \rangle > 0$.  
+since each term of the sum is non-negative by the positivity of $\langle \cdot{,}\cdot \rangle'$.  The only problem would occur if each term of this sum is equal to zero.  But $\langle \rho(e) v {,} \rho(e) v \rangle ' = \langle v {,} v\rangle' > 0$.  Thus $\langle v {,} v \rangle > 0$.  
 
 Finally, we show that our new inner product is $G$-invariant.  For any $h \in G$, we have
 \begin{align*}
-\langle \varphi(h) v {,} \varphi(h) w  \rangle &= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(g) \varphi(h)v {,}\varphi(g) \varphi(h)w \rangle' \\
-&= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \varphi(gh)v {,} \varphi(gh)w \rangle' && \text{(since $\varphi$ is a homomorphism)} \\
-&= \frac{1}{|G|} \mathlarger{\sum}_{k \in G} \langle \varphi(k)v {,} \varphi(k)w \rangle' && \text{(by a change of variables)}\\
+\langle \rho(h) v {,} \rho(h) w  \rangle &= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g) \rho(h)v {,}\rho(g) \rho(h)w \rangle' \\
+&= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(gh)v {,} \rho(gh)w \rangle' && \text{(since $\rho$ is a homomorphism)} \\
+&= \frac{1}{|G|} \mathlarger{\sum}_{k \in G} \langle \rho(k)v {,} \rho(k)w \rangle' && \text{(by a change of variables)}\\
 &= \langle v {,} w \rangle.
 \end{align*}
 \end{proof}
@@ -365,7 +365,7 @@ An \textbf{algebra} over a field $K$ is a ring with unit, containing a distingui
 \end{defn}
 
 \begin{defn}
-Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} $\text{End}^G(V)$ is the space of linear self-maps $\phi \colon V \to V$ which commute with the group action, that is, $\varphi(g) \circ \phi = \phi \circ \varphi(g) \quad \forall g \in G$.  The addition is the usual addition of linear maps (pointwise), and the multiplication is function composition.  The distinguished copy of $K$ is given by $K \text{Id}$.
+Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} $\text{End}^G(V)$ is the space of linear self-maps $\phi \colon V \to V$ which commute with the group action, that is, $\rho(g) \circ \phi = \phi \circ \rho(g) \quad \forall g \in G$.  The addition is the usual addition of linear maps (pointwise), and the multiplication is function composition.  The distinguished copy of $K$ is given by $K \text{Id}$.
 \end{defn}
 
 \begin{thm}\label{schur-lemma}[Schur's Lemma] If $V$ is an irreducible finite-dimensional representation of $G$ over $K$, then $\text{End}^G(V)$ is a finite-dimensional division algebra over $K$.
@@ -387,9 +387,9 @@ Then we define
 Now let $V$ and $W$ be two representations of $G$.
 \begin{defn}
 We can define a representation of $G$ on $V \otimes W$ called the \textbf{tensor product representation}. We define
-\[ \varphi_{V \otimes W} (g) \colon V \otimes W \to V \otimes W \]
+\[ \rho_{V \otimes W} (g) \colon V \otimes W \to V \otimes W \]
 to be the linear map given by
-\[ \varphi_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \varphi_V (g) (a_i) \otimes \varphi_W (g) (b_j).\]
+\[ \rho_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \rho_V (g) (a_i) \otimes \rho_W (g) (b_j).\]
 \end{defn}
 
 
@@ -399,7 +399,7 @@ to be the linear map given by
 
 \section{Character Theory}
 \begin{defn}
-The \textbf{character} of a representation $\varphi \colon G \to GL(V)$ is the function $\chi_V \colon G \to \mathbb{C}$ defined by $\chi_V(g) = \text{Tr}(\varphi(g))$.
+The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function $\chi_V \colon G \to \mathbb{C}$ defined by $\chi_V(g) = \text{Tr}(\rho(g))$.
 \end{defn}
 \begin{note}
 The character is of a representation is not a homorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
@@ -417,7 +417,7 @@ The character is of a representation is not a homorphism in general, since $\tex
 \begin{enumerate}
 \item $\chi_V (h g h^{-1} = \text{Tr}(h g h^{-1}) = \text{Tr}(g h h^{-1}) = \text{Tr} (g) = \chi_V(g)$ for any $g,h \in G$.
 \item $\chi_V(1) = \text{Tr}(\text{Id} _V) = \text{dim } V$.
-\item Since $G$ is finite, we have seen that $\varphi(g)$ is a diagonal matrix with roots of unity along the diagonal with the right choice of basis.  The inverse of a root of unity is given by its complex conjugate, so under this same basis, $\varphi(g)^{-1}$ is clearly given by $\overline{\varphi(g)}$.  Thus, $\chi_V(g^{-1}) = \text{Tr}(\varphi(g^{-1})) = \text{Tr}(\varphi(g)^{-1}) = \text{Tr}(\overline{\varphi(g)}) = \overline{ \text{Tr} (\varphi(g))} = \overline {\chi_V(g)}$.
+\item Since $G$ is finite, we have seen that $\rho(g)$ is a diagonal matrix with roots of unity along the diagonal with the right choice of basis.  The inverse of a root of unity is given by its complex conjugate, so under this same basis, $\rho(g)^{-1}$ is clearly given by $\overline{\rho(g)}$.  Thus, $\chi_V(g^{-1}) = \text{Tr}(\rho(g^{-1})) = \text{Tr}(\rho(g)^{-1}) = \text{Tr}(\overline{\rho(g)}) = \overline{ \text{Tr} (\rho(g))} = \overline {\chi_V(g)}$.
 \end{enumerate}
 \end{proof}
 
