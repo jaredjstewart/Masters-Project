@@ -372,10 +372,23 @@ g &\mapsto \rho_{\text{Hom}(V,W)}(g).
 \end{prop}		
 \begin{proof}		
 We must check two things:		
-\begin{enumerate}		
-\item For all $g \in G$,  $\rho_{\text{Hom}(V,W)}(g)$ is invertible.		
-\item The map $g \mapsto  \rho_{\text{Hom}(V,W)}(g)$ is a homomorphism.		
+\begin{enumerate}			
+\item The map $g \mapsto  \rho_{\text{Hom}(V,W)}(g)$ is a homomorphism.	
+\item For every $g \in G$,  $\rho_{\text{Hom}(V,W)}(g)$ is invertible.		
 \end{enumerate}		
+First, we check that
+\begin{align*}
+\rho_{\text{Hom}(V,W)}(g) \circ \rho_{\text{Hom}(V,W)}(h) \colon f &\mapsto \rho_{\text{Hom}(V,W)} (g) ( \rho_W (h) \circ f \circ \rho_V (h^ {-1})) \\
+&= \rho_W (g) \circ \rho_w (h) \circ f \circ \rho_V (h^{-1} ) \circ \rho_V(g^{-1}) \\
+&= \rho_W (gh) \circ f \circ \rho_V (g ^{-1} h ^{-1}) \\
+&= \rho_{\text{Hom}(V,W)}(gh)(f)
+\end{align*}
+so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  It follows that $\rho_{\text{Hom}(V,W)}(g^{-1})$ is inverse to $\rho_{\text{Hom}(V,W)}(g)$:
+\begin{align*}
+\rho_{\text{Hom}(V,W)}(g) \circ \rho_{\text{Hom}(V,W)}(g^{-1}) \ &= \rho_{\text{Hom}(V,W)} (e) \\ 
+&= \text{Id}_{\text{Hom}(V,W)} \\
+&= \rho_{\text{Hom}(V,W)}(g^{-1}) \circ \rho_{\text{Hom}(V,W)}(g).
+\end{align*}
 \end{proof}
 
 \begin{defn}		
@@ -385,7 +398,7 @@ Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from 
 If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}^G(V,W)=\{0\}$.
 \end{cor}
 \begin{proof}
-Let $0 \neq \phi \in \text{Hom}_G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v) = 0$ implies that  $\phi (gv) = g  \phi(v) = g  0 =0$, i.e. $ gv \in \text{ker}(\phi)$. Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi (gw) = g \phi(w) = gv$, i.e. $gv \in \text{im}(\phi)$.  Thus $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant.  
+We claim $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant. Let $0 \neq \phi \in \text{Hom}_G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v) = 0$ implies that  $\phi (gv) = g  \phi(v) = g  0 =0$, i.e. $ gv \in \text{ker}(\phi)$. Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi (gw) = g \phi(w) = gv$, i.e. $gv \in \text{im}(\phi)$.    
 
 Irreducibility yields $\text{ker}(\phi) = 0 $ or $V$ and $\text{im}(\phi) = 0$ or  $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi) = 0$.  This means that $\phi$ is injective,  $\text{im}(\phi) = W$, and $\phi$ is an isomorphism. 
 
