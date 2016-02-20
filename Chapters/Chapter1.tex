@@ -85,14 +85,23 @@ By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomo
 %
 \section{The Definition of a Representation}
 %----------------------------------------------------------------------------------------
+\begin{defn}
+Let $G$ be a group.  A \textbf{representation} of $G$ is a homomorphism $\rho \colon  G \to GL_n (\mathbb{C})$ for some positive integer n.
+\end{defn}
+
+\begin{defn}
+Two representations $\rho_1 \colon  G \to GL_n (\mathbb{C})$  and $\rho_2 \colon  G \to GL_n (\mathbb{C})$ of $G$ are \textbf{equivalent} if there exists $P \in GL_n (\mathbb{C})$ such that $\rho_2 = P^{-1} \rho_1 P$.
+\end{defn}
+Equivalent representations are fundamentally "the same" in some sense, but to make this precise we need to shift our thinking to linear maps instead of matrices.
 
 \begin{defn}
 \label{rep-def-1}
-Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\varphi\colon G \to GL(V)$. \end{defn}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\varphi\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
  
- %More explicitly, a representation is a map $\rho \colon G \rightarrow GL(V)$ such that \[ \rho (g_1 g_2) = \rho(g_1) \rho(g_2) \quad \forall g_1, g_2 \in G. \]
 
-\begin{defn}[Alternative definition] \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is any action of $G$ on $V$ which preserves the linear structure of $V$, that is, 
+
+
+\begin{defn}[Alternative definition] \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
 \begin{align}
 \label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
 \label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
@@ -377,10 +386,10 @@ Then we define
 
 Now let $V$ and $W$ be two representations of $G$.
 \begin{defn}
-We can define a representation of $G$ on $V \bigotimes W$ called the \textbf{tensor product representation}. We define
-\[ \varphi_{V \bigotimes W} (g) \colon V \bigotimes W \to V \bigotimes W \]
+We can define a representation of $G$ on $V \otimes W$ called the \textbf{tensor product representation}. We define
+\[ \varphi_{V \otimes W} (g) \colon V \otimes W \to V \otimes W \]
 to be the linear map given by
-\[ \varphi_{V \bigotimes W} (g) \colon a_i \bigotimes b_j \mapsto \varphi_V (g) (a_i) \bigotimes \varphi_W (g) (b_j).\]
+\[ \varphi_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \varphi_V (g) (a_i) \otimes \varphi_W (g) (b_j).\]
 \end{defn}
 
 
@@ -392,6 +401,9 @@ to be the linear map given by
 \begin{defn}
 The \textbf{character} of a representation $\varphi \colon G \to GL(V)$ is the function $\chi_V \colon G \to \mathbb{C}$ defined by $\chi_V(g) = \text{Tr}(\varphi(g))$.
 \end{defn}
+\begin{note}
+The character is of a representation is not a homorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
+\end{note}
 
 \begin{prop} (Basic Properties)
 \begin{enumerate}
@@ -400,6 +412,7 @@ The \textbf{character} of a representation $\varphi \colon G \to GL(V)$ is the f
 \item $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
 \end{enumerate}
 \end{prop}
+
 \begin{proof}
 \begin{enumerate}
 \item $\chi_V (h g h^{-1} = \text{Tr}(h g h^{-1}) = \text{Tr}(g h h^{-1}) = \text{Tr} (g) = \chi_V(g)$ for any $g,h \in G$.
@@ -414,3 +427,50 @@ A \textbf{class function} on $G$ is a function on $G$ whose values are invariant
 \begin{note}
 The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
 \end{note}
+
+\begin{prop}
+Isomorphic representations have the same character.
+\end{prop}
+\begin{proof}
+We have seen (CITE ME!!!) that isomorphic representations can be described by the same matrices in the right choice of basis.
+\end{proof}
+We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
+
+\begin{prop}
+Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$ with characters $\chi_V$ and $\chi_W$.
+\begin{enumerate}
+\item $\chi _{V \oplus W} = \chi_V + \chi_W$.
+\item $\chi_{V \otimes W} = \chi_V \cdot \chi_W$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+\begin{enumerate}
+\item Pick bases for $V$ and $W$, so that $\rho_V (g)$ and $\rho_W (g)$ are described by matrices $M$ and $N$.  Then $\rho_{V \oplus W} (g)$ is described by the block-diagonal matrix
+\[ \begin{bmatrix}
+M & 0 \\
+0 & N \\
+\end{bmatrix} \]
+
+So we have $\text{Tr} (\rho_{V \oplus W} (g)) = \text{Tr} (M) + \text{Tr}(N) = \text{Tr}(\rho_V (g)) + \text{Tr} (\rho_W (g))$.
+
+\item $\rho_ {V \otimes W}$ is given by the matrix
+
+\[ [M \otimes N ]_{js, it} = M_{ji} N_{st} \]
+
+%Continue (pg 56) %
+\end{enumerate}
+\end{proof}
+
+\begin{prop}
+\begin{enumerate}
+\item Let $\{ V_i \}$ be the irreducible representations of $G$, with $d_i$  the dimension of  $V_i$ and $\chi_i$ the corresponding irreducible character.  Then
+\[ \chi_{\text{reg}} = d_1 \chi_1 + \ldots + d_r \chi_r \]
+
+\item \[  
+\chi_{\text{reg}} (g) = \begin{cases} 
+|G| &\mbox{if } g = e \\ 
+0 & \mbox{if } g \neq e 
+\end{cases}  \]
+
+\end{enumerate}
+\end{prop}
