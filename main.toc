@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {1.4}Constructions from Linear Algebra}{6}{section.31}
 \contentsline {section}{\numberline {1.5}Complete Reducibility and Unitarity}{6}{section.35}
 \contentsline {section}{\numberline {1.6}Schur's Lemma}{8}{section.52}
-\contentsline {section}{\numberline {1.7}Tensor Product}{9}{section.59}
-\contentsline {section}{\numberline {1.8}Isotypical Decomposition}{10}{section.62}
-\contentsline {section}{\numberline {1.9}Character Theory}{10}{section.63}
-\contentsline {chapter}{Bibliography}{13}{chapter*.82}
+\contentsline {section}{\numberline {1.7}Tensor Product}{10}{section.63}
+\contentsline {section}{\numberline {1.8}Isotypical Decomposition}{11}{section.66}
+\contentsline {section}{\numberline {1.9}Character Theory}{11}{section.67}
+\contentsline {chapter}{Bibliography}{13}{chapter*.86}
