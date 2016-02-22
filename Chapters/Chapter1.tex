@@ -335,14 +335,7 @@ Every complex representation of a finite group is completely reducible.
 Any such representation is unitarisable y by Theorem \ref{weyl-unitary-trick}.  We can then apply Theorem \ref{full-red-of-unitary-reps} to obtain full reduciblility.
 \end{proof}
 
-
-\section{Schur's Lemma}
-\begin{thm}\label{schur-lemma-over-c}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible $G$-representation over $\mathbb{C}$, then evey linear operator $\phi \colon V \to V$ commuting with $G$ is a scalar.
-\end{thm}
-\begin{proof}
-Let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so by irreducibility $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
-\end{proof}
-
+\section{Vector Spaces of Linear Maps}
 \begin{defn}
 Let $V$ and $W$ be vector spaces.  Recall that the set $\textbf{Hom}\mathbf{(V,W)}$ of linear maps from $V$ to $W$ is itself a vector space.  If $f_1, f_2$ are two linear maps from $V$ to $W$, then we define their sum by
 \begin{align*}		
@@ -360,7 +353,7 @@ Now suppose we have representations $\rho_V \colon G \to GL(V)$ and $\rho_W \col
  \rho_{\text{Hom}(V,W)}(g)  \colon \text{Hom}(V,W) &\to \text{Hom}(V,W) \\		
  f &\mapsto \rho_{W}(g) \circ f \circ \rho_{V}(g^{-1})
  \end{align*}		
-for all $g \in G$. Note that $\rho_{\text{Hom}(V,W)}(g)(f)$ is certainly a linear map $V \to W$ since the composition of linear maps is linear.
+for all $g \in G$. Note that $\rho_{\text{Hom}(V,W)}(g)(f)$ is certainly a linear map from $V$ to $W$ since the composition of linear maps is linear.
 \end{defn}
 
 \begin{prop} $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.  That is, the map		
@@ -383,17 +376,48 @@ First, we check that
 &= \rho_W (gh) \circ f \circ \rho_V (g ^{-1} h ^{-1}) \\
 &= \rho_{\text{Hom}(V,W)}(gh)(f)
 \end{align*}
-so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  It follows that $\rho_{\text{Hom}(V,W)}(g^{-1})$ is inverse to $\rho_{\text{Hom}(V,W)}(g)$:
+so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  We can use this fact to see that $\rho_{\text{Hom}(V,W)}(g^{-1})$ is inverse to $\rho_{\text{Hom}(V,W)}(g)$ as
 \begin{align*}
 \rho_{\text{Hom}(V,W)}(g) \circ \rho_{\text{Hom}(V,W)}(g^{-1}) \ &= \rho_{\text{Hom}(V,W)} (e) \\ 
 &= \text{Id}_{\text{Hom}(V,W)} \\
 &= \rho_{\text{Hom}(V,W)}(g^{-1}) \circ \rho_{\text{Hom}(V,W)}(g).
 \end{align*}
+Thus $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.
 \end{proof}
 
 \begin{defn}		
 Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$ forms a subspace of $\text{Hom}(V,W)$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
 \end{defn} 
+
+\begin{defn}
+Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
+\[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
+\end{defn}
+Note that $V^G$ is a subspace of $V$, and is clearly also a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
+
+\begin{prop}
+Let  $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then the subrepresentation 
+\[ \text{Hom}_G (V,W) \subset \text{Hom} (V,W) \]
+is precisely the invariant subrepresentation $\text{Hom}(V,W) ^G$ of $\text{Hom}(V,W)$.
+\end{prop}
+\begin{proof}
+Let $f \in \text{Hom}(V,W)$.  Then $f$ is an element of the invariant subrepresentation $\text{Hom}(V,W) ^G$ iff we have
+\begin{align*}
+&f = \rho_{\text{Hom}(V,W)} (g)(f)  \quad \forall g \in G \\
+\iff &f = \rho_W (g) \circ f \circ \rho_V (g^{-1}) \quad \forall g \in G \\ 
+\iff & f \circ \rho_V (g) = \rho_W (g) \circ f \quad \forall g \in G \\
+\end{align*}
+which is exactly the condition that $f$ is $G$-linear, i.e. $f \in \text{Hom}_G (V,W)$.
+\end{proof}
+
+
+\section{Schur's Lemma}
+\begin{thm}\label{schur-lemma-over-c}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible $G$-representation over $\mathbb{C}$, then evey linear operator $\phi \colon V \to V$ commuting with $G$ is a scalar.
+\end{thm}
+\begin{proof}
+Let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so by irreducibility $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
+\end{proof}
+
 \begin{cor}
 If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}^G(V,W)=\{0\}$.
 \end{cor}
