@@ -12,5 +12,5 @@
 \contentsline {section}{\numberline {1.7}Schur's Lemma}{10}{section.60}
 \contentsline {section}{\numberline {1.8}Tensor Product}{11}{section.66}
 \contentsline {section}{\numberline {1.9}Isotypical Decomposition}{11}{section.69}
-\contentsline {section}{\numberline {1.10}Character Theory}{11}{section.70}
-\contentsline {chapter}{Bibliography}{15}{chapter*.89}
+\contentsline {section}{\numberline {1.10}Character Theory}{13}{section.73}
+\contentsline {chapter}{Bibliography}{15}{chapter*.92}

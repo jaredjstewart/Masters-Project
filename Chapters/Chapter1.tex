@@ -382,7 +382,7 @@ so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  We can use this fact to s
 &= \text{Id}_{\text{Hom}(V,W)} \\
 &= \rho_{\text{Hom}(V,W)}(g^{-1}) \circ \rho_{\text{Hom}(V,W)}(g).
 \end{align*}
-Thus $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.
+Thus $\rho_{\text{Hom}(V,W)}(g)$ is invertible for every $g \in G$, and $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.
 \end{proof}
 
 \begin{defn}		
@@ -393,7 +393,7 @@ Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from 
 Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
 \[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
 \end{defn}
-Note that $V^G$ is a subspace of $V$, and is clearly also a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
+Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
 
 \begin{prop}
 Let  $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then the subrepresentation 
@@ -405,9 +405,9 @@ Let $f \in \text{Hom}(V,W)$.  Then $f$ is an element of the invariant subreprese
 \begin{align*}
 &f = \rho_{\text{Hom}(V,W)} (g)(f)  \quad \forall g \in G \\
 \iff &f = \rho_W (g) \circ f \circ \rho_V (g^{-1}) \quad \forall g \in G \\ 
-\iff & f \circ \rho_V (g) = \rho_W (g) \circ f \quad \forall g \in G \\
+\iff & f \circ \rho_V (g) = \rho_W (g) \circ f \quad \forall g \in G
 \end{align*}
-which is exactly the condition that $f$ is $G$-linear, i.e. $f \in \text{Hom}_G (V,W)$.
+which is exactly the condition that $f$ is $G$-linear, i.e. that $f \in \text{Hom}_G (V,W)$.
 \end{proof}
 
 
@@ -466,7 +466,73 @@ to be the linear map given by
 
 \section{Isotypical Decomposition}
 
+\begin{lemma}
+Let $U, V, W$ be three vector spaces.  Then we have natural isomorphisms
+\begin{enumerate}
+\item \label{lemma-uvw1} $\text{Hom} (V, U \oplus W) = \text{Hom} (V,U) \oplus \text{Hom} (V,W)$
+\item \label{lemma-uvw2} $\text{Hom} (U \oplus W, V) = \text{Hom} (U,V) \oplus \text{Hom} (W,V)$.
+\end{enumerate}
+Additionally, if $U,V,W$ carry representations of $G$, then (\ref{lemma-uvw1}) and (\ref{lemma-uvw2}) are isomorphisms of representations.
+\end{lemma}
+\begin{proof}
+We have inclusion and projection maps
+\[
+\begin{tikzcd}
+U \arrow[r, hookrightarrow,  shift left,"\iota_{U}"]
+& U \oplus W \arrow[r, twoheadrightarrow, shift left,"\pi_{W}"]
+\arrow[l, twoheadrightarrow, shift left,"\pi_{U}"]
+& W
+\arrow[l, hookrightarrow, shift left, "\iota_{W}"]
+\end{tikzcd}
+ \]
+ given by
+\begin{align*}
+ \iota_U \colon x \mapsto (x , 0) \\
+ \pi_U \colon (x , y) \mapsto x
+ \end{align*}
+ and similarly for $\iota_W$ and $\pi_W$.  It is clear that
+ \[ \text{Id}_{U \oplus W} = \iota_U \circ \pi_U + \iota_W \circ \pi_W. \]
+We also note that the four spaces under consideration all have dimension $(\text{dim } V)(\text{dim } W + \text{dim } U)$.
 
+(\ref{lemma-uvw1}) We define a map
+\begin{align*}
+ \psi \colon \text{Hom}(V, U \oplus W) &\to \text{Hom}(V,U) \oplus \text{Hom}(V,W) \\
+ f  &\mapsto (\pi_U \circ f, \pi_W \circ f). 
+\end{align*}
+We claim that this map has an inverse	given by 
+\begin{align*}
+ \psi^{-1} \colon \text{Hom}(V,U) \oplus \text{Hom}(V,W) &\to \text{Hom}(V, U \oplus W) \\
+ (f_U ,f_W) &\mapsto \iota_U \circ f_U + \iota_W \circ f_W.
+\end{align*}
+Check that
+\begin{align*}
+\psi^{-1} \circ \psi \colon f &\mapsto \iota_U \circ \pi_U \circ f + \iota_W \circ \pi_W \circ f \\
+&= (\iota_U \circ \pi_U + \iota_W \circ \pi_W) \circ f\\
+&= \text{Id}_{\text{Hom}(V,W)} \circ f = f.
+\end{align*}
+Since both vector spaces have the same dimension, $\psi \circ \psi^{-1}$ must also be the identity map, and $\psi$ is an isomorphism of vector spaces.  Now suppose we have representations $\rho_V, \rho_W, \rho_U$ of $G$ on $V, W$ and $U$.  Then we claim $\psi$ is $G$-linear.  Recall that by definition, 
+\[ \rho_{\text{Hom}(V, U \oplus W)}(g)(f) = \rho_{V \oplus W} (g) \circ f \circ \rho_V (g^{-1}).\]
+Observe that for any $g \in G$ and  $f \in \text{Hom}(V, U \oplus W)$,
+\begin{align*}
+ \pi_U \circ ( \rho_{\text{Hom}(V, U \oplus W)}(g)(f) )&= \pi_U \circ \rho_{U \oplus W} (g) \circ f \circ \rho_V (g^{-1}) \\
+ &= \rho_U (g) \circ \pi_U  \circ f \circ \rho_V (g^{-1}) \quad (\text{since } \pi_U \text{ is }G\text{-linear}) \\
+ &=\rho_{\text{Hom}(U,V)}(g)(f)
+ \end{align*}
+ and similarly for $W$, so that 
+ \begin{align*}
+\psi ( \rho_{\text{Hom}(V, U \oplus W)}(g)(f)) &= (\pi_U \circ \rho_{\text{Hom}(V, U \oplus W)}(g)(f), \pi_W \circ \rho_{\text{Hom}(V,U \oplus W)}(g)(f)) \\
+&=(\rho_{\text{Hom}(V,U)}(g)(\pi_U \circ f), \rho_{\text{Hom}(V,W)}(g)(\pi_W \circ f)) \\
+&= \rho_{\text{Hom}(V,U) \oplus \text{Hom}(V,W)}(g)(\pi_U \circ f, \pi_W \circ f).
+ \end{align*}
+Thus $\psi$ is $G$-linear, and we've proved (\ref{lemma-uvw1}).
+
+(\ref{lemma-uvw2})  Define a map
+\begin{align*}
+\phi \colon \text{Hom}(U \oplus W, V) &\to \text{Hom}(U,V) \oplus \text{Hom}(W,V) \\
+&= (f \circ \iota_U, f \circ \iota_W).
+\end{align*}
+We [finish me].  The book says proof is like (1)
+\end{proof}
 
 \section{Character Theory}
 \begin{defn}
