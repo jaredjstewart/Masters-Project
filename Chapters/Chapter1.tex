@@ -487,8 +487,8 @@ U \arrow[r, hookrightarrow,  shift left,"\iota_{U}"]
  \]
  given by
 \begin{align*}
- \iota_U \colon x \mapsto (x , 0) \\
- \pi_U \colon (x , y) \mapsto x
+ \iota_U &\colon x \mapsto (x , 0) \\
+ \pi_U &\colon (x , y) \mapsto x
  \end{align*}
  and similarly for $\iota_W$ and $\pi_W$.  It is clear that
  \[ \text{Id}_{U \oplus W} = \iota_U \circ \pi_U + \iota_W \circ \pi_W. \]
@@ -510,8 +510,8 @@ Check that
 &= (\iota_U \circ \pi_U + \iota_W \circ \pi_W) \circ f\\
 &= \text{Id}_{\text{Hom}(V,W)} \circ f = f.
 \end{align*}
-Since both vector spaces have the same dimension, $\psi \circ \psi^{-1}$ must also be the identity map, and $\psi$ is an isomorphism of vector spaces.  Now suppose we have representations $\rho_V, \rho_W, \rho_U$ of $G$ on $V, W$ and $U$.  Then we claim $\psi$ is $G$-linear.  Recall that by definition, 
-\[ \rho_{\text{Hom}(V, U \oplus W)}(g)(f) = \rho_{V \oplus W} (g) \circ f \circ \rho_V (g^{-1}).\]
+Since both vector spaces have the same dimension, $\psi \circ \psi^{-1}$ must be the identity map as well, and $\psi$ is an isomorphism of vector spaces.  Now suppose we have representations $\rho_V, \rho_W, \rho_U$ of $G$ on $V, W$ and $U$.  Then we claim $\psi$ is $G$-linear.  Recall that by definition, 
+\[ \rho_{\text{Hom}(V, U \oplus W)}(g)(f) = \rho_{U \oplus W} (g) \circ f \circ \rho_V (g^{-1}).\]
 Observe that for any $g \in G$ and  $f \in \text{Hom}(V, U \oplus W)$,
 \begin{align*}
  \pi_U \circ ( \rho_{\text{Hom}(V, U \oplus W)}(g)(f) )&= \pi_U \circ \rho_{U \oplus W} (g) \circ f \circ \rho_V (g^{-1}) \\
