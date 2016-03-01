@@ -395,7 +395,7 @@ Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invari
 \end{defn}
 Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
 
-\begin{prop}
+\begin{prop}\label{invariant-subrprn}
 Let  $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then the subrepresentation 
 \[ \text{Hom}_G (V,W) \subset \text{Hom} (V,W) \]
 is precisely the invariant subrepresentation $\text{Hom}(V,W) ^G$ of $\text{Hom}(V,W)$.
@@ -410,7 +410,7 @@ Let $f \in \text{Hom}(V,W)$.  Then $f$ is an element of the invariant subreprese
 which is exactly the condition that $f$ is $G$-linear, i.e. that $f \in \text{Hom}_G (V,W)$.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{invariant-subrprn-of-dir-sum}
 Let $A$ and $B$ be two representations of $G$.  Then \[ (A \oplus B)^ G = A^G \oplus B^G. \]
 \end{lemma}
 \begin{proof}Observe that
@@ -421,7 +421,7 @@ Let $A$ and $B$ be two representations of $G$.  Then \[ (A \oplus B)^ G = A^G \o
 \end{align*}
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{isomorphism-invariant-subrprns}
 Let $\psi \colon A \to B$ be an isomorphism between representations of $G$. Then $\psi$ induces an isomorphism between their invariant subrepresentations 
 \[ \psi \restriction_{A^G} \colon A^G \to B^G.\]
 \end{lemma}
@@ -490,7 +490,7 @@ to be the linear map given by
 
 \section{Isotypical Decomposition}
 
-\begin{lemma}
+\begin{lemma}\label{lemma-uvw}
 Let $U, V, W$ be three vector spaces.  Then we have natural isomorphisms
 \begin{enumerate}
 \item \label{lemma-uvw1} $\text{Hom} (V, U \oplus W) = \text{Hom} (V,U) \oplus \text{Hom} (V,W)$
@@ -559,16 +559,23 @@ We [finish me].  The book says proof is like (1)
 \end{proof}
 
 \begin{cor}
-If  $U, V, W$ are representations of $G$, then there are natural isomorphismis
+If  $U, V, W$ are representations of $G$, then there are natural isomorphisms
 \begin{enumerate}
 \item $\text{Hom}_G(V, U \oplus W) = \text{Hom}_G(V,U) \oplus \text{Hom}_G(V,W)$
 \item $\text{Hom}_G(U \oplus W, V) = \text{Hom}_G(U, V) \oplus \text{Hom}_G(W ,V)$
 \end{enumerate}
 \end{cor}
 \begin{proof}
+(1). By Lemma (\ref{lemma-uvw}), we have an isomorphism of representations 
+\[ \psi \colon \text{Hom}(V, U \oplus W) \to \text{Hom}(V, U) \oplus \text{Hom}(V,W). \]
+We can apply Lemma (\ref{isomorphism-invariant-subrprns}) to obtain an isomorphism on the invariant subrepresentations
+\[\text{Hom}(V, U \oplus W)^G \cong (\text{Hom}(V, U) \oplus \text{Hom}(V,W))^G.\]
+Then Lemma (\ref{invariant-subrprn-of-dir-sum}) implies that 
+\[\text{Hom}(V, U \oplus W)^G \cong \text{Hom}(V, U)^G \oplus \text{Hom}(V,W)^G. \]
+The statement now follows from Proposition (\ref{invariant-subrprn}).
 
+(2). The argument is similar to the one above.
 \end{proof}
-
 
 \begin{prop}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
