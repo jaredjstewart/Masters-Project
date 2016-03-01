@@ -558,7 +558,7 @@ Thus $\psi$ is $G$-linear, and we've proved (\ref{lemma-uvw1}).
 We [finish me].  The book says proof is like (1)
 \end{proof}
 
-\begin{cor}
+\begin{cor}\label{invariant-subrprns-hom-spaces}
 If  $U, V, W$ are representations of $G$, then there are natural isomorphisms
 \begin{enumerate}
 \item $\text{Hom}_G(V, U \oplus W) = \text{Hom}_G(V,U) \oplus \text{Hom}_G(V,W)$
@@ -577,7 +577,7 @@ The statement now follows from Proposition (\ref{invariant-subrprn}).
 (2). The argument is similar to the one above.
 \end{proof}
 
-\begin{prop}
+\begin{prop}\label{schurs-lemma-homvw}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
 \[ \text{dim Hom}_G (V,W) =  \begin{cases} 
 1 & \mbox{if $V$ and $W$ are isomorphic}  \\
@@ -591,11 +591,16 @@ On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for 
 \end{proof}
 
 \begin{prop}
-Let $\rho \colon G \to GL(V)$ be a representation, and let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreducibles.  Let $W$ be any irreducible representation of $G$.  Then the number of irreducible representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to the dimension of $\text{Hom}_G(W,V)$, and also equal to the dimension of $\text{Hom}_G(V,W)$.
+Let $\rho \colon G \to GL(V)$ be a representation, and let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreducibles.  Let $W$ be any irreducible representation of $G$.  Then the number of irreducible representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to the dimension of $\text{Hom}_G(V,W)$, and also equal to the dimension of $\text{Hom}_G(W,V)$.
 \end{prop}
 \begin{proof}
-
+We know from Proposition (\ref{schurs-lemma-homvw}) that the number of irreducibles representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
+By Corollary (\ref{invariant-subrprns-hom-spaces}), \[ \text{Hom}_G(V,W) = \bigoplus_{i=1}^s \text{Hom}_G(U_i, W) \]
+so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
+The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U_i)$ in place of $\text{Hom}_G(V,W)$ and $\text{Hom}_G(U_i,W)$.
 \end{proof}
+
+
 
 
 \section{Character Theory}
