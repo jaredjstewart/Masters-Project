@@ -410,6 +410,30 @@ Let $f \in \text{Hom}(V,W)$.  Then $f$ is an element of the invariant subreprese
 which is exactly the condition that $f$ is $G$-linear, i.e. that $f \in \text{Hom}_G (V,W)$.
 \end{proof}
 
+\begin{lemma}
+Let $A$ and $B$ be two representations of $G$.  Then \[ (A \oplus B)^ G = A^G \oplus B^G. \]
+\end{lemma}
+\begin{proof}Observe that
+\begin{align*}
+(a,b) \in (A \oplus B)^G \iff & \rho_{A \oplus B} (g) (a,b) = (a,b) &  \forall g \in G \\
+\iff & (\rho_A (g) (a), \rho_B (g) (b)) = (a,b) &  \forall g \in G \\
+\iff & (a,b) \in A^G \oplus B^G.
+\end{align*}
+\end{proof}
+
+\begin{lemma}
+Let $\psi \colon A \to B$ be an isomorphism between representations of $G$. Then $\psi$ induces an isomorphism between their invariant subrepresentations 
+\[ \psi \restriction_{A^G} \colon A^G \to B^G.\]
+\end{lemma}
+\begin{proof}
+Clearly the restriction of $\psi$ to $A^G \subset A$ induces an isomorphism, but we must verify that the image of this restriction actually equals $B^G$.  We check that 
+\begin{align*}
+a \in A^G \iff & \rho_A (g) (a) = a & \forall g \in G \\
+\iff & \psi( \rho_A (g)(a)) = \psi (a) & \forall g \in G \\
+\iff & \rho_B(g) \psi(a) = \psi(a) & \forall g \in G \\
+\iff & \psi(a) \in B^G.
+\end{align*}
+\end{proof}
 
 \section{Schur's Lemma}
 \begin{thm}\label{schur-lemma-over-c}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible $G$-representation over $\mathbb{C}$, then evey linear operator $\phi \colon V \to V$ commuting with $G$ is a scalar.
@@ -533,6 +557,39 @@ Thus $\psi$ is $G$-linear, and we've proved (\ref{lemma-uvw1}).
 \end{align*}
 We [finish me].  The book says proof is like (1)
 \end{proof}
+
+\begin{cor}
+If  $U, V, W$ are representations of $G$, then there are natural isomorphismis
+\begin{enumerate}
+\item $\text{Hom}_G(V, U \oplus W) = \text{Hom}_G(V,U) \oplus \text{Hom}_G(V,W)$
+\item $\text{Hom}_G(U \oplus W, V) = \text{Hom}_G(U, V) \oplus \text{Hom}_G(W ,V)$
+\end{enumerate}
+\end{cor}
+\begin{proof}
+
+\end{proof}
+
+
+\begin{prop}
+Let $V$ and $W$ be irreducible representations of $G$.  Then
+\[ \text{dim Hom}_G (V,W) =  \begin{cases} 
+1 & \mbox{if $V$ and $W$ are isomorphic}  \\
+0 &\mbox{if $V$ and $W$ are not isomorphic}
+\end{cases} \]
+\end{prop}
+\begin{proof}
+Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
+
+On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$, i.e. $h = \lambda f$ for some $\lambda \in \mathbb{C}$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
+\end{proof}
+
+\begin{prop}
+Let $\rho \colon G \to GL(V)$ be a representation, and let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreducibles.  Let $W$ be any irreducible representation of $G$.  Then the number of irreducible representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to the dimension of $\text{Hom}_G(W,V)$, and also equal to the dimension of $\text{Hom}_G(V,W)$.
+\end{prop}
+\begin{proof}
+
+\end{proof}
+
 
 \section{Character Theory}
 \begin{defn}

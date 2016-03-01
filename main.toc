@@ -9,8 +9,8 @@
 \contentsline {section}{\numberline {1.4}Constructions from Linear Algebra}{6}{section.31}
 \contentsline {section}{\numberline {1.5}Complete Reducibility and Unitarity}{6}{section.35}
 \contentsline {section}{\numberline {1.6}Vector Spaces of Linear Maps}{8}{section.52}
-\contentsline {section}{\numberline {1.7}Schur's Lemma}{10}{section.60}
-\contentsline {section}{\numberline {1.8}Tensor Product}{11}{section.66}
-\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{11}{section.69}
-\contentsline {section}{\numberline {1.10}Character Theory}{13}{section.73}
-\contentsline {chapter}{Bibliography}{15}{chapter*.92}
+\contentsline {section}{\numberline {1.7}Schur's Lemma}{10}{section.62}
+\contentsline {section}{\numberline {1.8}Tensor Product}{11}{section.68}
+\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{12}{section.71}
+\contentsline {section}{\numberline {1.10}Character Theory}{14}{section.80}
+\contentsline {chapter}{Bibliography}{17}{chapter*.99}
