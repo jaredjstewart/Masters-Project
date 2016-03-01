@@ -590,7 +590,7 @@ Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma states that the only
 On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$, i.e. $h = \lambda f$ for some $\lambda \in \mathbb{C}$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
 \end{proof}
 
-\begin{prop}
+\begin{prop}\label{num-iso-subrprns}
 Let $\rho \colon G \to GL(V)$ be a representation, and let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreducibles.  Let $W$ be any irreducible representation of $G$.  Then the number of irreducible representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to the dimension of $\text{Hom}_G(V,W)$, and also equal to the dimension of $\text{Hom}_G(W,V)$.
 \end{prop}
 \begin{proof}
@@ -600,7 +600,17 @@ so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
 The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U_i)$ in place of $\text{Hom}_G(V,W)$ and $\text{Hom}_G(U_i,W)$.
 \end{proof}
 
-
+\begin{thm}
+Let $\rho \colon G \to GL(V)$ be a representation, and let
+\begin{align*}
+V = U_1 \oplus \ldots \oplus U_s \\
+V = \tilde{U_1} \oplus \ldots \oplus \tilde{U_r}
+\end{align*}
+be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\tilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
+\end{thm}
+\begin{proof}
+Let $W$ be any irreducible representation of $G$.  By Proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
+\end{proof}
 
 
 \section{Character Theory}
