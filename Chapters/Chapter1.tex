@@ -467,7 +467,7 @@ Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} 
 \end{thm}
 
 \section{Tensor Product}
-Let $V$ and $W$ be two vector spaces over $K$, and assume we have bases $\{ a_1, \ldots, a_n\}$ for $V$  and $\{b_1, \ldots, b_m \}$ for W.
+Let $V$ and $W$ be two finite-dimensional vector spaces over $K$, and assume we have bases $\{ a_1, \ldots, a_n\}$ for $V$  and $\{b_1, \ldots, b_m \}$ for W.
 \begin{defn}
 The \textbf{tensor product} $V \bigotimes_{K} W$ of $V$ and $W$ is the $K$-vector space which has a basis given by the set of symbols 
 \[ \{ a_i \otimes b_j | 1 \leq i \leq n, 1 \leq j \leq m \}. \]
@@ -648,7 +648,7 @@ The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$
 Isomorphic representations have the same character.
 \end{prop}
 \begin{proof}
-We have seen (CITE ME!!!) that isomorphic representations can be described by the same matrices in the right choice of basis.
+We have seen (CITE ME!!!) that isomorphic representations can be described by the same set of matrices in the right choice of basis.
 \end{proof}
 We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
 
@@ -668,12 +668,15 @@ M & 0 \\
 \end{bmatrix} \]
 
 So we have $\text{Tr} (\rho_{V \oplus W} (g)) = \text{Tr} (M) + \text{Tr}(N) = \text{Tr}(\rho_V (g)) + \text{Tr} (\rho_W (g))$.
-
-\item $\rho_ {V \otimes W}$ is given by the matrix
-
+\item $\rho_ {V \otimes W}(g)$ is given by the matrix
 \[ [M \otimes N ]_{js, it} = M_{ji} N_{st} \]
-
-%Continue (pg 56) %
+so
+\begin{align*}
+\text{Tr} (M \otimes N) &= \sum_{i,t} [M \otimes N]_{js,it} \\
+	&= \sum_{i,t} (M_{ii} N_{tt}) \\
+	&= \text{Tr} (M) \text{Tr} (N).
+\end{align*}
+Thus $\chi_{V \otimes W} (g)= \chi_V (g) \chi_W(g)$.
 \end{enumerate}
 \end{proof}
 
