@@ -491,10 +491,19 @@ for all $v \in V, w \in W, k \in K$.
 \end{prop}
 
 \begin{prop}
-Let $\{ e_1, \ldots e_m \}$ and $\{ f_1, \ldots f_n \}$ be bases for $V$ and $W$.  Then $\{ e_i \otimes f_j \}$ where $i \in \{ 1, \ldots, m \}$ and $ j \in \{1, \ldots, n \}$ is a basis for $V \otimes W$.
+Let $\{ e_i \}_{i \in I}$ and $\{ f_j \}_{j \in J}$ be bases for $V$ and $W$.  Then $\{ e_i \otimes f_j | i \in I, j \in J\}$  is a basis for $V \otimes W$.
 \end{prop}
 \begin{proof}
+An elementory tensor in $V \otimes W$ has the form $v \otimes w$.  Write $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$, where all but finitely many of $a_i$ and $b_j$ are 0.  Then 
+\[ m \otimes n = \sum_i a_i e_i \otimes \sum_j b_j f_j  = \sum_{i,j} a_i b_j e_i \otimes f_j\]
+is a linear combination of the tensors $e_i \otimes f_j$.  Since every tensor can be written as a sum of elementary tensors, the elements $e_i \otimes f_j$ span $V \otimes W$.
 
+Now, we must show that this spanning set is linearly independent.  Suppose that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$, where all but finitely many $c_{ij}$ are 0.  We want to show that $c_{ij} = 0$ for every $i \in I, j \in J$. Fix two elements $ i_0 \in I$ and $j_0 \in J$.  To show that $c_{i_0 j_0} = 0$, consider the bilinear map
+\begin{align*}
+V \times W &\to K \\
+(v,w) &\mapsto a_{i_0} b_{j_0}
+\end{align*}
+ where $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$. By the universal property of tensor products, there is a linear map $f_0 \colon V \otimes W \to K$ such that $f_0 (v \otimes w) = a_{i_0} b_{j_0}$ on any elementary tensor $v \otimes w$.  In particular, $f_0 (e_{i_0} \otimes f_{j_0}) = 1$ and  $f_0 (e_{i} \otimes f_{j}) = 0$ for $(i,j) \neq (i_0, j_0)$.  Applying $f_0$ to our assumption that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$ in $V \otimes W$ tells us that $c_{i_0 j_0} =0$ in $K$.  
 \end{proof}
 
 Now let $V$ and $W$ be two representations of $G$.
