@@ -468,27 +468,44 @@ Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} 
 
 \section{Tensor Product}
 \begin{defn}
-Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace spanned by the difference of left- and right-hand sides in the following identities for all $v \in V, w \in W, k \in K$:
+Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace $D$ spanned by all elements of the form
+\begin{align*}
+(v_1 + v_2, w) - (v_1 , w) - (v_2 , w) \\
+(v , w_1 + w_2) - (v , w_1) - (v , w_2) \\
+(k \cdot v , w) -( v , k \cdot w)
+\end{align*}
+for $v, v_1, v_2 \in V, w, w_1, w_2 \in W$, and $k \in K$. When the ground field $K$ is clear it can be omitted from the notation.  The elements of $V \otimes W$ are called \textbf{tensors}, and the coset $v \otimes w$ of $(v,w)$ in $V \otimes W$ is called a \textbf{simple tensor}.  We have the relations
 \begin{align*}
 (v_1 + v_2) \otimes w &= v_1 \otimes w + v_2 \otimes w \\
 v \otimes (w_1 + w_2) &= v \otimes w_1 + v \otimes w_2 \\
 (k \cdot v) \otimes w &= v \otimes (k \cdot w) = k \cdot (v \otimes w).
 \end{align*}
-When the ground field $K$ is clear it can be omitted from the notation.
 \end{defn}
-
 
 \begin{defn}
 Let $V$ and $W$ be vector spaces over $K$.  A map $\phi \colon V \times W \to K$ is called $\mathbf{K}$\textbf{-balanced} if \begin{align*}
 \phi( v_1 + v_2, w) &= \phi(v_1, w) + \phi(v_2, w) \\
 \phi(v, w_1 + w_2) &= \phi (v, w_1) + \phi(v, w_2) \\
-\phi(v, kw) = \phi( kv, w)
+\phi(v, kw) &= \phi( kv, w)
 \end{align*}
 for all $v \in V, w \in W, k \in K$.
 \end{defn}
+\begin{example}
+Mapping $V \times W$ to the free $K$-vector space on $V \times W$, and then passing to the quotient defines a map $\iota \colon V \times W \to V \otimes W$ with $\iota (v,w) = v \otimes w$.  From the relations satisfied by the tensor product, we see that the map $\iota$ is $K$-balanced.
+\end{example}
 
-\begin{prop}[Universal property of the tensor product]  Suppose $V$ and $W$ are vector spaces over the field $K$.  
-\end{prop}
+%see pf. 364 of dummit-foote
+\begin{thm}\label{universal-prop-tensor}[Universal property of the tensor product]  Suppose $V,W$, and $U$ are vector spaces over the field $K$.  Let $\varphi \colon V \times W \to U$ be a $K$-balanced map, and let $\iota$ be the map above.  Then there is a unique linear map $\varphi \colon V \otimes W \to U$ such that $\varphi$ factors through $\iota$, i.e., $\varphi = \varphi \circ \iota$.
+\end{thm}
+\begin{proof}
+The map $\varphi$ extends by linearity to a linear transformation $\tilde{\varphi}$ from the free vector space on $V \times W$ to $U$ such that $\tilde{\varphi}(v , w) = \varphi (v,w)$ for all $v \in V, w \in W$.  Since $\varphi$ is $K$-balanced, $\tilde{\varphi}$ maps each of the elements which span the subspace $D$ from the definition of the tensor product to 0.  For example,
+\[ \tilde{\varphi} ((kv, w) - (v, kw)) = \varphi(kv, w ) - \varphi (v, kw) = 0. \]
+Thus the kernel of $\tilde{\varphi}$ contains $D$, and so $\tilde{\varphi}$ induces a linear map $\varphi \colon V \otimes W \to U$.  Then
+\[ \varphi( v \otimes w) = \tilde{\varphi}( v , w) = \varphi ( v , w) \]
+i.e., $\varphi = \varphi \circ \iota$. Note that $\varphi$ is completely determined by this equation since the elements $v \otimes w$ span $V \otimes W$.
+\end{proof}
+
+
 
 \begin{prop}
 Let $\{ e_i \}_{i \in I}$ and $\{ f_j \}_{j \in J}$ be bases for $V$ and $W$.  Then $\{ e_i \otimes f_j | i \in I, j \in J\}$  is a basis for $V \otimes W$.
@@ -498,13 +515,31 @@ An elementory tensor in $V \otimes W$ has the form $v \otimes w$.  Write $v = \s
 \[ m \otimes n = \sum_i a_i e_i \otimes \sum_j b_j f_j  = \sum_{i,j} a_i b_j e_i \otimes f_j\]
 is a linear combination of the tensors $e_i \otimes f_j$.  Since every tensor can be written as a sum of elementary tensors, the elements $e_i \otimes f_j$ span $V \otimes W$.
 
-Now, we must show that this spanning set is linearly independent.  Suppose that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$, where all but finitely many $c_{ij}$ are 0.  We want to show that $c_{ij} = 0$ for every $i \in I, j \in J$. Fix two elements $ i_0 \in I$ and $j_0 \in J$.  To show that $c_{i_0 j_0} = 0$, consider the bilinear map
+Now, we must show that this spanning set is linearly independent.  Suppose that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$, where all but finitely many $c_{ij}$ are 0.  We want to show that $c_{ij} = 0$ for every $i \in I, j \in J$. Fix two elements $ i_0 \in I$ and $j_0 \in J$.  To show that $c_{i_0 j_0} = 0$, consider the $K$-balanced map
 \begin{align*}
 V \times W &\to K \\
 (v,w) &\mapsto a_{i_0} b_{j_0}
 \end{align*}
  where $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$. By the universal property of tensor products, there is a linear map $f_0 \colon V \otimes W \to K$ such that $f_0 (v \otimes w) = a_{i_0} b_{j_0}$ on any elementary tensor $v \otimes w$.  In particular, $f_0 (e_{i_0} \otimes f_{j_0}) = 1$ and  $f_0 (e_{i} \otimes f_{j}) = 0$ for $(i,j) \neq (i_0, j_0)$.  Applying $f_0$ to our assumption that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$ in $V \otimes W$ tells us that $c_{i_0 j_0} =0$ in $K$.  
 \end{proof}
+
+\begin{prop}
+There are natural isomorphisms 
+\begin{enumerate}
+\item $(U \otimes V) \otimes W \cong U \otimes (V \otimes W)$ 
+\item $( U \oplus V) \otimes W \cong (U \otimes W) \oplus (V \otimes W)$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+(1.) For each fixed $w \in W$, the mapping $(u,v) \mapsto u \otimes ( v \otimes w)$ is $K$-balanced, so by Theorem \ref{universal-prop-tensor} there is a unique linear map from $U \otimes V$ to $U \otimes ( V \otimes W)$ with $u \otimes v \mapsto u \otimes (v \otimes w)$.  This shows that the map from $(U \otimes V ) \times W$ to $U \otimes ( V \otimes W)$ given by $(u \otimes v, w ) \mapsto u \otimes (v \otimes w)$ is well defined.  This map is also $K$-balanced, and  thus another application of Theorem \ref{universal-prop-tensor} shows that it induces a linear map $(U \otimes V) \otimes W \to U \otimes ( V \otimes W)$ such that $(u \otimes v) \otimes w \mapsto u \otimes (v \otimes w)$.  In a similar manner, we can construct a map $U \otimes (V \otimes W) \to (U \otimes V) \otimes W$ with $u \otimes ( v \otimes w) \mapsto (u \otimes v) \otimes w$ which is inverse to our first map.  This proves the isomorphism.
+
+(2.)  The map $(U \oplus V ) \times W \to (U \oplus W) \otimes (V \oplus W)$ defined by $((u, v ) , w) \mapsto (u \otimes w, v \otimes w)$ is clearly $K$-balanced.  Thus it induces a linear map $f \colon (U \oplus V) \otimes W \to (U \otimes W) \oplus (V \otimes W)$ with 
+\[ f ( ( u, v ) \otimes w) = (u \otimes w, v \otimes w). \]
+In the other direction, we use the $K$-balanced maps $U \times W \to (U \oplus V) \otimes W$ and $V \times W \to (U \oplus V) \otimes W)$ given by $(u, w) \mapsto (u, 0)\otimes w$ and $(v,w) \mapsto (0,v) \otimes w$ to obtain linear maps from $U \otimes W$ and $V \otimes W$ to $(U \oplus V) \otimes W$.  Together these maps give a linear transformation $g$ from the direct sum $(U \otimes W) \oplus ( V \otimes W)$ to $(U \oplus V) \otimes W)$ with 
+\[ g ( u \otimes w_1, v \otimes w_2) = (u, 0) \otimes w_1 + (0,v) \otimes w_2. \]
+It is straightforward to see that $f$ and $g$ are inverse linear transformations, and the isomorphism holds.
+\end{proof}
+
 
 Now let $V$ and $W$ be two representations of $G$.
 \begin{defn}
