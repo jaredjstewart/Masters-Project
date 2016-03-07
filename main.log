@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  3 MAR 2016 09:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  7 MAR 2016 12:45
 entering extended mode
 **main.tex
 (main.tex
@@ -1496,23 +1496,23 @@ Overfull \hbox (0.46645pt too wide) in paragraph at lines 378--380
  []
 
 [9] [10] [11]
-Overfull \hbox (18.07841pt too wide) in paragraph at lines 518--520
+Overfull \hbox (18.07841pt too wide) in paragraph at lines 535--537
 \OT1/ppl/m/n/10.95 We also note that the four spaces un-der con-sid-er-a-tion a
 ll have di-men-sion $\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10
 .95 )([]\OML/cmm/m/it/10.95 W \OT1/cmr/m/n/10.95 +$
  []
 
-[12] [13]
-Overfull \hbox (10.65857pt too wide) in paragraph at lines 618--619
-[]\OT1/ppl/b/n/10.95 Definition 1.50. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
+[12] [13] [14]
+Overfull \hbox (10.65857pt too wide) in paragraph at lines 635--636
+[]\OT1/ppl/b/n/10.95 Definition 1.53. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
 95 char-ac-ter \OT1/ppl/m/n/10.95 of a rep-re-sen-ta-tion $\OML/cmm/m/it/10.95 
  [] [] G \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 GL\OT1/cmr/m/n/10.95 (\OML/
 cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 )$ \OT1/ppl/m/n/10.95 is the func-tion $\OML
 /cmm/m/it/10.95 [] [] [] G \OMS/cmsy/m/n/10.95 !$
  []
 
-[14]
-Overfull \hbox (10.35799pt too wide) in paragraph at lines 621--622
+
+Overfull \hbox (10.35799pt too wide) in paragraph at lines 638--639
 []\OT1/ppl/m/it/10.95 Note. []\OT1/ppl/m/n/10.95 The char-ac-ter is of a rep-re
 -sen-ta-tion is not a ho-mor-phism in gen-eral, since $[]\OT1/cmr/m/n/10.95 (\O
 ML/cmm/m/it/10.95 MN\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.9
@@ -1540,7 +1540,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 250.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 250.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 250.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1A5BC794C4EDF7B813F4FAFAF4BB3D7C;2296.
+(rerunfilecheck)             Checksum: A887CC4B5EBED6A2EB57FCB11B4C06E7;2296.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1549,8 +1549,8 @@ LaTeX Font Warning: Size substitutions with differences
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 38221 strings out of 493673
- 730338 string characters out of 3141529
+ 38224 strings out of 493673
+ 730359 string characters out of 3141529
  849644 words of memory out of 3000000
  40937 multiletter control sequences out of 15000+200000
  39244 words of font info for 111 fonts, out of 3000000 for 9000
@@ -1576,9 +1576,9 @@ urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/up
 lr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (23 pages, 340110 bytes).
+Output written on main.pdf (23 pages, 340691 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 130 named destinations out of 1000 (max. 500000)
+ 471 PDF objects out of 1000 (max. 8388607)
+ 133 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
