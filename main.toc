@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {1.5}Complete Reducibility and Unitarity}{6}{section.35}
 \contentsline {section}{\numberline {1.6}Vector Spaces of Linear Maps}{8}{section.52}
 \contentsline {section}{\numberline {1.7}Schur's Lemma}{10}{section.62}
-\contentsline {section}{\numberline {1.8}Tensor Product}{11}{section.68}
-\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{14}{section.78}
+\contentsline {section}{\numberline {1.8}Isotypical Decomposition}{11}{section.68}
+\contentsline {section}{\numberline {1.9}Tensor Product}{14}{section.78}
 \contentsline {section}{\numberline {1.10}Character Theory}{16}{section.88}
 \contentsline {chapter}{Bibliography}{19}{chapter*.107}
