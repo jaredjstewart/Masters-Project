@@ -778,7 +778,7 @@ Let $\varphi, \psi \in \mathbb{C}^G$.  We define an \textbf{inner product}  on $
 \end{defn}
 It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three properties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
-The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require a quick lemma:
+The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 
 \begin{lemma}
 Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
@@ -793,4 +793,31 @@ Recall that $V = U \oplus \text{Ker }(\pi)$.  (FROM WHENCE IS THIS RECOLLECTION?
 where $\text{dim U}$ is the size of the upper left block and $\text{dim Ker }(\pi)$ is the size of the bottom right block.  So $\text{Tr}(\pi) = \text{Tr}(\mathbf{1}_U) = \text{dim } U$.
 \end{proof}
 
+\begin{lemma}
+Let $\rho \colon G \to GL(V)$ be any representation.  Consider the linear map 
+\begin{align*}
+\Psi \colon V &\to V \\
+x &\mapsto \frac{1}{|G} \sum_{g \in G} \rho(g)(x).
+\end{align*}
+Then $\Psi$ is a  projection from $V$ onto the invariant subspace $V^G$.
+\end{lemma}
+\begin{proof}
+We need to check that $\Psi(x) \in V^G$ for all $x \in V$.  For any $h \in G$, 
+\begin{align*}
+\rho(h)(\Psi(x)) &= \frac{1}{|G|}  \sum_{g \in G} \rho(h)\rho(g)(x) \\
+&= \frac{1}{|G|}\sum_{g \in G} \rho(h g) (x) \\
+&= \frac{1}{|G|} \sum_{g \in G} \rho(g)(x) \quad (\text{by relabelling } g \mapsto h^{-1}g) \\
+&= \Psi(x).
+\end{align*}
+Thus $\Psi$ is a linear map $V \to V^G$.  Next we need to check that $\Psi$ is a projection.  Let $x \in V^G$.  Then
+\begin{align*}
+\Psi(x) &= \frac{1}{|G|} \sum_{g \in G} \rho(g)(x) \\
+&= \frac{1}{|G|} \sum_{g \in G} (x) = x.
+\end{align*}
+\end{proof}
 
+\begin{thm}
+Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$, and let $\chi_V, \chi_W$ be their characters.  Then 
+\[ \langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W). \]
+\end{thm}
+In particular, the inner product of two characters is always a non-negative integer.  
