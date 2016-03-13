@@ -752,9 +752,45 @@ Thus $\chi_{V \otimes W} (g)= \chi_V (g) \chi_W(g)$.
 
 \item \[  
 \chi_{\text{reg}} (g) = \begin{cases} 
-|G| &\mbox{if } g = e \\ 
-0 & \mbox{if } g \neq e 
+|G| &\text{if } g = e \\ 
+0 & \text{if } g \neq e 
 \end{cases}  \]
-
 \end{enumerate}
 \end{prop}
+
+\begin{defn}
+Let $\mathbb{C}^G$ denote the set of all functions from $G$ to $\mathbb{C}$.  Then $\mathbb{C}^G$ is a vector space with the sum of two functions defined pointwise and with scalar multiplication defined for $f \in \mathbb{C}^G, \lambda \in \mathbb{C}$ by 
+\begin{align*}
+\lambda f \colon G &\to \mathbb{C} \\
+g &\mapsto \lambda f(g).
+\end{align*}
+A basis for $\mathbb{C}^G$ is clearly given by the set of functions 
+\[\{ \delta_g | g \in G  \} \]
+defined by 
+\[ \delta_g \colon h \mapsto \begin{cases}  1 &\text{if } h = g \\
+ 0 &\text{if } h \neq g
+\end{cases} \]
+\end{defn}
+
+\begin{defn}
+Let $\varphi, \psi \in \mathbb{C}^G$.  We define an \textbf{inner product}  on $\mathbb{C}^G$ by 
+\[ \langle \varphi | \psi \rangle = \frac{1}{|G|} \sum_{g \in G} \varphi(g) \overline{\psi(g)}.\]
+\end{defn}
+It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three properties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
+\[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
+The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require a quick lemma:
+
+\begin{lemma}
+Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
+\[ \text{Tr}(\pi) = \text{dim } U. \]
+\end{lemma}
+\begin{proof}
+Recall that $V = U \oplus \text{Ker }(\pi)$.  (FROM WHENCE IS THIS RECOLLECTION??  MASCHKE??)  If we fix bases for $U$ and $\text{Ker }(\pi)$, which together give a basis for V, then $\pi$ is given by the block-diagonal matrix
+\[   \begin{bmatrix}
+\mathbf{1} & 0 \\
+0 & \mathbf{0} \\
+\end{bmatrix} \]
+where $\text{dim U}$ is the size of the upper left block and $\text{dim Ker }(\pi)$ is the size of the bottom right block.  So $\text{Tr}(\pi) = \text{Tr}(\mathbf{1}_U) = \text{dim } U$.
+\end{proof}
+
+
