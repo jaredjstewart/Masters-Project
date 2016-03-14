@@ -690,7 +690,7 @@ The character is of a representation is not a homorphism in general, since $\tex
 \begin{enumerate}
 \item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g)$ for all $g , h \in G$.
 \item $\chi_V (1) = \text{\emph{dim }} V$.
-\item $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
+\item \label{char-of-inverse} $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
 \end{enumerate}
 \end{prop}
 
@@ -780,7 +780,7 @@ It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first v
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
 The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 
-\begin{lemma}
+\begin{lemma} \label{projection-lemma}
 Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
 \[ \text{Tr}(\pi) = \text{dim } U. \]
 \end{lemma}
@@ -820,4 +820,43 @@ Thus $\Psi$ is a linear map $V \to V^G$.  Next we need to check that $\Psi$ is a
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$, and let $\chi_V, \chi_W$ be their characters.  Then 
 \[ \langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W). \]
 \end{thm}
-In particular, the inner product of two characters is always a non-negative integer.  
+In particular, the inner product of two characters is always a non-negative integer.  (Whereas in general, the inner product of two arbitrary functions can be any complex number.)
+
+\begin{proof}
+We have seen in Proposition \ref{invariant-subrprn} that
+ \[ \text{Hom}_G (V,W) \subset \text{Hom}(V,W) \] 
+ as the invariant subrepresentation, and by the previous lemma we have a projection
+\begin{align*}
+\Psi \colon \text{Hom}(V,W) &\to \text{Hom}(V,W) \\
+f &\mapsto \frac{1}{|G|} \sum_{g \in G} \rho_{\text{Hom}(V,W)} (g) (f).
+\end{align*}
+We claim that \[ \text{Tr} (\Psi) = \langle \chi_W | \chi_V \rangle. \]  Once this claim is established, then Lemma \ref{projection-lemma} will prove the theorem.  We proceed by calculating $\text{Tr} (\Psi)$.  Fix bases $\{ a_1, \ldots, a_n \}$ for $V$ and $\{ b_1, \ldots, b_m \}$ for $W$.  Then $\text{Hom}(V,W)$ has an associated basis 
+\[ \{ f_{ji} | 1 \leq i \leq n, 1 \leq j \leq m\} \]
+where
+\[ f_{ji} (a_i) = \begin{cases} b_j &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \] 
+We may calculate $\text{Tr}(\Psi)$ as follows:  For each $i,j$, compute the expression of $\Psi(f_{ji})$ in this basis, and take the coefficient of the basis element $f_{ji}$.  This is a diagonal entry in the matrix for $\Psi$. Summing these values over all $i$ and $j$ will gives us $\text{Tr}(\Psi)$.
+
+Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We know that 
+\[ \text{Hom}(V,W) = V* \otimes W \]
+so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V*}}$ and $\widetilde{\rho_W}$.  Thus
+\begin{align*}
+\rho_{\text{Hom}(V,W)}(g)(f_{ji}) &= \rho_W (g) \circ f_{ji} \circ \rho_V (g^{-1}) \\
+&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{Show another step?}
+\end{align*}
+Then 
+\begin{align*}
+\Psi (f_{ji}) &= \frac{1}{|G|} \sum_{g \in G} \rho_{\text{Hom}(V,W)}(g)(f) \\
+&= \frac{1}{|G|} \sum_{g \in G} \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}.
+\end{align*}
+The coefficient of $f_{ji}$ in this expression is
+\[ \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj}. \]
+Therefore
+\begin{align*}
+\text{Tr} (\Psi) &= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}}  \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj} \\
+&=  \frac{1}{|G|} \sum_{g \in G} \left( \sum_{i=1}^n \widetilde{\rho_V}(g^{-1})_{ii} \right) \left( \sum_{j=1}^m \widetilde{\rho_W} (g)_{jj} \right) \\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_V (g^{-1}) \chi_W (g) \\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g)  \quad \text{(by Proposition \ref{char-of-inverse})}\\
+&= \langle \chi_W | \chi_V \rangle.
+\end{align*}
+\end{proof}
+
