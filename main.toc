@@ -13,4 +13,4 @@
 \contentsline {section}{\numberline {1.8}Isotypical Decomposition}{11}{section.68}
 \contentsline {section}{\numberline {1.9}Tensor Product}{14}{section.78}
 \contentsline {section}{\numberline {1.10}Character Theory}{16}{section.88}
-\contentsline {chapter}{Bibliography}{21}{chapter*.112}
+\contentsline {chapter}{Bibliography}{23}{chapter*.115}

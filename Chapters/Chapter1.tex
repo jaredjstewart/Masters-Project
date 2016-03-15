@@ -565,7 +565,7 @@ Let $V$ and $W$ be irreducible representations of $G$.  Then
 \begin{proof}
 Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
 
-On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$, i.e. $h = \lambda f$ for some $\lambda \in \mathbb{C}$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
+On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$ for some $\lambda \in \mathbb{C}$, i.e. $h = \lambda f$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
 \end{proof}
 
 \begin{prop}\label{num-iso-subrprns}
@@ -636,7 +636,7 @@ i.e., $\varphi = \varphi \circ \iota$. Note that $\varphi$ is completely determi
 Let $\{ e_i \}_{i \in I}$ and $\{ f_j \}_{j \in J}$ be bases for $V$ and $W$.  Then $\{ e_i \otimes f_j | i \in I, j \in J\}$  is a basis for $V \otimes W$.
 \end{prop}
 \begin{proof}
-An elementory tensor in $V \otimes W$ has the form $v \otimes w$.  Write $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$, where all but finitely many of $a_i$ and $b_j$ are 0.  Then 
+An elementary tensor in $V \otimes W$ has the form $v \otimes w$.  Write $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$, where all but finitely many of $a_i$ and $b_j$ are 0.  Then 
 \[ m \otimes n = \sum_i a_i e_i \otimes \sum_j b_j f_j  = \sum_{i,j} a_i b_j e_i \otimes f_j\]
 is a linear combination of the tensors $e_i \otimes f_j$.  Since every tensor can be written as a sum of elementary tensors, the elements $e_i \otimes f_j$ span $V \otimes W$.
 
@@ -673,9 +673,15 @@ We can define a representation of $G$ on $V \otimes W$ called the \textbf{tensor
 be the linear map given by
 \[ \rho_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \rho_V (g) (a_i) \otimes \rho_W (g) (b_j).\]
 \end{defn}
-
-
-, and assume we have bases $\{ a_1, \ldots, a_n\}$ for $V$  and $\{b_1, \ldots, b_m \}$ for W.
+Suppose $\rho_V (g)$ is described by the matrix $M$ and 
+$\rho_W (g)$ is described by the matrix $N$ in the given bases $\{ a_1, \ldots, a_n\}$ for $V$  and $\{b_1, \ldots, b_m \}$ for W.  Then
+\begin{align*}
+\rho_{V \otimes W} (g) \colon a_i \otimes b_t &\mapsto \left( \sum_{j=1}^n M_{ji} a_j \right) \otimes \left( \sum_{s=1}^m N_{st} b_s \right) \\
+&= \sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} a_j \otimes b_s.
+\end{align*}
+So $\rho_{V \otimes W}$ is described by the $nm \times nm$ matrix $M \otimes N$ whose entries are 
+\[ [ M \otimes N ]_{js, it} = M_{ji} N_{st}. \]
+This matrix has $nm$ rows, and to specify a row we need a pair of numbers $(j, s)$ where $j \in \{ 1, \ldots, n \}$ and $s \in \{ 1, \ldots, m \}$.  
 
 
 \section{Character Theory}
@@ -709,7 +715,7 @@ A \textbf{class function} on $G$ is a function on $G$ whose values are invariant
 The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
 \end{note}
 
-\begin{prop}
+\begin{prop}\label{iso-reprns-same-char}
 Isomorphic representations have the same character.
 \end{prop}
 \begin{proof}
@@ -837,8 +843,8 @@ where
 We may calculate $\text{Tr}(\Psi)$ as follows:  For each $i,j$, compute the expression of $\Psi(f_{ji})$ in this basis, and take the coefficient of the basis element $f_{ji}$.  This is a diagonal entry in the matrix for $\Psi$. Summing these values over all $i$ and $j$ will gives us $\text{Tr}(\Psi)$.
 
 Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We know that 
-\[ \text{Hom}(V,W) = V* \otimes W \]
-so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V*}}$ and $\widetilde{\rho_W}$.  Thus
+\[ \text{Hom}(V,W) = V^* \otimes W \]
+so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V^*}}$ and $\widetilde{\rho_W}$.  Thus
 \begin{align*}
 \rho_{\text{Hom}(V,W)}(g)(f_{ji}) &= \rho_W (g) \circ f_{ji} \circ \rho_V (g^{-1}) \\
 &= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{Show another step?}
@@ -860,3 +866,41 @@ Therefore
 \end{align*}
 \end{proof}
 
+\begin{cor}\label{inner-product-of-irr-chars}
+Let $\chi_1, \ldots, \chi_r$ be the irreducible characters of $G$.  Then
+\[ \langle \chi_i | \chi_j \rangle = \begin{cases}  1 &\text{if } i = j \\ 0 &\text{if } i \neq j\end{cases} \]
+\end{cor}
+\begin{proof}
+Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then by Proposition \ref{schurs-lemma-homvw},
+
+\[ \langle \chi_i | \chi_j \rangle = \text{dim Hom}_G (U_i, U_j) = \begin{cases}  1 &\text{if }U_i, U_j \text{ are isomorphic} \\  0 &\text{if }U_i, U_j \text{ are not isomorphic}. \end{cases} \]
+\end{proof}
+
+\begin{cor}
+Let $\chi$ be any character of $G$.    Then $\chi$ is irreducible if and only if \[ \langle \chi | \chi \rangle = 1\]
+\end{cor}
+\begin{proof}
+Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] where each $m_i$ is a non-negative integer.  Then by Lemma \ref{inner-product-of-irr-chars}, 
+\begin{align*}
+\langle \chi | \chi \rangle &= \sum_{i,j \in [1, k]} m_i m_j \langle \chi_i | \chi_j \rangle \\
+&= m_1^2 + \ldots + m_k^2.
+\end{align*}
+So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$ and the rest are $0$.
+\end{proof}
+
+\begin{cor}
+Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
+\end{cor}
+\begin{proof}
+We have already seen that isomorphic representations have the same character by Proposition \label{iso-reprns-same-char}.  On the other hand, suppose $\chi_V = \chi_W$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $G$, and let $\chi_1, \ldots, \chi_r$ be their characters.  We can write
+\[ V = U_1^{m_1} \oplus \ldots \oplus U_r^{m_r} \]
+for some non-negative integers $m_1, \ldots, m_r$, and 
+\[ W = U_1^{l_1} \oplus \ldots \oplus U_r^{l_r} \]
+for some non-negative integers $l_1, \ldots, l_r$.  So
+\[ \chi_V = m_1 \chi_1 + \ldots + m_r \chi_r \]
+and 
+\[ \chi_W = l_1 \chi_1 + \ldots + l_r \chi_r \].
+Thus we have 
+\[ m_i = \langle \chi_V | \chi_i \rangle = \langle \chi_W | \chi_i \rangle = l_i \]
+for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.  This proves $V$ and $W$ are isomorphic.
+\end{proof}
