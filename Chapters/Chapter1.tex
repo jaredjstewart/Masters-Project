@@ -684,29 +684,35 @@ So $\rho_{V \otimes W}$ is described by the $nm \times nm$ matrix $M \otimes N$ 
 This matrix has $nm$ rows, and to specify a row we need a pair of numbers $(j, s)$ where $j \in \{ 1, \ldots, n \}$ and $s \in \{ 1, \ldots, m \}$.  
 
 \begin{prop}
-$V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
+Let $V$ and $W$ be representations of $G$.  Then $V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
 \end{prop}
 \begin{proof}
-Let $\{\alpha_1, \ldots, \alpha_n \}$ be the basis for $V^{*}$ dual to $\{ a_1,  \ldots, a_n\}$.  Then $\text{Hom}(V^*,W)$ has a basis given by $\{ f_{it} | 1 \leq i \leq n, 1 \leq t \leq m \}$ where
+Let $\{ a_1,  \ldots, a_n\}$ be a basis for $V$, let $\{\alpha_1, \ldots, \alpha_n \}$ be the corresponding dual basis for $V^{*}$, and let $\{b_1,  \ldots,b_m\}$ be a basis for $W$.  Then $\text{Hom}(V^*,W)$ has a basis $\{ f_{it} | 1 \leq i \leq n, 1 \leq t \leq m \}$ where
 \begin{align*}
 f_{it} (\alpha_j) = \begin{cases} b_t &\text{if } j = i\\ 0 &\text{if } j \neq i \end{cases}
 \end{align*}
 We obtain an isomorphism of vector spaces between $\text{Hom}(V^*,W)$ and $V \otimes W$ by the map
-\[ f_{it} \mapsto a_i \otimes b_t \]
-extended to all of  $\text{Hom}(V^*,W)$ by linearity.  It remains to show that this isomorphism of vector spaces yields an isomorphism of representations.  We can check this by showing that the representation $\rho_{\text{Hom}(V^*,W)}$ agrees with the definition of $\rho_{V \otimes W}$ when we write it in the basis $\{ f_{it} \}$.  Fix $g \in G$, and let $M$ and $N$ denote the matrices which describe $\rho_V (g)$ and $\rho_W (g)$ in the given bases.
+\[ \psi (f_{it}) = a_i \otimes b_t \]
+extended to all of  $\text{Hom}(V^*,W)$ by linearity.  It remains to show that this isomorphism of vector spaces yields an isomorphism of representations, i.e. we need to check that 
+\[ \psi \circ \rho_{\text{Hom}(V^*,W)} (g) = \rho_{V \otimes W} (g) \circ \psi \]
+for all $g \in G$.  Fix $g \in G$, and let $M$ and $N$ denote the matrices which describe $\rho_V (g)$ and $\rho_W (g)$ in the given bases.  
 By definition,
-\[ \rho_{\text{Hom}(V^{*},W)} (g) \colon f_{it} \mapsto \rho_W (g) \circ f_{it} \circ \rho_{V^{*}}(g^{-1}). \]
-
+\[ \rho_{\text{Hom}(V^{*},W)} (g) (f_{it}) = \rho_W (g) \circ f_{it} \circ \rho_{V^{*}}(g^{-1}). \]
 Now $\rho_{V^{*}} (g^ {-1})$ is given by the matrix $M^T$ in the dual basis (CITE ME!!!), so
-\[\rho_{V^{*}} (g^ {-1}) \colon \alpha_k \mapsto \sum_{j=1}^n M_{kj} \alpha_{j}. \]
+\[\rho_{V^{*}} (g^ {-1}) ( \alpha_k )= \sum_{j=1}^n M_{kj} \alpha_{j}. \]
 Then
-\[ f_{it} \circ \rho_{V^{*}} (g^ {-1}) \colon \alpha_k \mapsto M_{ki} b_t \]
+\[ f_{it} \circ \rho_{V^{*}} (g^ {-1}) (\alpha_k) = M_{ki} b_t \]
 which means that 
-\[ \rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) \colon \alpha_k \mapsto M_{ki} \left( \sum_{s=1}^m N_{st} b_s \right). \]
+\[ \rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) ( \alpha_k) = M_{ki} \left( \sum_{s=1}^m N_{st} b_s \right). \]
 Thus, if we write $\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1})$ in terms of the basis $\{ f_{js} \}$, we have 
 \[\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) = \sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} f_{js} \]
-
-(since both sides agree on every basis vector $\alpha_k$) and this is precisely the formula for the tensor product representation $\rho_{V \otimes W}$.
+(since both sides agree on every basis vector $\alpha_k$).  Therefore,
+\begin{align*}
+\psi \circ \rho_{\text{Hom}(V^*,W)} (g) (f_{it}) &= \psi \left(\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) \right) \\
+&=  \sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} a_j \otimes b_s \\
+&= \rho_{V \otimes W} (g) (a_i \otimes b_t) \quad \text{(by definition of the tensor product representation)} \\
+&= \rho_{V \otimes W} (g) \circ \psi (f_{it})
+\end{align*}
 \end{proof}
 
 
