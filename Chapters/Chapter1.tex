@@ -273,67 +273,7 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
-We recall the following definition from linear algebra:
-\begin{defn} \label{hip}
-Let $V$ be a complex vector space.  A \textbf{Hermitian inner product} on $V$ is a map $\langle \cdot{,}\cdot \rangle \colon  V \times V \to \mathbb{C}$ that satisfies the following properties for all  $u, v, w \in V$ and $c \in \mathbb{C}$:
-\begin{enumerate}
-\item \label{hip-1}  $\langle u + v, w \rangle = \langle u , w \rangle + \langle v, w \rangle$.
-\item \label{hip-2} $\langle c u, v \rangle = c \langle u, v \rangle$.
-\item \label{hip-3} $\langle u , v \rangle = \overline{\langle v , u \rangle }$.
-\item \label{hip-4} $\langle v, v \rangle \geq 0$ with equality if and only if $v = 0$.
-\end{enumerate}
-\end{defn}
 
-\begin{defn}
-A representation $\rho$ of $G$ on a complex vector space $V$ is \textbf{unitary} if $V$ has been equipped with a hermetian inner product $\langle \cdot{,}\cdot \rangle$ which is preserved by the action of $G$, that is, 
-\[ \langle v , w \rangle = \langle \rho(g)(v) , \rho(g)(w) \rangle \quad \forall v,w \in V, g \in G. \]
-A representation is said to be \textbf{unitarisable} if it can be equipped with such a product (even without one being specified).
-\end{defn}
-
-\begin{thm}\label{weyl-unitary-trick} [Weyl's unitary trick] Finite-dimensional represenations of finite groups are unitarisable.
-\end {thm}
-\begin{proof}
-Take any Hermetian inner product on V, say $\langle \cdot{,}\cdot \rangle'$.  We define a new inner product on V by \textit{averaging over} $G$:
-\[ \langle v {,}w  \rangle \defeq \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g)v {,} \rho(g)w \rangle'. \]
-
-This new inner product satifies properties \ref{hip-1},  \ref{hip-2}, and  \ref{hip-3} of Definition \ref{hip} by linearity.  It remains to check positivity (\ref{hip-4}).  Clearly $\langle v {,} v \rangle = 0$ when $v =0$, since each term of the sum will equal zero.  In the case where $v \neq 0$,  observe that
-
-\[ \langle v {,} v \rangle =\frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g)v {,} \rho(g)v \rangle' \geq 0\]
-
-since each term of the sum is non-negative by the positivity of $\langle \cdot{,}\cdot \rangle'$.  The only problem would occur if each term of this sum is equal to zero.  But $\langle \rho(e) v {,} \rho(e) v \rangle ' = \langle v {,} v\rangle' > 0$.  Thus $\langle v {,} v \rangle > 0$.  
-
-Finally, we show that our new inner product is $G$-invariant.  For any $h \in G$, we have
-\begin{align*}
-\langle \rho(h) v {,} \rho(h) w  \rangle &= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(g) \rho(h)v {,}\rho(g) \rho(h)w \rangle' \\
-&= \frac{1}{|G|} \mathlarger{\sum}_{g \in G} \langle \rho(gh)v {,} \rho(gh)w \rangle' && \text{(since $\rho$ is a homomorphism)} \\
-&= \frac{1}{|G|} \mathlarger{\sum}_{k \in G} \langle \rho(k)v {,} \rho(k)w \rangle' && \text{(by a change of variables)}\\
-&= \langle v {,} w \rangle.
-\end{align*}
-\end{proof}
-
-\begin{lemma}\label{unitary-ortho-complement}
-Let $V$ be a unitary representation of $G$ and let $W \subseteq V$ be a $G$-invariant subspace.  Then the orthogonal complement $W^\perp$ is also $G$-invariant.
-\end{lemma}
-\begin{proof}
-Choose arbitrary elements $v \in W^\perp$ and $g \in G$.  We need to show that $gv \in W^\perp$.  Now for any $w \in W$, we have $\langle v,w \rangle = 0$.  Thus $\langle gv, gw \rangle = g \overline{g} \langle v , w \rangle = 0$ for any $w \in W$.  Notice that $w' = gw \in W$ since $W$ is $G$-invariant.  This implies that $ \langle gv, w' \rangle =0$, i.e. $gv \in W^\perp$.
-\end{proof}
-
-
-\begin{thm}\label{full-red-of-unitary-reps}
-A finite-dimensional unitary representation of a group is fully reducible into unitary irreducible subrepresentations.
-\end{thm}
-\begin{proof}
-Let $V$ be a finite dimensional unitary representation of $G$. We proceed by induction on the dimension of $V$.  If $\text{dim}(V)=1$, then $V$ is necessarily irreducible.  Now, suppose the theorem holds for all $W$ with $\text{dim}(V) \leq n - 1$ and suppose $\text{dim}(V)=n$. If $V$ is irreducible, we are done. Otherwise, there exists a proper $G$-invariant subspace $W (\neq 0, V)$.  
-We can write $V = W \oplus W^\perp$ by Lemma \ref{unitary-ortho-complement}.  Applying the inductive hypothesis to $W$ and $W^\perp$, we obtain a decomposition into irreducibles
-\[ V = (W_1 \oplus \ldots \oplus W_j) \oplus (W_{j + 1} \oplus \ldots \oplus W_k). \]
-\end{proof}
-
-\begin{cor}
-Every complex representation of a finite group is completely reducible.
-\end{cor}
-\begin{proof}
-Any such representation is unitarisable by Theorem \ref{weyl-unitary-trick}.  We can apply Theorem \ref{full-red-of-unitary-reps} to obtain full reduciblility.
-\end{proof}
 
 \section{Vector Spaces of Linear Maps}
 \begin{defn}
