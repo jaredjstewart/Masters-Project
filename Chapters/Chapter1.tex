@@ -273,6 +273,18 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
+\begin{lemma}  
+Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
+\[ f \colon V \to W. \]
+Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e.
+\[ V = \text{Ker}(f) \oplus W \]
+\end{lemma}
+\begin{proof}
+First we note that $\text{Ker}(f)$ is $G$-invariant, since if $x \in \text{Ker}(f)$, then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$.
+Now if $y \in \text{Ker}(f) \cap W$ then $y=f(y)=0$, so $\text{Ker}(f) \cap W = 0$.  Finally $\text{Im}(f)=W$, so by the Rank-Nullity theorem
+\[ \text{dim Ker}(f) + \text{dim }W = \text{dim }V. \]
+Thus $V = \text{Ker}(f) \oplus W$.  
+\end{proof}
 
 
 \section{Vector Spaces of Linear Maps}
