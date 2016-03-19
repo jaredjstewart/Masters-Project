@@ -273,7 +273,11 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
-\begin{lemma}  
+\begin{defn}
+Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the map $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
+\end{defn}
+
+\begin{lemma} \label{maschke-lemma}
 Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
 Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e.
@@ -284,6 +288,37 @@ First we note that $\text{Ker}(f)$ is $G$-invariant, since if $x \in \text{Ker}(
 Now if $y \in \text{Ker}(f) \cap W$ then $y=f(y)=0$, so $\text{Ker}(f) \cap W = 0$.  Finally $\text{Im}(f)=W$, so by the Rank-Nullity theorem
 \[ \text{dim Ker}(f) + \text{dim }W = \text{dim }V. \]
 Thus $V = \text{Ker}(f) \oplus W$.  
+\end{proof}
+
+\begin{thm}[Maschke's Theorem]
+Let $\rho \colon G \to GL(V)$ be a representation, and let $W \subset V$ be a subrepresentation.  Then there exists a complementary subrepresentation $U \subset V$ to $W$.
+\end{thm}
+\begin{proof}
+By the previous Lemma \ref{maschke-lemma} it will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.  There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\tilde{f} \colon V \to V$ by
+\[\tilde{f}(x) = \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x). \]
+
+We claim that $\tilde{f}$ is a $G$-linear projection from $V$ onto $W$.  
+First we check that $\text{Im}(f) \subset W$.  If $x \in V$ and $g \in G$, then
+\[ f (\rho (g^{-1})(x)) \in W \]
+and so
+\[ \rho(g) ( f ( \rho( g^{-1})(x))) \in W \]
+since $W$ is $G$-invariant.  Thus $\tilde{f}(x) \in W$.  Next we check that $\tilde{f} \restriction_{W} = \text{Id}_W$. Let $y \in W$.  For any $g \in G$, we know that $\rho(g^{-1})(y)$ is also in $W$, so
+\[ f (\rho(g^{-1})(y)) = \rho (g^{-1})(y).\]
+Then
+\begin{align*}
+\tilde{f}(y) &=  \frac{1}{|G|} \sum_{g \in G} \rho(g) (f ( \rho(g^{-1})(y))) \\
+&=\frac{1}{|G|} \sum_{g \in G} \rho(g) (\rho(g^{-1})(y)) \\
+&= \frac{1}{|G|} \sum_{g \in G} \rho(g g^{-1}) (y) \\
+&=\frac{1}{|G|} \sum_{g \in G} (y) \\
+&= \frac{|G| y} {|G|}
+\end{align*}
+so indeed $\tilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we check that $\tilde{f}$ is $G$-linear.  If $x \in V$ and $h \in G$, then
+\begin{align*}
+(\tilde{f} \circ \rho(h))(x) &= \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}) \circ \rho(h))(x) \\
+&= \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1} h))(x) \\
+&=\frac{1}{|G|} \sum_{g \in G} (\rho(hg) \circ f \circ \rho(g^{-1}))(x) \quad \text{(relabelling } g \mapsto hg \text{)} \\
+&= (\rho(h) \circ \tilde{f}) (x).
+\end{align*}
 \end{proof}
 
 
