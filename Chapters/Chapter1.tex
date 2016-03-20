@@ -294,30 +294,30 @@ Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid
 \[ V = W \oplus U \].
 \end{thm}
 \begin{proof}
-By the previous Lemma \ref{maschke-lemma} it will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.  There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\tilde{f} \colon V \to V$ by
-\[\tilde{f}(x) = \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x). \]
+By the previous Lemma \ref{maschke-lemma} it will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.  There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\widetilde{f} \colon V \to V$ by
+\[\widetilde{f}(x) = \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x). \]
 
-We claim that $\tilde{f}$ is a $G$-linear projection from $V$ onto $W$.  
+We claim that $\widetilde{f}$ is a $G$-linear projection from $V$ onto $W$.  
 First we check that $\text{Im}(f) \subset W$.  If $x \in V$ and $g \in G$, then
 \[ f (\rho (g^{-1})(x)) \in W \]
 and so
 \[ \rho(g) ( f ( \rho( g^{-1})(x))) \in W \]
-since $W$ is $G$-invariant.  Thus $\tilde{f}(x) \in W$.  Next we check that $\tilde{f} \restriction_{W} = \text{Id}_W$. Let $y \in W$.  For any $g \in G$, we know that $\rho(g^{-1})(y)$ is also in $W$, so
+since $W$ is $G$-invariant.  Thus $\widetilde{f}(x) \in W$.  Next we check that $\widetilde{f} \restriction_{W} = \text{Id}_W$. Let $y \in W$.  For any $g \in G$, we know that $\rho(g^{-1})(y)$ is also in $W$, so
 \[ f (\rho(g^{-1})(y)) = \rho (g^{-1})(y).\]
 Then
 \begin{align*}
-\tilde{f}(y) &=  \frac{1}{|G|} \sum_{g \in G} \rho(g) (f ( \rho(g^{-1})(y))) \\
+\widetilde{f}(y) &=  \frac{1}{|G|} \sum_{g \in G} \rho(g) (f ( \rho(g^{-1})(y))) \\
 &=\frac{1}{|G|} \sum_{g \in G} \rho(g) (\rho(g^{-1})(y)) \\
 &= \frac{1}{|G|} \sum_{g \in G} \rho(g g^{-1}) (y) \\
 &=\frac{1}{|G|} \sum_{g \in G} (y) \\
 &= \frac{|G| y} {|G|}
 \end{align*}
-so indeed $\tilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we check that $\tilde{f}$ is $G$-linear.  If $x \in V$ and $h \in G$, then
+so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we check that $\widetilde{f}$ is $G$-linear.  If $x \in V$ and $h \in G$, then
 \begin{align*}
-(\tilde{f} \circ \rho(h))(x) &= \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}) \circ \rho(h))(x) \\
+(\widetilde{f} \circ \rho(h))(x) &= \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}) \circ \rho(h))(x) \\
 &= \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1} h))(x) \\
 &=\frac{1}{|G|} \sum_{g \in G} (\rho(hg) \circ f \circ \rho(g^{-1}))(x) \quad \text{(relabelling } g \mapsto hg \text{)} \\
-&= (\rho(h) \circ \tilde{f}) (x).
+&= (\rho(h) \circ \widetilde{f}) (x).
 \end{align*}
 \end{proof}
 
@@ -576,9 +576,9 @@ The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U
 Let $\rho \colon G \to GL(V)$ be a representation, and let
 \begin{align*}
 V = U_1 \oplus \ldots \oplus U_s \\
-V = \tilde{U_1} \oplus \ldots \oplus \tilde{U_r}
+V = \widetilde{U_1} \oplus \ldots \oplus \widetilde{U_r}
 \end{align*}
-be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\tilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
+be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\widetilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
 \end{thm}
 \begin{proof}
 Let $W$ be any irreducible representation of $G$.  By Proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
@@ -617,10 +617,10 @@ Mapping $V \times W$ to the free $K$-vector space on $V \times W$, and then pass
 \begin{thm}\label{universal-prop-tensor}[Universal property of the tensor product]  Suppose $V,W$, and $U$ are vector spaces over the field $K$.  Let $\varphi \colon V \times W \to U$ be a $K$-balanced map, and let $\iota$ be the map above.  Then there is a unique linear map $\varphi \colon V \otimes W \to U$ such that $\varphi$ factors through $\iota$, i.e., $\varphi = \varphi \circ \iota$.
 \end{thm}
 \begin{proof}
-The map $\varphi$ extends by linearity to a linear transformation $\tilde{\varphi}$ from the free vector space on $V \times W$ to $U$ such that $\tilde{\varphi}(v , w) = \varphi (v,w)$ for all $v \in V, w \in W$.  Since $\varphi$ is $K$-balanced, $\tilde{\varphi}$ maps each of the elements which span the subspace $D$ from the definition of the tensor product to 0.  For example,
-\[ \tilde{\varphi} ((kv, w) - (v, kw)) = \varphi(kv, w ) - \varphi (v, kw) = 0. \]
-Thus the kernel of $\tilde{\varphi}$ contains $D$, and so $\tilde{\varphi}$ induces a linear map $\varphi \colon V \otimes W \to U$.  Then
-\[ \varphi( v \otimes w) = \tilde{\varphi}( v , w) = \varphi ( v , w) \]
+The map $\varphi$ extends by linearity to a linear transformation $\widetilde{\varphi}$ from the free vector space on $V \times W$ to $U$ such that $\widetilde{\varphi}(v , w) = \varphi (v,w)$ for all $v \in V, w \in W$.  Since $\varphi$ is $K$-balanced, $\widetilde{\varphi}$ maps each of the elements which span the subspace $D$ from the definition of the tensor product to 0.  For example,
+\[ \widetilde{\varphi} ((kv, w) - (v, kw)) = \varphi(kv, w ) - \varphi (v, kw) = 0. \]
+Thus the kernel of $\widetilde{\varphi}$ contains $D$, and so $\widetilde{\varphi}$ induces a linear map $\varphi \colon V \otimes W \to U$.  Then
+\[ \varphi( v \otimes w) = \widetilde{\varphi}( v , w) = \varphi ( v , w) \]
 i.e., $\varphi = \varphi \circ \iota$. Note that $\varphi$ is completely determined by this equation since the elements $v \otimes w$ span $V \otimes W$.
 \end{proof}
 
