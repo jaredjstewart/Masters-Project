@@ -280,7 +280,7 @@ Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a li
 \begin{lemma} \label{maschke-lemma}
 Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
-Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e.
+Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ker}(f)$ is a $G$-invariant subspace of $V$ such that
 \[ V = \text{Ker}(f) \oplus W \]
 \end{lemma}
 \begin{proof}
@@ -291,7 +291,8 @@ Thus $V = \text{Ker}(f) \oplus W$.
 \end{proof}
 
 \begin{thm}[Maschke's Theorem]
-Let $\rho \colon G \to GL(V)$ be a representation, and let $W \subset V$ be a subrepresentation.  Then there exists a complementary subrepresentation $U \subset V$ to $W$.
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite-dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
+\[ V = W \oplus U \].
 \end{thm}
 \begin{proof}
 By the previous Lemma \ref{maschke-lemma} it will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.  There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\tilde{f} \colon V \to V$ by
