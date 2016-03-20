@@ -246,10 +246,9 @@ A representation is said to be \textbf{irreducible} if it contains no proper inv
 \end{defn}
 
 \begin{example}
-\begin{enumerate}
-\item Any irreducible representation is completely reducible.
-\item Any $1$-dimensional representations has no proper subspaces, and is thus irreducible.
-\end{enumerate}
+
+1. Any irreducible representation is, in particular, completely reducible.
+2. Any $1$-dimensional representations has no proper subspaces, and is thus irreducible.
 \end{example}
 
 \begin{thm}\label{simultaneous} If $A_1, A_2, \ldots, A_r$ are linear operators on $V$ and each $A_i$ is diagonalizable, they are simultaneously diagonalizable if and only if they commute.
@@ -290,7 +289,7 @@ Now if $y \in \text{Ker}(f) \cap W$ then $y=f(y)=0$, so $\text{Ker}(f) \cap W = 
 Thus $V = \text{Ker}(f) \oplus W$.  
 \end{proof}
 
-\begin{thm}[Maschke's Theorem]
+\begin{thm}[Maschke's Theorem] \label{maschke}
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite-dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
 \[ V = W \oplus U \].
 \end{thm}
@@ -322,6 +321,14 @@ so indeed $\tilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we check
 \end{align*}
 \end{proof}
 
+\begin{cor}
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
+\end{cor}
+\begin{proof}
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem (\ref{maschke}), we know there exists a subrepresentation $U \subset V$ such that 
+\begin{equation} \label{1.28.1} V = W \oplus U. \end{equation}
+Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce from \ref{1.28.1} that $V$ is completely reducible.
+\end{proof}
 
 \section{Vector Spaces of Linear Maps}
 \begin{defn}
@@ -431,14 +438,13 @@ Let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambd
 \end{proof}
 
 \begin{cor}
-If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}^G(V,W)=\{0\}$.
+If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_GG(V,W)=\{0\}$.
 \end{cor}
 \begin{proof}
-We claim $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant. Let $0 \neq \phi \in \text{Hom}_G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v) = 0$ implies that  $\phi (gv) = g  \phi(v) = g  0 =0$, i.e. $ gv \in \text{ker}(\phi)$. Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi (gw) = g \phi(w) = gv$, i.e. $gv \in \text{im}(\phi)$.    
-
-Irreducibility yields $\text{ker}(\phi) = 0 $ or $V$ and $\text{im}(\phi) = 0$ or  $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi) = 0$.  This means that $\phi$ is injective,  $\text{im}(\phi) = W$, and $\phi$ is an isomorphism. 
-
-Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi$ is also an intertwining operator from $V$ to $V$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.
+Suppose $V$ and $W$ aren't isomorphic.  Then by Schur's Lemma, the zero map is the only $G$-linear map from $V$ to $W$, so 
+\[ \text{Hom}_G (V,W) = \{0 \}. \]
+On the other hand, suppose that $\phi \colon V \to W$ is an isomorphism.
+Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi \in \text{Hom}_G (V,V)$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.  So $phi$ spans $\text{Hom}_G(V,W)$.
 \end{proof}
 
 More definitions are required before we can state a more general Schur's Lemma (not restricted to just $\mathbb{C}$).
@@ -823,7 +829,7 @@ where $\text{dim U}$ is the size of the upper left block and $\text{dim Ker }(\p
 Let $\rho \colon G \to GL(V)$ be any representation.  Consider the linear map 
 \begin{align*}
 \Psi \colon V &\to V \\
-x &\mapsto \frac{1}{|G} \sum_{g \in G} \rho(g)(x).
+x &\mapsto \frac{1}{|G|} \sum_{g \in G} \rho(g)(x).
 \end{align*}
 Then $\Psi$ is a  projection from $V$ onto the invariant subspace $V^G$.
 \end{lemma}

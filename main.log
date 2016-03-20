@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.13)  20 MAR 2016 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.13)  20 MAR 2016 11:37
 entering extended mode
 **C:/Users/Jared/Documents/Masters-Project/main.tex
 (C:/Users/Jared/Documents/Masters-Project/main.tex
@@ -1449,27 +1449,27 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 [1
 
 ] [2] [3] [4] [5] [6] [7] [8]
-Overfull \hbox (0.46645pt too wide) in paragraph at lines 366--368
+Overfull \hbox (0.46645pt too wide) in paragraph at lines 373--375
 \OT1/ppl/m/n/10.95 so in-deed $\OML/cmm/m/it/10.95 []$ \OT1/ppl/m/n/10.95 is a
  ho-mo-mor-phism. We can use this fact to see that $\OML/cmm/m/it/10.95 []\OT1
 /cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\OT1/cmr/m/n/10.95 )$
  []
 
 [9] [10] [11]
-Overfull \hbox (18.07841pt too wide) in paragraph at lines 484--486
+Overfull \hbox (18.07841pt too wide) in paragraph at lines 491--493
 \OT1/ppl/m/n/10.95 We also note that the four spaces un-der con-sid-er-a-tion a
 ll have di-men-sion $\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10
 .95 )([]\OML/cmm/m/it/10.95 W \OT1/cmr/m/n/10.95 +$
  []
 
 [12] [13] [14] [15] [16]
-Overfull \hbox (43.13185pt too wide) in paragraph at lines 703--703
+Overfull \hbox (43.13185pt too wide) in paragraph at lines 710--710
 [] 
  []
 
 [17]
-Overfull \hbox (10.65857pt too wide) in paragraph at lines 709--710
-[]\OT1/ppl/b/n/10.95 Definition 1.53. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
+Overfull \hbox (10.65857pt too wide) in paragraph at lines 716--717
+[]\OT1/ppl/b/n/10.95 Definition 1.54. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
 95 char-ac-ter \OT1/ppl/m/n/10.95 of a rep-re-sen-ta-tion $\OML/cmm/m/it/10.95 
  [] [] G \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 GL\OT1/cmr/m/n/10.95 (\OML/
 cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 )$ \OT1/ppl/m/n/10.95 is the func-tion $\OML
@@ -1477,7 +1477,7 @@ cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 )$ \OT1/ppl/m/n/10.95 is the func-tion $\OML
  []
 
 
-Overfull \hbox (10.35799pt too wide) in paragraph at lines 712--713
+Overfull \hbox (10.35799pt too wide) in paragraph at lines 719--720
 []\OT1/ppl/m/it/10.95 Note. []\OT1/ppl/m/n/10.95 The char-ac-ter is of a rep-re
 -sen-ta-tion is not a ho-mor-phism in gen-eral, since $[]\OT1/cmr/m/n/10.95 (\O
 ML/cmm/m/it/10.95 MN\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.9
@@ -1514,10 +1514,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 37708 strings out of 493673
- 722115 string characters out of 3141530
+ 37710 strings out of 493673
+ 722135 string characters out of 3141530
  842895 words of memory out of 3000000
- 40416 multiletter control sequences out of 15000+200000
+ 40418 multiletter control sequences out of 15000+200000
  33664 words of font info for 89 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  72i,16n,86p,10418b,1766s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1541,9 +1541,9 @@ urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/up
 lr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (31 pages, 376032 bytes).
+Output written on main.pdf (31 pages, 377306 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
+ 523 PDF objects out of 1000 (max. 8388607)
  147 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
