@@ -200,7 +200,7 @@ where each \textit{Jordan block} $J_k$ is of the form
     0& 0& 0 & \dots  & 0  &\lambda
 \end{bmatrix}. \]
 Now $I = \rho(g)^n$ is a block-diagonal matrix with diagonal blocks $J_k^n$, so we must have that each block $J_k^n=\text{Id}$.  Observe that we can write each block $J_k$ as $J_k = \lambda \text{Id} + N$ where $N$ is the Jordan block with $\lambda = 0$.  Thus we have 
-\[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n \]. The following lemma will show that in fact $N=0$. 
+\[ \text{Id} = J_k^n = (\lambda \text{Id} + N)^n = \lambda ^n \text{Id} + \binom{n}{1} \lambda ^{n -1} N + \binom{n}{2} \lambda ^{n-2} N^2 + \ldots + \binom {n} {n -1} \lambda N^{n -1} + N^n. \] The following lemma will show that in fact $N=0$. 
 \begin{lemma}
 Let $N$ be the Jordan block with $\lambda = 0$ of size $n \times n$.  For any integer $p$ with $1 \leq p \leq n - 1$, then $N^p$ is the matrix with ones in the positions $(i,j)$ where $j = i + p$ and zeroes everywhere else.  (The ones lie along a line parallel to the diagonal, $p$ steps above it.)
 
@@ -291,7 +291,7 @@ Thus $V = \text{Ker}(f) \oplus W$.
 
 \begin{thm}[Maschke's Theorem] \label{maschke}
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite-dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
-\[ V = W \oplus U \].
+\[ V = W \oplus U. \]
 \end{thm}
 \begin{proof}
 By the previous Lemma \ref{maschke-lemma} it will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.  There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\widetilde{f} \colon V \to V$ by
@@ -963,7 +963,7 @@ for some non-negative integers $m_1, \ldots, m_r$, and
 for some non-negative integers $l_1, \ldots, l_r$.  So
 \[ \chi_V = m_1 \chi_1 + \ldots + m_r \chi_r \]
 and 
-\[ \chi_W = l_1 \chi_1 + \ldots + l_r \chi_r \].
+\[ \chi_W = l_1 \chi_1 + \ldots + l_r \chi_r .\]
 Thus we have 
 \[ m_i = \langle \chi_V | \chi_i \rangle = \langle \chi_W | \chi_i \rangle = l_i \]
 for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.  This proves $V$ and $W$ are isomorphic.
