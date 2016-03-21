@@ -527,7 +527,7 @@ Thus $\psi$ is $G$-linear, and we've proved (\ref{lemma-uvw1}).
 \phi \colon \text{Hom}(U \oplus W, V) &\to \text{Hom}(U,V) \oplus \text{Hom}(W,V) \\
 &= (f \circ \iota_U, f \circ \iota_W).
 \end{align*}
-We [finish me].  The book says proof is like (1)
+The proof is similar to (1).
 \end{proof}
 
 \begin{cor}\label{invariant-subrprns-hom-spaces}
@@ -793,15 +793,15 @@ Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representatio
 \end{enumerate}
 \end{prop}
 \begin{proof}
-\begin{enumerate}
 Pick bases for $V$ and $W$, so that $\rho_V (g)$ and $\rho_W (g)$ are described by matrices $M$ and $N$.  
+\begin{enumerate}
 \item $\rho_{V \oplus W} (g)$ is described by the block-diagonal matrix
 \[ \begin{bmatrix}
 M & 0 \\
 0 & N \\
-\end{bmatrix} \]
-
+\end{bmatrix}\]
 So we have $\text{Tr} (\rho_{V \oplus W} (g)) = \text{Tr} (M) + \text{Tr}(N) = \text{Tr}(\rho_V (g)) + \text{Tr} (\rho_W (g))$.
+
 \item $\rho_ {V \otimes W}(g)$ is given by the matrix
 \[ [M \otimes N ]_{js, it} = M_{ji} N_{st} \]
 so
@@ -849,19 +849,6 @@ It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first v
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
 The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 
-\begin{lemma} \label{projection-lemma}
-Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
-\[ \text{Tr}(\pi) = \text{dim } U. \]
-\end{lemma}
-\begin{proof}
-Recall that $V = U \oplus \text{Ker }(\pi)$ from Lemma \ref{maschke-lemma}. If we fix bases for $U$ and $\text{Ker }(\pi)$, which together give a basis for V, then $\pi$ is given by the block-diagonal matrix
-\[   \begin{bmatrix}
-\mathbf{1} & 0 \\
-0 & \mathbf{0} \\
-\end{bmatrix} \]
-where $\text{dim U}$ is the size of the upper left block and $\text{dim Ker }(\pi)$ is the size of the bottom right block.  So $\text{Tr}(\pi) = \text{Tr}(\mathbf{1}_U) = \text{dim } U$.
-\end{proof}
-
 \begin{lemma}
 Let $\rho \colon G \to GL(V)$ be any representation.  Consider the linear map 
 \begin{align*}
@@ -884,6 +871,19 @@ Thus $\Psi$ is a linear map $V \to V^G$.  Finally we need to check that $\Psi \r
 &= \frac{1}{|G|} \sum_{g \in G} (x) \\
 &= \frac{|G|}{|G|} x= x.
 \end{align*}
+\end{proof}
+
+\begin{lemma} \label{projection-lemma}
+Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
+\[ \text{Tr}(\pi) = \text{dim } U. \]
+\end{lemma}
+\begin{proof}
+Recall that $V = U \oplus \text{Ker }(\pi)$ from Lemma \ref{maschke-lemma}. If we fix bases for $U$ and $\text{Ker }(\pi)$, which together give a basis for V, then $\pi$ is given by the block-diagonal matrix
+\[   \begin{bmatrix}
+\mathbf{1} & 0 \\
+0 & \mathbf{0} \\
+\end{bmatrix} \]
+where $\text{dim U}$ is the size of the upper left block and $\text{dim Ker }(\pi)$ is the size of the bottom right block.  So $\text{Tr}(\pi) = \text{Tr}(\mathbf{1}_U) = \text{dim } U$.
 \end{proof}
 
 \begin{thm}
