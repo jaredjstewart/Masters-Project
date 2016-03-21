@@ -443,10 +443,9 @@ Let $\phi \colon V \to V$  be a linear operator commuting with $G$, and let $\la
 If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
 \end{cor}
 \begin{proof}
-Suppose $V$ and $W$ aren't isomorphic.  Then by Schur's Lemma, the zero map is the only $G$-linear map from $V$ to $W$, so 
-\[ \text{Hom}_G (V,W) = \{0 \}. \]
-On the other hand, suppose that $\phi \colon V \to W$ is an isomorphism.
-Let $\psi$ be another interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi \in \text{Hom}_G (V,V)$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.  So $\phi$ spans $\text{Hom}_G(V,W)$.
+We claim $\text{ker}(\phi)$ and $\text{im}\phi$ are both $G$-invariant.  Let $0 \neq \phi \in \text{Hom}_G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v)=0$ implies that $\phi(gv) = g\phi(v) = g0 = 0$, i.e. $gv \in \text{ker}(\phi)$.  Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi(gw) = g \phi(w) = gv$, i.e. $gv \in \text{Im} (\phi)$.
+Irreducibility yields $\text{ker}(\phi) = 0$ or $V$ and $\text{im}(\phi) = 0$ or $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi)=0$, $\text{im}(\phi)=W$, and $\phi$ is an isomorphism.  
+Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi \in \text{Hom}_G (V,V)$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.  So $\phi$ spans $\text{Hom}_G(V,W)$.
 \end{proof}
 
 More definitions are required before we can state a more general Schur's Lemma (not restricted to just $\mathbb{C}$).
@@ -458,6 +457,9 @@ An \textbf{algebra} over a field $K$ is a ring with unit, containing a distingui
 \begin{defn}
 Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} $\text{End}_G(V)$ is the space of linear self-maps $\phi \colon V \to V$ which commute with the group action, that is, $\rho(g) \circ \phi = \phi \circ \rho(g) \quad \forall g \in G$.  The addition is the usual addition of linear maps (pointwise), and the multiplication is function composition.  The distinguished copy of $K$ is given by $K \text{Id}$.
 \end{defn}
+\begin{note}
+You may notice that $\text{End}_G(V)$ is precisely the space $\text{Hom}_G(V,V)$ we have already seen.  However, $\text{Hom}_G(V,W)$ is in general only a vector space over the base field, not an algebra.
+\end{note}
 
 \begin{thm}\label{schur-lemma}[Schur's Lemma] If $V$ is an irreducible finite-dimensional representation of $G$ over $K$, then $\text{End}_G(V)$ is a finite-dimensional division algebra over $K$.
 \end{thm}
@@ -465,7 +467,7 @@ Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} 
 Let $0 \neq f \in \text{End}_G(V)$.  Then $\text{ker}(f)$ and $\text{im}(f)$ are both $G$-invariant subspaces of $V$.  Since $V$ is irreducible and $f \neq 0$, we must have $\text{ker}(f) = \{ 0\}$ and $\text{im}(f) = V$, i.e. $f$ is bijective.  
 \end{proof}
 \begin{note}
-We recover Schur's Lemma over $\mathbb{C}$ from the observation that $\mathbb{C}$ is the only finite-dimensional division algebra over $\mathbb{C}$.
+We recover Schur's Lemma over $\mathbb{C}$ by the fact that $\mathbb{C}$ is the only finite-dimensional division algebra over $\mathbb{C}$.
 \end{note}
 
 
@@ -593,7 +595,22 @@ be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$,
 Let $W$ be any irreducible representation of $G$.  By Proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
 \end{proof}
 
-ISO
+\begin{defn}
+Let $V$ be a finite-dimensional representation of $G$. Decompose $V$ into a direct sum
+\[ V = (V_{11} \oplus \ldots \oplus V_{1 n_1}) \oplus (V_{21} \oplus \ldots V_{2 n_2}) \oplus \ldots \oplus (V_{k 1} \oplus \ldots \oplus V_{k n_k}) \] 
+where 
+\begin{enumerate}
+\item $V_{11}, V_{21}, \ldots, V_{k1}$ are pairwise non-isomorphic irreducible representations of $G$.
+\item $V_{i 1} \cong \ldots \cong V_{i n_i} \quad \forall 1 \leq i \leq k.$
+\end{enumerate}
+Now, for any irreducible representation $S$ of $G$, we use the decomposition of $V$ above to define
+\[ V_S = \bigoplus_{ \{(i,j) | V_{ij} \cong S\}} V_{ij}.\] 
+Then we have
+\[ V_S \cong  \begin{cases} S^{n_i} &\text{if } S \cong V_{1i} \text{ for some } 1 \leq i \leq k \\ 0 &\text{otherwise}. \end{cases} \]
+This leaves us with the canonical decomposition
+\[ V = \bigoplus_{S} V_S \]
+where $S$ ranges over a set of representatives of the isomorphism classes of the irreducible representations of $G$.  We call this the \textbf{canonical decomposition of $V$ into isotypical components}.
+\end{defn}
 
 \section{Duals and Tensor Products}
 \begin{defn}
