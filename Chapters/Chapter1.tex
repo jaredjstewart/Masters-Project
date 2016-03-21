@@ -86,19 +86,8 @@ By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomo
 \section{The Definition of a Representation}
 %----------------------------------------------------------------------------------------
 \begin{defn}
-Let $G$ be a group.  A \textbf{representation} of $G$ is a homomorphism $\rho \colon  G \to GL_n (\mathbb{C})$ for some positive integer n.
-\end{defn}
-
-\begin{defn}
-Two representations $\rho_1 \colon  G \to GL_n (\mathbb{C})$  and $\rho_2 \colon  G \to GL_n (\mathbb{C})$ of $G$ are \textbf{equivalent} if there exists $P \in GL_n (\mathbb{C})$ such that $\rho_2 = P^{-1} \rho_1 P$.
-\end{defn}
-Equivalent representations are fundamentally "the same" in some sense, but to make this precise we need to shift our thinking to linear maps instead of matrices.
-
-\begin{defn}
 \label{rep-def-1}
 Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
- 
-
 
 
 \begin{defn}[Alternative definition] \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
@@ -109,7 +98,7 @@ Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. 
  \end{defn}
  
  \begin{note}
- Unless otherwise specificed, we use \textit{representation} to mean \textit{finite-dimensional complex representation}.
+ Unless otherwise specificed, we will restrict our discussion to \textit{finite-dimensional} representations over $\mathbb{C}$.
  \end{note}
  
  
@@ -225,7 +214,7 @@ Now, if $N \neq 0$ then each term $\binom {n}{k} \lambda ^ {n - k } N ^k$ for $k
 To summarize, every $m$-dimensional representation $\rho$ of the cyclic group $G = \langle g \rangle$ of order $n$ can be seen to act (with the right choice of basis) as $m \times m$ diagonal matrices all with $n$th roots of unity along the diagonal.  In particular, these representations are determined completely by the value of $\rho(g)$ and are classified up to isomorphism by unordered $m$-tuples of $n$th roots of unity.
 \end{example}
 
-\section{Constructions from Linear Algebra}
+\section{Constructing New Representations from Old}
 \begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
 \end{defn}
 
@@ -242,7 +231,7 @@ Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a re
 \end{defn}
 
 
-\section{Complete Reducibility and Unitarity}
+\section{Complete Reducibility}
 \begin{defn}
 A representation is said to be \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
 \end{defn}
@@ -271,7 +260,7 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 		&=  \rho(g_2 g_1) && \text{(since $G$ is abeilian)} \\
 		&= \rho(g_2) \rho(g_1) && \text{(since $\rho$ is a homomorphism)}.
 \end{align*}
-Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
+Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply Theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
 \begin{defn}
@@ -363,8 +352,8 @@ g &\mapsto \rho_{\text{Hom}(V,W)}(g).
 \begin{proof}		
 We must check two things:		
 \begin{enumerate}			
+\item For every $g \in G$,  $\rho_{\text{Hom}(V,W)}(g)$ is invertible.	
 \item The map $g \mapsto  \rho_{\text{Hom}(V,W)}(g)$ is a homomorphism.	
-\item For every $g \in G$,  $\rho_{\text{Hom}(V,W)}(g)$ is invertible.		
 \end{enumerate}		
 First, we check that
 \begin{align*}
@@ -439,7 +428,7 @@ a \in A^G \iff & \rho_A (g) (a) = a & \forall g \in G \\
 Let $\phi \colon V \to V$  be a linear operator commuting with $G$, and let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so since $V$ is irreducible, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
 \end{proof}
 
-\begin{cor}
+\begin{cor}\label{schur-cor}
 If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
 \end{cor}
 \begin{proof}
@@ -568,7 +557,7 @@ Let $V$ and $W$ be irreducible representations of $G$.  Then
 \end{cases} \]
 \end{prop}
 \begin{proof}
-Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
+Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma Corollary \ref{schur-cor} states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
 
 On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$ for some $\lambda \in \mathbb{C}$, i.e. $h = \lambda f$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
 \end{proof}
@@ -583,7 +572,7 @@ so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
 The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U_i)$ in place of $\text{Hom}_G(V,W)$ and $\text{Hom}_G(U_i,W)$.
 \end{proof}
 
-\begin{thm}
+\begin{thm}\label{uniqueness-of-irr-decomp}
 Let $\rho \colon G \to GL(V)$ be a representation, and let
 \begin{align*}
 V = U_1 \oplus \ldots \oplus U_s \\
@@ -609,7 +598,7 @@ Then we have
 \[ V_S \cong  \begin{cases} S^{n_i} &\text{if } S \cong V_{1i} \text{ for some } 1 \leq i \leq k \\ 0 &\text{otherwise}. \end{cases} \]
 This leaves us with the canonical decomposition
 \[ V = \bigoplus_{S} V_S \]
-where $S$ ranges over a set of representatives of the isomorphism classes of the irreducible representations of $G$.  We call this the \textbf{canonical decomposition of $V$ into isotypical components}.
+where $S$ ranges over a set of representatives of the isomorphism classes of the irreducible representations of $G$.  We call this the \textbf{canonical decomposition of $V$ into isotypical components}. If follows from Theorem \ref{uniqueness-of-irr-decomp} that such a decomposition is unique, i.e. it does not depend on our initial decomposition of $V$ into irreducibles.
 \end{defn}
 
 \section{Duals and Tensor Products}
@@ -1017,10 +1006,8 @@ Let $\chi_1, \ldots, \chi_r$ be the irreducible characters of $G$ with degrees $
 \[ |G| = \sum_{i=1}^n d_i^2 \]
 \end{cor}
 \begin{proof}
-CITE ME
+TODO: type this up
 \end{proof}
-
-
 
 
 \begin{defn}
