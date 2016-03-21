@@ -11,6 +11,6 @@
 \contentsline {section}{\numberline {1.6}Vector Spaces of Linear Maps}{9}{section.45}
 \contentsline {section}{\numberline {1.7}Schur's Lemma}{11}{section.55}
 \contentsline {section}{\numberline {1.8}Isotypical Decomposition}{11}{section.61}
-\contentsline {section}{\numberline {1.9}Tensor Product}{14}{section.71}
-\contentsline {section}{\numberline {1.10}Character Theory}{18}{section.82}
-\contentsline {chapter}{Bibliography}{25}{chapter*.109}
+\contentsline {section}{\numberline {1.9}Duals and Tensor Products}{14}{section.71}
+\contentsline {section}{\numberline {1.10}Character Theory}{19}{section.84}
+\contentsline {chapter}{Bibliography}{25}{chapter*.111}

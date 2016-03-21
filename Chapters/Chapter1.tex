@@ -166,7 +166,7 @@ If we have representations $(\rho_1, V)$ and $(\rho_2, W)$ and an isomorphism of
 Given any representation $(\rho, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\rho, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
 
 Suppose that we have two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_m(F)$ given by $\rho_1(g) = X_g$ and $\rho_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\rho_1(g) = A \rho_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
-\begin{prop}
+\begin{prop} \ref{iso-classes-of-reprns}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
 \end{prop}
 
@@ -585,7 +585,42 @@ Let $W$ be any irreducible representation of $G$.  By Proposition (\ref{num-iso-
 \end{proof}
 
 
-\section{Tensor Product}
+\section{Duals and Tensor Products}
+\begin{defn}
+Let $V$ be a vector space.  Recall that we define the \textbf{dual vector space} to be
+\[ V^{*} = \text{Hom}(V,\mathbb{C}).\]
+This is a special case of $\text{Hom}(V,W)$ where $W = \mathbb{C}$. We know that if $\{ b_1, \ldots, b_n \} $ is a basis for $V$, then there is a \textbf{dual basis} $\{ f_1, \ldots, f_n \}$ for $V$ defined by
+\[ f_i (b_j) = \begin{cases} 1 &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \]
+Let $\rho_V \colon G \to GL(V)$ be a representation of $G$, and let $\mathbb{C}$ be the $1$-dimensional trival representation of $G$.  Then we have seen that $V^{*}$ carries a representation of $G$ defined by
+\[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = f \circ \rho_V ( g^{-1}) \]
+We call this the \textbf{dual representation} to $\rho_V$ and denote it by $\rho_V^{*}$.
+\end{defn}
+\begin{prop}
+If we fix a basis for $V$, then $\rho_V^*(g)$ is given by the matrix 
+\[( \rho_V (g^{-1}) )^T \]
+with respect to the dual basis.
+\end{prop}
+\begin{proof}
+Fix a basis $\{ a_1, \ldots, a_n \}$ for $V$.  Let $\rho_V (g^{-1})$ be described by the matrix $M$, so that 
+\[ \rho_V (g^{-1} ) (a_j) = \sum_{1 \leq i \leq n} M_{ij} a_i. \]
+Let $\rho_V^* (g)$ be described by the matrix $N$ with respect to the dual basis $\{ \alpha_1, \ldots, \alpha_n \}$, so that
+\[ \rho_V^* (g) (\alpha_j)  = \sum_{1 \leq i \leq n} N_{ij} \alpha_i. \]
+Then
+\begin{align*}
+N_{ji} &= \sum_{1 \leq k \leq n} N_{ki} \delta_{kj} \\
+	&=\sum_{1 \leq k \leq n} N_{ki}( \alpha_k a_j )\\
+	&= \left( \sum_{1 \leq k \leq n} N_{ki} \alpha_k \right) a_j \\
+	&= (\rho_V^* (g) (\alpha_i )) (a_j) \\
+	&= (\alpha_i \circ \rho_V (g^{-1}) ) (a_j) \quad \text{(by definition of the dual representation)} \\
+	&= \alpha_i ( \rho_V(g^{-1}) (a_j)) \\
+	&= \alpha_i \left(  \sum_{1 \leq k \leq n} M_{kj} a_k \right) \\
+	&= \sum_{1 \leq k \leq n} M_{kj} \alpha_i a_k \\
+	&= \sum_{1 \leq k \leq n} M_{kj} \delta_{ik} \\
+	&= M_{ij}.
+\end{align*}
+That is,  $N=M^T$.
+\end{proof}
+
 \begin{defn}
 Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace $D$ spanned by all elements of the form
 \begin{align*}
@@ -745,7 +780,7 @@ The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$
 Isomorphic representations have the same character.
 \end{prop}
 \begin{proof}
-We have seen (CITE ME!!!) that isomorphic representations can be described by the same set of matrices in the right choice of basis.
+We have seen in Proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.
 \end{proof}
 We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
 
