@@ -166,7 +166,7 @@ If we have representations $(\rho_1, V)$ and $(\rho_2, W)$ and an isomorphism of
 Given any representation $(\rho, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\rho, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
 
 Suppose that we have two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_m(F)$ given by $\rho_1(g) = X_g$ and $\rho_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\rho_1(g) = A \rho_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
-\begin{prop} \ref{iso-classes-of-reprns}
+\begin{prop} \label{iso-classes-of-reprns}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
 \end{prop}
 
@@ -595,8 +595,8 @@ Let $\rho_V \colon G \to GL(V)$ be a representation of $G$, and let $\mathbb{C}$
 \[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = f \circ \rho_V ( g^{-1}) \]
 We call this the \textbf{dual representation} to $\rho_V$ and denote it by $\rho_V^{*}$.
 \end{defn}
-\begin{prop}
-If we fix a basis for $V$, then $\rho_V^*(g)$ is given by the matrix 
+\begin{prop}\label{matrix-of-dual}
+If we fix a basis for $V$, then $\rho_{V^*}(g)$ is given by the matrix 
 \[( \rho_V (g^{-1}) )^T \]
 with respect to the dual basis.
 \end{prop}
@@ -727,7 +727,7 @@ extended to all of  $\text{Hom}(V^*,W)$ by linearity.  It remains to show that t
 for all $g \in G$.  Fix $g \in G$, and let $M$ and $N$ denote the matrices which describe $\rho_V (g)$ and $\rho_W (g)$ in the given bases.  
 By definition,
 \[ \rho_{\text{Hom}(V^{*},W)} (g) (f_{it}) = \rho_W (g) \circ f_{it} \circ \rho_{V^{*}}(g^{-1}). \]
-Now $\rho_{V^{*}} (g^ {-1})$ is given by the matrix $M^T$ in the dual basis (CITE ME!!!), so
+Now $\rho_{V^{*}} (g^ {-1})$ is given by the matrix $M^T$ in the dual basis by Proposition \ref{matrix-of-dual}, so
 \[\rho_{V^{*}} (g^ {-1}) ( \alpha_k )= \sum_{j=1}^n M_{kj} \alpha_{j}. \]
 Then
 \[ f_{it} \circ \rho_{V^{*}} (g^ {-1}) (\alpha_k) = M_{ki} b_t \]
@@ -738,6 +738,7 @@ Thus, if we write $\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1})$ in term
 (since both sides agree on every basis vector $\alpha_k$).  Therefore,
 \begin{align*}
 \psi \circ \rho_{\text{Hom}(V^*,W)} (g) (f_{it}) &= \psi \left(\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) \right) \\
+&= \psi \left(\sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} f_{js} \right) \\
 &=  \sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} a_j \otimes b_s \\
 &= \rho_{V \otimes W} (g) (a_i \otimes b_t) \quad \text{(by definition of the tensor product representation)} \\
 &= \rho_{V \otimes W} (g) \circ \psi (f_{it})
@@ -753,11 +754,12 @@ The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the func
 The character is of a representation is not a homorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
 \end{note}
 
-\begin{prop} (Basic Properties)
+\begin{prop}\label{basic-props-of-char} (Basic Properties)
 \begin{enumerate}
 \item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g)$ for all $g , h \in G$.
 \item $\chi_V (1) = \text{\emph{dim }} V$.
 \item \label{char-of-inverse} $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
+\item $\chi_{V^*} (g) =  \overline{\chi_V (g)}$ for all $g \in G$.
 \end{enumerate}
 \end{prop}
 
@@ -766,21 +768,20 @@ The character is of a representation is not a homorphism in general, since $\tex
 \item $\chi_V (h g h^{-1} = \text{Tr}(h g h^{-1}) = \text{Tr}(g h h^{-1}) = \text{Tr} (g) = \chi_V(g)$ for any $g,h \in G$.
 \item $\chi_V(1) = \text{Tr}(\text{Id} _V) = \text{dim } V$.
 \item Since $G$ is finite, we have seen that $\rho(g)$ is a diagonal matrix with roots of unity along the diagonal with the right choice of basis.  The inverse of a root of unity is given by its complex conjugate, so under this same basis, $\rho(g)^{-1}$ is clearly given by $\overline{\rho(g)}$.  Thus, $\chi_V(g^{-1}) = \text{Tr}(\rho(g^{-1})) = \text{Tr}(\rho(g)^{-1}) = \text{Tr}(\overline{\rho(g)}) = \overline{ \text{Tr} (\rho(g))} = \overline {\chi_V(g)}$.
+\item \begin{align*}
+ \chi_{V^*}(g) &= \text{Tr}(\rho_{V^*}(g)) \\
+ &= \text{Tr}(\rho_V (g^{-1})^T) \quad \text{ (by Proposition \ref{matrix-of-dual})} \\
+ &= \text{Tr}(\rho_V(g^{-1})) \\
+ &= \overline{\chi_V (g)}  \quad \text{ (by \ref{char-of-inverse})}
+\end{align*}
 \end{enumerate}
 \end{proof}
-
-\begin{defn}
-A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$.  We may therefore view class functions as functions on the set of conjugacy classes of $G$.
-\end{defn}
-\begin{note}
-The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
-\end{note}
 
 \begin{prop}\label{iso-reprns-same-char}
 Isomorphic representations have the same character.
 \end{prop}
 \begin{proof}
-We have seen in Proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.
+We have seen in Proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus they have the same trace.
 \end{proof}
 We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
 
@@ -793,7 +794,8 @@ Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representatio
 \end{prop}
 \begin{proof}
 \begin{enumerate}
-\item Pick bases for $V$ and $W$, so that $\rho_V (g)$ and $\rho_W (g)$ are described by matrices $M$ and $N$.  Then $\rho_{V \oplus W} (g)$ is described by the block-diagonal matrix
+Pick bases for $V$ and $W$, so that $\rho_V (g)$ and $\rho_W (g)$ are described by matrices $M$ and $N$.  
+\item $\rho_{V \oplus W} (g)$ is described by the block-diagonal matrix
 \[ \begin{bmatrix}
 M & 0 \\
 0 & N \\
@@ -852,7 +854,7 @@ Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to
 \[ \text{Tr}(\pi) = \text{dim } U. \]
 \end{lemma}
 \begin{proof}
-Recall that $V = U \oplus \text{Ker }(\pi)$.  (FROM WHENCE IS THIS RECOLLECTION??  MASCHKE??)  If we fix bases for $U$ and $\text{Ker }(\pi)$, which together give a basis for V, then $\pi$ is given by the block-diagonal matrix
+Recall that $V = U \oplus \text{Ker }(\pi)$ from Lemma \ref{maschke-lemma}. If we fix bases for $U$ and $\text{Ker }(\pi)$, which together give a basis for V, then $\pi$ is given by the block-diagonal matrix
 \[   \begin{bmatrix}
 \mathbf{1} & 0 \\
 0 & \mathbf{0} \\
@@ -876,10 +878,11 @@ We need to check that $\Psi(x) \in V^G$ for all $x \in V$.  For any $h \in G$,
 &= \frac{1}{|G|} \sum_{g \in G} \rho(g)(x) \quad (\text{by relabelling } g \mapsto h^{-1}g) \\
 &= \Psi(x).
 \end{align*}
-Thus $\Psi$ is a linear map $V \to V^G$.  Next we need to check that $\Psi$ is a projection.  Let $x \in V^G$.  Then
+Thus $\Psi$ is a linear map $V \to V^G$.  Finally we need to check that $\Psi \restriction_{V^G} = \text{Id}_{V^G}$.  Let $x \in V^G$.  Then
 \begin{align*}
 \Psi(x) &= \frac{1}{|G|} \sum_{g \in G} \rho(g)(x) \\
-&= \frac{1}{|G|} \sum_{g \in G} (x) = x.
+&= \frac{1}{|G|} \sum_{g \in G} (x) \\
+&= \frac{|G|}{|G|} x= x.
 \end{align*}
 \end{proof}
 
@@ -922,7 +925,7 @@ Therefore
 \text{Tr} (\Psi) &= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}}  \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj} \\
 &=  \frac{1}{|G|} \sum_{g \in G} \left( \sum_{i=1}^n \widetilde{\rho_V}(g^{-1})_{ii} \right) \left( \sum_{j=1}^m \widetilde{\rho_W} (g)_{jj} \right) \\
 &= \frac{1}{|G|} \sum_{g \in G} \chi_V (g^{-1}) \chi_W (g) \\
-&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g)  \quad \text{(by Proposition \ref{char-of-inverse})}\\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g)  \quad \text{(by Proposition \ref{basic-props-of-char}.\ref{char-of-inverse})}\\
 &= \langle \chi_W | \chi_V \rangle.
 \end{align*}
 \end{proof}
@@ -965,3 +968,10 @@ Thus we have
 \[ m_i = \langle \chi_V | \chi_i \rangle = \langle \chi_W | \chi_i \rangle = l_i \]
 for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.  This proves $V$ and $W$ are isomorphic.
 \end{proof}
+
+\begin{defn}
+A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$.  We may therefore view class functions as functions on the set of conjugacy classes of $G$.
+\end{defn}
+\begin{note}
+The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
+\end{note}
