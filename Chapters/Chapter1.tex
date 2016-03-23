@@ -136,7 +136,7 @@ Thus $\sigma_g$ is linear, and $\rho(G) \subset GL(V)$ proves that we  have a ho
 
 \item If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$.  
 
-\item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication.  In this case, the elements of $G$ form a basis for $V$, and each $g \in G$ permutes the basis elements by $g \cdot g_i = gg_i$.  This representation is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
+\item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication. We take a vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ b_g | g \in G \}$, and define $\rho_{\text{reg}} (h) (b_g) = b_{hg}$.  This representation is called the \textit{regular representation} of $G$ and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.  Note that $\text{dim}V_{\text{reg}} = |G|$.
 
 \item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
@@ -933,8 +933,8 @@ Therefore
 \end{align*}
 \end{proof}
 
-\begin{cor}\label{inner-product-of-irr-chars}
-Let $\chi_1, \ldots, \chi_r$ be the irreducible characters of $G$.  Then
+\begin{cor}[Row orthogonality relations]\label{inner-product-of-irr-chars}
+Let $\chi_1, \ldots, \chi_r$ be characters of pairwise non-isomorphic irreducible representations of $G$.  Then
 \[ \langle \chi_i | \chi_j \rangle = \begin{cases}  1 &\text{if } i = j \\ 0 &\text{if } i \neq j\end{cases} \]
 \end{cor}
 \begin{proof}
@@ -947,7 +947,7 @@ Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $
 Let $\chi$ be any character of $G$.    Then $\chi$ is irreducible if and only if \[ \langle \chi | \chi \rangle = 1\]
 \end{cor}
 \begin{proof}
-Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] where each $m_i$ is a non-negative integer.  Then by Lemma \ref{inner-product-of-irr-chars}, 
+Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] where each $m_i$ is a non-negative integer.  Then by Corollary \ref{inner-product-of-irr-chars}, 
 \begin{align*}
 \langle \chi | \chi \rangle &= \sum_{i,j \in [1, k]} m_i m_j \langle \chi_i | \chi_j \rangle \\
 &= m_1^2 + \ldots + m_k^2.
@@ -980,7 +980,7 @@ For each $g \in G$, we have $\rho_{\text{reg}} (g) (e_h) = e_{gh}$.  So $\rho_{\
 Thus \[ \text{Tr} (\rho_{\text{reg}} (g)) = | \{ g \in G | h=gh \} | = \begin{cases} |G| &\text{if } g=1 \\ 0 &\text{if } g \neq 1 \end{cases}. \]
 \end{proof}
 
-\begin{prop}
+\begin{prop} \label{mult-of-irr-in-reg}
 The multiplicity of any irreducible representation in the regular representation equals its dimension.
 \end{prop}
 \begin{proof}
@@ -1006,7 +1006,9 @@ Let $\chi_1, \ldots, \chi_r$ be the irreducible characters of $G$ with degrees $
 \[ |G| = \sum_{i=1}^n d_i^2 \]
 \end{cor}
 \begin{proof}
-TODO: type this up
+Let $U_1, \ldots, U_r$ be distinct representatives of the isomorphism classes of irreducible representations of $G$.  Then
+\[ V_{\text{reg}} = U_1 ^ {d_1} \oplus \ldots \oplus U_r ^{d_r} \]
+by Proposition \ref{mult-of-irr-in-reg}.  The claim follows from taking dimensions of each side of this equation.
 \end{proof}
 
 
