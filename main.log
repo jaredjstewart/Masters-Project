@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.13)  23 MAR 2016 10:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.13)  23 MAR 2016 11:11
 entering extended mode
 **C:/Users/Jared/Documents/Masters-Project/main.tex
 (C:/Users/Jared/Documents/Masters-Project/main.tex
@@ -1442,28 +1442,28 @@ LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <10.95> not available
 [1
 
 
-] [2] [3] [4] [5] [6] [7] [8] [9]
-Overfull \hbox (0.46645pt too wide) in paragraph at lines 393--395
+] [2] [3] [4] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (0.46645pt too wide) in paragraph at lines 407--409
 \OT1/ppl/m/n/10.95 so in-deed $\OML/cmm/m/it/10.95 []$ \OT1/ppl/m/n/10.95 is a
  ho-mo-mor-phism. We can use this fact to see that $\OML/cmm/m/it/10.95 []\OT1
 /cmr/m/n/10.95 (\OML/cmm/m/it/10.95 g[]\OT1/cmr/m/n/10.95 )$
  []
 
-[10] [11] [12]
-Overfull \hbox (18.07841pt too wide) in paragraph at lines 519--521
+[11] [12]
+Overfull \hbox (18.07841pt too wide) in paragraph at lines 533--535
 \OT1/ppl/m/n/10.95 We also note that the four spaces un-der con-sid-er-a-tion a
 ll have di-men-sion $\OT1/cmr/m/n/10.95 ([]\OML/cmm/m/it/10.95 V\OT1/cmr/m/n/10
 .95 )([]\OML/cmm/m/it/10.95 W \OT1/cmr/m/n/10.95 +$
  []
 
-[13] [14] [15] [16] [17] [18] [19]
-Overfull \hbox (43.13185pt too wide) in paragraph at lines 790--790
+[13] [14] [15] [16] [17] [18] [19] [20]
+Overfull \hbox (43.13185pt too wide) in paragraph at lines 804--804
 [] 
  []
 
-[20]
-Overfull \hbox (10.65857pt too wide) in paragraph at lines 796--797
-[]\OT1/ppl/b/n/10.95 Definition 1.57. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
+
+Overfull \hbox (10.65857pt too wide) in paragraph at lines 810--811
+[]\OT1/ppl/b/n/10.95 Definition 1.58. []\OT1/ppl/m/n/10.95 The \OT1/ppl/b/n/10.
 95 char-ac-ter \OT1/ppl/m/n/10.95 of a rep-re-sen-ta-tion $\OML/cmm/m/it/10.95 
  [] [] G \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 GL\OT1/cmr/m/n/10.95 (\OML/
 cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 )$ \OT1/ppl/m/n/10.95 is the func-tion $\OML
@@ -1471,7 +1471,7 @@ cmm/m/it/10.95 V\OT1/cmr/m/n/10.95 )$ \OT1/ppl/m/n/10.95 is the func-tion $\OML
  []
 
 
-Overfull \hbox (10.35799pt too wide) in paragraph at lines 799--800
+Overfull \hbox (10.35799pt too wide) in paragraph at lines 813--814
 []\OT1/ppl/m/it/10.95 Note. []\OT1/ppl/m/n/10.95 The char-ac-ter is of a rep-re
 -sen-ta-tion is not a ho-mor-phism in gen-eral, since $[]\OT1/cmr/m/n/10.95 (\O
 ML/cmm/m/it/10.95 MN\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.9
@@ -1479,7 +1479,7 @@ ML/cmm/m/it/10.95 MN\OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95 6\OT1/cmr/m/n/10.9
  []
 
 [21] [22] [23] [24] [25] [26]
-Overfull \hbox (4.73792pt too wide) in paragraph at lines 1038--1039
+Overfull \hbox (4.73792pt too wide) in paragraph at lines 1052--1053
 []\OT1/ppl/m/n/10.95 Let $\OML/cmm/m/it/10.95 U[]; [] ; U[]$ \OT1/ppl/m/n/10.95
  be dis-tinct rep-re-sen-ta-tives of the iso-mor-phism classes of ir-re-ducible
 
@@ -1506,7 +1506,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 252.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 252.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 252.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E67BE1FEC508990F96006C75B1588B99;2313.
+(rerunfilecheck)             Checksum: B4DE26DE08381755FB2B02E0BD9C2722;2313.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1514,13 +1514,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
- 37727 strings out of 493673
- 722363 string characters out of 3141530
- 842801 words of memory out of 3000000
+ 37728 strings out of 493673
+ 722370 string characters out of 3141530
+ 841801 words of memory out of 3000000
  40424 multiletter control sequences out of 15000+200000
  32599 words of font info for 87 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 72i,16n,86p,10418b,1766s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 72i,16n,86p,10418b,1812s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Fil
@@ -1541,9 +1541,9 @@ urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/pala
 tino/uplbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/up
 lr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (30 pages, 394629 bytes).
+Output written on main.pdf (30 pages, 396461 bytes).
 PDF statistics:
- 568 PDF objects out of 1000 (max. 8388607)
- 159 named destinations out of 1000 (max. 500000)
+ 569 PDF objects out of 1000 (max. 8388607)
+ 160 named destinations out of 1000 (max. 500000)
  117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

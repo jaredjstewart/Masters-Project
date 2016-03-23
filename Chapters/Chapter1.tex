@@ -192,6 +192,20 @@ We similarly calculate
 \[  \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{bmatrix} \]
 \end{example}
 
+\begin{example}
+Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$ and $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a an action of $G$ on $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
+\begin{align*}
+\rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} \\
+\rho (\sigma^2) &= \begin{bmatrix} -1 & 0 \\ 0 & -1  \end{bmatrix} \\ 
+\rho (\sigma^3) &= \begin{bmatrix} 0 & 1 \\ -1 & 0  \end{bmatrix} \\
+\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
+\rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
+\rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
+\rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix} \\
+\rho( e) &= \text{Id}_2
+\end{align*}
+
+\end{example}
 %----------------------------------------------------------------------------------------
 %	Representations of Cyclic Groups
 %

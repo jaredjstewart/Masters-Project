@@ -5,12 +5,12 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.3}
 \contentsline {section}{\numberline {1.2}Group Actions}{1}{section.6}
 \contentsline {section}{\numberline {1.3}The Definition of a Representation}{2}{section.14}
-\contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{5}{section.30}
-\contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{6}{section.34}
-\contentsline {section}{\numberline {1.6}Complete Reducibility}{7}{section.38}
-\contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{9}{section.48}
-\contentsline {section}{\numberline {1.8}Schur's Lemma}{11}{section.58}
-\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{12}{section.64}
-\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{16}{section.77}
-\contentsline {section}{\numberline {1.11}Character Theory}{21}{section.90}
-\contentsline {chapter}{Bibliography}{28}{chapter*.120}
+\contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{6}{section.31}
+\contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{7}{section.35}
+\contentsline {section}{\numberline {1.6}Complete Reducibility}{7}{section.39}
+\contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{10}{section.49}
+\contentsline {section}{\numberline {1.8}Schur's Lemma}{12}{section.59}
+\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{13}{section.65}
+\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{16}{section.78}
+\contentsline {section}{\numberline {1.11}Character Theory}{21}{section.91}
+\contentsline {chapter}{Bibliography}{28}{chapter*.121}
