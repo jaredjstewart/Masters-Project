@@ -206,6 +206,63 @@ Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \end{align*}
 
 \end{example}
+
+%\begin{example}
+%Let $G$ be a subgroup of $S_n$, and let $(V, \rho_1)$ be the associated permutation representation, i.e. let $V$ be an $n$-dimensional vector space with basis $\{b_1, \ldots, b_n\}$ and let 
+%\begin{align*}
+%\rho_1 \colon G &\to GL(V)   \\
+%g &\mapsto \rho_1(g) \colon b_k  \mapsto   b_{g(k)}.
+%\end{align*}
+%Let $W = \mathbb{C}$ be the $1$-dimensional trivial representation of $G$, i.e. let $\rho_2 \colon G &\to GL(W)$ be given by $\rho_2(g) =1$ for all $g \in G$.
+%We define a linear map $f \colon V \to W$ by 
+%\[ f(b_k) = 1 \quad \forall k \in \{1 , \ldots, n\}. \]
+%\end{example}
+
+\begin{example} \label{basic-example-of-hom-of-reps}
+Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$, written in the standard basis, is 
+\[ \rho_{\text{reg}}(\tau)= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \]
+and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_1$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
+\begin{align*}
+ \rho_1 \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} (= \mathbb{C}  \{0 \}) \\
+\tau &\mapsto -1 \\
+e &\mapsto 1
+ \end{align*}
+Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the matrix $\begin{bmatrix} 1 & -1 \end{bmatrix}$ in the standard basis.  Then for any vector $x = \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \in \mathbb{C}^2$, we have 
+\begin{align*}
+f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
+&= - \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
+&= \rho_1 (\tau) \circ f(x).
+\end{align*}
+Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_1$ (i.e. a homomorphism of representations).  
+
+Now, let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
+\[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
+and  $\rho_{\text{reg}}(e) \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} $, so $W$ is a subrepresentation of $\rho_{\text{reg}}$.  (In fact, $W$ is isomorphic to the $1$-dimensional trivial representation of $G$.)
+\end{example}
+
+\begin{example}
+We can generalize the previous example.  Suppose we have a representation $\rho \colon G \to GL_n (\mathbb{C})$.  If we can find a vector $x \ in \mathbb{C}^n$ which is an eigenvector for every matrix $\rho(g), g \in G$, i.e.
+\[ \rho(g) (x) = \lambda_g (x) \]
+for some eigenvalues $\lambda_g \in \mathbb{C}$, then the span of $x$ is a $1$-dimensional $G$-invariant subspace of $\mathbb{C}^n$.  It's isomorphic to the $1$-dimensional representation
+\begin{align*}
+ \rho_2 \colon G &\to GL_1 (\mathbb{C})
+g &\mapsto \lambda_g.
+\end{align*}
+\end{example}
+
+
+\begin{prop}\label{ker-im-subreprns}
+Let $f \colon V \to W$ be a homomorphism of representations of $G$.  Then $\text{Ker}(f)$ is a subrepresentation of $V$ and $\text{Im}(f)$ is a subrepresentation of $W$.
+\end{prop}
+\begin{proof}
+If $x \in \text{Ker}(f)$, then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$, so $\text{Ker}(f)$ is $G$-invariant..
+If $w \in \text{Im}(f)$, then $w = f(v)$ for some $v \in V$.  Thus $g w = g f(v) = f(gv)$ for every $g \in G$, so $gw \in \text{Im}(f)$ and $\text{Im}(f)$ is $G$-invariant.
+\end{proof}
+\begin{note}
+Observe that the subrepresentation $W$ we constructed in Example \ref{basic-example-of-hom-of-reps} is precisely equal to the kernel of the map $f$ from that example. 
+\end{note}
+
+
 %----------------------------------------------------------------------------------------
 %	Representations of Cyclic Groups
 %
@@ -317,7 +374,7 @@ Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ke
 \[ V = \text{Ker}(f) \oplus W \]
 \end{lemma}
 \begin{proof}
-First we note that $\text{Ker}(f)$ is $G$-invariant, since if $x \in \text{Ker}(f)$, then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$.
+We have seen that $\text{Ker}(f)$ is a subprepresentation of $V$ in Proposition \ref{ker-im-subreprns}.
 Now if $y \in \text{Ker}(f) \cap W$ then $y=f(y)=0$, so $\text{Ker}(f) \cap W = 0$.  Finally $\text{Im}(f)=W$, so by the Rank-Nullity theorem
 \[ \text{dim Ker}(f) + \text{dim }W = \text{dim }V. \]
 Thus $V = \text{Ker}(f) \oplus W$.  
