@@ -7,10 +7,10 @@
 \contentsline {section}{\numberline {1.3}The Definition of a Representation}{2}{section.14}
 \contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{6}{section.31}
 \contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{7}{section.35}
-\contentsline {section}{\numberline {1.6}Complete Reducibility}{7}{section.39}
+\contentsline {section}{\numberline {1.6}Complete Reducibility}{8}{section.39}
 \contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{10}{section.49}
 \contentsline {section}{\numberline {1.8}Schur's Lemma}{12}{section.59}
 \contentsline {section}{\numberline {1.9}Isotypical Decomposition}{13}{section.65}
-\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{16}{section.78}
-\contentsline {section}{\numberline {1.11}Character Theory}{21}{section.91}
-\contentsline {chapter}{Bibliography}{28}{chapter*.121}
+\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{17}{section.78}
+\contentsline {section}{\numberline {1.11}Character Theory}{22}{section.91}
+\contentsline {chapter}{Bibliography}{29}{chapter*.121}

@@ -193,16 +193,16 @@ We similarly calculate
 \end{example}
 
 \begin{example}
-Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$ and $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a an action of $G$ on $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
+Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
 \begin{align*}
+\rho( e) &= \text{Id}_2 \\
 \rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} \\
 \rho (\sigma^2) &= \begin{bmatrix} -1 & 0 \\ 0 & -1  \end{bmatrix} \\ 
 \rho (\sigma^3) &= \begin{bmatrix} 0 & 1 \\ -1 & 0  \end{bmatrix} \\
 \rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
 \rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
 \rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
-\rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix} \\
-\rho( e) &= \text{Id}_2
+\rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix}
 \end{align*}
 
 \end{example}
@@ -212,7 +212,7 @@ Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \section{Representations of Cyclic Groups}
 %----------------------------------------------------------------------------------------
 \begin{example}[Representations of $\mathbb{Z}$]
-We want to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\rho \colon \mathbb{Z} \to GL_n (\mathbb{C})$.  For $\rho$ to be a group homomorphism requires that $\rho(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\rho(n) = \rho( 1 + \ldots + 1) = \rho(1)^n$.  Thus $\rho$ is completely determined by the matrix $\rho(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
+Let's try to classify all representations of the group $\mathbb{Z}$ under addition.  Consider an $n$-dimensional representation $\rho \colon \mathbb{Z} \to GL_n (\mathbb{C})$.  For $\rho$ to be a group homomorphism requires that $\rho(0) = \text{Id}$.  Observe that for any $0 \neq n \in \mathbb{Z}$, we have $\rho(n) = \rho( 1 + \ldots + 1) = \rho(1)^n$.  Then $\rho$ is completely determined by the matrix $\rho(1) \in GL_n(\mathbb{C})$, and any such matrix determines a representation of $\mathbb{Z}$.  It follows that the $n$-dimensional isomorphism classes of representations of $\mathbb{Z}$ are in bijection with the conjugacy classes in $GL_n(\mathbb{C})$.  These conjugacy classes can be parameterized by the \textit{Jordan canonical form}.
 \end{example}
 
 \begin{example}[Representations of the cyclic group of order $n$]
