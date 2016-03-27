@@ -217,9 +217,9 @@ Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \begin{example} \label{basic-example-of-hom-of-reps}
 Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$, written in the standard basis, is 
 \[ \rho_{\text{reg}}(\tau)= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \]
-and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_1$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
+and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_{\text{sgn}}$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
 \begin{align*}
- \rho_1 \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} \\
+ \rho_{\text{sgn}} \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} \\
 \tau &\mapsto -1 \\
 e &\mapsto 1
  \end{align*}
@@ -227,9 +227,9 @@ Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the 
 \begin{align*}
 f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
 &= - \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
-&= \rho_1 (\tau) \circ f(x).
+&= \rho_{\text{sgn}} (\tau) \circ f(x).
 \end{align*}
-Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_1$ (i.e. a homomorphism of representations).  
+Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_{\text{sgn}}$ (i.e. a homomorphism of representations).  
 
 Now, let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
 \[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
@@ -471,7 +471,7 @@ We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so 
 \[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \subset V_{\text{reg}}. \]
 Then
 \[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
-so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_1$ from the earlier example.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
+so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_{\text{sgn}}$ from the Example \ref{basic-example-of-hom-of-reps}.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
 \end{example}
 
 
