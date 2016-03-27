@@ -1179,3 +1179,10 @@ A \textbf{class function} on $G$ is a function on $G$ whose values are invariant
 \begin{note}
 The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
 \end{note}
+Since the character of a representation is a class function on $G$, we don't actually need to to compute $\chi_V (g) \overline {\chi_W (g)}$ for every group element to find the inner product of $\chi_V$ and $\chi_W$.  We just need to calculate it once on each conjugacy class, i.e. 
+\begin{align*}
+\langle \chi_V | \chi_W \rangle &= \frac{1}{|G|} \sum_{g \in G} \rho_V (g) \overline{\rho_W (g)} \\
+&=  \frac{1}{|G|} \sum_{[g]} |[g]|   \rho_V (g) \overline{\rho_W (g)}
+\end{align*}
+where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
+
