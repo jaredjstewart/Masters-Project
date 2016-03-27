@@ -337,18 +337,23 @@ To summarize, every $m$-dimensional representation $\rho$ of the cyclic group $G
 \end{example}
 
 \section{Constructing New Representations from Old}
+We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
 
-From elementary linear algebra, we know that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \rho(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\rho(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\rho(g)(v) + W$ and $\rho(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
+\begin{defn}
+Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural representation of $G$, called the \textbf{direct sum representation} of $V$ and $W$, which we define by 
+\begin{align*}
+\rho_{V \oplus W} \colon G &\to GL(V \oplus W) \\
+\rho_{V \oplus W}(g) \colon (x,y) &\mapsto (\rho_{V} (g)(x), \rho_{W}(g)(y)).
+\end{align*}
+\end{defn}
+
+
+Recall from linear algebra that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \rho(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\rho(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\rho(g)(v) + W$ and $\rho(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
 
 \begin{defn}
 Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \rho(g)(v) + W$.
 \end{defn}
 
-Recall also from linear algebra that given two vector spaces $V_1$ and $V_2$, we can form the \textbf{direct sum} $V_1 \oplus V_2$ consisting of ordered pairs $(v_1 ,v_2)$ where $v_1 \in V_1, v_2 \in V_2$.  
-
-\begin{defn}
-Let $V_1$ and $V_2$ be representations of $G$.  Then $V_1 \oplus V_2$ forms a representation of $G$ called the \textbf{direct sum representation} of $V_1$ and $V_2$ with the action $g (v_1, v_2) = (g \cdot  v_1, g \cdot v_2)$.
-\end{defn}
 
 
 \section{Complete Reducibility}
@@ -440,6 +445,18 @@ Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreduc
 \begin{equation} \label{1.28.1} V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce from \ref{1.28.1} that $V$ is completely reducible.
 \end{proof}
+
+\begin{example}
+Let us once again return to Example \ref{basic-example-of-hom-of-reps}.  We had $G= C_2$, and found a $1$-dimensional subrepresentation 
+\[ W = \left< \begin{bmatrix}1 \\ 1 \end{bmatrix} \right> \subset V_{\text{reg}}= \mathbb{C}^2 . \]
+We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so let's try to find one.  Consider
+\[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \subset V_{\text{reg}}. \]
+Then
+\[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
+so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_1$ from the earlier example.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
+
+\end{example}
+
 
 \section{Vector Spaces of Linear Maps}
 \begin{defn}

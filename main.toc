@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{7}{section.35}
 \contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{8}{section.39}
 \contentsline {section}{\numberline {1.6}Complete Reducibility}{9}{section.42}
-\contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{11}{section.52}
-\contentsline {section}{\numberline {1.8}Schur's Lemma}{13}{section.62}
-\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{14}{section.68}
-\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{18}{section.81}
-\contentsline {section}{\numberline {1.11}Character Theory}{23}{section.94}
-\contentsline {chapter}{Bibliography}{30}{chapter*.124}
+\contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{12}{section.53}
+\contentsline {section}{\numberline {1.8}Schur's Lemma}{14}{section.63}
+\contentsline {section}{\numberline {1.9}Isotypical Decomposition}{15}{section.69}
+\contentsline {section}{\numberline {1.10}Duals and Tensor Products}{18}{section.82}
+\contentsline {section}{\numberline {1.11}Character Theory}{23}{section.95}
+\contentsline {chapter}{Bibliography}{30}{chapter*.125}
