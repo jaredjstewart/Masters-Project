@@ -199,7 +199,7 @@ We similarly calculate
 \[  \rho_{\text{reg}}(\sigma \tau) = \begin{bmatrix}0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{bmatrix} \]
 \end{example}
 
-\begin{example}
+\begin{example}\label{rep-of-d8}
 Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \text{Id}_2 \\
@@ -1111,6 +1111,21 @@ Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \ch
 So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$ and the rest are $0$.
 \end{proof}
 
+\begin{example}\label{irr-char-of-d8}
+Let $G=D_8=  \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Recall the two dimensional representation $W$ of $D_8$ given in Example \ref {rep-of-d8}.
+We compute the character of this representation by taking the trace of the matrices from that example:
+\begin{align*}
+\chi_W(e) &=2 & \chi_W(\tau) = 0 \\
+\chi_W(\sigma) &= 0 &\chi_W (\sigma \tau) = 0 \\
+\chi_W(\sigma^2) &= -2 &\chi_W (\sigma^2 \tau) = 0 \\
+\chi_W(\sigma^3) &= 0 &\chi_W (\sigma^3 \tau) = 0.
+\end{align*}
+Then
+\[ \langle \chi_W | \chi_W \rangle =\frac {1}{|G} \sum_{g \in G} \chi_W (g) \overline{\chi_W (g)} = \frac{1}{8} (4 + 4) = 1\]
+so we conclude that $W$ is irreducible.
+\end{example}
+
+
 \begin{cor}
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{cor}
@@ -1186,3 +1201,14 @@ Since the character of a representation is a class function on $G$, we don't act
 \end{align*}
 where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
 
+\begin{example}
+Let $G = D_8$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_8$ with dimensions $d_1, \ldots, d_r$ respectively, where $U_1$ is the $1$-dimensional trivial representation.  Then 
+\[ d_2^2 + \ldots + d_r ^2 = |G| - d_1^2 = 8 - 1 = 7. \]
+There are two possibilities:  
+
+1. $r=8$, and $d_i = 1$ for all $ 1 \leq i \leq 8$. 
+
+2. $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
+
+We saw in Example \ref{irr-char-of-d8} that $G$ has a two-dimensional irreducible representation, so in fact (2) holds.  The four 
+\end{example}
