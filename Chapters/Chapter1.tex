@@ -358,13 +358,36 @@ Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of
 
 \section{Complete Reducibility}
 \begin{defn}
-A representation is said to be \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
 \end{defn}
 
-\begin{example}
+\begin{note}
+\begin{enumerate}
+\item Any $1$-dimensional representation $V$ has no subspaces other than $0$ and $V$ itself, and is thus irreducible.
+\item Any irreducible representation is, in particular, completely reducible.
+\end{enumerate}
+\end{note}
 
-1. Any irreducible representation is, in particular, completely reducible.
-2. Any $1$-dimensional representations has no proper subspaces, and is thus irreducible.
+\begin{example}[A $2$-dimensional irreducible representation]
+Let $G = D_6 = \{ \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \} (\cong S_3)$.
+Consider a triangle centered at the origin with vertices
+\[(1,0), (-\frac{1}{2}, \frac{\sqrt{3}}{2}), (-\frac{1}{2}, - \frac{\sqrt{3}}{2}). \]
+Then we can let $\sigma$ act as rotation by $\frac{2 \pi}{3}$ and let $\tau$ act as reflection over the $x$-axis to obtain an action of $G$ on $\mathbb{C}^2$ given (under the standard basis) by the matrices
+\begin{align*}
+\rho(\sigma) &= \begin{bmatrix}-\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix} \\
+\rho(\tau) &= \begin{bmatrix}1 & 0 \\ 0 & -1 \end{bmatrix}
+\end{align*}
+Suppose $\rho$ has a non-trivial subrepresentation $W$.  We must have $\text{dim }W =1$.  Since $W$ is invariant under the action of both $\rho(\sigma)$ and $\rho(\tau)$, there must be some mutual eigenvector for $\rho(\sigma)$ and $\rho(\tau)$ that spans $W$.  The eigenvectors of $\rho(\sigma)$ are
+\begin{align*}
+\begin{bmatrix} 1 \\ -i \end{bmatrix} \quad (\lambda_1 = e^{\frac{2 \pi i}{3}}) \quad \text{and} \quad
+\begin{bmatrix} 1 \\ i \end{bmatrix} \quad (\lambda_2 = e^{-\frac{2 \pi i}{3}}) .
+\end{align*}  
+The eigenvectors of $\rho(\tau)$ are 
+\begin{align*}
+\begin{bmatrix} 1 \\ 0 \end{bmatrix} \quad (\lambda_1 = 1) \quad \text{and} \quad
+\begin{bmatrix} 0 \\ 1 \end{bmatrix} \quad (\lambda_2 = -1).
+\end{align*}
+Thus we see that there is no such $W$.
 \end{example}
 
 \begin{thm}\label{simultaneous} If $A_1, A_2, \ldots, A_r$ are linear operators on $V$ and each $A_i$ is diagonalizable, they are simultaneously diagonalizable if and only if they commute.
@@ -454,8 +477,9 @@ We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so 
 Then
 \[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
 so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_1$ from the earlier example.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
-
 \end{example}
+
+
 
 
 \section{Vector Spaces of Linear Maps}
