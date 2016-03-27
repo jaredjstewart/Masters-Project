@@ -5,8 +5,8 @@
 \contentsline {section}{\numberline {1.1}Introduction}{1}{section.3}
 \contentsline {section}{\numberline {1.2}Group Actions}{1}{section.6}
 \contentsline {section}{\numberline {1.3}The Definition of a Representation}{2}{section.14}
-\contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{7}{section.34}
-\contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{8}{section.38}
+\contentsline {section}{\numberline {1.4}Representations of Cyclic Groups}{7}{section.35}
+\contentsline {section}{\numberline {1.5}Constructing New Representations from Old}{8}{section.39}
 \contentsline {section}{\numberline {1.6}Complete Reducibility}{9}{section.42}
 \contentsline {section}{\numberline {1.7}Vector Spaces of Linear Maps}{11}{section.52}
 \contentsline {section}{\numberline {1.8}Schur's Lemma}{13}{section.62}
