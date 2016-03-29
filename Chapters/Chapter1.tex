@@ -200,7 +200,7 @@ We similarly calculate
 \end{example}
 
 \begin{example}\label{rep-of-d8}
-Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \text{Id}_2 \\
 \rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} \\
@@ -1112,7 +1112,7 @@ So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$
 \end{proof}
 
 \begin{example}\label{irr-char-of-d8}
-Let $G=D_8=  \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Recall the two dimensional representation $W$ of $D_8$ given in Example \ref {rep-of-d8}.
+Let $G=D_4=  \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Recall the two dimensional representation $W$ of $D_4$ given in Example \ref {rep-of-d8}.
 We compute the character of this representation by taking the trace of the matrices from that example:
 \begin{align*}
 \chi_W(e) &=2 & \chi_W(\tau) = 0 \\
@@ -1182,11 +1182,6 @@ Let $U_1, \ldots, U_r$ be distinct representatives of the isomorphism classes of
 by Proposition \ref{mult-of-irr-in-reg}.  The claim follows from taking dimensions of each side of this equation.
 \end{proof}
 
-\begin{example}
-Consider $G=D_3$.  We have seen three irreducible representations of $G$, namely the $1$-dimensional trivial representation, the $1$-dimensional alternating representation, and the $2$-dimensional irreducible representation $W$ constructed geometrically in Example \ref{2d-irrep-d3}.  Then
-\[ |D_3| = 6 = 1^2 + 1^2 +2^2 \]
-so these are all of the irreducible representations of $D_3$ up to isomorphism.
-\end{example}
 
 \begin{defn}
 A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$.  We may therefore view class functions as functions on the set of conjugacy classes of $G$.
@@ -1213,12 +1208,14 @@ It is also helpful to include the size of the conjugacy class associated with ea
 \end{note}
 
 \begin{example}
-The conjugacy classes of $D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ are given by
-$\{e\}$, $\{ \sigma, \sigma ^2 \}$, and $\{\tau, \tau \sigma, \tau \sigma^2 \}$.  Therefore the character table of $D_3$ is given by 
+Consider $G=D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  We have seen three irreducible representations of $D_3$, namely the $1$-dimensional trivial representation, the $1$-dimensional alternating representation, and the $2$-dimensional irreducible representation $W$ constructed geometrically in Example \ref{2d-irrep-d3}.  Observe that
+\[ |D_3| = 6 = 1^2 + 1^2 +2^2 \]
+so these are all of the irreducible representations of $D_3$ up to isomorphism.  The conjugacy classes of $D_3$ are 
+$\{e\}$, $\{ \sigma, \sigma ^2 \}$, and $\{\tau, \tau \sigma, \tau \sigma^2 \}$.  Thus, the character table of $D_3$ is given by 
 
 \begin{tabular}{ | l | c | c | c |}\hline 
 \multicolumn{4}{|c|}{Character table of $D_3$} \\ \hline
-Size of conjugacy class & 1 & 3 & 2 \\ \hline
+Size of conjugacy class $\vert [ g] \vert$ & 1 & 3 & 2 \\ \hline
 \multicolumn{4}{|c|}{} \\ \hline
 
 Conjugacy class representative $[g]$ & $[e]$ & $[\tau]$ & $[\sigma]$ \\ \hline
@@ -1231,31 +1228,29 @@ $\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -1 \\
 
 
 \begin{example}
-Let $G = D_4$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$ with dimensions $d_1, \ldots, d_r$ respectively, where $U_1$ is the $1$-dimensional trivial representation.  Then 
+Let $G = D_4$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$, with dimensions $d_1, \ldots, d_r$ respectively, and let $U_1$ be the $1$-dimensional trivial representation.  Then 
 \[ d_2^2 + \ldots + d_r ^2 = |G| - d_1^2 = 8 - 1 = 7. \]
 There are two possibilities:  
 
-1. $r=8$, and $d_i = 1$ for all $ 1 \leq i \leq 8$. 
+1.  $r=8$, and $d_i = 1$ for all $ 1 \leq i \leq 8$. 
 
-2. $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
+2. or $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
 
-We saw in Example \ref{irr-char-of-d8} that $G$ has a two-dimensional irreducible representation, so in fact (2) holds.  The character table for $D_4$ is as follows:
+We saw in Example \ref{irr-char-of-d8} that $G$ has a two-dimensional irreducible representation, so in fact (2) holds. If we look at the relations in the presentation of $D_4=\langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$, we may construct four one-dimensional representations $\rho_1, \ldots, \rho_4$ by specifying the images of $\sigma$ and $\tau$:
+ \begin{align*}
+ \rho_{1 + i + 2j} \colon  \tau &\mapsto (-1)^i \\
+	\sigma &\mapsto (-1)^j
+ \end{align*}
+where $i,j \in \{0,1\}$.  Thus the character table for $D_4$ is as follows:
 
-\begin{tabular}{ |l|l|l| }
-\hline
-\multicolumn{3}{ |c| }{Team sheet} \\
-\hline
-Goalkeeper & GK & Paul Robinson \\ \hline
-\multirow{4}{*}{Defenders} & LB & Lucas Radebe \\
- & DC & Michael Duburry \\
- & DC & Dominic Matteo \\
- & RB & Didier Domi \\ \hline
-\multirow{3}{*}{Midfielders} & MC & David Batty \\
- & MC & Eirik Bakke \\
- & MC & Jody Morris \\ \hline
-Forward & FW & Jamie McMaster \\ \hline
-\multirow{2}{*}{Strikers} & ST & Alan Smith \\
- & ST & Mark Viduka \\
+\begin{tabular}{ | l | c | c | c |c | c |}\hline 
+\multicolumn{6}{|c|}{Character table of $D_4$} \\ \hline
+Conjugacy class  & $\{1\}$ & $ \{\sigma, \sigma^3\}$ & $\{\sigma^2\}$  & $\{\tau, \sigma^2 \tau\}$ & $\{\sigma\tau, \sigma^3 \tau\}$ \\ \hline
+$\chi_1$ & $1$ & 1 & 1 & 1 & 1\\ \hline
+$\chi_2$ & 1 & 1 & 1 & -1 & -1\\ \hline
+$\chi_3$  & 1 & -1 & 1  & 1 & -1\\ \hline
+$\chi_4$   & 1 & -1 & 1 & -1 & 1 \\ \hline
+$\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -2  & 0 & 0 \\
 \hline
 \end{tabular}
 \end{example}
