@@ -114,7 +114,7 @@ The two definitions we have given of a linear representation are equivalent.
 \begin{align*}
 \rho \colon S_n &\to GL(\mathbb{C})=\mathbb{C}^\times \\
 \sigma & \mapsto \text{sgn}(\sigma).
-\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) }
+\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) }
  \end{example}
 \end{frame}
 
@@ -122,7 +122,6 @@ The two definitions we have given of a linear representation are equivalent.
 \begin{definition}
 A \textbf{homomorphism} between two representations $\rho_1 \colon G \to GL(V)$ and $\rho_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with the action of $G$, i.e. such that
 \[ \psi \circ \rho_1 (g)= \rho_2(g) \circ \psi \quad \forall  g \in G. \]  
-
 In this case, we also refer to $\psi$ as a $\mathbf{G}$\textbf{-linear map}.
 \end{definition}
 \begin{definition}
@@ -130,126 +129,145 @@ An \textbf{isomorphism} of representations is a $G$-linear map that is also inve
 \end{definition}
 \end{frame}
 
-\section{Section no.1} 
-\begin{frame}\frametitle{Title} 
-Each frame should have a title.
-\end{frame}
-\subsection{Subsection no.1.1  }
+\begin{frame}{Representations as matrices}
+\begin{example}
+\only<1>{Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $n$ over the field $K$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to K^n$.  This yields a representation $\phi$ of $G$ on $K^n$ by defining \[\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}\] for all $g \in G$. This representation is isomorphic to our original representation $(\rho, V)$. In particular, we can always choose to view complex $n$-dimensional representations of $G$ as representations on $\mathbb{C}^n$, where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.}
 
-
-\section{Section no. 2} 
-\subsection{Lists I}
-
-\note[itemize]{
-\item point 1 Ijkflasjkssdf
-\item point 2
+\only<2>{
+Let $G = \{ (1), (123), (132) \} \subset S_3$.  Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
+\begin{align*}
+\rho((1)) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+\rho((123)) &= \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \\
+\rho((132)) &= \begin{bmatrix} 0 & 1  & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}.
+\end{align*}
 }
-\begin{frame}\frametitle{unnumbered lists}
+\end{example}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{example}
+Let $G= C_2 \times C_2 = \langle \sigma, \tau | \sigma^2 = \tau^2 = e, \sigma \tau = \tau \sigma \rangle$ be the Klein four-group.  Let $V$ be the vector space with basis $\{ b_e, b_\sigma, b_\tau, b_{\sigma \tau} \}$.  Left multiplication by $\sigma$ gives a permutation 
+\begin{align*}
+b_e &\mapsto b_\sigma\\
+b_\sigma &\mapsto b_e \\
+b_ \tau &\mapsto b_{\sigma \tau}\\
+b_{\sigma \tau} &\mapsto b_\tau.
+\end{align*}
+We can similarly compute $\rho_{\text{reg}}(\tau)$.  Thus, in our basis, the regular representation $\rho_{\text{reg}} \colon G \to GL(V)$  is given by the matrices
+\begin{align*}
+ \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0 & 1 & 0 & 0 \\  1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix} & \quad \rho_{\text{reg}}(\tau) = \begin{bmatrix}0&0&1&0 \\ 0&0&0&1 \\ 1&0&0&0 \\ 0&1&0&0 \end{bmatrix} \end{align*}
+\end{example}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{example}\label{rep-of-d8}
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  \pause Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  \pause We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
+\begin{align*}
+\rho( e) &= \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}  &\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
+\rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} & \rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
+\rho (\sigma^2) &= \begin{bmatrix} -1 & 0 \\ 0 & -1  \end{bmatrix} & \rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
+\rho (\sigma^3) &= \begin{bmatrix} 0 & 1 \\ -1 & 0  \end{bmatrix} & \rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix}
+\end{align*}
+\end{example}
+\end{frame}
+
+\subsection{Subrepresentations}
+\begin{frame}{Subrepresentations}
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
+\end{definition}
+\end{frame}
+
+\begin{frame}{Representations of ${C}^2$}
+\only<1>{
+\begin{example}
+Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$ written in the standard basis is given by 
+\[ \rho_{\text{reg}}(\tau)= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \]
+and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_{\text{sgn}}$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
+\begin{align*}
+ \rho_{\text{sgn}} \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} \\
+\tau &\mapsto -1 \\
+e &\mapsto 1.
+ \end{align*} \end{example} }
+ 
+ \only<2>{
+ \begin{example}[Cont.]
+Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the matrix $\begin{bmatrix} 1 & -1 \end{bmatrix}$.  Then for any  $x = \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \in \mathbb{C}^2$, we have 
+\begin{align*}
+f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
+&= \begin{bmatrix} -1 & 1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
+&= \rho_{\text{sgn}} (\tau) \circ f(x).
+\end{align*}
+Also note that $ f \circ \rho_{\text{reg}}(e) = \rho_{\text{sgn}}(e) \circ f$.  Thus $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_{\text{sgn}}$ (i.e. a homomorphism of representations).  
+\end{example}
+}
+
+\only<3>{
+ \begin{example}[Cont.]
+Now let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
+\[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
+and  $\rho_{\text{reg}}(e) \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} $, so $W$ is a $G$-invariant subpace, i.e. $W$ is a subrepresentation of $\rho_{\text{reg}}$.  Note that $W$ is precisely equal to the kernel of the map $f$, and that $W$ is isomorphic to the $1$-dimensional trivial representation of $G$.
+\end{example}
+
+}
+\end{frame}
+
+\begin{frame}
+\begin{example}
+We can generalize the $G$-invariant subspace from the previous example.  Suppose we have a representation $\rho \colon G
+\to GL_n
+(\mathbb{C})$.  If
+we can find a vector $x \in \mathbb{C}^n$ which is an eigenvector for every matrix $\rho(g), g \in G$,
+i.e. an $x \in \mathbb{C}^n$ such that
+\[ \rho(g) (x) = \lambda_g (x) \quad \forall g \in G\]
+for some eigenvalues $\lambda_g \in \mathbb{C}$, then the span of $x$ is a $1$-dimensional $G$-invariant
+subspace
+ of $\mathbb{C}^n$.  It is isomorphic to the $1$-dimensional representation
+\begin{align*}
+ \rho_2 \colon G &\to GL_1 (\mathbb{C}) \\
+g &\mapsto \lambda_g.
+\end{align*}
+\end{example}
+\end{frame}
+
+\begin{frame}
+\begin{proposition}\label{ker-im-subreprns}
+Let $f \colon V \to W$ be a homomorphism of representations of $G$.  Then $\text{Ker}(f)$ is a subrepresentation of $V$ and $\text{Im}(f)$ is a subrepresentation of $W$.
+\end{proposition}
+\begin{proof}
 \begin{itemize}
-\item Introduction to  \LaTeX  
-\item Course 2 
-\item Termpapers and presentations with \LaTeX 
-\item Beamer class
-\end{itemize} 
-\end{frame}
+\item Let $x \in \text{Ker}(f)$. Then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$.
+So $gx \in \text{Ker}(f)$ and $\text{Ker}(f)$ is $G$-invariant.
 
-\begin{frame}\frametitle{lists with pause}
-\begin{itemize}
-\item Introduction to  \LaTeX \pause 
-\item Course 2 \pause 
-\item Termpapers and presentations with \LaTeX \pause 
-\item Beamer class
-\end{itemize} 
-\end{frame}
-
-\subsection{Lists II}
-\begin{frame}\frametitle{numbered lists}
-\begin{enumerate}
-\item Introduction to  \LaTeX  
-\item Course 2 
-\item Termpapers and presentations with \LaTeX 
-\item Beamer class
-\end{enumerate}
-\end{frame}
-
-\begin{frame}\frametitle{numbered lists with pause}
-\begin{enumerate}
-\item Introduction to  \LaTeX \pause 
-\item Course 2 \pause 
-\item Termpapers and presentations with \LaTeX \pause 
-\item Beamer class
-\end{enumerate}
-\end{frame}
-
-\section{Section no.3} 
-\subsection{Tables}
-\begin{frame}\frametitle{Tables}
-\begin{tabular}{|c|c|c|}
-\hline
-\textbf{Date} & \textbf{Instructor} & \textbf{Title} \\
-\hline
-WS 04/05 & Sascha Frank & First steps with  \LaTeX  \\
-\hline
-SS 05 & Sascha Frank & \LaTeX \ Course serial \\
-\hline
-\end{tabular}
-\end{frame}
-
-
-\begin{frame}\frametitle{Tables with pause}
-\begin{tabular}{c c c}
-A & B & C \\ 
-\pause 
-1 & 2 & 3 \\  
-\pause 
-A & B & C \\ 
-\end{tabular} 
-\end{frame}
-
-
-\section{Section no. 4}
-\subsection{blocs}
-\begin{frame}\frametitle{blocs}
-
-\begin{block}{title of the bloc}
-bloc text
-\end{block}
-
-\begin{exampleblock}{title of the bloc}
-bloc text
-\end{exampleblock}
-
-
-\begin{alertblock}{title of the bloc}
-bloc text
-\end{alertblock}
-\end{frame}
-
-\section{Section no. 5}
-\subsection{split screen}
-
-\begin{frame}\frametitle{splitting screen}
-\begin{columns}
-\begin{column}{5cm}
-\begin{itemize}
-\item Beamer 
-\item Beamer Class 
-\item Beamer Class Latex 
+\item Now let $w \in \text{Im}(f)$. There exists $v \in V$ such that $w = f(v)$, so $g w = g f(v) = f
+(gv)$ for
+every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant.
 \end{itemize}
-\end{column}
-\begin{column}{5cm}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Instructor} & \textbf{Title} \\
-\hline
-Sascha Frank &  \LaTeX \ Course 1 \\
-\hline
-Sascha Frank &  Course serial  \\
-\hline
-\end{tabular}
-\end{column}
-\end{columns}
+\end{proof}
 \end{frame}
 
+\section{Complete Reducibility}
+\begin{frame}{The direct sum of representations}
+\begin{block}{Note}
+We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
+\end{block} \pause
+\begin{definition}
+Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural representation of $G$, called the \textbf{direct sum representation} of $V$ and $W$, which we define by 
+\begin{align*}
+\rho_{V \oplus W} \colon G &\to GL(V \oplus W) \\
+\rho_{V \oplus W}(g) \colon (x,y) &\mapsto (\rho_{V} (g)(x), \rho_{W}(g)(y)).
+\end{align*}
+\end{definition}
+\end{frame}
 
+\begin{frame}{Irreducible representations and complete reducibility}
+\begin{definition}
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.
+\end{definition}
+
+\begin{block}{Note}
+\begin{enumerate}
+\item Any $1$-dimensional representation $V$ has no subspaces other than $0$ and $V$ itself, and is thus irreducible.
+\item Any irreducible representation is, in particular, completely reducible.
+\end{enumerate} \end{block}
+\end{frame}
 \end{document}

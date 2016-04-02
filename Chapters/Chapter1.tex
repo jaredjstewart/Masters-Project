@@ -145,7 +145,7 @@ Thus $\sigma_g$ is linear, and $\rho(G) \subset GL(V)$ proves that we  have a ho
 
 \item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by $\rho_{\text{reg}}(h) (e_g) = e_{hg}$.  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
 
-\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
+\item For any symmetric group $S_n$, the \textbf{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
 \end{enumerate}
  \end{example}
@@ -167,12 +167,6 @@ Suppose that we have two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho
 \begin{proposition} \label{iso-classes-of-reprns}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
 \end{proposition}
-\begin{note}
-In other words, 
-\end{note}
-\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
-\end{definition}
-
 
 \begin{example}
 Let $G = \{ (1), (123), (132) \} \subset S_3$.  Note that $G$ is a subgroup of $S_3$, and is isomorphic to the cyclic group of order $3$. Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
@@ -199,7 +193,7 @@ We similarly calculate
 \end{example}
 
 \begin{example}\label{rep-of-d8}
-Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \text{Id}_2 \\
 \rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} \\
@@ -210,8 +204,10 @@ Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
 \rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix}
 \end{align*}
-
 \end{example}
+
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
+\end{definition}
 
 \begin{example} \label{basic-example-of-hom-of-reps}
 Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$, written in the standard basis, is 
@@ -225,18 +221,18 @@ e &\mapsto 1
 Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the matrix $\begin{bmatrix} 1 & -1 \end{bmatrix}$ in the standard basis.  Then for any vector $x = \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \in \mathbb{C}^2$, we have 
 \begin{align*}
 f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
-&= - \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
+&= \begin{bmatrix} -1 & 1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
 &= \rho_{\text{sgn}} (\tau) \circ f(x).
 \end{align*}
 Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_{\text{sgn}}$ (i.e. a homomorphism of representations).  
 
 Now, let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
-\[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
+\[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
 and  $\rho_{\text{reg}}(e) \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} $, so $W$ is a subrepresentation of $\rho_{\text{reg}}$.  (In fact, $W$ is isomorphic to the $1$-dimensional trivial representation of $G$.)
 \end{example}
 
 \begin{example}
-We can generalize $G$-invariant subspace from the previous example.  Suppose we have a representation $\rho \colon G
+We can generalize the $G$-invariant subspace from the previous example.  Suppose we have a representation $\rho \colon G
 \to GL_n
 (\mathbb{C})$.  If
 we can find a vector $x \in \mathbb{C}^n$ which is an eigenvector for every matrix $\rho(g), g \in G$,
@@ -265,7 +261,7 @@ every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant
 \end{proof}
 \begin{note}
 Recall the subrepresentation $W$ that we constructed in Example \ref{basic-example-of-hom-of-reps}.  This
-subrepresnentation
+subrepresentation
  is
 precisely equal
  to the
@@ -342,11 +338,9 @@ Recall from linear algebra that given a subspace $W \subseteq V$, we can form th
 Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \rho(g)(v) + W$.
 \end{definition}
 
-
-
 \section{Complete Reducibility}
 \begin{definition}
-A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.
 \end{definition}
 
 \begin{note}
