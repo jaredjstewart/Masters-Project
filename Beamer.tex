@@ -1,6 +1,7 @@
 \documentclass[10pt]{beamer}
 
-\usetheme{metropolis}
+\usetheme{Frankfurt}
+
 \usepackage{appendixnumberbeamer}
 
 \usepackage{booktabs}
@@ -10,7 +11,29 @@
 \usepgfplotslibrary{dateplot}
 
 \usepackage{xspace}
-\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+\newcommand{\themename}{theme}%{\textbf{\textsc{metropolis}}\xspace}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}%[chapter] % reset theorem numbering for each chapter
+\newtheorem{prop}[thm]{Proposition} % definition numbers are dependent on theorem numbers
+%\newtheorem{lemma}[thm]{Lemma} % definition numbers are dependent on theorem numbers
+\newtheorem{cor}[thm]{Corollary} % definition numbers are dependent on theorem numbers
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+%\newtheorem{example}[thm]{Example} % same for example numbers
+
+\renewcommand{\restriction}{\mathord{\upharpoonright}} % Improve spacing of the restriction symbol
+
+\newcommand{\defeq}{\mathrel{\mathop:}=}
+
+\theoremstyle{remark}	
+\newtheorem*{rem}{Remark}
+%\newtheorem*{note}{Note}
+%\newtheorem*{lemma}{Lemma}
+
+\numberwithin{equation}{thm}
+
+
 
 \title{Character Tables for Representations of Finite Groups}
 \subtitle{for Math 8190}
@@ -31,7 +54,6 @@
 \section{Introduction}
 
 \begin{frame}{Group Representations}
-
 Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.   \pause For example, 
 \begin{enumerate}
 \item The \textbf{symmetric group} of degree $n$, $S_n$, is the group of all symmetries of the set $\{ 1, \ldots, n \}$. \pause
@@ -40,15 +62,35 @@ Groups arise naturally as sets of symmetries of some object which are closed und
 \pause
 One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
 This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
-
-\end{frame}
-\begin{frame}[fragile]{Sections}
-  Sections group slides of the same topic
-
-  for which \themename provides a nice progress indicator \ldots
 \end{frame}
 
-\section{Titleformats}
+\begin{frame}{Group Actions}
+\begin{defn}\label{def-grp-action}
+A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+\begin{align}
+\label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
+\label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
+\end{align}
+\end{defn}
+\begin{note}
+We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
+\end{note}
+\end{frame}
+
+\begin{frame}{The Definition of a Representation}
+\begin{defn}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
+\begin{align}
+\label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
+\label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
+\end{align}
+\end{defn}
+\end{frame}
+
+\begin{frame}{The Definition of a Representation}
+\begin{defn}[Alternative definition]
+\label{rep-def-1}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
+\end{frame}
 
 \begin{frame}{Metropolis titleformats}
 	\themename supports 4 different titleformats:
@@ -62,7 +104,7 @@ This is the basic question of representation theory, which attempts to classify 
 \end{frame}
 
 {
-    \metroset{titleformat frame=smallcaps}
+    %\metroset{titleformat frame=smallcaps}
 \begin{frame}{Small caps}
 	This frame uses the \texttt{smallcaps} titleformat.
 
@@ -73,7 +115,7 @@ This is the basic question of representation theory, which attempts to classify 
 }
 
 {
-\metroset{titleformat frame=allsmallcaps}
+%\metroset{titleformat frame=allsmallcaps}
 \begin{frame}{All small caps}
 	This frame uses the \texttt{allsmallcaps} titleformat.
 
@@ -86,7 +128,7 @@ This is the basic question of representation theory, which attempts to classify 
 }
 
 {
-\metroset{titleformat frame=allcaps}
+%\metroset{titleformat frame=allcaps}
 \begin{frame}{All caps}
 	This frame uses the \texttt{allcaps} titleformat.
 
@@ -213,7 +255,7 @@ or show \textbf{bold} results.\end{verbatim}
 
     \column{0.5\textwidth}
 
-      \metroset{block=fill}
+      %\metroset{block=fill}
 
       \begin{block}{Default}
         Block content.
@@ -234,43 +276,7 @@ or show \textbf{bold} results.\end{verbatim}
     e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
   \end{equation*}
 \end{frame}
-\begin{frame}{Line plots}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mlineplot,
-        width=0.9\textwidth,
-        height=6cm,
-      ]
 
-        \addplot {sin(deg(x))};
-        \addplot+[samples=100] {sin(deg(2*x))};
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Bar charts}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mbarplot,
-        xlabel={Foo},
-        ylabel={Bar},
-        width=0.9\textwidth,
-        height=6cm,
-      ]
-
-      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
-      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
-      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
-
-      \legend{lorem, ipsum, dolor}
-
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
 \begin{frame}{Quotes}
   \begin{quote}
     Veni, Vidi, Vici
@@ -305,7 +311,7 @@ or show \textbf{bold} results.\end{verbatim}
 
 \end{frame}
 
-\begin{frame}[standout]
+\begin{frame}%[standout]
   Questions?
 \end{frame}
 

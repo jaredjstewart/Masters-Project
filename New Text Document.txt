@@ -1,0 +1,5 @@
+*.log
+*.out
+*.nav
+*.snm
+*.aux

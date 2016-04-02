@@ -1,12 +1,13 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Section no.1}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Subsection no.1.1 }{4}{0}{1}
-\beamer@sectionintoc {2}{Section no. 2}{4}{0}{2}
-\beamer@subsectionintoc {2}{1}{Lists I}{4}{0}{2}
-\beamer@subsectionintoc {2}{2}{Lists II}{9}{0}{2}
-\beamer@sectionintoc {3}{Section no.3}{14}{0}{3}
-\beamer@subsectionintoc {3}{1}{Tables}{14}{0}{3}
-\beamer@sectionintoc {4}{Section no. 4}{18}{0}{4}
-\beamer@subsectionintoc {4}{1}{blocs}{18}{0}{4}
-\beamer@sectionintoc {5}{Section no. 5}{19}{0}{5}
-\beamer@subsectionintoc {5}{1}{split screen}{19}{0}{5}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Section no.1}{10}{0}{2}
+\beamer@subsectionintoc {2}{1}{Subsection no.1.1 }{11}{0}{2}
+\beamer@sectionintoc {3}{Section no. 2}{11}{0}{3}
+\beamer@subsectionintoc {3}{1}{Lists I}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Lists II}{16}{0}{3}
+\beamer@sectionintoc {4}{Section no.3}{21}{0}{4}
+\beamer@subsectionintoc {4}{1}{Tables}{21}{0}{4}
+\beamer@sectionintoc {5}{Section no. 4}{25}{0}{5}
+\beamer@subsectionintoc {5}{1}{blocs}{25}{0}{5}
+\beamer@sectionintoc {6}{Section no. 5}{26}{0}{6}
+\beamer@subsectionintoc {6}{1}{split screen}{26}{0}{6}

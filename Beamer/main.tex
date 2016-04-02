@@ -8,16 +8,16 @@
 % www.informatik.uni-freiburg.de/~frank/
 %
 % 
-\usetheme{Warsaw}
+\usetheme{Frankfurt}
 %\useoutertheme[subsection=false]{smoothbars}  % Dots for subsection
 
 
 %\setbeamertemplate{footline}[page number]{}%gets rid of bottom navigation bars
 
-%\setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
+\setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
 
 %  \useoutertheme{default}   % empty
-%  \useoutertheme{infolines}% simple but bland
+  %\useoutertheme{infolines}% simple but bland
   %\useoutertheme{split}    % ok if compress option used
 %  \useoutertheme{shadow}   % way too much space used -- ok with option 'compress'
   %\useoutertheme{shadow}   
@@ -25,11 +25,11 @@
   %\useoutertheme[subsection=false]{miniframes}
 
 
-
-\begin{document}
 \title{Character Tables for Representations of Finite Groups}  
 \author{Jared Stewart}
 \date{\today} 
+
+\begin{document}
 
 \begin{frame}
 \titlepage
@@ -38,6 +38,47 @@
 \begin{frame}\frametitle{Table of contents}\tableofcontents
 \end{frame} 
 
+\section{Introduction}
+
+\begin{frame}{Group Representations}
+Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.   \pause For example, 
+\begin{enumerate}
+\item The \textbf{symmetric group} of degree $n$, $S_n$, is the group of all symmetries of the set $\{ 1, \ldots, n \}$. \pause
+\item The \textbf{dihedral group} of order $2n$, $D_{n}$, is the group of all symmetries of the regular $n$-gon in the plane.
+\end{enumerate}
+\pause
+One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
+This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
+\end{frame}
+
+\begin{frame}{Group Actions}
+\begin{definition}\label{def-grp-action}
+A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+\begin{align}
+\label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
+\label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
+\end{align}
+\end{definition}
+\end{frame}
+\begin{note}
+We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
+\end{note}
+
+
+\begin{frame}{The Definition of a Representation}
+\begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
+\begin{align}
+\label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
+\label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
+\end{align}
+\end{definition}
+\end{frame}
+
+\begin{frame}{The Definition of a Representation}
+\begin{definition}[Alternative definition]
+\label{rep-def-1}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{definition}
+\end{frame}
 
 \section{Section no.1} 
 \begin{frame}\frametitle{Title} 
