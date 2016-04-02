@@ -1,4 +1,4 @@
-% This text is proprietary.
+% This text is propositionrietary.
 % It's a part of presentation made by myself.
 % It may not used commercial.
 % The noncommercial use such as private and study is free
@@ -8,14 +8,19 @@
 % www.informatik.uni-freiburg.de/~frank/
 %
 % 
+%\usetheme{Madrid}
+%\usetheme{Warsaw}
+%\usetheme{Copenhagen}
 \usetheme{Frankfurt}
+\usefonttheme[onlymath]{serif}
+%\usefonttheme{professionalfonts}
 %\useoutertheme[subsection=false]{smoothbars}  % Dots for subsection
-
+%\setbeamertemplate{theorems}[numbered]
 
 %\setbeamertemplate{footline}[page number]{}%gets rid of bottom navigation bars
 
 \setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
-
+\newtheorem{proposition}[theorem]{Proposition} 
 %  \useoutertheme{default}   % empty
   %\useoutertheme{infolines}% simple but bland
   %\useoutertheme{split}    % ok if compress option used
@@ -38,22 +43,23 @@
 \begin{frame}\frametitle{Table of contents}\tableofcontents
 \end{frame} 
 
-\section{Introduction}
+\section{Basics of Representation Theory}
 
-\begin{frame}{Group Representations}
-Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.   \pause For example, 
+\subsection{Motivation}
+\begin{frame}{Motivation}
+Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.  For example, 
 \begin{enumerate}
-\item The \textbf{symmetric group} of degree $n$, $S_n$, is the group of all symmetries of the set $\{ 1, \ldots, n \}$. \pause
+\item The \textbf{symmetric group} of degree $n$, $S_n$, is the group of all symmetries of the set $\{ 1, \ldots, n \}$.
 \item The \textbf{dihedral group} of order $2n$, $D_{n}$, is the group of all symmetries of the regular $n$-gon in the plane.
 \end{enumerate}
-\pause
-One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
+In these two examples, $S_n$  acts on the set $\{ 1, \ldots, n \}$ and $D_{n}$ acts on the regular $n$-gon in a natural manner. One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
 This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
 \end{frame}
 
+\subsection{Group Actions}
 \begin{frame}{Group Actions}
 \begin{definition}\label{def-grp-action}
-A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot a$, for all $g \in G$ and $a \in A$) that satisfies the following two axoims:
+A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot x$, for all $g \in G$ and $x \in X$) that satisfies the following two axoims:
 \begin{align}
 \label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
 \label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
@@ -62,22 +68,66 @@ A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\
 \end{frame}
 \begin{note}
 We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
-\end{note}
+ \end{note}
 
-
+\subsection{The Definition of a Representation}
 \begin{frame}{The Definition of a Representation}
-\begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
+\begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ that preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
 \begin{align}
 \label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
 \label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
 \end{align}
 \end{definition}
-\end{frame}
-
-\begin{frame}{The Definition of a Representation}
 \begin{definition}[Alternative definition]
 \label{rep-def-1}
-Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{definition}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism \[\rho\colon G \to GL(V).\]\end{definition}
+\end{frame}
+
+
+\begin{frame}
+\begin{proposition}
+The two definitions we have given of a linear representation are equivalent.
+ \end{proposition}
+ \begin{proof}
+\begin{itemize}
+\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\rho \colon G \to GL(V)$.  We can obtain a linear action of $G$ on $V$ by defining $g \cdot v = \rho(g)(v)$. 
+
+\item[$(\leftarrow)$] Suppose that we have a linear action of $G$ on $V$.  We obtain a homomorphism $\rho \colon G \to GL(V)$ by defining $\rho(g)(v) =g \cdot v$. 
+\end{itemize}
+ \end{proof}
+\end{frame}
+
+\begin{frame}{The Dimension of a Representation}
+ \begin{definition}Let $\rho \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of the vector space $V$.  
+ \end{definition}
+\end{frame}
+
+\begin{frame}{Examples of Representations}
+ \begin{example}
+\only<1>{Let $V$ be an $n$-dimensional vector space.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = \text{Id}_V$ for all $g \in G$ is a representation of $G$ called the \textbf{trival representation} of dimension $n$. }
+
+\only<2>{ If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textbf{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$. }
+
+\only<3>{ A special case of a permutation representation is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by \[\rho_{\text{reg}}(h) (e_g) = e_{hg}.\]  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$.  }
+
+\only<4>{ For any symmetric group $S_n$, the \textbf{alternating representation} on $\mathbb{C}$ is given by the map 
+\begin{align*}
+\rho \colon S_n &\to GL(\mathbb{C})=\mathbb{C}^\times \\
+\sigma & \mapsto \text{sgn}(\sigma).
+\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) }
+ \end{example}
+\end{frame}
+
+\begin{frame}{$G$-linear maps}
+\begin{definition}
+A \textbf{homomorphism} between two representations $\rho_1 \colon G \to GL(V)$ and $\rho_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with the action of $G$, i.e. such that
+\[ \psi \circ \rho_1 (g)= \rho_2(g) \circ \psi \quad \forall  g \in G. \]  
+
+In this case, we also refer to $\psi$ as a $\mathbf{G}$\textbf{-linear map}.
+\end{definition}
+\begin{definition}
+An \textbf{isomorphism} of representations is a $G$-linear map that is also invertible.
+\end{definition}
 \end{frame}
 
 \section{Section no.1} 

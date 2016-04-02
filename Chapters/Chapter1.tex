@@ -24,21 +24,21 @@ This is the basic question of representation theory, which attempts to classify 
 %
 \section {Group Actions}
 %----------------------------------------------------------------------------------------
-\begin{defn}\label{def-grp-action}
+\begin{definition}\label{def-grp-action}
 A  \textbf{\textit{(left)} group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ that satisfies the following two axoims:
 \begin{align}
 \label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
 \label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
 \end{align}
-\end{defn}
+\end{definition}
 \begin{note}
-We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.  We often write $g \cdot a$ in place of $\rho(g) (a)$. 
+We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.  We often write $g \cdot x$ in place of $\rho(g) (x)$. 
 \end{note}
 
 
-\begin{prop}\label{sigma-is-a-permutation}
+\begin{proposition}\label{sigma-is-a-permutation}
 Let $G$ act on the set $X$.  For any fixed $g \in G$, the map $\sigma_g$ from $X$ into $X$ defined by $\sigma_g (x) = g \cdot x$ is a \textit{permutation} of the set $X$.  That is, $\sigma_g \in S_X$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse map, namely $\sigma_{g^{-1}}$. Observe that for any $x \in X$, we have
 \begin{align*}
@@ -51,11 +51,11 @@ We show that $\sigma_g$ is a permutation of $X$ by finding a two-sided inverse m
 Thus $\sigma_{g^{-1}} \circ \sigma_g$ is the identity map on $X$. We can reverse the roles of $g$ and $g^{-1}$ to see that $\sigma_g \circ \sigma_{g^{-1}}$ is also the identity map on $X$.  Having a two-sided inverse, we conclude that $\sigma_g$ is a permutation of $X$.
 \end{proof}
 
-\begin{prop}\label{action-yields-hom}
+\begin{proposition}\label{action-yields-hom}
 Let $G$ act on the set $X$. The map from $G$ into the symmetric group $S_X$ defined by $g \mapsto \sigma_g (x) = g \cdot x$ is a group homomorphism.
-\end{prop}
+\end{proposition}
 \begin{proof}
-Define the map $\rho \colon G \to S_X$ by $\rho (g) = \sigma_g$.  We have seen from Proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\rho(g_1 g_2) = \rho(g_1) \circ \rho(g_2)$ for any $g_1, g_2 \in G$.  Observe that
+Define the map $\rho \colon G \to S_X$ by $\rho (g) = \sigma_g$.  We have seen from proposition \ref{sigma-is-a-permutation} that $\sigma_g$ is indeed an element of $S_X$.  It remains to show that $\rho(g_1 g_2) = \rho(g_1) \circ \rho(g_2)$ for any $g_1, g_2 \in G$.  Observe that
 
 \begin{align*}
 \rho(g_1 g_2)(x) &= \sigma_{g_1 g_2} (x) && \text{(by definition of $\rho$)} \\
@@ -69,9 +69,9 @@ Since the values of $\rho(g_1 g_2)$ and $\rho(g_1) \circ \rho(g_2)$ agree on eve
 \end{proof}
 
 
-\begin{prop} \label{hom-yields-action}
+\begin{proposition} \label{hom-yields-action}
 Any homomorphism $\psi$ from the group $G$ into the symmetric group $S_X$ on a set $X$ gives rise to an action of $G$ on $X$, defined by taking $g \cdot x = \psi(g)(x)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Suppose  that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define a map from $G \times X$ to $X$  by $g \cdot x = \psi(g)(x)$. We verify that this map satisfies the definition of a group action of $G$ on $X$:
 \\ (axiom \ref{grp-action-axiom-1}) \quad $1 \cdot x = \psi(1)(x) = id_X(x) = x$
@@ -82,7 +82,7 @@ Suppose  that we have a homomorphism $\psi$ from $G$ into $S_X$.  We can define 
 The actions of $G$ on the set $X$ are in bijective correspondence with the homomorphisms from $G$ into the symmetric group $S_X$.
 \end{cor}
 \begin{proof}
-By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomorphism from $G$ into $S_X$.    Conversely, any homomorphism from $G$ into $S_X$ establishes an action of $G$ on $X$ by Proposition \ref{hom-yields-action}.
+By proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomorphism from $G$ into $S_X$.    Conversely, any homomorphism from $G$ into $S_X$ establishes an action of $G$ on $X$ by proposition \ref{hom-yields-action}.
 \end{proof}
 
 
@@ -93,35 +93,32 @@ By Proposition \ref{action-yields-hom}, any action of $G$ on $X$ yields a homomo
 %
 \section{The Definition of a Representation}
 %----------------------------------------------------------------------------------------
-\begin{defn} \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ which preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
+\begin{definition} \label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ that preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
 \begin{align}
 \label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
 \label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
 \end{align}
- \end{defn}
+ \end{definition}
 
-\begin{defn}[Alternative definition]
+\begin{definition}[Alternative definition]
 \label{rep-def-1}
-Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$. If we fix a basis for $V$, we get a representation in the previous sense.\end{defn}
+Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism $\rho\colon G \to GL(V)$.\end{definition}
 
-
-
- 
  \begin{note}
  Unless otherwise specificed, we will restrict our discussion to \textit{finite-dimensional} representations over $\mathbb{C}$.
  \end{note}
  
  
- \begin{prop}
+ \begin{proposition}
 The definitions of a linear representation given in \ref{rep-def-1} and \ref{rep-def-2} above are equivalent.
- \end{prop}
+ \end{proposition}
  \begin{proof}
 %\leavevmode
  \begin{itemize}
-\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\rho \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply Proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \rho(g)(v)$.  We check that this action preserves the linear structure of V.
+\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\rho \colon G \to GL(V)$.  Note that $GL(V)$ is a subgroup of the symmetric group $S_V$ on $V$, so we can apply proposition \ref{hom-yields-action} to obtain an action of $G$ on $V$ by $g \cdot v = \rho(g)(v)$.  We check that this action preserves the linear structure of V.
 \\\ref{rep-axiom-1} \quad For any $g \in G$, $v_1, v_2 \in V$ we have $g \cdot (v_1 +  v_2) = \rho(g) (v_1 + v_2) = \rho(g)(v_1) + \rho(g)(v_2)= g \cdot v_1 + g \cdot v_2$.
 \\\ref{rep-axiom-2} \quad For any $g \in G, v \in V, k \in F$ we have $g \cdot (kv) = \rho(g)(kv) = k (\rho(g)(v)) = k (g \cdot v)$.
-\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply Proposition \ref{action-yields-hom} to obtain a homorphism $\rho \colon G \to S_V$ given by $\rho(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\rho(G)$ of $G$ under $\rho$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$, we have
+\item[$(\leftarrow)$] Suppose that we have an action of $G$ on $V$ which preserves the linear structure of V in the sense of Definition \ref{rep-def-2}.  We can apply proposition \ref{action-yields-hom} to obtain a homomorphism $\rho \colon G \to S_V$ given by $\rho(g) = \sigma_g$ where $\sigma_g(v) = g \cdot v $.  It remains to show that the image $\rho(G)$ of $G$ under $\rho$ is actually contained in $GL(V)$, i.e. that for each $g \in G$ the map $\sigma_g$ is linear.  Fix an element $g \in G$. For any $k \in F$ and $v \in V$, we have
 \begin{align*}
 \sigma_g (kv) &= g \cdot (kv) && \text{(by definition of $\sigma_g$)} \\
 		&= k (g \cdot v) && \text{(by property \ref{rep-axiom-1})} \\
@@ -134,32 +131,32 @@ Also, for any $v_1, v_2 \in V$ we have
 		&= \sigma_g(v_1) + \sigma_g(v_2) && \text{(by definition of $\sigma_g$)}.
 \end{align*}
 Thus $\sigma_g$ is linear, and $\rho(G) \subset GL(V)$ proves that we  have a homomorphism $\rho \colon G \to GL(V)$.
-
 \end{itemize}
  \end{proof}
- \begin{defn}Let $G$ be a group, let $F$ be a field, let $V$ be a vector space over $F$, and let $\rho \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of $V$ over $F$.  
- \end{defn}
+ 
+ \begin{definition}Let $G$ be a group, let $F$ be a field, let $V$ be a vector space over $F$, and let $\rho \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of $V$ over $F$.  
+ \end{definition}
 % ============== Examples of Representations ===========%
  \begin{example}
  \begin{enumerate}
-\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = 1$ for all $g \in G$ is a representation called the \textit{trival representation} of $G$.  The trivial representation has dimension $1$.
+\item Let $V$ be a $1$-dimensional vector space over the field $F$.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = 1$ for all $g \in G$ is a representation called the \textbf{trival representation} of $G$.  The trivial representation has dimension $1$.
 
-\item If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textit{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$. 
+\item If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textbf{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$. 
 
-\item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $G$ act by $\rho_{\text{reg}}(h) (e_g) = e_{hg}$.  This representation is called the \textit{regular representation} of $G$, and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
+\item A fundamental special case of a permutation representation that we shall return to later on is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by $\rho_{\text{reg}}(h) (e_g) = e_{hg}$.  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$. We shall see later that this representation encodes information about all other representations of $G$.
 
-\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textit{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
+\item For any symmetric group $S_n$, the \textit{alternating representation} on $V=\mathbb{C}$ is given by the map $\rho \colon S_n \to GL(\mathbb{C})=\mathbb{C}^\times$ defined by $\rho(\sigma)=\text{sgn}(\sigma)$. More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.)
 
 \end{enumerate}
  \end{example}
 
 %=========Homomorphisms===================%
 
-\begin{defn}
+\begin{definition}
 A \textbf{homomorphism} between two representations $\rho_1 \colon G \to GL(V)$ and $\rho_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with (respects) the $G$-action, i.e. 
 \[ \psi \circ \rho_1 (g)= \rho_2(g) \circ \psi \quad \forall  g \in G. \]  
 An \textbf{isomorphism} of representations is a homomorphism of representations that is also an invertible map.
-\end{defn}
+\end{definition}
 \begin{note}
 If we have representations $(\rho_1, V)$ and $(\rho_2, W)$ and an isomorphism of vector spaces $\psi \colon V \to W$ then we can rewrite the compatibility requirement above as $\rho_2(g) = \psi \circ \rho_1(g) \circ \psi^{-1}$ for all $g \in G$.
 \end{note}
@@ -167,14 +164,14 @@ If we have representations $(\rho_1, V)$ and $(\rho_2, W)$ and an isomorphism of
 Given any representation $(\rho, V)$ of a group $G$ on a vector space $V$ over a field $F$ of dimension $n$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to F^n$.  This yields a representation $\phi$ of $G$ on $F^n$ by defining $\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}$ for all $g \in G$. Clearly, this representation is isomorphic to our original representation $(\rho, V)$. In particular, this means we can always choose to view $n$-dimensional complex representations as representations on $\mathbb{C}^n$ where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.
 
 Suppose that we have two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_m(F)$ given by $\rho_1(g) = X_g$ and $\rho_2(g) = Y_g$.  A homomorphism between these representations is then an $m \times n$ matrix $A$ such that $A X_g = Y_g A$ for all $g \in G$.   An isomorphism is given precisely when such $A$ is square and invertible.  Thus, two representations $\rho_1 \colon G \to GL_n(F)$ and $\rho_2 \colon G \to GL_n(F)$ are isomorphic if and only if there exists $A \in GL_n(F)$ such that $\rho_1(g) = A \rho_2(g) A^{-1}$ for all $g \in G$.  This establishes the following proposition:
-\begin{prop} \label{iso-classes-of-reprns}
+\begin{proposition} \label{iso-classes-of-reprns}
 The isomorphism classes of $n$-dimensional representations of $G$ on $\mathbb{C}$ are in bijection with the quotient $Hom(G; GL_n(\mathbb{C})) / GL_n(\mathbb{C})$ of group homomorphisms $G \to GL_n(\mathbb{C})$ modulo the conjugation action of $GL_n(\mathbb{C})$.
-\end{prop}
+\end{proposition}
 \begin{note}
 In other words, 
 \end{note}
-\begin{defn} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
-\end{defn}
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
+\end{definition}
 
 
 \begin{example}
@@ -255,9 +252,9 @@ g &\mapsto \lambda_g.
 \end{example}
 
 
-\begin{prop}\label{ker-im-subreprns}
+\begin{proposition}\label{ker-im-subreprns}
 Let $f \colon V \to W$ be a homomorphism of representations of $G$.  Then $\text{Ker}(f)$ is a subrepresentation of $V$ and $\text{Im}(f)$ is a subrepresentation of $W$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Let $x \in \text{Ker}(f)$. Then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$,
 so $gx \in \text{Ker}(f)$ and $\text{Ker}(f)$ is $G$-invariant.
@@ -330,27 +327,27 @@ To summarize, every $m$-dimensional representation $\rho$ of the cyclic group $G
 \section{Constructing New Representations from Old}
 We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
 
-\begin{defn}
+\begin{definition}
 Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural representation of $G$, called the \textbf{direct sum representation} of $V$ and $W$, which we define by 
 \begin{align*}
 \rho_{V \oplus W} \colon G &\to GL(V \oplus W) \\
 \rho_{V \oplus W}(g) \colon (x,y) &\mapsto (\rho_{V} (g)(x), \rho_{W}(g)(y)).
 \end{align*}
-\end{defn}
+\end{definition}
 
 
 Recall from linear algebra that given a subspace $W \subseteq V$, we can form the \textbf{quotient space} $V / W$ consisting of cosets $v + W$ in $V$.  If $W$ is a subrepresentation of $V$, we would like to define an action of $G$ on $V / W$ by the natural choice of $g (v + W) = \rho(g)(v)+ W$.  It remains to verify that this action is well defined.  If we choose another $v' \in v + W$, then $v - v' \in W$, so that $\rho(g)(v - v') \in W$ since $W$ is $G$-invariant.  Thus, the cosets $\rho(g)(v) + W$ and $\rho(g)(v') + W$ agree and this action is indeed well defined. This justifies the following definition:
 
-\begin{defn}
+\begin{definition}
 Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of $G$ called the \textbf{quotient representation} of $V$ under $W$ with the action $g( v + W) = \rho(g)(v) + W$.
-\end{defn}
+\end{definition}
 
 
 
 \section{Complete Reducibility}
-\begin{defn}
+\begin{definition}
 A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
-\end{defn}
+\end{definition}
 
 \begin{note}
 \begin{enumerate}
@@ -408,9 +405,9 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply Theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
 \end{proof}
 
-\begin{defn}
+\begin{definition}
 Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the map $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
-\end{defn}
+\end{definition}
 
 \begin{lemma} \label{maschke-lemma}
 Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
@@ -419,7 +416,7 @@ Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ke
 \[ V = \text{Ker}(f) \oplus W \]
 \end{lemma}
 \begin{proof}
-We have seen that $\text{Ker}(f)$ is a subprepresentation of $V$ in Proposition \ref{ker-im-subreprns}.
+We have seen that $\text{Ker}(f)$ is a subprepresentation of $V$ in proposition \ref{ker-im-subreprns}.
 Now if $y \in \text{Ker}(f) \cap W$ then $y=f(y)=0$, so $\text{Ker}(f) \cap W = 0$.  Finally $\text{Im}(f)=W$, so by the Rank-Nullity theorem
 \[ \text{dim Ker}(f) + \text{dim }W = \text{dim }V. \]
 Thus $V = \text{Ker}(f) \oplus W$.  
@@ -461,7 +458,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we c
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{cor}
 \begin{proof}
-Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem (\ref{maschke}), we know there exists a subrepresentation $U \subset V$ such that 
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a propositioner subrepresentation $W \subset V$.  From Maschke's Theorem (\ref{maschke}), we know there exists a subrepresentation $U \subset V$ such that 
 \begin{equation} \label{1.28.1} V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce from \ref{1.28.1} that $V$ is completely reducible.
 \end{proof}
@@ -480,7 +477,7 @@ so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating represen
 
 
 \section{Vector Spaces of Linear Maps}
-\begin{defn}
+\begin{definition}
 Let $V$ and $W$ be vector spaces.  Recall that the set $\textbf{Hom}\mathbf{(V,W)}$ of linear maps from $V$ to $W$ is itself a vector space.  If $f_1, f_2$ are two linear maps from $V$ to $W$, then we define their sum by
 \begin{align*}		
 (f_1 + f_2) \colon &V \to W \\		
@@ -498,15 +495,15 @@ Now suppose we have representations $\rho_V \colon G \to GL(V)$ and $\rho_W \col
  f &\mapsto \rho_{W}(g) \circ f \circ \rho_{V}(g^{-1})
  \end{align*}		
 for all $g \in G$. Note that $\rho_{\text{Hom}(V,W)}(g)(f)$ is certainly a linear map from $V$ to $W$ since the composition of linear maps is linear.
-\end{defn}
+\end{definition}
 
-\begin{prop} $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.  That is, the map		
+\begin{proposition} $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.  That is, the map		
 \begin{align*}		
   \rho_{\text{Hom}(V,W)} \colon G &\to \text{GL}(\text{Hom}(V,W)) \\		
 g &\mapsto \rho_{\text{Hom}(V,W)}(g).		
 \end{align*}		
  is a homomorphism.		
-\end{prop}		
+\end{proposition}		
 \begin{proof}		
 We must check two things:		
 \begin{enumerate}			
@@ -529,21 +526,21 @@ so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  We can use this fact to s
 Thus $\rho_{\text{Hom}(V,W)}(g)$ is invertible for every $g \in G$, and $\rho_{\text{Hom}(V,W)}$ is a representation of $G$.
 \end{proof}
 
-\begin{defn}		
+\begin{definition}		
 Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$ forms a subspace of $\text{Hom}(V,W)$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
-\end{defn} 
+\end{definition} 
 
-\begin{defn}
+\begin{definition}
 Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
 \[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
-\end{defn}
+\end{definition}
 Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
 
-\begin{prop}\label{invariant-subrprn}
+\begin{proposition}\label{invariant-subrprn}
 Let  $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then the subrepresentation 
 \[ \text{Hom}_G (V,W) \subset \text{Hom} (V,W) \]
 is precisely the invariant subrepresentation $\text{Hom}(V,W) ^G$ of $\text{Hom}(V,W)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Let $f \in \text{Hom}(V,W)$.  Then $f$ is an element of the invariant subrepresentation $\text{Hom}(V,W) ^G$ iff we have
 \begin{align*}
@@ -597,13 +594,13 @@ Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi 
 
 More definitions are required before we can state a more general Schur's Lemma (not restricted to just $\mathbb{C}$).
 
-\begin{defn}
+\begin{definition}
 An \textbf{algebra} over a field $K$ is a ring with unit, containing a distinguished copy of $K$ that commutes with every algebra element, and with $1 \in K$ being the algebra unit.  A \textbf{division ring} is a ring where every non-zero element is invertible, and a \textbf{division algebra} is a division ring which is also a $K$-algebra.
-\end{defn}
+\end{definition}
 
-\begin{defn}
+\begin{definition}
 Let $V$ be a representation of $G$ over $K$.  The \textbf{endomorphism algebra} $\text{End}_G(V)$ is the space of linear self-maps $\phi \colon V \to V$ which commute with the group action, that is, $\rho(g) \circ \phi = \phi \circ \rho(g) \quad \forall g \in G$.  The addition is the usual addition of linear maps (pointwise), and the multiplication is function composition.  The distinguished copy of $K$ is given by $K \text{Id}$.
-\end{defn}
+\end{definition}
 \begin{note}
 You may notice that $\text{End}_G(V)$ is precisely the space $\text{Hom}_G(V,V)$ we have already seen.  However, $\text{Hom}_G(V,W)$ is in general only a vector space over the base field, not an algebra.
 \end{note}
@@ -702,29 +699,29 @@ We can apply Lemma (\ref{isomorphism-invariant-subrprns}) to obtain an isomorphi
 \[\text{Hom}(V, U \oplus W)^G \cong (\text{Hom}(V, U) \oplus \text{Hom}(V,W))^G.\]
 Then Lemma (\ref{invariant-subrprn-of-dir-sum}) implies that 
 \[\text{Hom}(V, U \oplus W)^G \cong \text{Hom}(V, U)^G \oplus \text{Hom}(V,W)^G. \]
-The statement now follows from Proposition (\ref{invariant-subrprn}).
+The statement now follows from proposition (\ref{invariant-subrprn}).
 
 (2). The argument is similar to the one above.
 \end{proof}
 
-\begin{prop}\label{schurs-lemma-homvw}
+\begin{proposition}\label{schurs-lemma-homvw}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
 \[ \text{dim Hom}_G (V,W) =  \begin{cases} 
 1 & \mbox{if $V$ and $W$ are isomorphic}  \\
 0 &\mbox{if $V$ and $W$ are not isomorphic}
 \end{cases} \]
-\end{prop}
+\end{proposition}
 \begin{proof}
 Suppose $V$ and $W$ are not isomorphic.  Then Schur's Lemma Corollary \ref{schur-cor} states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
 
 On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$ for some $\lambda \in \mathbb{C}$, i.e. $h = \lambda f$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
 \end{proof}
 
-\begin{prop}\label{num-iso-subrprns}
+\begin{proposition}\label{num-iso-subrprns}
 Let $\rho \colon G \to GL(V)$ be a representation, and let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreducibles.  Let $W$ be any irreducible representation of $G$.  Then the number of irreducible representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to the dimension of $\text{Hom}_G(V,W)$, and also equal to the dimension of $\text{Hom}_G(W,V)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
-We know from Proposition (\ref{schurs-lemma-homvw}) that the number of irreducibles representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
+We know from proposition (\ref{schurs-lemma-homvw}) that the number of irreducibles representations in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
 By Corollary (\ref{invariant-subrprns-hom-spaces}), \[ \text{Hom}_G(V,W) = \bigoplus_{i=1}^s \text{Hom}_G(U_i, W) \]
 so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
 The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U_i)$ in place of $\text{Hom}_G(V,W)$ and $\text{Hom}_G(U_i,W)$.
@@ -739,10 +736,10 @@ V = \widetilde{U_1} \oplus \ldots \oplus \widetilde{U_r}
 be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\widetilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
 \end{thm}
 \begin{proof}
-Let $W$ be any irreducible representation of $G$.  By Proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
+Let $W$ be any irreducible representation of $G$.  By proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
 \end{proof}
 
-\begin{defn}
+\begin{definition}
 Let $V$ be a finite-dimensional representation of $G$. Decompose $V$ into a direct sum
 \[ V = (V_{11} \oplus \ldots \oplus V_{1 n_1}) \oplus (V_{21} \oplus \ldots V_{2 n_2}) \oplus \ldots \oplus (V_{k 1} \oplus \ldots \oplus V_{k n_k}) \] 
 where 
@@ -757,10 +754,10 @@ Then we have
 This leaves us with the canonical decomposition
 \[ V = \bigoplus_{S} V_S \]
 where $S$ ranges over a set of representatives of the isomorphism classes of the irreducible representations of $G$.  We call this the \textbf{canonical decomposition of $V$ into isotypical components}. If follows from Theorem \ref{uniqueness-of-irr-decomp} that such a decomposition is unique, i.e. it does not depend on our initial decomposition of $V$ into irreducibles.
-\end{defn}
+\end{definition}
 
 \section{Duals and Tensor Products}
-\begin{defn}
+\begin{definition}
 Let $V$ be a vector space.  Recall that we define the \textbf{dual vector space} to be
 \[ V^{*} = \text{Hom}(V,\mathbb{C}).\]
 This is a special case of $\text{Hom}(V,W)$ where $W = \mathbb{C}$. We know that if $\{ b_1, \ldots, b_n \} $ is a basis for $V$, then there is a \textbf{dual basis} $\{ f_1, \ldots, f_n \}$ for $V$ defined by
@@ -768,12 +765,12 @@ This is a special case of $\text{Hom}(V,W)$ where $W = \mathbb{C}$. We know that
 Let $\rho_V \colon G \to GL(V)$ be a representation of $G$, and let $\mathbb{C}$ be the $1$-dimensional trival representation of $G$.  Then we have seen that $V^{*}$ carries a representation of $G$ defined by
 \[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = f \circ \rho_V ( g^{-1}) \]
 We call this the \textbf{dual representation} to $\rho_V$ and denote it by $\rho_V^{*}$.
-\end{defn}
-\begin{prop}\label{matrix-of-dual}
+\end{definition}
+\begin{proposition}\label{matrix-of-dual}
 If we fix a basis for $V$, then $\rho_{V^*}(g)$ is given by the matrix 
 \[( \rho_V (g^{-1}) )^T \]
 with respect to the dual basis.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Fix a basis $\{ a_1, \ldots, a_n \}$ for $V$.  Let $\rho_V (g^{-1})$ be described by the matrix $M$, so that 
 \[ \rho_V (g^{-1} ) (a_j) = \sum_{1 \leq i \leq n} M_{ij} a_i. \]
@@ -795,7 +792,7 @@ N_{ji} &= \sum_{1 \leq k \leq n} N_{ki} \delta_{kj} \\
 That is,  $N=M^T$.
 \end{proof}
 
-\begin{defn}
+\begin{definition}
 Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace $D$ spanned by all elements of the form
 \begin{align*}
 (v_1 + v_2, w) - (v_1 , w) - (v_2 , w) \\
@@ -808,22 +805,22 @@ for $v, v_1, v_2 \in V, w, w_1, w_2 \in W$, and $k \in K$. When the ground field
 v \otimes (w_1 + w_2) &= v \otimes w_1 + v \otimes w_2 \\
 (k \cdot v) \otimes w &= v \otimes (k \cdot w) = k \cdot (v \otimes w).
 \end{align*}
-\end{defn}
+\end{definition}
 
-\begin{defn}
+\begin{definition}
 Let $V$ and $W$ be vector spaces over $K$.  A map $\phi \colon V \times W \to K$ is called $\mathbf{K}$\textbf{-balanced} if \begin{align*}
 \phi( v_1 + v_2, w) &= \phi(v_1, w) + \phi(v_2, w) \\
 \phi(v, w_1 + w_2) &= \phi (v, w_1) + \phi(v, w_2) \\
 \phi(v, kw) &= \phi( kv, w)
 \end{align*}
 for all $v \in V, w \in W, k \in K$.
-\end{defn}
+\end{definition}
 \begin{example}
 Mapping $V \times W$ to the free $K$-vector space on $V \times W$, and then passing to the quotient defines a map $\iota \colon V \times W \to V \otimes W$ with $\iota (v,w) = v \otimes w$.  From the relations satisfied by the tensor product, we see that the map $\iota$ is $K$-balanced.
 \end{example}
 
 %see pf. 364 of dummit-foote
-\begin{thm}\label{universal-prop-tensor}[Universal property of the tensor product]  Suppose $V,W$, and $U$ are vector spaces over the field $K$.  Let $\varphi \colon V \times W \to U$ be a $K$-balanced map, and let $\iota$ be the map above.  Then there is a unique linear map $\varphi \colon V \otimes W \to U$ such that $\varphi$ factors through $\iota$, i.e., $\varphi = \varphi \circ \iota$.
+\begin{thm}\label{universal-proposition-tensor}[Universal property of the tensor product]  Suppose $V,W$, and $U$ are vector spaces over the field $K$.  Let $\varphi \colon V \times W \to U$ be a $K$-balanced map, and let $\iota$ be the map above.  Then there is a unique linear map $\varphi \colon V \otimes W \to U$ such that $\varphi$ factors through $\iota$, i.e., $\varphi = \varphi \circ \iota$.
 \end{thm}
 \begin{proof}
 The map $\varphi$ extends by linearity to a linear transformation $\widetilde{\varphi}$ from the free vector space on $V \times W$ to $U$ such that $\widetilde{\varphi}(v , w) = \varphi (v,w)$ for all $v \in V, w \in W$.  Since $\varphi$ is $K$-balanced, $\widetilde{\varphi}$ maps each of the elements which span the subspace $D$ from the definition of the tensor product to 0.  For example,
@@ -835,9 +832,9 @@ i.e., $\varphi = \varphi \circ \iota$. Note that $\varphi$ is completely determi
 
 
 
-\begin{prop}
+\begin{proposition}
 Let $\{ e_i \}_{i \in I}$ and $\{ f_j \}_{j \in J}$ be bases for $V$ and $W$.  Then $\{ e_i \otimes f_j | i \in I, j \in J\}$  is a basis for $V \otimes W$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 An elementary tensor in $V \otimes W$ has the form $v \otimes w$.  Write $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$, where all but finitely many of $a_i$ and $b_j$ are 0.  Then 
 \[ m \otimes n = \sum_i a_i e_i \otimes \sum_j b_j f_j  = \sum_{i,j} a_i b_j e_i \otimes f_j\]
@@ -851,15 +848,15 @@ V \times W &\to K \\
  where $v = \sum_i a_i e_i$ and $w = \sum_j b_j f_j$. By the universal property of tensor products, there is a linear map $f_0 \colon V \otimes W \to K$ such that $f_0 (v \otimes w) = a_{i_0} b_{j_0}$ on any elementary tensor $v \otimes w$.  In particular, $f_0 (e_{i_0} \otimes f_{j_0}) = 1$ and  $f_0 (e_{i} \otimes f_{j}) = 0$ for $(i,j) \neq (i_0, j_0)$.  Applying $f_0$ to our assumption that $\sum_{i,j} c_{ij} e_i \otimes f_j = 0$ in $V \otimes W$ tells us that $c_{i_0 j_0} =0$ in $K$.  
 \end{proof}
 
-\begin{prop}
+\begin{proposition}
 There are natural isomorphisms 
 \begin{enumerate}
 \item $(U \otimes V) \otimes W \cong U \otimes (V \otimes W)$ 
 \item $( U \oplus V) \otimes W \cong (U \otimes W) \oplus (V \otimes W)$.
 \end{enumerate}
-\end{prop}
+\end{proposition}
 \begin{proof}
-(1.) For each fixed $w \in W$, the mapping $(u,v) \mapsto u \otimes ( v \otimes w)$ is $K$-balanced, so by Theorem \ref{universal-prop-tensor} there is a unique linear map from $U \otimes V$ to $U \otimes ( V \otimes W)$ with $u \otimes v \mapsto u \otimes (v \otimes w)$.  This shows that the map from $(U \otimes V ) \times W$ to $U \otimes ( V \otimes W)$ given by $(u \otimes v, w ) \mapsto u \otimes (v \otimes w)$ is well defined.  This map is also $K$-balanced, and  thus another application of Theorem \ref{universal-prop-tensor} shows that it induces a linear map $(U \otimes V) \otimes W \to U \otimes ( V \otimes W)$ such that $(u \otimes v) \otimes w \mapsto u \otimes (v \otimes w)$.  In a similar manner, we can construct a map $U \otimes (V \otimes W) \to (U \otimes V) \otimes W$ with $u \otimes ( v \otimes w) \mapsto (u \otimes v) \otimes w$ which is inverse to our first map.  This proves the isomorphism.
+(1.) For each fixed $w \in W$, the mapping $(u,v) \mapsto u \otimes ( v \otimes w)$ is $K$-balanced, so by Theorem \ref{universal-proposition-tensor} there is a unique linear map from $U \otimes V$ to $U \otimes ( V \otimes W)$ with $u \otimes v \mapsto u \otimes (v \otimes w)$.  This shows that the map from $(U \otimes V ) \times W$ to $U \otimes ( V \otimes W)$ given by $(u \otimes v, w ) \mapsto u \otimes (v \otimes w)$ is well defined.  This map is also $K$-balanced, and  thus another application of Theorem \ref{universal-proposition-tensor} shows that it induces a linear map $(U \otimes V) \otimes W \to U \otimes ( V \otimes W)$ such that $(u \otimes v) \otimes w \mapsto u \otimes (v \otimes w)$.  In a similar manner, we can construct a map $U \otimes (V \otimes W) \to (U \otimes V) \otimes W$ with $u \otimes ( v \otimes w) \mapsto (u \otimes v) \otimes w$ which is inverse to our first map.  This proves the isomorphism.
 
 (2.)  The map $(U \oplus V ) \times W \to (U \oplus W) \otimes (V \oplus W)$ defined by $((u, v ) , w) \mapsto (u \otimes w, v \otimes w)$ is clearly $K$-balanced.  Thus it induces a linear map $f \colon (U \oplus V) \otimes W \to (U \otimes W) \oplus (V \otimes W)$ with 
 \[ f ( ( u, v ) \otimes w) = (u \otimes w, v \otimes w). \]
@@ -870,12 +867,12 @@ It is straightforward to see that $f$ and $g$ are inverse linear transformations
 
 
 Now let $V$ and $W$ be two representations of $G$.
-\begin{defn}
+\begin{definition}
 We can define a representation of $G$ on $V \otimes W$ called the \textbf{tensor product representation}. We let
 \[ \rho_{V \otimes W} (g) \colon V \otimes W \to V \otimes W \]
 be the linear map given by
 \[ \rho_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \rho_V (g) (a_i) \otimes \rho_W (g) (b_j).\]
-\end{defn}
+\end{definition}
 Suppose $\rho_V (g)$ is described by the matrix $M$ and 
 $\rho_W (g)$ is described by the matrix $N$ in the given bases $\{ a_1, \ldots, a_n\}$ for $V$  and $\{b_1, \ldots, b_m \}$ for W.  Then
 \begin{align*}
@@ -886,9 +883,9 @@ So $\rho_{V \otimes W}$ is described by the $nm \times nm$ matrix $M \otimes N$ 
 \[ [ M \otimes N ]_{js, it} = M_{ji} N_{st}. \]
 This matrix has $nm$ rows, and to specify a row we need a pair of numbers $(j, s)$ where $j \in \{ 1, \ldots, n \}$ and $s \in \{ 1, \ldots, m \}$.  
 
-\begin{prop}
+\begin{proposition}
 Let $V$ and $W$ be representations of $G$.  Then $V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Let $\{ a_1,  \ldots, a_n\}$ be a basis for $V$, let $\{\alpha_1, \ldots, \alpha_n \}$ be the corresponding dual basis for $V^{*}$, and let $\{b_1,  \ldots,b_m\}$ be a basis for $W$.  Then $\text{Hom}(V^*,W)$ has a basis $\{ f_{it} | 1 \leq i \leq n, 1 \leq t \leq m \}$ where
 \begin{align*}
@@ -901,7 +898,7 @@ extended to all of  $\text{Hom}(V^*,W)$ by linearity.  It remains to show that t
 for all $g \in G$.  Fix $g \in G$, and let $M$ and $N$ denote the matrices which describe $\rho_V (g)$ and $\rho_W (g)$ in the given bases.  
 By definition,
 \[ \rho_{\text{Hom}(V^{*},W)} (g) (f_{it}) = \rho_W (g) \circ f_{it} \circ \rho_{V^{*}}(g^{-1}). \]
-Now $\rho_{V^{*}} (g^ {-1})$ is given by the matrix $M^T$ in the dual basis by Proposition \ref{matrix-of-dual}, so
+Now $\rho_{V^{*}} (g^ {-1})$ is given by the matrix $M^T$ in the dual basis by proposition \ref{matrix-of-dual}, so
 \[\rho_{V^{*}} (g^ {-1}) ( \alpha_k )= \sum_{j=1}^n M_{kj} \alpha_{j}. \]
 Then
 \[ f_{it} \circ \rho_{V^{*}} (g^ {-1}) (\alpha_k) = M_{ki} b_t \]
@@ -921,21 +918,21 @@ Thus, if we write $\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1})$ in term
 
 
 \section{Character Theory}
-\begin{defn}
+\begin{definition}
 The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function $\chi_V \colon G \to \mathbb{C}$ defined by $\chi_V(g) = \text{Tr}(\rho(g))$.
-\end{defn}
+\end{definition}
 \begin{note}
-The character is of a representation is not a homorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
+The character is of a representation is not a homomorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
 \end{note}
 
-\begin{prop}\label{basic-props-of-char} (Basic Properties)
+\begin{proposition}\label{basic-propositions-of-char} (Basic propositionerties)
 \begin{enumerate}
 \item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g)$ for all $g , h \in G$.
 \item $\chi_V (1) = \text{\emph{dim }} V$.
 \item \label{char-of-inverse} $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
 \item $\chi_{V^*} (g) =  \overline{\chi_V (g)}$ for all $g \in G$.
 \end{enumerate}
-\end{prop}
+\end{proposition}
 
 \begin{proof}
 \begin{enumerate}
@@ -944,28 +941,28 @@ The character is of a representation is not a homorphism in general, since $\tex
 \item Since $G$ is finite, we have seen that $\rho(g)$ is a diagonal matrix with roots of unity along the diagonal with the right choice of basis.  The inverse of a root of unity is given by its complex conjugate, so under this same basis, $\rho(g)^{-1}$ is clearly given by $\overline{\rho(g)}$.  Thus, $\chi_V(g^{-1}) = \text{Tr}(\rho(g^{-1})) = \text{Tr}(\rho(g)^{-1}) = \text{Tr}(\overline{\rho(g)}) = \overline{ \text{Tr} (\rho(g))} = \overline {\chi_V(g)}$.
 \item \begin{align*}
  \chi_{V^*}(g) &= \text{Tr}(\rho_{V^*}(g)) \\
- &= \text{Tr}(\rho_V (g^{-1})^T) \quad \text{ (by Proposition \ref{matrix-of-dual})} \\
+ &= \text{Tr}(\rho_V (g^{-1})^T) \quad \text{ (by proposition \ref{matrix-of-dual})} \\
  &= \text{Tr}(\rho_V(g^{-1})) \\
  &= \overline{\chi_V (g)}  \quad \text{ (by \ref{char-of-inverse})}
 \end{align*}
 \end{enumerate}
 \end{proof}
 
-\begin{prop}\label{iso-reprns-same-char}
+\begin{proposition}\label{iso-reprns-same-char}
 Isomorphic representations have the same character.
-\end{prop}
+\end{proposition}
 \begin{proof}
-We have seen in Proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus they have the same trace.
+We have seen in proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus they have the same trace.
 \end{proof}
 We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
 
-\begin{prop}
+\begin{proposition}
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$ with characters $\chi_V$ and $\chi_W$.
 \begin{enumerate}
 \item $\chi _{V \oplus W} = \chi_V + \chi_W$.
 \item $\chi_{V \otimes W} = \chi_V \cdot \chi_W$.
 \end{enumerate}
-\end{prop}
+\end{proposition}
 \begin{proof}
 Pick bases for $V$ and $W$, so that $\rho_V (g)$ and $\rho_W (g)$ are described by matrices $M$ and $N$.  
 \begin{enumerate}
@@ -988,7 +985,7 @@ Thus $\chi_{V \otimes W} (g)= \chi_V (g) \chi_W(g)$.
 \end{enumerate}
 \end{proof}
 
-\begin{defn}
+\begin{definition}
 Let $\mathbb{C}^G$ denote the set of all functions from $G$ to $\mathbb{C}$.  Then $\mathbb{C}^G$ is a vector space with the sum of two functions defined pointwise and with scalar multiplication defined for $f \in \mathbb{C}^G, \lambda \in \mathbb{C}$ by 
 \begin{align*}
 \lambda f \colon G &\to \mathbb{C} \\
@@ -1000,13 +997,13 @@ defined by
 \[ \delta_g \colon h \mapsto \begin{cases}  1 &\text{if } h = g \\
  0 &\text{if } h \neq g
 \end{cases} \]
-\end{defn}
+\end{definition}
 
-\begin{defn}
+\begin{definition}
 Let $\varphi, \psi \in \mathbb{C}^G$.  We define an \textbf{inner product}  on $\mathbb{C}^G$ by 
 \[ \langle \varphi | \psi \rangle = \frac{1}{|G|} \sum_{g \in G} \varphi(g) \overline{\psi(g)}.\]
-\end{defn}
-It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three properties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
+\end{definition}
+It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three propositionerties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
 The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 
@@ -1054,7 +1051,7 @@ Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representatio
 In particular, the inner product of two characters is always a non-negative integer.  (Whereas in general, the inner product of two arbitrary functions can be any complex number.)
 
 \begin{proof}
-We have seen in Proposition \ref{invariant-subrprn} that
+We have seen in proposition \ref{invariant-subrprn} that
  \[ \text{Hom}_G (V,W) \subset \text{Hom}(V,W) \] 
  as the invariant subrepresentation, and by the previous lemma we have a projection
 \begin{align*}
@@ -1086,7 +1083,7 @@ Therefore
 \text{Tr} (\Psi) &= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}}  \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj} \\
 &=  \frac{1}{|G|} \sum_{g \in G} \left( \sum_{i=1}^n \widetilde{\rho_V}(g^{-1})_{ii} \right) \left( \sum_{j=1}^m \widetilde{\rho_W} (g)_{jj} \right) \\
 &= \frac{1}{|G|} \sum_{g \in G} \chi_V (g^{-1}) \chi_W (g) \\
-&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g)  \quad \text{(by Proposition \ref{basic-props-of-char}.\ref{char-of-inverse})}\\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g)  \quad \text{(by proposition \ref{basic-propositions-of-char}.\ref{char-of-inverse})}\\
 &= \langle \chi_W | \chi_V \rangle.
 \end{align*}
 \end{proof}
@@ -1096,7 +1093,7 @@ Let $\chi_1, \ldots, \chi_r$ be characters of pairwise non-isomorphic irreducibl
 \[ \langle \chi_i | \chi_j \rangle = \begin{cases}  1 &\text{if } i = j \\ 0 &\text{if } i \neq j\end{cases} \]
 \end{cor}
 \begin{proof}
-Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then by Proposition \ref{schurs-lemma-homvw},
+Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then by proposition \ref{schurs-lemma-homvw},
 
 \[ \langle \chi_i | \chi_j \rangle = \text{dim Hom}_G (U_i, U_j) = \begin{cases}  1 &\text{if }U_i, U_j \text{ are isomorphic} \\  0 &\text{if }U_i, U_j \text{ are not isomorphic}. \end{cases} \]
 \end{proof}
@@ -1132,7 +1129,7 @@ so we conclude that $W$ is irreducible.
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{cor}
 \begin{proof}
-We have already seen that isomorphic representations have the same character by Proposition \label{iso-reprns-same-char}.  On the other hand, suppose $\chi_V = \chi_W$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $G$, and let $\chi_1, \ldots, \chi_r$ be their characters.  We can write
+We have already seen that isomorphic representations have the same character by proposition \label{iso-reprns-same-char}.  On the other hand, suppose $\chi_V = \chi_W$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $G$, and let $\chi_1, \ldots, \chi_r$ be their characters.  We can write
 \[ V = U_1^{m_1} \oplus \ldots \oplus U_r^{m_r} \]
 for some non-negative integers $m_1, \ldots, m_r$, and 
 \[ W = U_1^{l_1} \oplus \ldots \oplus U_r^{l_r} \]
@@ -1153,9 +1150,9 @@ For each $g \in G$, we have $\rho_{\text{reg}} (g) (e_h) = e_{gh}$.  So $\rho_{\
 Thus \[ \text{Tr} (\rho_{\text{reg}} (g)) = | \{ g \in G | h=gh \} | = \begin{cases} |G| &\text{if } g=1 \\ 0 &\text{if } g \neq 1 \end{cases}. \]
 \end{proof}
 
-\begin{prop} \label{mult-of-irr-in-reg}
+\begin{proposition} \label{mult-of-irr-in-reg}
 The multiplicity of any irreducible representation in the regular representation equals its dimension.
-\end{prop}
+\end{proposition}
 \begin{proof}
 Let $V$ be an irreducible representation of $G$.  Then
 \begin{align*}
@@ -1181,13 +1178,13 @@ Let $\chi_1, \ldots, \chi_r$ be the irreducible characters of $G$ with degrees $
 \begin{proof}
 Let $U_1, \ldots, U_r$ be distinct representatives of the isomorphism classes of irreducible representations of $G$.  Then
 \[ V_{\text{reg}} = U_1 ^ {d_1} \oplus \ldots \oplus U_r ^{d_r} \]
-by Proposition \ref{mult-of-irr-in-reg}.  The claim follows from taking dimensions of each side of this equation.
+by proposition \ref{mult-of-irr-in-reg}.  The claim follows from taking dimensions of each side of this equation.
 \end{proof}
 
 
-\begin{defn}
+\begin{definition}
 A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$.  We may therefore view class functions as functions on the set of conjugacy classes of $G$.
-\end{defn}
+\end{definition}
 \begin{note}
 The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
 \end{note}
@@ -1198,13 +1195,13 @@ Since the character of a representation is a class function on $G$, we don't act
 \end{align*}
 where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
 
-\begin{defn}
+\begin{definition}
 We define \textbf{the character table of } $G$ to be the table of complex numbers whose:
 \begin{itemize}\item rows are index by the isomorphism classes of irreducible representations of $G$, 
 \item columns are indexed by the conjugacy classes of $G$,
 \item $i,j$ entry is given by value of the character corresponding to row $i$ evaluated at the isomorphism class corresponding to column $j$.
 \end{itemize}
-\end{defn}
+\end{definition}
 \begin{note}
 It is also helpful to include the size of the conjugacy class associated with each column of the character table, so that we can easily compute the inner product of two characters by looking at the character table.
 \end{note}
