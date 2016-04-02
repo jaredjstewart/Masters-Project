@@ -1,0 +1,484 @@
+\documentclass[pdf]{beamer}
+\mode<all>{\usetheme{Warsaw} \useoutertheme{splitRSI}}
+\mode<handout>{\usecolortheme{seagull}}
+\usepackage{rsislidepacks}
+\usepackage{colortbl}
+\usepackage{epstopdf}
+\usenavigationsymbolstemplate{}
+
+% title information
+\title{Making Slides}
+\subtitle{...and doing it with Beamer}
+\author{RSI \the\year\ Staff}
+
+\begin{document}
+
+\AtBeginSection[]{
+\begin{frame}{Table of Contents}
+	\tableofcontents[currentsection]
+\end{frame}
+}
+
+\begin{frame}
+	\thispagestyle{empty}
+	\titlepage
+\end{frame}
+\addtocounter{framenumber}{-1}
+
+\begin{frame}{Table of Contents}
+	\tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Intro to Beamer}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{About Beamer}
+
+\begin{frame}{What Is Beamer?}
+	\begin{itemize}
+		\item Beamer is a flexible \LaTeX\ class for making slides and presentations.
+		\item It supports functionality for making PDF slides complete with colors, overlays, environments, themes, transitions, etc.
+		\item Adds a couple new features to the commands you've been working with.
+		\pause
+		\item As you probably guessed, this presentation was made using the Beamer class.
+	\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[Basic Structure]{Basic Structure}
+
+\begin{frame}[fragile]{Document Template: slides.tex}
+\begin{columns}[t]
+  \column{0.5\textwidth}
+  \begin{block}{}
+    \begin{verbatim}
+\documentclass[pdf]
+          {beamer}
+\mode<presentation>{}
+%% preamble
+\title{The title}
+\subtitle{The subtitle}
+\author{your name}
+
+\begin{document}
+  	\end{verbatim}	
+  \end{block}
+  
+	\column{0.5\textwidth}
+	\begin{block}{}
+		\begin{semiverbatim}
+\%\% title frame
+\\begin\{frame\}
+    \\titlepage
+\\end\{frame\}
+
+\%\% normal frame
+\\begin\{frame\}\{Frame title\}
+    The body of the frame.
+\\end\{frame\}
+
+\\end\{document\}
+		\end{semiverbatim}
+	\end{block}
+\end{columns}
+\verb+athena% make slides.pdf+
+\end{frame}
+
+\begin{frame}[fragile]{What would you like in your sandwich?}
+\begin{itemize}
+	\item So what can you do between \verb=\begin{frame}= and \verb=\end{frame}=?
+	\pause
+	\item Pretty much anything you can do in a normal \LaTeX\
+	document:
+	\pause
+	\begin{itemize}
+		\item figures, tables, equations, normal text, etc.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+%\begin{frame}[fragile]{Too much \LaTeX\ for your frames to handle?}
+%	\begin{itemize}
+%		\item Be careful not to fit too much text, especially when writing mathematical formulas, but if you must...
+%		\pause
+%		\item Use the optional argument \verb=[allowframebreaks]= with \verb=\begin{frame}= to let \LaTeX\ automatically segment your very long frame.
+%		\pause
+%		\item Warning: Overlays are not available with \verb=[allowframebreaks]=.
+%	\end{itemize}
+%\end{frame}
+
+\begin{frame}{Don't Do This}
+\begin{itemize}
+	\item Here is a well-known formula:\vspace{-.5em}
+	$$\displaystyle \sum_{k=0}^{n} k = \frac{n(n+1)}{2}$$
+	\item Here is a less well-known, but still useful, formula:\vspace{-.5em}
+	$$\displaystyle \sum_{k=0}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$$
+	\item This is pretty well-known, too:\vspace{-.5em}
+	$$\displaystyle \sum_{k=0}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$$
+	\item Who knows about this one?\vspace{-.5em}
+	$$\displaystyle \sum_{k=0}^{n} k^4 = \frac{n(6n^4 + 15n^3 + 10n^2 + 1)}{30}$$
+	\item Have fun factoring the quartic expression!
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Overlaying Concepts}
+
+\begin{frame}{The Rudimentary pause}
+Watch this slide grow.
+\pause
+\begin{itemize}
+	\item Hello, World!
+	\pause
+	\item Hello, Mars!
+	\pause
+	\item Hello, Alpha Centauri!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{The Rudimentary pause: Backstage}
+\begin{semiverbatim}
+Watch this slide grow.
+\alert{\\pause}
+\\begin\{itemize\}
+  \\item Hello, World!
+  \alert{\\pause}
+  \\item Hello, Mars!
+  \alert{\\pause}
+  \\item Hello, Alpha Centauri!
+\\end\{itemize\}
+\end{semiverbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Specifications}
+
+\begin{frame}[fragile]{The Specification}
+\begin{itemize}
+\item<+-| alert@1-> Professor: I want you to read the textbook to prepare for tomorrow's lecture.
+\item<+-> Student: Which chapter should I read?
+\item<+-| alert@3-> Professor: \textit{Specifically}, Chapters \LARGE{\verb=<1-3, 6, 10->=}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Specificationizing the Rudimentary pause}
+Watch this slide grow.
+\begin{itemize}
+	\item<2-> Hello, World!
+	\item<3-> Hello, Mars!
+	\item<4-> Hello, Alpha Centauri!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Specificationizing the Rudimentary pause: Backstage}
+\begin{semiverbatim}
+Watch this slide grow.
+\\begin\{itemize\}
+  \alert{\\item<2->} Hello, World!
+  \alert{\\item<3->} Hello, Mars!
+  \alert{\\item<4->} Hello, Alpha Centauri!
+\\end\{itemize\}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Useful Commands that Work with Specifications}
+\begin{footnotesize}
+\begin{table}
+\begin{tabular}{|p{.75in}|p{1in}|p{.75in}|p{1in}|} \hline
+  \verb=\textbf<>{}= & controls when to bold text
+ & \verb=\only<>{}= & controls when to reveal text, occupies NO space otherwise \\ \hline
+  \verb=\textit<>{}= & controls when to italicize text
+ & \verb=\uncover<>{}= & controls when to reveal text, DOES occupy space
+ otherwise \\ \hline
+  \verb=\color<>[]{}= & controls when to change color of text
+ & \verb=\alt<>{}{}= & reveals first argument when specification is
+ true, otherwise reveals second argument \\ \hline
+  \verb=\alert<>{}= & controls when to highlight text (default red)
+ & \verb=\item<>= & controls when an item is shown \\ \hline
+\end{tabular}
+\end{table}
+\end{footnotesize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection[Examples]{Examples: Lists, Graphics, Tables}
+
+\begin{frame}{Lists: The \$1,000,000 Question}
+Which president said, ``Most folks are about as happy as they make up their minds to be''?
+\begin{enumerate}[A]
+\item<2-5> James Madison
+\item<3-5> Harry Truman
+\item<4-> \color<6>[rgb]{0,0.6,0}Abraham Lincoln
+\item<5-5> Calvin Coolidge
+\end{enumerate}
+\uncover<1-5>{Hints:}\\
+\uncover<2-5>{\small{James Madison ate broccoli.}}\\
+\uncover<3-5>{\small{Harry Truman drank milk.}}\\
+\uncover<4-5>{\small{Abe Lincoln raised bees.}}\\
+\uncover<5-5>{\small{And Cal Coolidge grew silk.}}\\
+\end{frame}
+
+\begin{frame}[fragile]{Lists: The \$1,000,000 Question: Backstage}
+\begin{verbatim}
+\begin{enumerate}[A]
+    \item<2-5> James Madison
+    \item<3-5> Harry Truman
+    \item<4-> \color<6>[rgb]{0,0.6,0}Abraham Lincoln
+    \item<5-5>  Calvin Coolidge
+\end{enumerate}
+
+\uncover<1-5>{Hints:}\\
+\uncover<2-5>{James Madison ate broccoli.}\\
+\uncover<3-5>{Harry Truman drank milk.}\\
+\uncover<4-5>{Abe Lincoln raised bees.}\\
+\uncover<5-5>{And Cal Coolidge grew silk.}\\
+\end{verbatim}
+\end{frame}
+
+\begin{frame}{Columns and Blocks}
+\begin{columns}
+  \column{0.5\textwidth}
+  \begin{figure}[ht]
+  \begin{center}
+  \includegraphics[height=2in]{LarsonGifted.eps}~\footnote{Apologies to
+  Gary Larson}
+  \end{center}
+  \end{figure}
+  
+  \column{0.5\textwidth}
+  \begin{block}<2->{Observation 1}
+    Simmons Hall is composed of metal and concrete.
+  \end{block}
+  \begin{block}<3->{Observation 2}
+    Simmons Dormitory is composed of brick.
+  \end{block}
+  \begin{block}<4->{Conclusion}
+    Simmons Hall $\not=$ Simmons Dormitory.
+  \end{block}
+\end{columns}
+\end{frame}
+
+\begin{frame}[fragile, allowframebreaks=0.8]{Columns and Blocks: Backstage}
+\begin{verbatim}
+\begin{columns}
+  \column{0.5\textwidth}
+    \begin{figure}[ht]
+    \begin{center}
+        \includegraphics[height=2in]{LarsonGifted.eps}
+            ~\footnote{Apologies to Gary Larson}
+    \end{center}
+    \end{figure}
+  
+
+
+
+  \column{0.5\textwidth}
+      \begin{block}<2->{Observation 1}
+          Simmons Hall is composed of metal and concrete.
+      \end{block}
+      \begin{block}<3->{Observation 2}
+          Simmons Dormitory is composed of brick.
+      \end{block}
+      \begin{block}<4->{Conclusion}
+          Simmons Hall $\not=$ Simmons Dormitory.
+      \end{block}
+\end{columns}
+\end{verbatim}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Easy Theorem}
+\newtheorem{pf}{Proof}
+\newtheorem{rmk}{Remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Math stuff}
+	\begin{thm}<1->
+	The equation
+	$$x^n+y^n=z^n,$$
+	has no integer solutions for $n>2$ where $x,\,y,\,z\,\neq\,0$.
+	\end{thm}
+	\begin{pf}<3->
+	The proof is trivial and left as an exercise for the reader.
+	\end{pf}
+	\begin{rmk}<2->
+	This problem was first posed in $10,000$ B.C.
+	\end{rmk}
+\end{frame}
+
+\begin{frame}[fragile]{Math stuff: Backstage}
+\begin{small}
+\begin{verbatim}
+\newtheorem{thm}{Easy Theorem}
+\newtheorem{pf}{Proof}
+\newtheorem{rmk}{Remark}
+
+\begin{thm}<1->
+    $$x^n+y^n=z^n,$$
+    has no integer solutions for $n>2$ 
+    where $x,\,y,\,z\,\neq\,0$.
+\end{thm}
+\begin{pf}<3->
+    The proof is trivial and left as an exercise.
+\end{pf}
+\begin{rmk}<2->
+    This problem was first posed in $10,000$ B.C.
+\end{rmk}
+\end{verbatim}
+\end{small}
+\end{frame}
+
+\begin{frame}{Building Tables}
+\begin{table}[bt]
+\begin{tabular}{|l|c|c|} \hline
+\textbf{Ice Cream Store} & \textbf{Location} & \textbf{How to Get There} \\ \hline
+\uncover<2->{Toscanini's} & \uncover<2->{Central Square} & \uncover<2->{Just walk!} \\
+\uncover<3->{Herrell's} & \uncover<3->{Harvard Square} & \uncover<3->{Red Line} \\
+\uncover<4->{J.P. Licks} & \uncover<4->{Davis Square} & \uncover<4->{Red Line} \\
+\uncover<5->{Ben \& Jerry's} & \uncover<5->{Newbury Street} & \uncover<5->{Green Line} \\ \hline
+\end{tabular}
+\end{table}
+
+%\rowcolors[]{1}{blue!20}{blue!10}
+%\begin{tabular}{l|cccc}
+%Class & A & B & C & D \\\hline
+%X & 1 & 2 & 3 & 4 \pause\\
+%Y & 3 & 4 & 5 & 6 \pause\\
+%Z & 5 & 6 & 7 & 8
+%\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]{Building Tables: Backstage}
+\begin{scriptsize}
+\begin{verbatim}
+\begin{table}[bt]
+\begin{tabular}{|l|c|c|} \hline
+  \textbf{Ice Cream Store}      & \textbf{Location} 
+                                & \textbf{How to Get There}   \\ \hline
+  \uncover<2->{Toscanini's}     & \uncover<2->{Central Square} 
+                                & \uncover<2->{Just walk!}    \\
+  \uncover<3->{Herrell's}       & \uncover<3->{Harvard Square} 
+                                & \uncover<3->{Red Line}      \\
+  \uncover<4->{J.P. Licks}      & \uncover<4->{Davis Square} 
+                                & \uncover<4->{Red Line}      \\
+  \uncover<5->{Ben \& Jerry's}  & \uncover<5->{Newbury Street} 
+                                & \uncover<5->{Green Line}    \\ \hline
+\end{tabular}
+\end{table}
+\end{verbatim}
+\end{scriptsize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Sparkle]{Adding that Sparkle}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Sections}
+
+\begin{frame}[fragile]{Using Sections}
+\begin{itemize}[<+->]
+	\item Treat sections just like you would in a paper.
+	\item Use \verb=\tableofcontents[=$section$\verb=]= to keep audience informed of your talk's general plan.
+	\item Use \verb=\AtBeginSection[]{=$specialframe$\verb=}= to help audience follow the structure of your talk.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,allowframebreaks=1.1]{Using Sections: Backstage}
+\begin{semiverbatim}
+	\\section\{Intro to Beamer\}
+	\\subsection\{About Beamer\}
+	\\subsection[Basic Structure]\{Basic Structure\}
+	\\subsection\{How to Compile\}
+	
+	\\section\{Overlaying Concepts\}
+	\\subsection\{Specifications\}
+	\\subsection[Examples]\{Examples: Lists, Graphics, Tables\}
+	
+	\\section[Sparkle]\{Adding that Sparkle\}
+	\\subsection\{Sections\}
+	\\subsection\{Themes\}
+	
+	\\section*\{References\}
+\end{semiverbatim}
+\begin{semiverbatim}
+\\AtBeginSection[]
+\{
+    \\begin\{frame\}\{Table of Contents\}
+        \\tableofcontents[currentsection]
+    \\end\{frame\}
+\}
+\end{semiverbatim}
+\end{frame}
+
+\begin{frame}{See, I can get a ToC anywhere!}
+	\tableofcontents[currentsubsection]
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Themes}
+
+\begin{frame}[fragile]{Pre-customized Templates}
+\begin{itemize}
+\item To make your presentation use a shiny theme like ours:
+	\begin{itemize}
+	\item Find \verb=\mode<presentation>{}= at the top of your file
+	\item Insert \verb=\usetheme{Warsaw}= into the \verb={}=
+	\end{itemize}
+\item Also available within each Presentation Theme:
+	\begin{itemize}
+	\item \textbf{Color themes:} \verb=\usecolortheme{=\emph{colorthemename}\verb=}= \\ 
+	  control colors for bullets, background, text, etc.
+	\item \textbf{Inner themes:} \verb=\useinnertheme{=\emph{innerthemename}\verb=}= \\ 
+	  control main title, environments, figures and tables, footnotes, etc.
+	\item \textbf{Outer themes:} \verb=\useoutertheme{=\emph{outerthemename}\verb=}= \\ 
+	  control head-/foot-lines, sidebars, frame titles, etc.
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{A Sampling of Themes}
+\begin{itemize}
+\item \textbf{General themes:}
+	\begin{tabular}{llll}
+		default	&			Antibes			&	Berlin	&		Copenhagen \\
+		Madrid	&			Montpelier	&	Ilmenau	&		Malmoe	\\
+		CambridgeUS	&	Berkeley		&	Singapore	&	Warsaw	\\		
+	\end{tabular}
+\item Also available:
+	\begin{itemize}
+	\item \textbf{Color themes:} \\ beetle, beaver, orchid, whale, dolphin
+	\item \textbf{Inner themes:} \\ circles, rectanges, rounded, inmargin
+	\item \textbf{Outer themes:} \\ infolines, smoothbars, sidebar, split, tree
+	\end{itemize}
+\item See \htmladdnormallink{\underline{\textcolor{blue}{The Beamer	Theme Matrix}}}{http://www.hartwork.org/beamer-theme-matrix/}
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\subsection{Handouts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{References}
+
+\begin{frame}{Good sites to visit for Beamer help}
+%\begin{scriptsize}
+\begin{itemize}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{The Beamer	User Guide}}}
+	{http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{The Beamer Homepage}}}
+	{http://latex-beamer.sourceforge.net/}		
+	\item \htmladdnormallink{\underline{\textcolor{blue}{A Quick Tutorial}}}
+	{http://heather.cs.ucdavis.edu/~matloff/beamer.html}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{A Beamer Quickstart}}}
+	{http://www.math.umbc.edu/~rouben/beamer/}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{A Long Tutorial}}}
+	{http://cs.guc.edu.eg/research/latex_online_tutorial/LaTeX/LaTeX_03/latex_beamer_01.html}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{\LaTeX\ + Beamer Examples}}}
+	{http://www.rennes.enst-bretagne.fr/~gbertran/pages/tutorials_latex.html}
+	\item \htmladdnormallink{\underline{\textcolor{blue}{A Beamer Presentation on Beamer}}}
+	{http://www.uncg.edu/cmp/reu/presentations/Charles\%20Batts\%20-\%20Beamer\%20Tutorial.pdf}
+\end{itemize}
+%\end{scriptsize}
+\end{frame}
+
+\end{document}
