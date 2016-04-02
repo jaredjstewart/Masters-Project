@@ -14,9 +14,9 @@
 Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.  For example, 
 \begin{enumerate}
 \item The \textbf{symmetric group} of degree $n$, $S_n$, is the group of all symmetries of the set $\{ 1, \ldots, n \}$.
-\item The \textbf{dihedral group} of order $2n$, $D_{2n}$, is the group of all symmetries of the regular $n$-gon in the plane.
+\item The \textbf{dihedral group} of order $2n$, $D_{n}$, is the group of all symmetries of the regular $n$-gon in the plane.
 \end{enumerate}
-In these two examples, $S_n$  acts on the set $\{ 1, \ldots, n \}$ and $D_{2n}$ acts on the regular $n$-gon in a natural manner. One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
+In these two examples, $S_n$  acts on the set $\{ 1, \ldots, n \}$ and $D_{n}$ acts on the regular $n$-gon in a natural manner. One may wonder more generally:  Given an abstract group $G$, which objects $X$ does $G$ act on?
 This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
 
 %----------------------------------------------------------------------------------------
@@ -196,11 +196,11 @@ Thus, with respect to our given basis of $V$, the regular representation $\rho_{
 \[  \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0 & 1 & 0 & 0 \\  1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix} \]
 We similarly calculate
 \[  \rho_{\text{reg}}(\tau) = \begin{bmatrix}0&0&1&0 \\ 0&0&0&1 \\ 1&0&0&0 \\ 0&1&0&0 \end{bmatrix} \]
-\[  \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{bmatrix} \]
+\[  \rho_{\text{reg}}(\sigma \tau) = \begin{bmatrix}0&0&0&1 \\ 0&0&1&0 \\ 0&1&0&0 \\ 1&0&0&0 \end{bmatrix} \]
 \end{example}
 
-\begin{example}
-Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
+\begin{example}\label{rep-of-d8}
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  We can use geometry to construct a representation of $G$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflecting over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \text{Id}_2 \\
 \rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} \\
@@ -214,23 +214,12 @@ Let $G = D_8 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 
 \end{example}
 
-%\begin{example}
-%Let $G$ be a subgroup of $S_n$, and let $(V, \rho_1)$ be the associated permutation representation, i.e. let $V$ be an $n$-dimensional vector space with basis $\{b_1, \ldots, b_n\}$ and let 
-%\begin{align*}
-%\rho_1 \colon G &\to GL(V)   \\
-%g &\mapsto \rho_1(g) \colon b_k  \mapsto   b_{g(k)}.
-%\end{align*}
-%Let $W = \mathbb{C}$ be the $1$-dimensional trivial representation of $G$, i.e. let $\rho_2 \colon G &\to GL(W)$ be given by $\rho_2(g) =1$ for all $g \in G$.
-%We define a linear map $f \colon V \to W$ by 
-%\[ f(b_k) = 1 \quad \forall k \in \{1 , \ldots, n\}. \]
-%\end{example}
-
 \begin{example} \label{basic-example-of-hom-of-reps}
 Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$, written in the standard basis, is 
 \[ \rho_{\text{reg}}(\tau)= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \]
-and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_1$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
+and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_{\text{sgn}}$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
 \begin{align*}
- \rho_1 \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} (= \mathbb{C}  \{0 \}) \\
+ \rho_{\text{sgn}} \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} \\
 \tau &\mapsto -1 \\
 e &\mapsto 1
  \end{align*}
@@ -238,9 +227,9 @@ Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the 
 \begin{align*}
 f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
 &= - \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
-&= \rho_1 (\tau) \circ f(x).
+&= \rho_{\text{sgn}} (\tau) \circ f(x).
 \end{align*}
-Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_1$ (i.e. a homomorphism of representations).  
+Thus, $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_{\text{sgn}}$ (i.e. a homomorphism of representations).  
 
 Now, let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
 \[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
@@ -358,13 +347,42 @@ Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of
 
 \section{Complete Reducibility}
 \begin{defn}
-A representation is said to be \textbf{irreducible} if it contains no proper invariant subspaces.  It is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible subrepresentations.
 \end{defn}
 
-\begin{example}
+\begin{note}
+\begin{enumerate}
+\item Any $1$-dimensional representation $V$ has no subspaces other than $0$ and $V$ itself, and is thus irreducible.
+\item Any irreducible representation is, in particular, completely reducible.
+\end{enumerate}
+\end{note}
 
-1. Any irreducible representation is, in particular, completely reducible.
-2. Any $1$-dimensional representations has no proper subspaces, and is thus irreducible.
+\begin{example}[A $2$-dimensional irreducible representation] \label{2d-irrep-d3}
+Let $G = D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$. (Note that $D_3 \cong S_3)$.
+Consider the regular triangle centered at the origin with vertices
+\[(1,0), (-\frac{1}{2}, \frac{\sqrt{3}}{2}), (-\frac{1}{2}, - \frac{\sqrt{3}}{2}). \]
+We can let $\sigma$ act as rotation by $\frac{2 \pi}{3}$ and let $\tau$ act as reflection over the $x$-axis to obtain an action of $G$ on $\mathbb{C}^2$ given (under the standard basis) by the matrices
+\begin{align*}
+\rho(\sigma) &= \begin{bmatrix}-\frac{1}{2} & -\frac{\sqrt{3}}{2} \\ \frac{\sqrt{3}}{2} & -\frac{1}{2}\end{bmatrix} \\
+\rho(\tau) &= \begin{bmatrix}1 & 0 \\ 0 & -1 \end{bmatrix}
+\end{align*}
+Suppose $\rho$ has a non-trivial subrepresentation $W$.  We must have $\text{dim }W =1$.  Since $W$ is invariant under the action of both $\rho(\sigma)$ and $\rho(\tau)$, there must be some mutual eigenvector for $\rho(\sigma)$ and $\rho(\tau)$ that spans $W$.  The eigenvectors of $\rho(\sigma)$ are
+\begin{align*}
+\begin{bmatrix} 1 \\ -i \end{bmatrix} \quad (\lambda_1 = e^{\frac{2 \pi i}{3}}) \quad \text{and} \quad
+\begin{bmatrix} 1 \\ i \end{bmatrix} \quad (\lambda_2 = e^{-\frac{2 \pi i}{3}}) .
+\end{align*}  
+The eigenvectors of $\rho(\tau)$ are 
+\begin{align*}
+\begin{bmatrix} 1 \\ 0 \end{bmatrix} \quad (\lambda_1 = 1) \quad \text{and} \quad
+\begin{bmatrix} 0 \\ 1 \end{bmatrix} \quad (\lambda_2 = -1).
+\end{align*}
+Thus we see that there is no such $W$, and our representation is irreducible.
+Finally, we note that under a change of basis to diagonalize $\rho(\sigma)$we have
+\begin{align*}
+\rho(\sigma) &= \begin{bmatrix}w & 0 \\ 0 &w^{2}  \end{bmatrix} \\
+\rho(\tau) &= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}.
+\end{align*} 
+(Conjugate our original matrices by $A \mapsto S^{-1}AS$ where $S$ has columns given by the eigenvectors of $\rho(\sigma)$.)
 \end{example}
 
 \begin{thm}\label{simultaneous} If $A_1, A_2, \ldots, A_r$ are linear operators on $V$ and each $A_i$ is diagonalizable, they are simultaneously diagonalizable if and only if they commute.
@@ -373,7 +391,7 @@ A representation is said to be \textbf{irreducible} if it contains no proper inv
  See Conrad \cite[Theorem 5.1] {ConradMinPoly}.
 \end{proof}
 
-\begin{thm} Every complex representation of a finite abelian group is completely reducible into irreducible representations of dimension $1$.  
+\begin{thm} Every complex representation of a finite abelian group is completely reducible into a direct sum of irreducible representations of dimension $1$.  
 \end {thm}
 \begin{proof}
 Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    Hence the minimal polynomial of $\rho(g)$ divides  $x^n -1$.  Recall that $x^n-1$ has $n$ distinct roots over $\mathbb{C}$, which are generated by taking powers of $\xi = e^{\frac{2 \pi i}{n}}$.  This means that the minimal polynomial $\rho(g)$ factors into linear factors only over $\mathbb{C}$ so that $\rho(g)$ is diagonalizable.  We conclude that each $\rho(g)$ is (separately) diagonalizable since $g \in G$ was arbitrary.
@@ -453,9 +471,10 @@ We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so 
 \[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \subset V_{\text{reg}}. \]
 Then
 \[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
-so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_1$ from the earlier example.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
-
+so $U$ is $G$-invariant.  (In fact $U$ is isomorphic to the alternating representation $\rho_{\text{sgn}}$ from the Example \ref{basic-example-of-hom-of-reps}.)  Finally we see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.
 \end{example}
+
+
 
 
 \section{Vector Spaces of Linear Maps}
@@ -1092,6 +1111,21 @@ Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \ch
 So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$ and the rest are $0$.
 \end{proof}
 
+\begin{example}\label{irr-char-of-d8}
+Let $G=D_4=  \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Recall the two dimensional representation $W$ of $D_4$ given in Example \ref {rep-of-d8}.
+We compute the character of this representation by taking the trace of the matrices from that example:
+\begin{align*}
+\chi_W(e) &=2 & \chi_W(\tau) = 0 \\
+\chi_W(\sigma) &= 0 &\chi_W (\sigma \tau) = 0 \\
+\chi_W(\sigma^2) &= -2 &\chi_W (\sigma^2 \tau) = 0 \\
+\chi_W(\sigma^3) &= 0 &\chi_W (\sigma^3 \tau) = 0.
+\end{align*}
+Then
+\[ \langle \chi_W | \chi_W \rangle =\frac {1}{|G} \sum_{g \in G} \chi_W (g) \overline{\chi_W (g)} = \frac{1}{8} (4 + 4) = 1\]
+so we conclude that $W$ is irreducible.
+\end{example}
+
+
 \begin{cor}
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{cor}
@@ -1155,3 +1189,69 @@ A \textbf{class function} on $G$ is a function on $G$ whose values are invariant
 \begin{note}
 The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
 \end{note}
+Since the character of a representation is a class function on $G$, we don't actually need to to compute $\chi_V (g) \overline {\chi_W (g)}$ for every group element to find the inner product of $\chi_V$ and $\chi_W$.  We just need to calculate it once on each conjugacy class, i.e. 
+\begin{align*}
+\langle \chi_V | \chi_W \rangle &= \frac{1}{|G|} \sum_{g \in G} \rho_V (g) \overline{\rho_W (g)} \\
+&=  \frac{1}{|G|} \sum_{[g]} |[g]|   \rho_V (g) \overline{\rho_W (g)}
+\end{align*}
+where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
+
+\begin{defn}
+We define \textbf{the character table of } $G$ to be the table of complex numbers whose:
+\begin{itemize}\item rows are index by the isomorphism classes of irreducible representations of $G$, 
+\item columns are indexed by the conjugacy classes of $G$,
+\item $i,j$ entry is given by value of the character corresponding to row $i$ evaluated at the isomorphism class corresponding to column $j$.
+\end{itemize}
+\end{defn}
+\begin{note}
+It is also helpful to include the size of the conjugacy class associated with each column of the character table, so that we can easily compute the inner product of two characters by looking at the character table.
+\end{note}
+
+\begin{example}
+Consider $G=D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  We have seen three irreducible representations of $D_3$, namely the $1$-dimensional trivial representation, the $1$-dimensional alternating representation, and the $2$-dimensional irreducible representation $W$ constructed geometrically in Example \ref{2d-irrep-d3}.  Observe that
+\[ |D_3| = 6 = 1^2 + 1^2 +2^2 \]
+so these are all of the irreducible representations of $D_3$ up to isomorphism.  The conjugacy classes of $D_3$ are 
+$\{e\}$, $\{ \sigma, \sigma ^2 \}$, and $\{\tau, \tau \sigma, \tau \sigma^2 \}$.  Thus, the character table of $D_3$ is given by 
+
+\begin{tabular}{ | l | c | c | c |}\hline 
+\multicolumn{4}{|c|}{Character table of $D_3$} \\ \hline
+Size of conjugacy class $\vert [ g] \vert$ & 1 & 3 & 2 \\ \hline
+\multicolumn{4}{|c|}{} \\ \hline
+
+Conjugacy class representative $[g]$ & $[e]$ & $[\tau]$ & $[\sigma]$ \\ \hline
+$\chi_1$  ($1$-d trivial reprn) & $1$ & 1 & 1 \\ \hline
+$\chi_{\text{sgn}}$  ($1$-d sign reprn)  & 1 & -1 & 1 \\ \hline
+$\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -1 \\
+\hline
+\end{tabular}
+\end{example}
+
+
+\begin{example}
+Let $G = D_4$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$, with dimensions $d_1, \ldots, d_r$ respectively, and let $U_1$ be the $1$-dimensional trivial representation.  Then 
+\[ d_2^2 + \ldots + d_r ^2 = |G| - d_1^2 = 8 - 1 = 7. \]
+There are two possibilities:  
+
+1.  $r=8$, and $d_i = 1$ for all $ 1 \leq i \leq 8$. 
+
+2. or $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
+
+We saw in Example \ref{irr-char-of-d8} that $G$ has a two-dimensional irreducible representation, so in fact (2) holds. If we look at the relations in the presentation of $D_4=\langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$, we may construct four one-dimensional representations $\rho_1, \ldots, \rho_4$ by specifying the images of $\sigma$ and $\tau$:
+ \begin{align*}
+ \rho_{1 + i + 2j} \colon  \tau &\mapsto (-1)^i \\
+	\sigma &\mapsto (-1)^j
+ \end{align*}
+where $i,j \in \{0,1\}$.  Thus the character table for $D_4$ is as follows:
+
+\begin{tabular}{ | l | c | c | c |c | c |}\hline 
+\multicolumn{6}{|c|}{Character table of $D_4$} \\ \hline
+Conjugacy class  & $\{1\}$ & $ \{\sigma, \sigma^3\}$ & $\{\sigma^2\}$  & $\{\tau, \sigma^2 \tau\}$ & $\{\sigma\tau, \sigma^3 \tau\}$ \\ \hline
+$\chi_1$ & $1$ & 1 & 1 & 1 & 1\\ \hline
+$\chi_2$ & 1 & 1 & 1 & -1 & -1\\ \hline
+$\chi_3$  & 1 & -1 & 1  & 1 & -1\\ \hline
+$\chi_4$   & 1 & -1 & 1 & -1 & 1 \\ \hline
+$\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -2  & 0 & 0 \\
+\hline
+\end{tabular}
+\end{example}
+
