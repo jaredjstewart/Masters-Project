@@ -82,17 +82,17 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 
 
 %----------------------------------------------------------------------------------------
-%	AMSTHM Environment/Numbering Configuration added by Jared Stewart
+%	AMStheorem Environment/Numbering Configuration added by Jared Stewart
 %----------------------------------------------------------------------------------------
 \theoremstyle{plain}
-\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
-\newtheorem{proposition}[thm]{Proposition} % definition numbers are dependent on theorem numbers
-\newtheorem{lemma}[thm]{Lemma} % definition numbers are dependent on theorem numbers
-\newtheorem{cor}[thm]{Corollary} % definition numbers are dependent on theorem numbers
+\newtheorem{theorem}{Theorem}[chapter] % reset theorem numbering for each chapter
+\newtheorem{proposition}[theorem]{Proposition} % definition numbers are dependent on theorem numbers
+\newtheorem{lemma}[theorem]{Lemma} % definition numbers are dependent on theorem numbers
+\newtheorem{cor}[theorem]{Corollary} % definition numbers are dependent on theorem numbers
 
 \theoremstyle{definition}
-\newtheorem{definition}[thm]{Definition} % definition numbers are dependent on theorem numbers
-\newtheorem{example}[thm]{Example} % same for example numbers
+\newtheorem{definition}[theorem]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{example}[theorem]{Example} % same for example numbers
 
 
 
@@ -101,7 +101,7 @@ singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespac
 \newtheorem*{note}{Note}
 %\newtheorem*{lemma}{Lemma}
 
-\numberwithin{equation}{thm}
+\numberwithin{equation}{theorem}
 
 \begin{document}
 
