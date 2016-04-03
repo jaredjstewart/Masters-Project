@@ -371,7 +371,17 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 \end{align*}}
 \alt<4>{\qedhere}{\phantom\qedhere}
 \end{proof}
-	
+\end{frame}
+
+\begin{frame}
+\begin{block}{Corollary}
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
+\end{block}
+\begin{proof}
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a propositioner subrepresentation $W \subset V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \subset V$ such that 
+\begin{equation}  V = W \oplus U. \end{equation}
+Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
+\end{proof}
 \end{frame}
 
 \end{document}
