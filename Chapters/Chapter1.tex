@@ -876,7 +876,7 @@ So $\rho_{V \otimes W}$ is described by the $nm \times nm$ matrix $M \otimes N$ 
 \[ [ M \otimes N ]_{js, it} = M_{ji} N_{st}. \]
 This matrix has $nm$ rows, and to specify a row we need a pair of numbers $(j, s)$ where $j \in \{ 1, \ldots, n \}$ and $s \in \{ 1, \ldots, m \}$.  
 
-\begin{proposition}
+\begin{proposition}\label{tensor-iso-hom}
 Let $V$ and $W$ be representations of $G$.  Then $V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
 \end{proposition}
 \begin{proof}
@@ -1057,12 +1057,12 @@ where
 \[ f_{ji} (a_i) = \begin{cases} b_j &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \] 
 We may calculate $\text{Tr}(\Psi)$ as follows:  For each $i,j$, compute the expression of $\Psi(f_{ji})$ in this basis, and take the coefficient of the basis element $f_{ji}$.  This is a diagonal entry in the matrix for $\Psi$. Summing these values over all $i$ and $j$ will gives us $\text{Tr}(\Psi)$.
 
-Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We know that 
+Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We have seen that 
 \[ \text{Hom}(V,W) = V^* \otimes W \]
-so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V^*}}$ and $\widetilde{\rho_W}$.  Thus
+and if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get
 \begin{align*}
 \rho_{\text{Hom}(V,W)}(g)(f_{ji}) &= \rho_W (g) \circ f_{ji} \circ \rho_V (g^{-1}) \\
-&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{Show another step?}
+&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{(See the proof of Proposition \ref{tensor-iso-hom})}
 \end{align*}
 Then 
 \begin{align*}
@@ -1113,7 +1113,7 @@ We compute the character of this representation by taking the trace of the matri
 \chi_W(\sigma^3) &= 0 &\chi_W (\sigma^3 \tau) = 0.
 \end{align*}
 Then
-\[ \langle \chi_W | \chi_W \rangle =\frac {1}{|G} \sum_{g \in G} \chi_W (g) \overline{\chi_W (g)} = \frac{1}{8} (4 + 4) = 1\]
+\[ \langle \chi_W | \chi_W \rangle =\frac {1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_W (g)} = \frac{1}{8} (4 + 4) = 1\]
 so we conclude that $W$ is irreducible.
 \end{example}
 
@@ -1122,25 +1122,25 @@ so we conclude that $W$ is irreducible.
 Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{cor}
 \begin{proof}
-We have already seen that isomorphic representations have the same character by proposition \label{iso-reprns-same-char}.  On the other hand, suppose $\chi_V = \chi_W$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $G$, and let $\chi_1, \ldots, \chi_r$ be their characters.  We can write
+We have already seen that isomorphic representations have the same character by Proposition \ref{iso-reprns-same-char}.  On the other hand, suppose $\chi_V = \chi_W$.    Write
 \[ V = U_1^{m_1} \oplus \ldots \oplus U_r^{m_r} \]
 for some non-negative integers $m_1, \ldots, m_r$, and 
 \[ W = U_1^{l_1} \oplus \ldots \oplus U_r^{l_r} \]
-for some non-negative integers $l_1, \ldots, l_r$.  So
+for some non-negative integers $l_1, \ldots, l_r$, where $U_1, \ldots, U_r$ are irreducible representations of $G$ and $\chi_1, \ldots, \chi_r$ are their characters.  Then
 \[ \chi_V = m_1 \chi_1 + \ldots + m_r \chi_r \]
 and 
 \[ \chi_W = l_1 \chi_1 + \ldots + l_r \chi_r .\]
-Thus we have 
-\[ m_i = \langle \chi_V | \chi_i \rangle = \langle \chi_W | \chi_i \rangle = l_i \]
+It follows that
+\[ m_i = \langle \chi_V | \chi_i \rangle   = \langle \chi_W | \chi_i \rangle =  l_i \]
 for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.  This proves $V$ and $W$ are isomorphic.
 \end{proof}
 
-\begin{lemma}
-$\chi_{\text{reg}}(g) = \begin{cases} |G| &\text{if } g=1 \\ 0 &\text{if } g \neq 1 \end{cases}$
-\end{lemma}
+\begin{proposition}
+$\chi_{\text{reg}}(g) = \begin{cases} |G| &\text{if } g=e \\ 0 &\text{if } g \neq e \end{cases}$
+\end{proposition}
 \begin{proof}
 For each $g \in G$, we have $\rho_{\text{reg}} (g) (e_h) = e_{gh}$.  So $\rho_{\text{reg}}$ maps any basis element to another basis element.  
-Thus \[ \text{Tr} (\rho_{\text{reg}} (g)) = | \{ g \in G | h=gh \} | = \begin{cases} |G| &\text{if } g=1 \\ 0 &\text{if } g \neq 1 \end{cases}. \]
+Thus \[ \text{Tr} (\rho_{\text{reg}} (g)) = | \{ g \in G | h=gh \} | = \begin{cases} |G| &\text{if } g=e \\ 0 &\text{if } g \neq e \end{cases}. \]
 \end{proof}
 
 \begin{proposition} \label{mult-of-irr-in-reg}
@@ -1149,7 +1149,7 @@ The multiplicity of any irreducible representation in the regular representation
 \begin{proof}
 Let $V$ be an irreducible representation of $G$.  Then
 \begin{align*}
-\langle \chi_{\text{reg}}, \chi_V \rangle &= \frac{1}{|G|} \chi_{\text{reg}}(1) \overline{\chi_V (1)} \\
+\langle \chi_{\text{reg}}, \chi_V \rangle &= \frac{1}{|G|} \chi_{\text{reg}}(e) \overline{\chi_V (e)} \\
 &= \frac{1}{|G|} |G| (\text{dim } V) \\
 &= \text{dim } V.
 \end{align*}
@@ -1160,7 +1160,7 @@ Therefore the multiplicity of $V$ in the regular representation is $\text{dim } 
 There are finitely many irreducible representations of $G$, up to isomorphism.
 \end{cor}
 \begin{proof}
-Since $\text{dim } FG = |G|$, there can be at most $|G|$ irreducible representations of $G$ up to isomorphism.
+Since $\text{dim } V_{\text{reg}} = |G|$, there can be at most $|G|$ irreducible representations of $G$ up to isomorphism.
 \end{proof}
 
 
@@ -1176,17 +1176,18 @@ by proposition \ref{mult-of-irr-in-reg}.  The claim follows from taking dimensio
 
 
 \begin{definition}
-A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$.  We may therefore view class functions as functions on the set of conjugacy classes of $G$.
+A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$.  The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$, so we can view class functions as functions on the set of conjugacy classes of $G$.
 \end{definition}
 \begin{note}
-The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.
-\end{note}
-Since the character of a representation is a class function on $G$, we don't actually need to to compute $\chi_V (g) \overline {\chi_W (g)}$ for every group element to find the inner product of $\chi_V$ and $\chi_W$.  We just need to calculate it once on each conjugacy class, i.e. 
+The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$.  So we don't actually need to to compute $\chi_V (g) \overline {\chi_W (g)}$ for every group element to find the inner product of $\chi_V$ and $\chi_W$.  We just need to calculate it once on each conjugacy class, i.e. 
 \begin{align*}
 \langle \chi_V | \chi_W \rangle &= \frac{1}{|G|} \sum_{g \in G} \rho_V (g) \overline{\rho_W (g)} \\
 &=  \frac{1}{|G|} \sum_{[g]} |[g]|   \rho_V (g) \overline{\rho_W (g)}
 \end{align*}
 where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
+\end{note}
+
+
 
 \begin{definition}
 We define \textbf{the character table of } $G$ to be the table of complex numbers whose:
@@ -1220,7 +1221,7 @@ $\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -1 \\
 
 
 \begin{example}
-Let $G = D_4$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$, with dimensions $d_1, \ldots, d_r$ respectively, and let $U_1$ be the $1$-dimensional trivial representation.  Then 
+Let $G = D_4\langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$, with dimensions $d_1, \ldots, d_r$ respectively, and let $U_1$ be the $1$-dimensional trivial representation.  Then 
 \[ d_2^2 + \ldots + d_r ^2 = |G| - d_1^2 = 8 - 1 = 7. \]
 There are two possibilities:  
 
@@ -1228,12 +1229,9 @@ There are two possibilities:
 
 2. or $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
 
-We saw in Example \ref{irr-char-of-d8} that $G$ has a two-dimensional irreducible representation, so in fact (2) holds. If we look at the relations in the presentation of $D_4=\langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$, we may construct four one-dimensional representations $\rho_1, \ldots, \rho_4$ by specifying the images of $\sigma$ and $\tau$:
- \begin{align*}
- \rho_{1 + i + 2j} \colon  \tau &\mapsto (-1)^i \\
-	\sigma &\mapsto (-1)^j
- \end{align*}
-where $i,j \in \{0,1\}$.  Thus the character table for $D_4$ is as follows:
+We saw earlier that $G$ has a two-dimensional irreducible representation, so in fact (2) holds. 
+The remaining $1$-dimensional representations are easy to find, since they must satisfy the relations  $\rho(\sigma)^2 = 1$ and $ \rho(\tau)^2  = 1$.
+Thus the character table for $D_4$ is as follows:
 
 \begin{tabular}{ | l | c | c | c |c | c |}\hline 
 \multicolumn{6}{|c|}{Character table of $D_4$} \\ \hline

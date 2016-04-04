@@ -38,8 +38,9 @@
 
 
 \title{Character Tables for Representations of Finite Groups}  
-\author{Jared Stewart}
-\date{\today} 
+\author{Jared Stewart \\Advised by Dr. Calin Chindris }
+
+\date{\today \\ University of Missouri} 
 
 \begin{document}
 
@@ -51,8 +52,7 @@
 \end{frame} 
 
 \section{Basics of Rep. Theory}
-
-\subsection{Motivation}
+\subsection{Motivation and Definitions}
 \begin{frame}{Motivation}
 Groups arise naturally as sets of symmetries of some object which are closed under composition and taking inverses.  For example, 
 \begin{enumerate}
@@ -75,6 +75,7 @@ A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \ti
 \begin{note}
 We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
  \end{note}
+
 
 \begin{frame}{The Definition of a Representation}
 \begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ that preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
@@ -106,6 +107,7 @@ The two definitions we have given of a linear representation are equivalent.
  \end{definition}
 \end{frame}
 
+\subsection{Examples of Representations}
 \begin{frame}{Examples of Representations}
  \begin{example}
 \only<1>{Let $V$ be an $n$-dimensional vector space.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = \text{Id}_V$ for all $g \in G$ is a representation of $G$ called the \textbf{trival representation} of dimension $n$. }
@@ -175,7 +177,6 @@ Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \end{example}
 \end{frame}
 
-\subsection{Subrepresentations}
 \begin{frame}{Subrepresentations}
 \begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
 \end{definition}
@@ -250,7 +251,7 @@ every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant
 \end{frame}
 
 \section{Reducibility}
-\subsection{Direct sum}
+\subsection{Irreducible representations and complete reducibility}
 \begin{frame}{The direct sum of representations}
 \begin{block}{Note}
 We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
@@ -487,6 +488,7 @@ Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi 
 \end{frame}
 
 \section{Isotypical Decomp.}
+\subsection{Isotypical decomposition}
 \begin{frame}
 \begin{proposition}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
@@ -541,6 +543,7 @@ For any irrep $W$ of $G$, the number of irreps in either decomposition that are 
 \end{frame}
 
 \section{Duals and Tensors}
+\subsection{Dual Spaces}
 \begin{frame}{The Dual Space}
 \begin{definition}
 Let $V$ be a vector space.  Recall that we define the \textbf{dual vector space} to be
@@ -567,6 +570,7 @@ with respect to the dual basis.
 \end{proposition}
 \end{frame}
 
+\subsection{Tensor Products}
 \begin{frame}
 \begin{definition}
 Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace $D$ spanned by all elements of the form
@@ -589,6 +593,17 @@ to be the linear map given by
 \begin{proposition}
 Let $V$ and $W$ be representations of $G$.  Then $V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
 \end{proposition}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Note}
+Let $\{ a_1,  \ldots, a_n\}$ be a basis for $V$, let $\{\alpha_1, \ldots, \alpha_n \}$ be the corresponding dual basis for $V^{*}$, and let $\{b_1,  \ldots,b_m\}$ be a basis for $W$.  Then $\text{Hom}(V^*,W)$ has a basis $\{ f_{it} | 1 \leq i \leq n, 1 \leq t \leq m \}$ where
+\begin{align*}
+f_{it} (\alpha_j) = \begin{cases} b_t &\text{if } j = i\\ 0 &\text{if } j \neq i \end{cases} 
+\end{align*}
+Let $M$ and $N$ denote the matrices which describe $\rho_V (g)$ and $\rho_W (g)$ in the given bases.  If we write $\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1})$ in terms of the basis $\{ f_{js} \}$, we have 
+\[\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1}) = \sum_{\substack{j \in [1,n] \\  s \in [1,m]}} M_{ji} N_{st} f_{js} \]
+\end{block}
 \end{frame}
 
 \section{Character Theory}
@@ -679,6 +694,21 @@ So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$
 \end{proof}
 \end{frame}
 
+\begin{frame}
+\begin{example}
+Let $G=D_4=  \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Recall the two dimensional representation $W$ of $D_4$ given earlier.
+We compute the character of this representation by taking the trace of the matrices from that example:
+\begin{align*}
+\chi_W(e) &=2 & \chi_W(\tau) = 0 \\
+\chi_W(\sigma) &= 0 &\chi_W (\sigma \tau) = 0 \\
+\chi_W(\sigma^2) &= -2 &\chi_W (\sigma^2 \tau) = 0 \\
+\chi_W(\sigma^3) &= 0 &\chi_W (\sigma^3 \tau) = 0.
+\end{align*}
+Then
+\[ \langle \chi_W | \chi_W \rangle =\frac {1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_W (g)} = \frac{1}{8} (4 + 4) = 1\]
+so we conclude that $W$ is irreducible.
+\end{example}
+\end{frame}
 
 \begin{frame}{Proof that $\langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W)$}
 \begin{lemma}
@@ -713,16 +743,163 @@ where
 We may calculate $\text{Tr}(\Psi)$ as follows:  For each $i,j$, compute the expression of $\Psi(f_{ji})$ in this basis, and take the coefficient of the basis element $f_{ji}$.  This is a diagonal entry in the matrix for $\Psi$. Summing these values over all $i$ and $j$ will gives us $\text{Tr}(\Psi)$.
 }
 \only<3>{
-Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We know that 
+Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We have seen that 
 \[ \text{Hom}(V,W) = V^* \otimes W \]
-so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V^*}}$ and $\widetilde{\rho_W}$.  Thus
+and if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get
 \begin{align*}
 \rho_{\text{Hom}(V,W)}(g)(f_{ji}) &= \rho_W (g) \circ f_{ji} \circ \rho_V (g^{-1}) \\
-&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{Show another step?}
+&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}.
 \end{align*}
 }
-\alt<4>{\qedhere}{\phantom\qedhere}
+\only<4>{
+Now 
+\begin{align*}
+\Psi (f_{ji}) &= \frac{1}{|G|} \sum_{g \in G} \rho_{\text{Hom}(V,W)}(g)(f) \\
+&= \frac{1}{|G|} \sum_{g \in G} \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}.
+\end{align*}
+The coefficient of $f_{ji}$ in this expression is
+\[ \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj}. \]
+(This is a diagonal entry of $\Psi$.)
+}
+\only<5>{
+Therefore
+\begin{align*}
+\text{Tr} (\Psi) &= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}}  \frac{1}{|G|} \sum_{g \in G}\widetilde{\rho_V} (g^{-1})_{ii} \widetilde{\rho_W}(g)_{jj} \\
+&=  \frac{1}{|G|} \sum_{g \in G} \left( \sum_{i=1}^n \widetilde{\rho_V}(g^{-1})_{ii} \right) \left( \sum_{j=1}^m \widetilde{\rho_W} (g)_{jj} \right) \\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_V (g^{-1}) \chi_W (g) \\
+&= \frac{1}{|G|} \sum_{g \in G} \chi_W (g) \overline{\chi_V}(g) = \langle \chi_W | \chi_V \rangle.
+\end{align*} }
+\alt<5>{\qedhere}{\phantom\qedhere}
 \end{proof}
 \end{frame}
+
+\begin{frame}[plain]
+\begin{block}{Corollary}
+Let $V$ and $W$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
+\end{block}
+\begin{proof}
+Suppose $\chi_V = \chi_W$. We can find non-negative integers $m_i$ and $l_j$ such that
+\begin{align*}
+V = U_1^{m_1} \oplus \ldots \oplus U_r^{m_r} \quad \text{ and } \quad W = U_1^{l_1} \oplus \ldots \oplus U_r^{l_r}
+\end{align*}
+where $U_1, \ldots, U_r$ are distinct irreps of $G$.  Then
+\begin{align*}
+\chi_V = m_1 \chi_1 + \ldots + m_r \chi_r \quad \text{ and } \quad  \chi_W = l_1 \chi_1 + \ldots + l_r \chi_r .
+\end{align*}
+It follows that
+\[ m_i = \langle \chi_V | \chi_i \rangle   = \langle \chi_W | \chi_i \rangle =  l_i \]
+for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Lemma}
+$\chi_{\text{reg}}(g) = \begin{cases} |G| &\text{if } g=e \\ 0 &\text{if } g \neq e \end{cases}$
+\end{block}
+\begin{proposition}
+The multiplicity of any irreducible representation in the regular representation equals its dimension.
+\end{proposition}
+\begin{proof}
+Let $V$ be an irreducible representation of $G$.  Then
+\begin{align*}
+\langle \chi_{\text{reg}}, \chi_V \rangle &= \frac{1}{|G|} \chi_{\text{reg}}(e) \overline{\chi_V (e)} \\
+&= \frac{1}{|G|} |G| (\text{dim } V)= \text{dim } V.
+\end{align*}
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Corollary}
+There are finitely many irreducible representations of $G$, up to isomorphism.
+\end{block}
+\begin{block}{Corollary}
+Let $U_1, \ldots, U_r$ be the irreducible representations of $G$ with degrees $d_1, \ldots, d_r$.  Then
+\[ |G| = \sum_{i=1}^n d_i^2 \]
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}
+\begin{definition}
+A \textbf{class function} on $G$ is a function on $G$ whose values are invariant by conjugation of elements in $G$. 
+\end{definition}
+\begin{block}{Note}
+The character $\chi_V$ of a representation $V$ of $G$ is a class function on $G$. To find the inner product of $\chi_V$ and $\chi_W$, we just need to calculate $\chi$ once on each conjugacy class, i.e. 
+\begin{align*}
+\langle \chi_V | \chi_W \rangle &= \frac{1}{|G|} \sum_{g \in G} \rho_V (g) \overline{\rho_W (g)} \\
+&=  \frac{1}{|G|} \sum_{[g]} |[g]|   \rho_V (g) \overline{\rho_W (g)}
+\end{align*}
+where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
+\end{block}
+\end{frame}
+\begin{note}
+ The value of a class function at an element $g \in G$ depends only on the conjugacy class of $g$, so we can view class functions as functions on the set of conjugacy classes of $G$.
+ \end{note}
+
+\begin{frame}
+\begin{definition}
+We define \textbf{the character table of} $G$ to be the table of complex numbers whose:
+\begin{itemize}\item rows are index by the isomorphism classes of irreducible representations of $G$, 
+\item columns are indexed by the conjugacy classes of $G$,
+\item $i,j$ entry is given by value of the character corresponding to row $i$ evaluated at the isomorphism class corresponding to column $j$.
+\end{itemize}
+\end{definition}
+\end{frame}
+
+\begin{frame}{Character table of $D_3$}
+\begin{example}
+\only<1>{
+Consider $G=D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  We have seen three irreducible representations of $D_3$, namely the $1$-dimensional trivial representation, the $1$-dimensional alternating representation, and the $2$-dimensional irreducible representation $W$ constructed geometrically.  Observe that
+\[ |D_3| = 6 = 1^2 + 1^2 +2^2 \]
+so these are all of the irreducible representations of $D_3$ up to isomorphism.  
+}
+\only<2>{The conjugacy classes of $D_3$ are 
+$\{e\}$, $\{ \sigma, \sigma ^2 \}$, and $\{\tau, \tau \sigma, \tau \sigma^2 \}$.  Thus, the character table of $D_3$ is given by 
+
+
+\begin{tabular}{ | l | c | c | c |}\hline 
+\multicolumn{4}{|c|}{Character table of $D_3$} \\ \hline
+
+Conjugacy class representative $[g]$ & $[e]$ & $[\tau]$ & $[\sigma]$ \\ \hline
+$\chi_1$  ($1$-d trivial reprn) & $1$ & 1 & 1 \\ \hline
+$\chi_{\text{sgn}}$  ($1$-d sign reprn)  & 1 & -1 & 1 \\ \hline
+$\chi_W$ ($2$-d reprn obtained geometrically) & 2 & 0 & -1 \\
+\hline
+\end{tabular}
+}
+\end{example}
+\end{frame}
+
+\begin{frame}{Character Table of $D_4$}
+\begin{example}
+\only<1>{
+Let $G = D_4$.  Let $U_1, \ldots, U_r$ be the irreducible representations of $D_4$, with dimensions $d_1, \ldots, d_r$ respectively, and let $U_1$ be the $1$-dimensional trivial representation.  Then 
+\[ d_2^2 + \ldots + d_r ^2 = |G| - d_1^2 = 8 - 1 = 7. \]
+There are two possibilities:  
+
+1.  $r=8$, and $d_i = 1$ for all $ 1 \leq i \leq 8$. 
+
+2. or $r=5$, and $d_2 = d_3 = d_4 = 1$, $d_5 = 2$.
+
+We saw earlier that $G$ has a two-dimensional irreducible representation, so in fact (2) holds. }
+\only<2>{
+ The remaining $1$-dimensional representations are easy to find, since they must satisfy the relations  $\rho(\sigma)^2 = 1$ and $ \rho(\tau)^2  = 1$.
+Thus the character table for $D_4$ is as follows:
+
+\begin{tabular}{ | l | c | c | c |c | c |}\hline 
+\multicolumn{6}{|c|}{Character table of $D_4$} \\ \hline
+Conjugacy class  & $\{1\}$ & $ \{\sigma, \sigma^3\}$ & $\{\sigma^2\}$  & $\{\tau, \sigma^2 \tau\}$ & $\{\sigma\tau, \sigma^3 \tau\}$ \\ \hline
+$\chi_1$ & $1$ & 1 & 1 & 1 & 1\\ \hline
+$\chi_2$ & 1 & 1 & 1 & -1 & -1\\ \hline
+$\chi_3$  & 1 & -1 & 1  & 1 & -1\\ \hline
+$\chi_4$   & 1 & -1 & 1 & -1 & 1 \\ \hline
+$\chi_W$ ($2$-d reprn) & 2 & 0 & -2  & 0 & 0 \\
+\hline
+\end{tabular}
+}
+\end{example}
+\end{frame}
+
 
 \end{document}
