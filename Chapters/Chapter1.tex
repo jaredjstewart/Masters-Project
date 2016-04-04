@@ -396,7 +396,7 @@ Now, given any two elements $g_1, g_2 \in G$ we have
 		&=  \rho(g_2 g_1) && \text{(since $G$ is abeilian)} \\
 		&= \rho(g_2) \rho(g_1) && \text{(since $\rho$ is a homomorphism)}.
 \end{align*}
-Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply Theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
+Thus the matrices $\left\{ \rho(g)\right\}$ commute, so we may apply Theorem \ref{simultaneous} to conclude that $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_i$ invariant under the action of $G$.
 \end{proof}
 
 \begin{definition}
@@ -753,8 +753,7 @@ where $S$ ranges over a set of representatives of the isomorphism classes of the
 \section{Duals and Tensor Products}
 \begin{definition}
 Let $V$ be a vector space.  Recall that we define the \textbf{dual vector space} to be
-\[ V^{*} = \text{Hom}(V,\mathbb{C}).\]
-This is a special case of $\text{Hom}(V,W)$ where $W = \mathbb{C}$. We know that if $\{ b_1, \ldots, b_n \} $ is a basis for $V$, then there is a \textbf{dual basis} $\{ f_1, \ldots, f_n \}$ for $V$ defined by
+\[ V^{*} = \text{Hom}(V,\mathbb{C}).\]    If we fix a basis  $\{ b_1, \ldots, b_n \} $ for $V$, then the \textbf{dual basis}$\{ f_1, \ldots, f_n \}$ for $V^*$ is defined by
 \[ f_i (b_j) = \begin{cases} 1 &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \]
 Let $\rho_V \colon G \to GL(V)$ be a representation of $G$, and let $\mathbb{C}$ be the $1$-dimensional trival representation of $G$.  Then we have seen that $V^{*}$ carries a representation of $G$ defined by
 \[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = f \circ \rho_V ( g^{-1}) \]
@@ -913,7 +912,7 @@ Thus, if we write $\rho_W (g) \circ f_{it} \circ \rho_{V^{*}} (g^ {-1})$ in term
 
 \section{Character Theory}
 \begin{definition}
-The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function $\chi_V \colon G \to \mathbb{C}$ defined by $\chi_V(g) = \text{Tr}(\rho(g))$.
+The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function \[ \chi_V \colon G \to \mathbb{C}\] defined by \[\chi_V(g) = \text{Tr}(\rho(g)).\]
 \end{definition}
 \begin{note}
 The character is of a representation is not a homomorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
@@ -922,7 +921,7 @@ The character is of a representation is not a homomorphism in general, since $\t
 \begin{proposition}\label{basic-propositions-of-char} (Basic properties)
 \begin{enumerate}
 \item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g)$ for all $g , h \in G$.
-\item $\chi_V (1) = \text{\emph{dim }} V$.
+\item $\chi_V (e) = \text{\emph{dim }} V$.
 \item \label{char-of-inverse} $\chi_V (g^{-1}) = \overline{\chi_V (g)}$ for all $g \in G$.
 \item $\chi_{V^*} (g) =  \overline{\chi_V (g)}$ for all $g \in G$.
 \end{enumerate}
@@ -930,8 +929,8 @@ The character is of a representation is not a homomorphism in general, since $\t
 
 \begin{proof}
 \begin{enumerate}
-\item $\chi_V (h g h^{-1} = \text{Tr}(h g h^{-1}) = \text{Tr}(g h h^{-1}) = \text{Tr} (g) = \chi_V(g)$ for any $g,h \in G$.
-\item $\chi_V(1) = \text{Tr}(\text{Id} _V) = \text{dim } V$.
+\item $\chi_V (h g h^{-1}) = \text{Tr}(h g h^{-1}) = \text{Tr} (g) = \chi_V(g)$ for any $g,h \in G$.
+\item $\chi_V(e) = \text{Tr}(\text{Id} _V) = \text{dim } V$.
 \item Since $G$ is finite, we have seen that $\rho(g)$ is a diagonal matrix with roots of unity along the diagonal with the right choice of basis.  The inverse of a root of unity is given by its complex conjugate, so under this same basis, $\rho(g)^{-1}$ is clearly given by $\overline{\rho(g)}$.  Thus, $\chi_V(g^{-1}) = \text{Tr}(\rho(g^{-1})) = \text{Tr}(\rho(g)^{-1}) = \text{Tr}(\overline{\rho(g)}) = \overline{ \text{Tr} (\rho(g))} = \overline {\chi_V(g)}$.
 \item \begin{align*}
  \chi_{V^*}(g) &= \text{Tr}(\rho_{V^*}(g)) \\
@@ -946,7 +945,7 @@ The character is of a representation is not a homomorphism in general, since $\t
 Isomorphic representations have the same character.
 \end{proposition}
 \begin{proof}
-We have seen in proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus they have the same trace.
+We have seen in proposition \ref{iso-classes-of-reprns} that isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus each $\rho(g)$ has the same trace.
 \end{proof}
 We will see later that the converse is true - if two representations have the same character, then they are isomorphic.
 
@@ -985,7 +984,7 @@ Let $\mathbb{C}^G$ denote the set of all functions from $G$ to $\mathbb{C}$.  Th
 \lambda f \colon G &\to \mathbb{C} \\
 g &\mapsto \lambda f(g).
 \end{align*}
-A basis for $\mathbb{C}^G$ is clearly given by the set of functions 
+A basis for $\mathbb{C}^G$ is given by the set of functions 
 \[\{ \delta_g | g \in G  \} \]
 defined by 
 \[ \delta_g \colon h \mapsto \begin{cases}  1 &\text{if } h = g \\
@@ -1001,7 +1000,7 @@ It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first v
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
 The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 
-\begin{lemma}
+\begin{lemma} \label{inv-subspace-proj-lemma}
 Let $\rho \colon G \to GL(V)$ be any representation.  Consider the linear map 
 \begin{align*}
 \Psi \colon V &\to V \\
@@ -1045,11 +1044,11 @@ Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representatio
 In particular, the inner product of two characters is always a non-negative integer.  (Whereas in general, the inner product of two arbitrary functions can be any complex number.)
 
 \begin{proof}
-We have seen in proposition \ref{invariant-subrprn} that
- \[ \text{Hom}_G (V,W) \subset \text{Hom}(V,W) \] 
- as the invariant subrepresentation, and by the previous lemma we have a projection
+We have seen in Proposition \ref{invariant-subrprn} that
+ \[ \text{Hom}_G (V,W)=  \text{Hom}(V,W)^G  \subset \text{Hom}(V,W) \] 
+ as the invariant subrepresentation, and by Lemma \ref{inv-subspace-proj-lemma} we have a projection
 \begin{align*}
-\Psi \colon \text{Hom}(V,W) &\to \text{Hom}(V,W) \\
+\Psi \colon \text{Hom}(V,W) &\to \text{Hom}(V,W)^G\\
 f &\mapsto \frac{1}{|G|} \sum_{g \in G} \rho_{\text{Hom}(V,W)} (g) (f).
 \end{align*}
 We claim that \[ \text{Tr} (\Psi) = \langle \chi_W | \chi_V \rangle. \]  Once this claim is established, then Lemma \ref{projection-lemma} will prove the theorem.  We proceed by calculating $\text{Tr} (\Psi)$.  Fix bases $\{ a_1, \ldots, a_n \}$ for $V$ and $\{ b_1, \ldots, b_m \}$ for $W$.  Then $\text{Hom}(V,W)$ has an associated basis 
@@ -1087,7 +1086,7 @@ Let $\chi_1, \ldots, \chi_r$ be characters of pairwise non-isomorphic irreducibl
 \[ \langle \chi_i | \chi_j \rangle = \begin{cases}  1 &\text{if } i = j \\ 0 &\text{if } i \neq j\end{cases} \]
 \end{cor}
 \begin{proof}
-Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then by proposition \ref{schurs-lemma-homvw},
+Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then by Proposition \ref{schurs-lemma-homvw},
 
 \[ \langle \chi_i | \chi_j \rangle = \text{dim Hom}_G (U_i, U_j) = \begin{cases}  1 &\text{if }U_i, U_j \text{ are isomorphic} \\  0 &\text{if }U_i, U_j \text{ are not isomorphic}. \end{cases} \]
 \end{proof}

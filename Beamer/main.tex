@@ -13,6 +13,13 @@
 %\usetheme{Copenhagen}
 \usetheme{Frankfurt}
 \usefonttheme[onlymath]{serif}
+
+%\useoutertheme{miniframes}
+%\makeatletter
+  %\beamer@compressfalse
+%\makeatother
+
+
 %\usefonttheme{professionalfonts}
 %\useoutertheme[subsection=false]{smoothbars}  % Dots for subsection
 %\setbeamertemplate{theorems}[numbered]
@@ -43,7 +50,7 @@
 \begin{frame}\frametitle{Table of contents}\tableofcontents
 \end{frame} 
 
-\section{Basics of Representation Theory}
+\section{Basics of Rep. Theory}
 
 \subsection{Motivation}
 \begin{frame}{Motivation}
@@ -56,7 +63,6 @@ In these two examples, $S_n$  acts on the set $\{ 1, \ldots, n \}$ and $D_{n}$ a
 This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
 \end{frame}
 
-\subsection{Group Actions}
 \begin{frame}{Group Actions}
 \begin{definition}
 A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot x$, for all $g \in G$ and $x \in X$) that satisfies the following two axoims:
@@ -70,7 +76,6 @@ A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \ti
 We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
  \end{note}
 
-\subsection{The Definition of a Representation}
 \begin{frame}{The Definition of a Representation}
 \begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ that preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
 \begin{align}
@@ -244,7 +249,7 @@ every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant
 \end{proof}
 \end{frame}
 
-\section{Complete Reducibility}
+\section{Reducibility}
 \subsection{Direct sum}
 \begin{frame}{The direct sum of representations}
 \begin{block}{Note}
@@ -307,10 +312,9 @@ Thus we see that there is no such $W$, and our representation is irreducible.
 \begin{theorem} Every complex representation of a finite abelian group is completely reducible into irreducible representations of dimension $1$.  
 \end {theorem}
 \begin{proof}
-Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    The minimal polynomial of $\rho(g)$ divides  $x^n -1$, which has $n$ distinct roots over $\mathbb{C}$.  So the minimal polynomial of $\rho(g)$ factors into linear factors only over $\mathbb{C}$,  i.e. $\rho(g)$ is diagonalizable.  We conclude that each $\rho(g)$ is (separately) diagonalizable since $g \in G$ was arbitrary.
-
+Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    The minimal polynomial of $\rho(g)$ divides  $x^n -1$, which has $n$ distinct roots over $\mathbb{C}$, so it factors into linear factors only over $\mathbb{C}$,  i.e. $\rho(g)$ is diagonalizable.  We conclude that each $\rho(g)$ is (separately).
 Now, given any two elements $g_1, g_2 \in G$ we have $\rho(g_1)\rho(g_2)=\rho(g_2)\rho(g_1)$.
-Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_1$ invariant under the action of $G$.
+Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_n$, with each subspace $ \mathbb{C}e_i$ invariant under the action of $G$.
 \end{proof}
 }
 \end{frame}
@@ -482,7 +486,7 @@ Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi 
 \end{proof}
 \end{frame}
 
-\section{Isotypical Decomposition}
+\section{Isotypical Decomp.}
 \begin{frame}
 \begin{proposition}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
@@ -513,9 +517,9 @@ If  $U, V,$ and $W$ are representations of $G$, then there are natural isomorphi
 
 \begin{frame}
 \begin{proof}
-The number of irreps in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
+We use the previous proposition to see that t	he number of irreps in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
 Then \[ \text{Hom}_G(V,W) = \bigoplus_{i=1}^s \text{Hom}_G(U_i, W) .\]
-so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
+by our lemma, so taking the dimension of both sides yields \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
 \end{proof}
 \end{frame}
 \begin{note}
@@ -536,6 +540,189 @@ For any irrep $W$ of $G$, the number of irreps in either decomposition that are 
 \end{proof}
 \end{frame}
 
-\section{Duals and Tensor Products}
+\section{Duals and Tensors}
+\begin{frame}{The Dual Space}
+\begin{definition}
+Let $V$ be a vector space.  Recall that we define the \textbf{dual vector space} to be
+\[ V^{*} = \text{Hom}(V,\mathbb{C}).\]  If we fix a basis  $\{ b_1, \ldots, b_n \} $ for $V$, then the \textbf{dual basis}$\{ f_1, \ldots, f_n \}$ for $V^*$ is defined by
+\[ f_i (b_j) = \begin{cases} 1 &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \]
+\end{definition}
+\end{frame}
+\begin{note}
+Let $W$ be the $1$-dim trivial rep of $G$.  Then we have seen the rep  $\rho_{\text{Hom}(V,\mathbb{C})}$ given by 
+\[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = \rho_W (g) f \circ \rho_V ( g^{-1})= f \circ \rho_V ( g^{-1}) \]
+\end{note}
+
+
+\begin{frame}{The Dual Representation}
+\begin{definition}
+Let $\rho_V \colon G \to GL(V)$ be a representation of $G$. Then we have seen that $V^{*}$ carries a representation of $G$ defined by
+\[ \rho_{\text{Hom}(V,\mathbb{C})} (g) (f) = f \circ \rho_V ( g^{-1}) \]
+We call this the \textbf{dual representation} to $\rho_V$, and denote it by $\rho_V^{*}$.
+\end{definition}
+\begin{proposition}
+ If we fix a basis for $V$, then $\rho_{V^*}(g)$ is given by the matrix 
+\[( \rho_V (g^{-1}) )^T \]
+with respect to the dual basis.
+\end{proposition}
+\end{frame}
+
+\begin{frame}
+\begin{definition}
+Suppose $V$ and $W$ are two vector spaces over a field $K$. Then we define a new vector space called the \textbf{tensor product} of $V$ and $W$, denoted by $V \otimes_{K} W$.  This space is the quotient of the free vector space on $V \times W$ (with basis given by formal symbols $v \otimes w, v\in V, w \in W$), by the subspace $D$ spanned by all elements of the form
+\begin{align*}
+(v_1 + v_2, w) - (v_1 , w) - (v_2 , w) \\
+(v , w_1 + w_2) - (v , w_1) - (v , w_2) \\
+(k \cdot v , w) -( v , k \cdot w)
+\end{align*}
+for $v, v_1, v_2 \in V, w, w_1, w_2 \in W$, and $k \in K$. When the ground field $K$ is clear it can be omitted from the notation.  The elements of $V \otimes W$ are called \textbf{tensors}, and the coset $v \otimes w$ of $(v,w)$ in $V \otimes W$ is called a \textbf{simple tensor}.
+\end{definition}
+\end{frame}
+
+\begin{frame}
+\begin{definition}
+We can define a representation of $G$ on $V \otimes W$ called the \textbf{tensor product representation}. We define
+\[ \rho_{V \otimes W} (g) \colon V \otimes W \to V \otimes W \]
+to be the linear map given by
+\[ \rho_{V \otimes W} (g) \colon a_i \otimes b_j \mapsto \rho_V (g) (a_i) \otimes \rho_W (g) (b_j).\]
+\end{definition}
+\begin{proposition}
+Let $V$ and $W$ be representations of $G$.  Then $V \otimes W$ is isomorphic to $\text{Hom}(V^{*},W)$.
+\end{proposition}
+\end{frame}
+
+\section{Character Theory}
+\subsection{Basics}
+\begin{frame}{The definition of a Character}
+\begin{definition}
+The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function \[ \chi_V \colon G \to \mathbb{C}\] defined by \[\chi_V(g) = \text{Tr}(\rho(g)).\]
+\end{definition}
+\begin{block}{Note}
+The character is of a representation is not a homomorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
+\end{block}
+\end{frame}
+
+\begin{frame}{Basic properties of Characters}
+\begin{proposition}
+Let $V$ be a representation of $G$.
+\begin{itemize}
+\item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g) \quad \forall g , h \in G$.
+\item $\chi_V (e) = \text{\emph{dim }} V$.
+\item \label{char-of-inverse} $\chi_V (g^{-1}) = \overline{\chi_V (g)} \quad \forall g \in G$.
+\item $\chi_{V^*} (g) =  \overline{\chi_V (g)}\quad \forall g \in G$.
+\end{itemize}
+\end{proposition}
+\begin{proposition}
+Let $V$ and $W$ be representations of $G$.
+\begin{itemize}
+\item $\chi _{V \oplus W} = \chi_V + \chi_W$.
+\item $\chi_{V \otimes W} = \chi_V \cdot \chi_W$.
+\end{itemize}
+\end{proposition}
+\end{frame}
+
+\begin{frame}
+\begin{proposition}
+Isomorphic representations have the same character.
+\end{proposition}
+\begin{proof}
+Isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus each $\rho(g)$ has the same trace.
+\end{proof}
+\end{frame}
+
+\subsection{Inner products of characters}
+\begin{frame}
+\begin{definition}
+Let $\mathbb{C}^G$ denote the vector space of all functions from $G$ to $\mathbb{C}$.
+A basis for $\mathbb{C}^G$ is given by the set of functions 
+\[\{ \delta_g | g \in G  \} \]
+defined by 
+\[ \delta_g \colon h \mapsto \begin{cases}  1 &\text{if } h = g \\
+ 0 &\text{if } h \neq g.
+\end{cases} \]
+\end{definition}
+\begin{definition}
+Let $\varphi, \psi \in \mathbb{C}^G$.  We define a \textbf{hermetian inner product}  on $\mathbb{C}^G$ by 
+\[ \langle \varphi | \psi \rangle = \frac{1}{|G|} \sum_{g \in G} \varphi(g) \overline{\psi(g)}.\]
+\end{definition}
+\end{frame}
+
+\begin{frame}{Inner product of Characters}
+\begin{theorem}
+Let $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$, and let $\chi_V, \chi_W$ be their characters.  Then 
+\[ \langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W). \]
+\end{theorem}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Corollary}
+Let $\chi_1, \ldots, \chi_r$ be characters of pairwise non-isomorphic irreducible representations of $G$.  Then
+\[ \langle \chi_i | \chi_j \rangle = \begin{cases}  1 &\text{if } i = j \\ 0 &\text{if } i \neq j\end{cases} \]
+\end{block}
+\begin{proof}
+Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $U_i, U_j$.  Then
+\[ \langle \chi_i | \chi_j \rangle = \text{dim Hom}_G (U_i, U_j) = \begin{cases}  1 &\text{if }U_i, U_j \text{ are isomorphic} \\  0 &\text{if }U_i, U_j \text{ are not isomorphic}. \end{cases} \]
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Corollary}
+Let $\chi$ be any character of $G$.    Then $\chi$ is irreducible if and only if \[ \langle \chi | \chi \rangle = 1\]
+\end{block}
+\begin{proof}
+Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] where each $m_i$ is a non-negative integer.  Then
+\begin{align*}
+\langle \chi | \chi \rangle &= \sum_{i,j \in [1, k]} m_i m_j \langle \chi_i | \chi_j \rangle \\
+&= m_1^2 + \ldots + m_k^2.
+\end{align*}
+So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$ and the rest are $0$.
+\end{proof}
+\end{frame}
+
+
+\begin{frame}{Proof that $\langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W)$}
+\begin{lemma}
+Let $\rho \colon G \to GL(V)$ be any representation.  Consider the linear map 
+\begin{align*}
+\Psi \colon V &\to V \\
+x &\mapsto \frac{1}{|G|} \sum_{g \in G} \rho(g)(x).
+\end{align*}
+Then $\Psi$ is a  projection from $V$ onto the invariant subspace $V^G$.
+\end{lemma}
+\begin{lemma}
+Let $V$ be a vector space with subspace $U \subset V$, and let $\pi \colon V \to V$ be a projection onto $U$.  Then 
+\[ \text{Tr}(\pi) = \text{dim } U. \]
+\end{lemma}
+\end{frame}
+
+\begin{frame}{Proof that $\langle \chi_W | \chi_V \rangle = \text{dim Hom}_G (V,W)$}
+\begin{proof}
+\only<1>{
+We have seen that
+ \[ \text{Hom}_G (V,W)=  \text{Hom}(V,W)^G  \subset \text{Hom}(V,W). \] By the first Lemma, we have a projection
+\begin{align*}
+\Psi \colon \text{Hom}(V,W) &\to \text{Hom}(V,W)^G\\
+f &\mapsto \frac{1}{|G|} \sum_{g \in G} \rho_{\text{Hom}(V,W)} (g) (f).
+\end{align*}
+We claim that \[ \text{Tr} (\Psi) = \langle \chi_W | \chi_V \rangle. \]  Once this claim is established, then the theorem will follow from our second Lemma, since $\text{Tr} (\Psi)  = \text{dim Hom}_G (V,W)$. }
+\only<2>{
+We proceed by calculating $\text{Tr} (\Psi)$.  Fix bases $\{ a_1, \ldots, a_n \}$ for $V$ and $\{ b_1, \ldots, b_m \}$ for $W$.  Then $\text{Hom}(V,W)$ has an associated basis 
+\[ \{ f_{ji} | 1 \leq i \leq n, 1 \leq j \leq m\} \]
+where
+\[ f_{ji} (a_i) = \begin{cases} b_j &\text{if } i=j \\ 0 &\text{if } i \neq j.  \end{cases} \] 
+We may calculate $\text{Tr}(\Psi)$ as follows:  For each $i,j$, compute the expression of $\Psi(f_{ji})$ in this basis, and take the coefficient of the basis element $f_{ji}$.  This is a diagonal entry in the matrix for $\Psi$. Summing these values over all $i$ and $j$ will gives us $\text{Tr}(\Psi)$.
+}
+\only<3>{
+Let $\widetilde{\rho_V}, \widetilde{\rho_W}$ be the matrix representations obtained by writing $\rho_V$ and $\rho_W$ in the given bases.  We know that 
+\[ \text{Hom}(V,W) = V^* \otimes W \]
+so if we write $\rho_{\text{Hom}(V,W)}$ in the basis $\{ f_{ji} \}$ then we get the tensor product of  $\widetilde{\rho_{V^*}}$ and $\widetilde{\rho_W}$.  Thus
+\begin{align*}
+\rho_{\text{Hom}(V,W)}(g)(f_{ji}) &= \rho_W (g) \circ f_{ji} \circ \rho_V (g^{-1}) \\
+&= \sum_{\substack{k \in [1,n] \\  t \in [1,m]}} \widetilde{\rho_V} (g^{-1})_{ik} \widetilde{\rho_W}(g)_{tj} f_{kt}. \quad \text{Show another step?}
+\end{align*}
+}
+\alt<4>{\qedhere}{\phantom\qedhere}
+\end{proof}
+\end{frame}
 
 \end{document}

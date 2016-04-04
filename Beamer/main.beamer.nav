@@ -3,42 +3,40 @@
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Basics of Representation Theory}{3}{Basics of Representation Theory}{0}}
+\headcommand {\sectionentry {1}{Basics of Rep. Theory}{3}{Basics of Rep. Theory}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Motivation}}\headcommand {\beamer@subsectionpages {3}{2}}
 \headcommand {\slideentry {1}{1}{1}{3/3}{Motivation}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{4}{Group Actions}}\headcommand {\beamer@subsectionpages {3}{3}}
-\headcommand {\slideentry {1}{2}{1}{4/4}{Group Actions}{0}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Motivation}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@subsectionentry {0}{1}{3}{5}{The Definition of a Representation}}\headcommand {\beamer@subsectionpages {4}{4}}
-\headcommand {\slideentry {1}{3}{1}{5/5}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{3}{5/5}{Motivation}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {1}{3}{2}{6/6}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{4}{6/6}{Motivation}{0}}
 \headcommand {\beamer@framepages {6}{6}}
-\headcommand {\slideentry {1}{3}{3}{7/7}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{5}{7/7}{Motivation}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\slideentry {1}{3}{4}{8/11}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{6}{8/11}{Motivation}{0}}
 \headcommand {\beamer@framepages {8}{11}}
-\headcommand {\slideentry {1}{3}{5}{12/12}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{7}{12/12}{Motivation}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {1}{3}{6}{13/14}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{8}{13/14}{Motivation}{0}}
 \headcommand {\beamer@framepages {13}{14}}
-\headcommand {\slideentry {1}{3}{7}{15/15}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{9}{15/15}{Motivation}{0}}
 \headcommand {\beamer@framepages {15}{15}}
-\headcommand {\slideentry {1}{3}{8}{16/19}{The Definition of a Representation}{0}}
+\headcommand {\slideentry {1}{1}{10}{16/19}{Motivation}{0}}
 \headcommand {\beamer@framepages {16}{19}}
-\headcommand {\beamer@subsectionentry {0}{1}{4}{20}{Subrepresentations}}\headcommand {\beamer@subsectionpages {5}{19}}
-\headcommand {\slideentry {1}{4}{1}{20/20}{Subrepresentations}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{20}{Subrepresentations}}\headcommand {\beamer@subsectionpages {3}{19}}
+\headcommand {\slideentry {1}{2}{1}{20/20}{Subrepresentations}{0}}
 \headcommand {\beamer@framepages {20}{20}}
-\headcommand {\slideentry {1}{4}{2}{21/23}{Subrepresentations}{0}}
+\headcommand {\slideentry {1}{2}{2}{21/23}{Subrepresentations}{0}}
 \headcommand {\beamer@framepages {21}{23}}
-\headcommand {\slideentry {1}{4}{3}{24/24}{Subrepresentations}{0}}
+\headcommand {\slideentry {1}{2}{3}{24/24}{Subrepresentations}{0}}
 \headcommand {\beamer@framepages {24}{24}}
-\headcommand {\slideentry {1}{4}{4}{25/25}{Subrepresentations}{0}}
+\headcommand {\slideentry {1}{2}{4}{25/25}{Subrepresentations}{0}}
 \headcommand {\beamer@framepages {25}{25}}
-\headcommand {\sectionentry {2}{Complete Reducibility}{26}{Complete Reducibility}{0}}
+\headcommand {\sectionentry {2}{Reducibility}{26}{Reducibility}{0}}
 \headcommand {\beamer@sectionpages {3}{25}}
 \headcommand {\beamer@subsectionpages {20}{25}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{26}{Direct sum}}\headcommand {\beamer@subsectionpages {26}{25}}
@@ -78,7 +76,7 @@
 \headcommand {\beamer@framepages {45}{45}}
 \headcommand {\slideentry {3}{2}{2}{46/46}{Schur's Lemma}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\sectionentry {4}{Isotypical Decomposition}{47}{Isotypical Decomposition}{0}}
+\headcommand {\sectionentry {4}{Isotypical Decomp.}{47}{Isotypical Decomp.}{0}}
 \headcommand {\beamer@sectionpages {41}{46}}
 \headcommand {\beamer@subsectionpages {45}{46}}
 \headcommand {\slideentry {4}{0}{1}{47/47}{}{0}}
@@ -89,8 +87,42 @@
 \headcommand {\beamer@framepages {49}{49}}
 \headcommand {\slideentry {4}{0}{4}{50/50}{}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {47}{50}}
+\headcommand {\sectionentry {5}{Duals and Tensors}{51}{Duals and Tensors}{0}}
 \headcommand {\beamer@sectionpages {47}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\def \inserttotalframenumber {35}}
+\headcommand {\beamer@subsectionpages {47}{50}}
+\headcommand {\slideentry {5}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\slideentry {5}{0}{2}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\slideentry {5}{0}{3}{53/53}{}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\slideentry {5}{0}{4}{54/54}{}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {6}{Character Theory}{55}{Character Theory}{0}}
+\headcommand {\beamer@sectionpages {51}{54}}
+\headcommand {\beamer@subsectionpages {51}{54}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{55}{Basics}}\headcommand {\beamer@subsectionpages {55}{54}}
+\headcommand {\slideentry {6}{1}{1}{55/55}{Basics}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\slideentry {6}{1}{2}{56/56}{Basics}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {6}{1}{3}{57/57}{Basics}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{58}{Inner products of characters}}\headcommand {\beamer@subsectionpages {55}{57}}
+\headcommand {\slideentry {6}{2}{1}{58/58}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\slideentry {6}{2}{2}{59/59}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\slideentry {6}{2}{3}{60/60}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {6}{2}{4}{61/61}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {6}{2}{5}{62/62}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\slideentry {6}{2}{6}{63/66}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {63}{66}}
+\headcommand {\beamer@partpages {1}{66}}
+\headcommand {\beamer@subsectionpages {58}{66}}
+\headcommand {\beamer@sectionpages {55}{66}}
+\headcommand {\beamer@documentpages {66}}
+\headcommand {\def \inserttotalframenumber {48}}
