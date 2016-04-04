@@ -340,7 +340,7 @@ Let $W$ be a $G$-subrepresentation of $V$.  Then $V/W$ forms a representation of
 
 \section{Complete Reducibility}
 \begin{definition}
-A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible 	representations.
 \end{definition}
 
 \begin{note}
@@ -452,7 +452,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$.  Finally, we c
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{cor}
 \begin{proof}
-Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a propositioner subrepresentation $W \subset V$.  From Maschke's Theorem (\ref{maschke}), we know there exists a subrepresentation $U \subset V$ such that 
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem (\ref{maschke}), we know there exists a subrepresentation $U \subset V$ such that 
 \begin{equation} \label{1.28.1} V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce from \ref{1.28.1} that $V$ is completely reducible.
 \end{proof}
@@ -508,7 +508,7 @@ First, we check that
 \begin{align*}
 \rho_{\text{Hom}(V,W)}(g) \circ \rho_{\text{Hom}(V,W)}(h) \colon f &\mapsto \rho_{\text{Hom}(V,W)} (g) ( \rho_W (h) \circ f \circ \rho_V (h^ {-1})) \\
 &= \rho_W (g) \circ \rho_w (h) \circ f \circ \rho_V (h^{-1} ) \circ \rho_V(g^{-1}) \\
-&= \rho_W (gh) \circ f \circ \rho_V (g ^{-1} h ^{-1}) \\
+&= \rho_W (gh) \circ f \circ \rho_V (h ^{-1} g ^{-1}) \\
 &= \rho_{\text{Hom}(V,W)}(gh)(f)
 \end{align*}
 so indeed $\rho_{\text{Hom}(V,W)}$ is a homomorphism.  We can use this fact to see that $\rho_{\text{Hom}(V,W)}(g^{-1})$ is inverse to $\rho_{\text{Hom}(V,W)}(g)$ as
@@ -578,10 +578,10 @@ Let $\phi \colon V \to V$  be a linear operator commuting with $G$, and let $\la
 \end{proof}
 
 \begin{cor}\label{schur-cor}
-If $V$ and $W$ are irreducible, the space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
+Suppose $V$ and $W$ are irreducible. The space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
 \end{cor}
 \begin{proof}
-We claim $\text{ker}(\phi)$ and $\text{im}\phi$ are both $G$-invariant.  Let $0 \neq \phi \in \text{Hom}_G(V,W)$.  If $v \in \text{ker}(\phi)$, then $\phi(v)=0$ implies that $\phi(gv) = g\phi(v) = g0 = 0$, i.e. $gv \in \text{ker}(\phi)$.  Similarly, if $v \in \text{im}(\phi)$, then $v = \phi(w)$ implies that $\phi(gw) = g \phi(w) = gv$, i.e. $gv \in \text{Im} (\phi)$.
+We have seen $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant.
 Irreducibility yields $\text{ker}(\phi) = 0$ or $V$ and $\text{im}(\phi) = 0$ or $W$ as the only possibilities.  If $\phi \neq 0$, then $\text{ker}(\phi)=0$, $\text{im}(\phi)=W$, and $\phi$ is an isomorphism.  
 Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi \in \text{Hom}_G (V,V)$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.  So $\phi$ spans $\text{Hom}_G(V,W)$.
 \end{proof}
@@ -730,7 +730,7 @@ V = \widetilde{U_1} \oplus \ldots \oplus \widetilde{U_r}
 be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\widetilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
 \end{theorem}
 \begin{proof}
-Let $W$ be any irreducible representation of $G$.  By proposition (\ref{num-iso-subrprns}), the number of irreducible subprepresentations in the first decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  On the other hand, the number of irreducible subrepresentations in the second decomposition that are isomorphic to $W$ is also equal to $\text{dim Hom}_G(V,W)$.  So for any irreducible representation $W$, the two decompositions contain the same number of factors isomorphic to $W$.
+For any irrep $W$ of $G$, the number of irreps in either decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$ by proposition \ref{num-iso-subrprns}.  So the two decompositions contain the same number of factors isomorphic to $W$ for any irrep $W$ of $G$.
 \end{proof}
 
 \begin{definition}
@@ -919,7 +919,7 @@ The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the func
 The character is of a representation is not a homomorphism in general, since $\text{Tr}(MN) \neq \text{Tr}(M) \text{Tr}(N)$ in general.
 \end{note}
 
-\begin{proposition}\label{basic-propositions-of-char} (Basic propositionerties)
+\begin{proposition}\label{basic-propositions-of-char} (Basic properties)
 \begin{enumerate}
 \item $\chi_V$ is conjugation invariant: $\chi_V (h g h^{-1}) = \chi_V (g)$ for all $g , h \in G$.
 \item $\chi_V (1) = \text{\emph{dim }} V$.
@@ -997,7 +997,7 @@ defined by
 Let $\varphi, \psi \in \mathbb{C}^G$.  We define an \textbf{inner product}  on $\mathbb{C}^G$ by 
 \[ \langle \varphi | \psi \rangle = \frac{1}{|G|} \sum_{g \in G} \varphi(g) \overline{\psi(g)}.\]
 \end{definition}
-It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three propositionerties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
+It is easy to see that $\langle \varphi | \psi \rangle$ is linear in the first variable, conjugate-linear in the second variable (i.e., $\langle \varphi | \lambda \psi \rangle = \overline{\lambda}	\langle \varphi | \psi \rangle$) , and that $\langle \varphi | \psi \rangle = \overline {\langle \psi | \varphi \rangle}$.  These three properties are the definition of a Hermitian inner product.  Note that our basis elements $\delta_g$ are orthogonal with respect to this inner product, but not orthonormal since 
 \[ \langle \delta_g | \delta_g \rangle = \begin{cases} \frac{1}{|G|} &\mbox{if } h = g \\ 0 &\mbox{if } h \neq g \end{cases}. \]
 The characters of $G$ are elements of $\mathbb{C}^G$, so we can evaluate this inner product on pairs of characters.  The answer turns out to be very useful, but before we can begin the proof we require two quick lemmas:
 

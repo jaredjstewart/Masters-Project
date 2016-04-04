@@ -58,7 +58,7 @@ This is the basic question of representation theory, which attempts to classify 
 
 \subsection{Group Actions}
 \begin{frame}{Group Actions}
-\begin{definition}\label{def-grp-action}
+\begin{definition}
 A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot x$, for all $g \in G$ and $x \in X$) that satisfies the following two axoims:
 \begin{align}
 \label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
@@ -79,7 +79,6 @@ We could likewise define the concept of a \textit{right} group action, where the
 \end{align}
 \end{definition}
 \begin{definition}[Alternative definition]
-\label{rep-def-1}
 Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism \[\rho\colon G \to GL(V).\]\end{definition}
 \end{frame}
 
@@ -160,7 +159,7 @@ We can similarly compute $\rho_{\text{reg}}(\tau)$.  Thus, in our basis, the reg
 \end{frame}
 
 \begin{frame}[plain]
-\begin{example}\label{rep-of-d8}
+\begin{example}[$2$-dim rep of $D_4$.]
 Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  \pause Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  \pause We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}  &\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
@@ -246,6 +245,7 @@ every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant
 \end{frame}
 
 \section{Complete Reducibility}
+\subsection{Direct sum}
 \begin{frame}{The direct sum of representations}
 \begin{block}{Note}
 We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
@@ -261,7 +261,7 @@ Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural 
 
 \begin{frame}{Irreducible representations and complete reducibility}
 \begin{definition}
-A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
 \end{definition}
 
 \begin{block}{Note}
@@ -273,7 +273,7 @@ A representation is said to be \textbf{irreducible} if it has no subrepresentati
 
 \begin{frame}
 \only<1>{
-\begin{example}[A $2$-dimensional irreducible representation] 
+\begin{example}[A $2$-dimensional irrep] 
 Let $G = D_3 = \langle \sigma, \tau | \sigma^3 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$. (Note that $D_3 \cong S_3$).
 Consider the regular triangle centered at the origin with vertices
 \[(1,0), (-\frac{1}{2}, \frac{\sqrt{3}}{2}), (-\frac{1}{2}, - \frac{\sqrt{3}}{2}). \]
@@ -284,7 +284,7 @@ We can let $\sigma$ act as rotation by $\frac{2 \pi}{3}$ and let $\tau$ act as r
 \end{align*} \end{example} }
 
 \only<2>{
-\begin{example}[A $2$-dimensional irreducible representation cont.] 
+\begin{example}[A $2$-dimensional irrep cont.] 
 Suppose $\rho$ has a non-trivial subrepresentation $W$.  We must have $\text{dim }W =1$.  Since $W$ is invariant under the action of both $\rho(\sigma)$ and $\rho(\tau)$, there must be some mutual eigenvector for $\rho(\sigma)$ and $\rho(\tau)$ that spans $W$.  The eigenvectors of $\rho(\sigma)$ are
 \begin{align*}
 \begin{bmatrix} 1 \\ -i \end{bmatrix} \quad (\lambda_1 = e^{\frac{2 \pi i}{3}}) \quad \text{and} \quad
@@ -320,7 +320,6 @@ Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$
 \begin{definition}
 Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the map $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
 \end{definition}
-
 \begin{lemma} \label{maschke-lemma}
 Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
@@ -329,6 +328,7 @@ Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ke
 \end{lemma}
 \end{frame}
 
+\subsection{Maschke's Theorem}
 \begin{frame}{Maschke's Theorem}
 \begin{theorem}[Maschke's Theorem]
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$ to $W$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
@@ -378,10 +378,164 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{block}
 \begin{proof}
-Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a propositioner subrepresentation $W \subset V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \subset V$ such that 
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \subset V$ such that 
 \begin{equation}  V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
 \end{proof}
 \end{frame}
+
+\begin{frame}
+\begin{example}
+Recall that for  $G= C_2$, we found a $1$-dim subrepresentation 
+\[ W = \left< \begin{bmatrix}1 \\ 1 \end{bmatrix} \right> \subset V_{\text{reg}}= \mathbb{C}^2 . \]
+We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so let's try to find one.  Consider
+\[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \subset V_{\text{reg}}. \]
+Then
+\[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
+so $U$ is $G$-invariant.  We see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.   (Note $U$ is isomorphic to the alternating representation $\rho_{\text{sgn}}$.)
+\end{example}
+\end{frame}
+
+\section{Schur's Lemma}
+\subsection{Vector Spaces of Linear Maps}
+\begin{frame}
+\begin{definition}
+Let $V$ and $W$ be vector spaces.  Recall that the set $\textbf{Hom}\mathbf{(V,W)}$ of linear maps from $V$ to $W$ itself form a vector space where we define the addition of vectors by
+\begin{align*}		
+(f_1 + f_2) \colon &V \to W \\		
+&x \mapsto f_1(x) + f_2(x)		
+\end{align*}		
+for  $f_1, f_2 \in \text{Hom}(V,W)$ and scalar multiplication for $\lambda \in \mathbb{C}$ by
+\begin{align*}		
+(\lambda f_1) \colon &V \to W \\		
+&x \mapsto \lambda f_1(x).		
+\end{align*}		
+
+\end{definition}
+\end{frame}
+
+\begin{frame}
+\begin{proposition}
+Suppose we have representations $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ of $G$. Then there is a natural representation of $G$ on the vector space $\text{Hom}(V,W)$ given for all $g \in G$ by
+\begin{align*}		
+ \rho_{\text{Hom}(V,W)}(g)  \colon \text{Hom}(V,W) &\to \text{Hom}(V,W) \\		
+ f &\mapsto \rho_{W}(g) \circ f \circ \rho_{V}(g^{-1}).
+ \end{align*}		
+\end{proposition}		
+\begin{proof}[Proof (sketch)]
+\begin{enumerate}			
+\item $\rho_{\text{Hom}(V,W)}(g)(f) \in \text{Hom}(V,W)$ since the composition of linear maps is linear.
+\item For every $g \in G$,  $\rho_{\text{Hom}(V,W)}(g)$ is invertible.	
+\item The map $g \mapsto  \rho_{\text{Hom}(V,W)}(g)$ is a homomorphism.	
+\end{enumerate}		
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{definition}		
+Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$ forms a subspace of $\text{Hom}(V,W)$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
+\end{definition} 
+
+\begin{definition}
+Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
+\[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
+\end{definition}
+\end{frame}
+\begin{note}
+Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
+\end{note}
+
+\begin{frame}
+\begin{proposition}
+Let  $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G \to GL(W)$ be representations of $G$.  Then the subrepresentation 
+\[ \text{Hom}_G (V,W) \subset \text{Hom} (V,W) \]
+is precisely the invariant subrepresentation $\text{Hom}(V,W) ^G$ of $\text{Hom}(V,W)$.
+\end{proposition}
+\begin{proof}
+Let $f \in \text{Hom}(V,W)$.  Then $f \in \text{Hom}(V,W) ^G$ iff we have
+\begin{align*}
+&f = \rho_{\text{Hom}(V,W)} (g)(f)  \quad \forall g \in G \\
+\iff &f = \rho_W (g) \circ f \circ \rho_V (g^{-1}) \quad \forall g \in G \\ 
+\iff & f \circ \rho_V (g) = \rho_W (g) \circ f \quad \forall g \in G
+\end{align*}
+which is exactly the condition that $f$ is $G$-linear.
+\end{proof}
+\end{frame}
+
+\subsection{Schur's Lemma}
+\begin{frame}
+\begin{theorem}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible representation of $G$ over $\mathbb{C}$, then evey linear operator $\phi \colon V \to V$ commuting with $G$ is a scalar.
+\end{theorem}
+\begin{proof}
+Let $\phi \colon V \to V$  be a linear operator commuting with $G$, and let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so since $V$ is irreducible, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Corollary}
+Suppose $V$ and $W$ are irreducible. The space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
+\end{block}
+\begin{proof}
+Suppose  $\text{Hom}_G(V,W) \neq \{0\}$ and let $\phi \in \text{Hom}_G(V,W)$. We have seen $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant.
+Irreducibility yields $\text{ker}(\phi) = 0$ or $V$ and $\text{im}(\phi) = 0$ or $W$ as the only possibilities.  Since $\phi \neq 0$, then $\text{ker}(\phi)=0$, $\text{im}(\phi)=W$, and $\phi$ is an isomorphism.  
+Let $\psi$ be another nonzero interwining operator from $V$ to $W$.  Then $\phi ^{-1} \circ \psi \in \text{Hom}_G (V,V)$.  We can apply Schur's Lemma over $\mathbb{C}$ to see that $\phi ^{-1} \circ \psi = \lambda \text{Id}$, hence $\psi = \lambda \phi$.  So $\phi$ spans $\text{Hom}_G(V,W)$.
+\end{proof}
+\end{frame}
+
+\section{Isotypical Decomposition}
+\begin{frame}
+\begin{proposition}
+Let $V$ and $W$ be irreducible representations of $G$.  Then
+\[ \text{dim Hom}_G (V,W) =  \begin{cases} 
+1 & \mbox{if $V$ and $W$ are isomorphic}  \\
+0 &\mbox{if $V$ and $W$ are not isomorphic}
+\end{cases} \]
+\end{proposition}
+\begin{proof}
+Suppose $V$ and $W$ are not isomorphic.  Then the Corollary to Schur's Lemma states that the only $G$-linear map from $V$ to $W$ is the zero map, hence $\text{Hom}_G(V,W) = \{ 0 \} $.
+
+On the other hand, suppose that $f \colon V \to W$ is an isomorphism.  Then for any $h \in \text{Hom}_G(V,W)$, we have $f^{-1} \circ h \in \text{Hom}_G(V,V)$.  By Schur's Lemma, $f^{-1} \circ h = \lambda \text{Id}_V$ for some $\lambda \in \mathbb{C}$, i.e. $h = \lambda f$.  Thus $f$  spans $\text{Hom}_G(V,W)$.
+\end{proof}
+\end{frame}
+
+\begin{frame}
+\begin{proposition}
+Let $\rho \colon G \to GL(V)$ be a representation, let \[ V = U_1 \oplus \ldots \oplus U_s \] be a decomposition of $V$ into irreps, and let $W$ be any irrep of $G$.  Then the number of irreps in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ equals the dimension of $\text{Hom}_G(V,W)$.
+\end{proposition}
+\begin{block}{Lemma}
+If  $U, V,$ and $W$ are representations of $G$, then there are natural isomorphisms
+\begin{itemize}
+\item $\text{Hom}_G(V, U \oplus W) = \text{Hom}_G(V,U) \oplus \text{Hom}_G(V,W)$
+\item $\text{Hom}_G(U \oplus W, V) = \text{Hom}_G(U, V) \oplus \text{Hom}_G(W ,V)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{proof}
+The number of irreps in the set  $ \{ U_1, \ldots, U_s \}$ which are isomorphic to $W$ is equal to \[ \sum_{i=1}^s \text{dim Hom}_G(U_i,W). \]
+Then \[ \text{Hom}_G(V,W) = \bigoplus_{i=1}^s \text{Hom}_G(U_i, W) .\]
+so that \[  \text{dim Hom}_G(V,W) = \sum_{i=1}^s \text{dim Hom}_G(U_i, W). \]
+\end{proof}
+\end{frame}
+\begin{note}
+The same argument works if we consider $\text{Hom}_G(W,V)$ and $\text{Hom}_G(W,U_i)$ in place of $\text{Hom}_G(V,W)$ and $\text{Hom}_G(U_i,W)$.
+\end{note}
+
+\begin{frame}
+\begin{theorem}[Uniqueness of decomposition into irreducibles.]
+Let $\rho \colon G \to GL(V)$ be a representation, and let
+\begin{align*}
+V = U_1 \oplus \ldots \oplus U_s \\
+V = \widetilde{U_1} \oplus \ldots \oplus \widetilde{U_r}
+\end{align*}
+be two decompositions of $V$ into irreducible subrepresentations.  Then $s = r$, and (after reordering if necessary) $U_i$ and $\widetilde{U_i}$ are isomorphic for every $i \in \{1, \ldots, s\}$.
+\end{theorem}
+\begin{proof}
+For any irrep $W$ of $G$, the number of irreps in either decomposition that are isomorphic to $W$ is equal to $\text{dim Hom}_G(V,W)$.  So the two decompositions contain the same number of factors isomorphic to $W$ for any irrep $W$ of $G$.
+\end{proof}
+\end{frame}
+
+\section{Duals and Tensor Products}
 
 \end{document}
