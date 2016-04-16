@@ -76,62 +76,43 @@
 \headcommand {\beamer@framepages {37}{37}}
 \headcommand {\slideentry {4}{1}{4}{38/38}{Isotypical decomposition}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\sectionentry {5}{Duals and Tensors}{39}{Duals and Tensors}{0}}
+\headcommand {\sectionentry {5}{Character Theory}{39}{Character Theory}{0}}
 \headcommand {\beamer@sectionpages {35}{38}}
 \headcommand {\beamer@subsectionpages {35}{38}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{39}{Dual Spaces}}\headcommand {\beamer@subsectionpages {39}{38}}
-\headcommand {\slideentry {5}{1}{1}{39/39}{Dual Spaces}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{39}{Basics}}\headcommand {\beamer@subsectionpages {39}{38}}
+\headcommand {\slideentry {5}{1}{1}{39/39}{Basics}{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\slideentry {5}{1}{2}{40/40}{Dual Spaces}{0}}
+\headcommand {\slideentry {5}{1}{2}{40/40}{Basics}{0}}
 \headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{41}{Tensor Products}}\headcommand {\beamer@subsectionpages {39}{40}}
-\headcommand {\slideentry {5}{2}{1}{41/41}{Tensor Products}{0}}
+\headcommand {\slideentry {5}{1}{3}{41/41}{Basics}{0}}
 \headcommand {\beamer@framepages {41}{41}}
-\headcommand {\slideentry {5}{2}{2}{42/42}{Tensor Products}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{42}{Inner products of characters}}\headcommand {\beamer@subsectionpages {39}{41}}
+\headcommand {\slideentry {5}{2}{1}{42/42}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {5}{2}{3}{43/43}{Tensor Products}{0}}
+\headcommand {\slideentry {5}{2}{2}{43/43}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\sectionentry {6}{Character Theory}{44}{Character Theory}{0}}
-\headcommand {\beamer@sectionpages {39}{43}}
-\headcommand {\beamer@subsectionpages {41}{43}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{44}{Basics}}\headcommand {\beamer@subsectionpages {44}{43}}
-\headcommand {\slideentry {6}{1}{1}{44/44}{Basics}{0}}
+\headcommand {\slideentry {5}{2}{3}{44/44}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\slideentry {6}{1}{2}{45/45}{Basics}{0}}
+\headcommand {\slideentry {5}{2}{4}{45/45}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {6}{1}{3}{46/46}{Basics}{0}}
+\headcommand {\slideentry {5}{2}{5}{46/46}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\beamer@subsectionentry {0}{6}{2}{47}{Inner products of characters}}\headcommand {\beamer@subsectionpages {44}{46}}
-\headcommand {\slideentry {6}{2}{1}{47/47}{Inner products of characters}{0}}
+\headcommand {\slideentry {5}{2}{6}{47/47}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {47}{47}}
-\headcommand {\slideentry {6}{2}{2}{48/48}{Inner products of characters}{0}}
+\headcommand {\slideentry {5}{2}{7}{48/48}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {48}{48}}
-\headcommand {\slideentry {6}{2}{3}{49/49}{Inner products of characters}{0}}
+\headcommand {\slideentry {5}{2}{8}{49/49}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {49}{49}}
-\headcommand {\slideentry {6}{2}{4}{50/50}{Inner products of characters}{0}}
+\headcommand {\slideentry {5}{2}{9}{50/50}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\slideentry {6}{2}{5}{51/51}{Inner products of characters}{0}}
+\headcommand {\slideentry {5}{2}{10}{51/51}{Inner products of characters}{0}}
 \headcommand {\beamer@framepages {51}{51}}
-\headcommand {\slideentry {6}{2}{6}{52/52}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {52}{52}}
-\headcommand {\slideentry {6}{2}{7}{53/57}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {53}{57}}
-\headcommand {\slideentry {6}{2}{8}{58/58}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {58}{58}}
-\headcommand {\slideentry {6}{2}{9}{59/59}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {59}{59}}
-\headcommand {\slideentry {6}{2}{10}{60/60}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {6}{2}{11}{61/61}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {6}{2}{12}{62/62}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {62}{62}}
-\headcommand {\slideentry {6}{2}{13}{63/64}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {63}{64}}
-\headcommand {\slideentry {6}{2}{14}{65/66}{Inner products of characters}{0}}
-\headcommand {\beamer@framepages {65}{66}}
-\headcommand {\beamer@partpages {1}{66}}
-\headcommand {\beamer@subsectionpages {47}{66}}
-\headcommand {\beamer@sectionpages {44}{66}}
-\headcommand {\beamer@documentpages {66}}
-\headcommand {\def \inserttotalframenumber {51}}
+\headcommand {\slideentry {5}{2}{11}{52/53}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {52}{53}}
+\headcommand {\slideentry {5}{2}{12}{54/55}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {54}{55}}
+\headcommand {\beamer@partpages {1}{55}}
+\headcommand {\beamer@subsectionpages {42}{55}}
+\headcommand {\beamer@sectionpages {39}{55}}
+\headcommand {\beamer@documentpages {55}}
+\headcommand {\def \inserttotalframenumber {44}}
