@@ -63,65 +63,38 @@ In these two examples, $S_n$  acts on the set $\{ 1, \ldots, n \}$ and $D_{n}$ a
 This is the basic question of representation theory, which attempts to classify all such $X$ up to isomorphism.
 \end{frame}
 
-\begin{frame}{Group Actions}
-\begin{definition}
-A  \textbf{group action} of a group $G$ on a set $X$ is a map $\rho \colon G \times X \to X$ (written as $g \cdot x$, for all $g \in G$ and $x \in X$) that satisfies the following two axoims:
-\begin{align}
-\label{grp-action-axiom-1}&1 \cdot  x = x && \forall x \in X\\
-\label{grp-action-axiom-2}&(gh) \cdot x  = g \cdot (h \cdot x) && \forall g,h \in G, x \in X
-\end{align}
-\end{definition}
-\end{frame}
-\begin{note}
-We could likewise define the concept of a \textit{right} group action, where the set elements would be multiplied by group elements on the right instead of on the left.  Throughout we shall use the term \textit{group action} to mean a \textit{left} group action.
- \end{note}
-
 
 \begin{frame}{The Definition of a Representation}
-\begin{definition}\label{rep-def-2}Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$. A \textbf{linear representation} of $G$ is an action of $G$ on $V$ that preserves the linear structure of $V$, i.e. an action of $G$ on $V$ such that
-\begin{align}
-\label{rep-axiom-1}&g \cdot (v_1+v_2)=g \cdot v_1+g \cdot v_2 \quad && \forall g \in G, v_1, v_2 \in V \\
-\label{rep-axiom-2}&g \cdot (kv) = k (g \cdot v) \quad && \forall g \in G, v \in V, k \in F
-\end{align}
-\end{definition}
-\begin{definition}[Alternative definition]
+\begin{definition}
 Let $G$ be a group, let $F$ be a field, and let $V$ be a vector space over $F$.  A \textbf{linear representation} of G is any group homomorphism \[\rho\colon G \to GL(V).\]\end{definition}
-\end{frame}
-
-
-\begin{frame}
-\begin{proposition}
-The two definitions we have given of a linear representation are equivalent.
- \end{proposition}
- \begin{proof}
-\begin{itemize}
-\item[$(\rightarrow)$]  Suppose that we have a homomorphism $\rho \colon G \to GL(V)$.  We can obtain a linear action of $G$ on $V$ by defining $g \cdot v = \rho(g)(v)$. 
-
-\item[$(\leftarrow)$] Suppose that we have a linear action of $G$ on $V$.  We obtain a homomorphism $\rho \colon G \to GL(V)$ by defining $\rho(g)(v) =g \cdot v$. 
-\end{itemize}
- \end{proof}
-\end{frame}
-
-\begin{frame}{The Dimension of a Representation}
  \begin{definition}Let $\rho \colon G \to GL(V)$ be a representation of $G$.  The \textbf{dimension} of the representation is the dimension of the vector space $V$.  
  \end{definition}
 \end{frame}
 
+
 \subsection{Examples of Representations}
 \begin{frame}{Examples of Representations}
- \begin{example}
-\only<1>{Let $V$ be an $n$-dimensional vector space.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = \text{Id}_V$ for all $g \in G$ is a representation of $G$ called the \textbf{trival representation} of dimension $n$. }
+\begin{example}
+Let $V$ be an $n$-dimensional vector space.  The map $\rho \colon G \to GL(V)$ defined by $\rho(g) = \text{Id}_V$ for all $g \in G$ is a representation of $G$ called the \textbf{trival representation} of dimension $n$. 
+\end{example}
 
-\only<2>{ If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textbf{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$. }
+\begin{example} If $G$ is a finite group that acts on a finite set $X$, and $F$ is any field, then there is an associated \textbf{permutation representation}  on the vector space $V$ over $F$ with basis $\{e_x \colon x \in X\}$.  We let $G$ act on the basis elements by the permutation $g \cdot e_x = e_{gx}$ for all $x \in X$ and $g \in G$. This representation has dimension $|X|$.  \end{example}
+\end{frame}
 
-\only<3>{ A special case of a permutation representation is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by \[\rho_{\text{reg}}(h) (e_g) = e_{hg}.\]  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$.  }
+\begin{frame}{The Regular Representation}
+\begin{example}
+A special case of a permutation representation is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by \[\rho_{\text{reg}}(h) (e_g) = e_{hg}.\]  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$.  
+ \end{example}
+\end{frame}
 
-\only<4>{ For any symmetric group $S_n$, the \textbf{alternating representation} on $\mathbb{C}$ is given by the map 
+\begin{frame}{Examples of Representations}
+\begin{example}
+For any symmetric group $S_n$, the \textbf{alternating representation} on $\mathbb{C}$ is given by the map 
 \begin{align*}
 \rho \colon S_n &\to GL(\mathbb{C})=\mathbb{C}^\times \\
 \sigma & \mapsto \text{sgn}(\sigma).
-\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) }
- \end{example}
+\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) 
+\end{example}
 \end{frame}
 
 \begin{frame}{$G$-linear maps}
@@ -137,7 +110,7 @@ An \textbf{isomorphism} of representations is a $G$-linear map that is also inve
 
 \begin{frame}{Representations as matrices}
 \begin{example}
-\only<1>{Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $n$ over the field $K$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to K^n$.  This yields a representation $\phi$ of $G$ on $K^n$ by defining \[\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}\] for all $g \in G$. This representation is isomorphic to our original representation $(\rho, V)$. In particular, we can always choose to view complex $n$-dimensional representations of $G$ as representations on $\mathbb{C}^n$, where each $\phi(g)$ is given by an $n \times n$ matrix with entries in $\mathbb{C}$.}
+\only<1>{Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $n$ over the field $K$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to K^n$.  This yields a representation $\phi$ of $G$ on $K^n$ by defining \[\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}\] for all $g \in G$. This representation is isomorphic to our original representation $(\rho, V)$. In particular, we can always choose to view complex $n$-dimensional representations of $G$ as representations on $\mathbb{C}^n$, where each $\phi(g)$ is given by an invertible $n \times n$ matrix with entries in $\mathbb{C}$.}
 
 \only<2>{
 Let $G = \{ (1), (123), (132) \} \subset S_3$.  Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
@@ -177,85 +150,9 @@ Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{
 \end{example}
 \end{frame}
 
-\begin{frame}{Subrepresentations}
-\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
-\end{definition}
-\end{frame}
-
-\begin{frame}{Representations of ${C}^2$}
-\only<1>{
-\begin{example}
-Let $G = C_2 = \langle \tau | \tau^2 = e \rangle$ be the cyclic group of order $2$.  The regular representation of $G$ written in the standard basis is given by 
-\[ \rho_{\text{reg}}(\tau)= \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \]
-and $\rho_{\text{reg}}(e) = \text{Id}_2$.  Let $\rho_{\text{sgn}}$ be the alternating representation of $G$ on $\mathbb{C}$, i.e.
-\begin{align*}
- \rho_{\text{sgn}} \colon G &\to GL_1 (\mathbb{C}) = \mathbb{C} ^ {\times} \\
-\tau &\mapsto -1 \\
-e &\mapsto 1.
- \end{align*} \end{example} }
- 
- \only<2>{
- \begin{example}[Cont.]
-Let $f \colon \mathbb{C}^2 \to \mathbb{C}$ be the linear map represented by the matrix $\begin{bmatrix} 1 & -1 \end{bmatrix}$.  Then for any  $x = \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \in \mathbb{C}^2$, we have 
-\begin{align*}
-f \circ \rho_{\text{reg}} (\tau) (x) &= \begin{bmatrix} 1 & -1 \end{bmatrix}  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix}  \\
-&= \begin{bmatrix} -1 & 1 \end{bmatrix}  \begin{bmatrix}x_1 \\ x_2 \end{bmatrix} \\
-&= \rho_{\text{sgn}} (\tau) \circ f(x).
-\end{align*}
-Also note that $ f \circ \rho_{\text{reg}}(e) = \rho_{\text{sgn}}(e) \circ f$.  Thus $f$ is a $G$-linear map from $\rho_{\text{reg}}$ to $\rho_{\text{sgn}}$ (i.e. a homomorphism of representations).  
-\end{example}
-}
-
-\only<3>{
- \begin{example}[Cont.]
-Now let $W$ be the subspace of $\mathbb{C}^2$ spanned by the vector $\begin{bmatrix}1 \\ 1  \end{bmatrix}$. Then
-\[ \rho_{\text{reg}}(\tau)  \begin{bmatrix}1 \\ 1  \end{bmatrix} =   \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} \]
-and  $\rho_{\text{reg}}(e) \begin{bmatrix}1 \\ 1  \end{bmatrix} = \begin{bmatrix}1 \\ 1  \end{bmatrix} $, so $W$ is a $G$-invariant subpace, i.e. $W$ is a subrepresentation of $\rho_{\text{reg}}$.  Note that $W$ is precisely equal to the kernel of the map $f$, and that $W$ is isomorphic to the $1$-dimensional trivial representation of $G$.
-\end{example}
-
-}
-\end{frame}
-
-\begin{frame}
-\begin{example}
-We can generalize the $G$-invariant subspace from the previous example.  Suppose we have a representation $\rho \colon G
-\to GL_n
-(\mathbb{C})$.  If
-we can find a vector $x \in \mathbb{C}^n$ which is an eigenvector for every matrix $\rho(g), g \in G$,
-i.e. an $x \in \mathbb{C}^n$ such that
-\[ \rho(g) (x) = \lambda_g (x) \quad \forall g \in G\]
-for some eigenvalues $\lambda_g \in \mathbb{C}$, then the span of $x$ is a $1$-dimensional $G$-invariant
-subspace
- of $\mathbb{C}^n$.  It is isomorphic to the $1$-dimensional representation
-\begin{align*}
- \rho_2 \colon G &\to GL_1 (\mathbb{C}) \\
-g &\mapsto \lambda_g.
-\end{align*}
-\end{example}
-\end{frame}
-
-\begin{frame}
-\begin{proposition}\label{ker-im-subreprns}
-Let $f \colon V \to W$ be a homomorphism of representations of $G$.  Then $\text{Ker}(f)$ is a subrepresentation of $V$ and $\text{Im}(f)$ is a subrepresentation of $W$.
-\end{proposition}
-\begin{proof}
-\begin{itemize}
-\item Let $x \in \text{Ker}(f)$. Then $0 = g0 = g f(x) = f(gx)$ for every $g \in G$.
-So $gx \in \text{Ker}(f)$ and $\text{Ker}(f)$ is $G$-invariant.
-
-\item Now let $w \in \text{Im}(f)$. There exists $v \in V$ such that $w = f(v)$, so $g w = g f(v) = f
-(gv)$ for
-every $g \in G$. Thus $gw \in \text{Im}(f)$, and $\text{Im}(f)$ is $G$-invariant.
-\end{itemize}
-\end{proof}
-\end{frame}
-
 \section{Reducibility}
 \subsection{Irreducible representations and complete reducibility}
 \begin{frame}{The direct sum of representations}
-\begin{block}{Note}
-We know from linear algebra that given two vector spaces $V$ and $W$, we can form the \textbf{direct sum} $V \oplus W$ consisting of ordered pairs $(v ,w)$ where $v \in V, w \in W$.  
-\end{block} \pause
 \begin{definition}
 Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural representation of $G$, called the \textbf{direct sum representation} of $V$ and $W$, which we define by 
 \begin{align*}
@@ -266,6 +163,8 @@ Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural 
 \end{frame}
 
 \begin{frame}{Irreducible representations and complete reducibility}
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
+\end{definition}
 \begin{definition}
 A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
 \end{definition}
@@ -380,7 +279,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 
 \begin{frame}
 \begin{block}{Corollary}
-Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. then any finite-dimensional representation of $G$ over $F$ is completely reducible.
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. Then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{block}
 \begin{proof}
 Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \subset V$ such that 
@@ -403,21 +302,6 @@ so $U$ is $G$-invariant.  We see that $V = W \oplus U$, since $W \cap U = \{ 0 \
 
 \section{Schur's Lemma}
 \subsection{Vector Spaces of Linear Maps}
-\begin{frame}
-\begin{definition}
-Let $V$ and $W$ be vector spaces.  Recall that the set $\textbf{Hom}\mathbf{(V,W)}$ of linear maps from $V$ to $W$ itself form a vector space where we define the addition of vectors by
-\begin{align*}		
-(f_1 + f_2) \colon &V \to W \\		
-&x \mapsto f_1(x) + f_2(x)		
-\end{align*}		
-for  $f_1, f_2 \in \text{Hom}(V,W)$ and scalar multiplication for $\lambda \in \mathbb{C}$ by
-\begin{align*}		
-(\lambda f_1) \colon &V \to W \\		
-&x \mapsto \lambda f_1(x).		
-\end{align*}		
-
-\end{definition}
-\end{frame}
 
 \begin{frame}
 \begin{proposition}

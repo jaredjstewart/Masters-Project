@@ -1,18 +1,18 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Basics of Rep. Theory}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Motivation and Definitions}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Examples of Representations}{8}{0}{1}
-\beamer@sectionintoc {2}{Reducibility}{26}{0}{2}
-\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{26}{0}{2}
-\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{34}{0}{2}
-\beamer@sectionintoc {3}{Schur's Lemma}{41}{0}{3}
-\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{41}{0}{3}
-\beamer@subsectionintoc {3}{2}{Schur's Lemma}{45}{0}{3}
-\beamer@sectionintoc {4}{Isotypical Decomp.}{47}{0}{4}
-\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{47}{0}{4}
-\beamer@sectionintoc {5}{Duals and Tensors}{51}{0}{5}
-\beamer@subsectionintoc {5}{1}{Dual Spaces}{51}{0}{5}
-\beamer@subsectionintoc {5}{2}{Tensor Products}{53}{0}{5}
-\beamer@sectionintoc {6}{Character Theory}{56}{0}{6}
-\beamer@subsectionintoc {6}{1}{Basics}{56}{0}{6}
-\beamer@subsectionintoc {6}{2}{Inner products of characters}{59}{0}{6}
+\beamer@subsectionintoc {1}{2}{Examples of Representations}{5}{0}{1}
+\beamer@sectionintoc {2}{Reducibility}{16}{0}{2}
+\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{16}{0}{2}
+\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{23}{0}{2}
+\beamer@sectionintoc {3}{Schur's Lemma}{30}{0}{3}
+\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{30}{0}{3}
+\beamer@subsectionintoc {3}{2}{Schur's Lemma}{33}{0}{3}
+\beamer@sectionintoc {4}{Isotypical Decomp.}{35}{0}{4}
+\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{35}{0}{4}
+\beamer@sectionintoc {5}{Duals and Tensors}{39}{0}{5}
+\beamer@subsectionintoc {5}{1}{Dual Spaces}{39}{0}{5}
+\beamer@subsectionintoc {5}{2}{Tensor Products}{41}{0}{5}
+\beamer@sectionintoc {6}{Character Theory}{44}{0}{6}
+\beamer@subsectionintoc {6}{1}{Basics}{44}{0}{6}
+\beamer@subsectionintoc {6}{2}{Inner products of characters}{47}{0}{6}
