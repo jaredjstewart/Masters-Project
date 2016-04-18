@@ -24,7 +24,7 @@
 %\useoutertheme[subsection=false]{smoothbars}  % Dots for subsection
 %\setbeamertemplate{theorems}[numbered]
 
-%\setbeamertemplate{footline}[page number]{}%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[page number]{}%gets rid of bottom navigation bars
 
 \setbeamertemplate{navigation symbols}{} %gets rid of navigation symbols
 \newtheorem{proposition}[theorem]{Proposition} 
@@ -89,6 +89,32 @@ A special case of a permutation representation is that when a finite group acts 
  \end{example}
 \end{frame}
 
+\begin{frame}
+\begin{example}
+Let $G = \{ (1), (123), (132) \} \leq S_3$.  Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
+\begin{align*}
+\rho((1)) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
+\rho((123)) &= \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \\
+\rho((132)) &= \begin{bmatrix} 0 & 1  & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}.
+\end{align*}
+\end{example}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{example}
+Let $G= C_2 \times C_2 = \langle \sigma, \tau | \sigma^2 = \tau^2 = e, \sigma \tau = \tau \sigma \rangle$ be the Klein four-group.  Let $V$ be the vector space with basis $\{ b_e, b_\sigma, b_\tau, b_{\sigma \tau} \}$.  Left multiplication by $\sigma$ gives a permutation 
+\begin{align*}
+b_e &\mapsto b_\sigma\\
+b_\sigma &\mapsto b_e \\
+b_ \tau &\mapsto b_{\sigma \tau}\\
+b_{\sigma \tau} &\mapsto b_\tau.
+\end{align*}
+We can similarly compute $\rho_{\text{reg}}(\tau)$.  Thus, in our basis, the regular representation $\rho_{\text{reg}} \colon G \to GL(V)$  is given by the matrices
+\begin{align*}
+ \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0 & 1 & 0 & 0 \\  1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix} & \quad \rho_{\text{reg}}(\tau) = \begin{bmatrix}0&0&1&0 \\ 0&0&0&1 \\ 1&0&0&0 \\ 0&1&0&0 \end{bmatrix} \end{align*}
+\end{example}
+\end{frame}
+
 \begin{frame}{The Alternating Representation}
 \begin{example}
 For any symmetric group $S_n$, the \textbf{alternating representation} on $\mathbb{C}$ is given by the map 
@@ -112,33 +138,10 @@ An \textbf{isomorphism} of representations is a $G$-linear map that is also inve
 
 \begin{frame}{Representations as matrices}
 \begin{example}
-\only<1>{Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $n$ over the field $K$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to K^n$.  This yields a representation $\phi$ of $G$ on $K^n$ by defining \[\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}\] for all $g \in G$. This representation is isomorphic to our original representation $(\rho, V)$. In particular, we can always choose to view complex $n$-dimensional representations of $G$ as representations on $\mathbb{C}^n$, where each $\phi(g)$ is given by an invertible $n \times n$ matrix with entries in $\mathbb{C}$.}
-
-\only<2>{
-Let $G = \{ (1), (123), (132) \} \leq S_3$.  Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
-\begin{align*}
-\rho((1)) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-\rho((123)) &= \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \\
-\rho((132)) &= \begin{bmatrix} 0 & 1  & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}.
-\end{align*}
-}
+Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $n$ over the field $K$, we can fix a basis for $V$ to obtain an isomorphism of vector spaces $\psi \colon V \to K^n$.  This yields a representation $\phi$ of $G$ on $K^n$ by defining \[\phi (g) = \psi \circ \rho(g) \circ \psi^{-1}\] for all $g \in G$. This representation is isomorphic to our original representation $(\rho, V)$. In particular, we can always choose to view complex $n$-dimensional representations of $G$ as representations on $\mathbb{C}^n$, where each $\phi(g)$ is given by an invertible $n \times n$ matrix with entries in $\mathbb{C}$.
 \end{example}
 \end{frame}
 
-\begin{frame}[plain]
-\begin{example}
-Let $G= C_2 \times C_2 = \langle \sigma, \tau | \sigma^2 = \tau^2 = e, \sigma \tau = \tau \sigma \rangle$ be the Klein four-group.  Let $V$ be the vector space with basis $\{ b_e, b_\sigma, b_\tau, b_{\sigma \tau} \}$.  Left multiplication by $\sigma$ gives a permutation 
-\begin{align*}
-b_e &\mapsto b_\sigma\\
-b_\sigma &\mapsto b_e \\
-b_ \tau &\mapsto b_{\sigma \tau}\\
-b_{\sigma \tau} &\mapsto b_\tau.
-\end{align*}
-We can similarly compute $\rho_{\text{reg}}(\tau)$.  Thus, in our basis, the regular representation $\rho_{\text{reg}} \colon G \to GL(V)$  is given by the matrices
-\begin{align*}
- \rho_{\text{reg}}(\sigma) = \begin{bmatrix}0 & 1 & 0 & 0 \\  1 & 0 & 0 & 0 \\ 0 & 0 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{bmatrix} & \quad \rho_{\text{reg}}(\tau) = \begin{bmatrix}0&0&1&0 \\ 0&0&0&1 \\ 1&0&0&0 \\ 0&1&0&0 \end{bmatrix} \end{align*}
-\end{example}
-\end{frame}
 
 \begin{frame}[plain]
 \begin{example}[$2$-dim rep of $D_4$.]
@@ -216,11 +219,42 @@ Thus we see that there is no such $W$, and our representation is irreducible.
 \begin{proof}
 Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    The minimal polynomial of $\rho(g)$ divides  $x^n -1$, which has $n$ distinct roots over $\mathbb{C}$, so it factors into linear factors only over $\mathbb{C}$,  i.e. $\rho(g)$ is diagonalizable.
 Now, given any two elements $g_1, g_2 \in G$ we have $\rho(g_1)\rho(g_2)=\rho(g_2)\rho(g_1)$.
-Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with respect to basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_k$, with each subspace $ \mathbb{C}e_i$ invariant under the action of $G$, since $e_i$ is an eigenvector for every $\rho(g)$.
+Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with respect to basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_k$, with each subspace $ \mathbb{C}e_i$ invariant under the action of $G$ since $e_i$ is an eigenvector for every $\rho(g)$.
 \end{proof}
 }
 \end{frame}
 
+
+\begin{frame}
+\begin{block}{Question:}
+Is every finite dimensional representation completely reducible? 
+\end{block}
+\begin{block}{Answer:}
+\textbf{No}, in general.
+\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{example}[Complete reducibility fails in the modular case]
+Let $F$ be a field whose characteristic divides $|G|$.  Consider the element \[x =  \sum_{g \in G} g \in FG.  \] Then $g x =x$ for every $g \in G$.  Moreover \[x^2 = |G| x = 0. \]  If follows that $FG$ contains nilpotent ideals, so is not semisimple.  (Recall that an algebra is semisimple iff it is artinian and contains no nonzero nilpotent ideals.)
+\end{example}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{example}[Complete reducibility fails when the group is infinite]
+Consider the additive group $G = (F, +)$, which we can view as a subgroup of $GL_2 (F)$ by identifying $t \in F$ with the matrix 
+\[ \begin{bmatrix} 1 & t \\ 0 & 1 \end{bmatrix}.\]
+Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (x + ty, y)$. Any one-dimensional subspace spanned by a vector $(x_1, y_1) \in V$ is $G$-invariant precisely when for all $t \in F$ there exist $\lambda_t \in F$ such that \[ t \cdot (x_1, y_1) = \lambda_t (x_1, y_1). \]  But this requires $y_1=0$, so that the only one-dimensional $G$-subrepresentation of $V$ is spanned by $(1,0)$. This subrepresentation has no $G$-invariant direct complement. 
+\end{example}
+\end{frame}
+
+\subsection{Maschke's Theorem}
+\begin{frame}{Maschke's Theorem}
+\begin{theorem}[Maschke's Theorem]
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$ to $W$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
+\[ V = W \oplus U. \]
+\end{theorem}
+\end{frame}
 
 \begin{frame}
 \begin{definition}
@@ -232,14 +266,6 @@ Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrep
 Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ker}(f)$ is a $G$-invariant subspace of $V$ such that
 \[ V = \text{Ker}(f) \oplus W \]
 \end{lemma}
-\end{frame}
-
-\subsection{Maschke's Theorem}
-\begin{frame}{Maschke's Theorem}
-\begin{theorem}[Maschke's Theorem]
-Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$ to $W$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
-\[ V = W \oplus U. \]
-\end{theorem}
 \end{frame}
 
 \begin{frame}{Maschke's Theorem}
@@ -279,7 +305,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 \end{proof}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Consequences of Machke's Theorem}
 \begin{block}{Corollary}
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. Then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{block}
@@ -317,13 +343,17 @@ Suppose we have representations $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G
 
 \begin{frame}
 \begin{definition}		
-Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$ forms a subspace of $\text{Hom}(V,W)$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
+Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$, forms a subspace of $\text{Hom}(V,W)$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
 \end{definition} 
 
 \begin{definition}
 Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
 \[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
 \end{definition}
+
+\begin{block}{Remark}
+$\text{Hom}_G(V,W) = ( \text{Hom} (V,W) )^G $.
+\end{block}
 \end{frame}
 \begin{note}
 Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.   It is isomorphic to a trivial representation of some dimension.
@@ -332,10 +362,10 @@ Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.  
 
 \subsection{Schur's Lemma}
 \begin{frame}
-\begin{theorem}[Schur's Lemma over $\mathbb{C}$.] If $V$ is an irreducible representation of $G$ over $\mathbb{C}$, then $\text{End}_G(V) = \{ \lambda \text{Id}_v \vert \lambda \in \mathbb{C} \}$.
+\begin{theorem}[Schur's Lemma over $\mathbb{C}$.] If $V$ is a complex irreducible representation of $G$, then $\text{End}_G(V) = \{ \lambda \text{Id}_v \vert \lambda \in \mathbb{C} \}$.
 \end{theorem}
 \begin{proof}
-Let $\phi \colon V \to V$  be a $G$-linear endomorphism of $G$, and let $\lambda$ be an eigenvalue of $\phi$.  Observe that the eigenspace $E_\lambda$ is $G$-invariant: If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so since $V$ is irreducible, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
+Let $\phi \colon V \to V$  be a $G$-linear endomorphism of $V$, and let $\lambda$ be an eigenvalue of $\phi$.  We claim that the eigenspace $E_\lambda$ is $G$-invariant. If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so since $V$ is irreducible, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
 \end{proof}
 \end{frame}
 
@@ -393,7 +423,7 @@ For any irrep $W$ of $G$, the number of irreps in either decomposition that are 
 \end{frame}
 
 \section{Character Theory}
-\subsection{Basics}
+\subsection{Definitions and Basic Properties}
 \begin{frame}{The definition of a Character}
 \begin{definition}
 The \textbf{character} of a representation $\rho \colon G \to GL(V)$ is the function \[ \chi_V \colon G \to \mathbb{C}\] defined by \[\chi_V(g) = \text{Tr}(\rho(g)).\]
@@ -542,7 +572,7 @@ Let $U_1, \ldots, U_r$ be the irreducible representations of $G$ with degrees $d
 \end{block}
 \end{frame}
 
-
+\subsection{Character Tables}
 \begin{frame}
 \begin{definition}
 We define \textbf{the character table of} $G$ to be the table of complex numbers whose:
@@ -553,12 +583,10 @@ We define \textbf{the character table of} $G$ to be the table of complex numbers
 \end{definition}
 
 \begin{block}{Note}
-To find the inner product of $\chi_V$ and $\chi_W$, we just need to calculate $\chi$ once on each conjugacy class, i.e. 
+To find the inner product of $\chi_V$ and $\chi_W$, we only need to calculate $\chi_V$ and $\chi_W$ once on each conjugacy class, i.e. 
 \begin{align*}
-\langle \chi_V | \chi_W \rangle &= \frac{1}{|G|} \sum_{g \in G} \rho_V (g) \overline{\rho_W (g)} \\
-&=  \frac{1}{|G|} \sum_{[g]} |[g]|   \rho_V (g) \overline{\rho_W (g)}
+\langle \chi_V | \chi_W \rangle &=  \frac{1}{|G|} \sum_{[g]} |[g]|   \chi_V (g) \overline{\chi_W (g)}.
 \end{align*}
-where the latter sum ranges over the conjugacy classes $[g]$ of $G$.
 \end{block}
 \end{frame}
 

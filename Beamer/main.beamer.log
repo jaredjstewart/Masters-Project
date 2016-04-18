@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  18 APR 2016 10:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  18 APR 2016 15:50
 entering extended mode
 **main.beamer.tex
 (main.beamer.tex
@@ -938,9 +938,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [30
 
-] [31
+]
+Overfull \vbox (5.7883pt too high) detected at line 317
+ []
 
-] [32
+[31
+
+]
+Overfull \vbox (3.99792pt too high) detected at line 329
+ []
+
+[32
 
 ] [33
 
@@ -948,8 +956,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [35
 
-]
-[36
+] [36
 
 ] [37
 
@@ -971,15 +978,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [46
 
-] [47
+]
+Overfull \vbox (3.94263pt too high) detected at line 511
+ []
+
+[47
 
 ] [48
 
-]
-Overfull \vbox (47.17447pt too high) detected at line 563
- []
-
-[49
+] [49
 
 ] [50
 
@@ -989,32 +996,38 @@ Overfull \vbox (47.17447pt too high) detected at line 563
 
 ] [53
 
+] [54
+
+] [55
+
+] [56
+
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 648.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 648.
  (main.beamer.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 620.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 620.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 648.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 648.
 Package rerunfilecheck Info: File `main.beamer.out' has not changed.
-(rerunfilecheck)             Checksum: 4CC064D1059F59B72ADB4C7306AB49A4;944.
+(rerunfilecheck)             Checksum: 0F2F262E644EB3E27972D2A822C63B0E;1038.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 620.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 648.
  ) ) 
 Here is how much of TeX's memory you used:
- 17010 strings out of 493673
- 328641 string characters out of 3141529
- 439279 words of memory out of 3000000
- 19833 multiletter control sequences out of 15000+200000
+ 17038 strings out of 493673
+ 329215 string characters out of 3141529
+ 444228 words of memory out of 3000000
+ 19854 multiletter control sequences out of 15000+200000
  16193 words of font info for 60 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,20n,66p,680b,760s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,66p,670b,760s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -1036,9 +1049,9 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.beamer.pdf (53 pages, 777140 bytes).
+Output written on main.beamer.pdf (56 pages, 842380 bytes).
 PDF statistics:
- 2656 PDF objects out of 2984 (max. 8388607)
- 123 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2968 PDF objects out of 2984 (max. 8388607)
+ 130 named destinations out of 1000 (max. 500000)
+ 229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
