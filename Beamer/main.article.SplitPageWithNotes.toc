@@ -1,13 +1,15 @@
 \beamer@endinputifotherversion {3.36pt}
-\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
-\beamer@sectionintoc {2}{Section no.1}{7}{0}{2}
-\beamer@subsectionintoc {2}{1}{Subsection no.1.1 }{8}{0}{2}
-\beamer@sectionintoc {3}{Section no. 2}{8}{0}{3}
-\beamer@subsectionintoc {3}{1}{Lists I}{8}{0}{3}
-\beamer@subsectionintoc {3}{2}{Lists II}{10}{0}{3}
-\beamer@sectionintoc {4}{Section no.3}{12}{0}{4}
-\beamer@subsectionintoc {4}{1}{Tables}{12}{0}{4}
-\beamer@sectionintoc {5}{Section no. 4}{14}{0}{5}
-\beamer@subsectionintoc {5}{1}{blocs}{14}{0}{5}
-\beamer@sectionintoc {6}{Section no. 5}{15}{0}{6}
-\beamer@subsectionintoc {6}{1}{split screen}{15}{0}{6}
+\beamer@sectionintoc {1}{Basics of Rep. Theory}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation and Definitions}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Examples of Representations}{5}{0}{1}
+\beamer@sectionintoc {2}{Reducibility}{12}{0}{2}
+\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{12}{0}{2}
+\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{17}{0}{2}
+\beamer@sectionintoc {3}{Schur's Lemma}{21}{0}{3}
+\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{21}{0}{3}
+\beamer@subsectionintoc {3}{2}{Schur's Lemma}{23}{0}{3}
+\beamer@sectionintoc {4}{Isotypical Decomp.}{26}{0}{4}
+\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{26}{0}{4}
+\beamer@sectionintoc {5}{Character Theory}{31}{0}{5}
+\beamer@subsectionintoc {5}{1}{Basics}{31}{0}{5}
+\beamer@subsectionintoc {5}{2}{Inner products of characters}{34}{0}{5}

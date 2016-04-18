@@ -7,9 +7,9 @@
 \beamer@subsectionintoc {2}{2}{Maschke's Theorem}{23}{0}{2}
 \beamer@sectionintoc {3}{Schur's Lemma}{30}{0}{3}
 \beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{30}{0}{3}
-\beamer@subsectionintoc {3}{2}{Schur's Lemma}{33}{0}{3}
-\beamer@sectionintoc {4}{Isotypical Decomp.}{35}{0}{4}
-\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{35}{0}{4}
-\beamer@sectionintoc {5}{Character Theory}{39}{0}{5}
-\beamer@subsectionintoc {5}{1}{Basics}{39}{0}{5}
-\beamer@subsectionintoc {5}{2}{Inner products of characters}{42}{0}{5}
+\beamer@subsectionintoc {3}{2}{Schur's Lemma}{32}{0}{3}
+\beamer@sectionintoc {4}{Isotypical Decomp.}{34}{0}{4}
+\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{34}{0}{4}
+\beamer@sectionintoc {5}{Character Theory}{38}{0}{5}
+\beamer@subsectionintoc {5}{1}{Basics}{38}{0}{5}
+\beamer@subsectionintoc {5}{2}{Inner products of characters}{41}{0}{5}

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.3.13)  16 APR 2016 10:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  18 APR 2016 10:54
 entering extended mode
-**C:/Users/Jared/Documents/Masters-Project/Beamer/main.beamer.tex
-(C:/Users/Jared/Documents/Masters-Project/Beamer/main.beamer.tex
+**main.beamer.tex
+(main.beamer.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\beamer.cls"
@@ -149,7 +149,7 @@ sts.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
 "
 \pgfutil@abb=\box34
- (C:\Users\Jared\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
@@ -207,8 +207,7 @@ File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(C:\Users\Jared\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -910,11 +909,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ] [16
 
-]
-Overfull \vbox (33.43155pt too high) detected at line 180
- []
-
-[17
+] [17
 
 ] [18
 
@@ -922,7 +917,8 @@ Overfull \vbox (33.43155pt too high) detected at line 180
 
 ] [20
 
-] [21
+]
+[21
 
 ] [22
 
@@ -944,8 +940,7 @@ Overfull \vbox (33.43155pt too high) detected at line 180
 
 ] [31
 
-]
-[32
+] [32
 
 ] [33
 
@@ -953,7 +948,8 @@ Overfull \vbox (33.43155pt too high) detected at line 180
 
 ] [35
 
-] [36
+]
+[36
 
 ] [37
 
@@ -975,12 +971,15 @@ Overfull \vbox (33.43155pt too high) detected at line 180
 
 ] [46
 
-]
-[47
+] [47
 
 ] [48
 
-] [49
+]
+Overfull \vbox (47.17447pt too high) detected at line 563
+ []
+
+[49
 
 ] [50
 
@@ -990,36 +989,32 @@ Overfull \vbox (33.43155pt too high) detected at line 180
 
 ] [53
 
-] [54
-
-] [55
-
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 653.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 653.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
  (main.beamer.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 653.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 653.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 620.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 620.
 Package rerunfilecheck Info: File `main.beamer.out' has not changed.
-(rerunfilecheck)             Checksum: 7B035720F10DF4791C27C1D0ABBE07F4;944.
+(rerunfilecheck)             Checksum: 4CC064D1059F59B72ADB4C7306AB49A4;944.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 653.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 620.
  ) ) 
 Here is how much of TeX's memory you used:
- 17019 strings out of 493673
- 328903 string characters out of 3141530
- 443830 words of memory out of 3000000
- 19837 multiletter control sequences out of 15000+200000
+ 17010 strings out of 493673
+ 328641 string characters out of 3141529
+ 439279 words of memory out of 3000000
+ 19833 multiletter control sequences out of 15000+200000
  16193 words of font info for 60 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,20n,66p,728b,852s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,20n,66p,680b,760s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
 b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
@@ -1041,9 +1036,9 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.beamer.pdf (55 pages, 818624 bytes).
+Output written on main.beamer.pdf (53 pages, 777140 bytes).
 PDF statistics:
- 2858 PDF objects out of 2984 (max. 8388607)
- 127 named destinations out of 1000 (max. 500000)
+ 2656 PDF objects out of 2984 (max. 8388607)
+ 123 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

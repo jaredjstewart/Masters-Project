@@ -1,11 +1,15 @@
-\contentsline {section}{\numberline {1}Section no.1}{1}
-\contentsline {subsection}{\numberline {1.1}Subsection no.1.1 }{1}
-\contentsline {section}{\numberline {2}Section no. 2}{1}
-\contentsline {subsection}{\numberline {2.1}Lists I}{1}
-\contentsline {subsection}{\numberline {2.2}Lists II}{2}
-\contentsline {section}{\numberline {3}Section no.3}{2}
-\contentsline {subsection}{\numberline {3.1}Tables}{2}
-\contentsline {section}{\numberline {4}Section no. 4}{3}
-\contentsline {subsection}{\numberline {4.1}blocs}{3}
-\contentsline {section}{\numberline {5}Section no. 5}{3}
-\contentsline {subsection}{\numberline {5.1}split screen}{3}
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Basics of Rep. Theory}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivation and Definitions}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Examples of Representations}{5}{0}{1}
+\beamer@sectionintoc {2}{Reducibility}{17}{0}{2}
+\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{17}{0}{2}
+\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{24}{0}{2}
+\beamer@sectionintoc {3}{Schur's Lemma}{31}{0}{3}
+\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{31}{0}{3}
+\beamer@subsectionintoc {3}{2}{Schur's Lemma}{35}{0}{3}
+\beamer@sectionintoc {4}{Isotypical Decomp.}{37}{0}{4}
+\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{37}{0}{4}
+\beamer@sectionintoc {5}{Character Theory}{42}{0}{5}
+\beamer@subsectionintoc {5}{1}{Basics}{42}{0}{5}
+\beamer@subsectionintoc {5}{2}{Inner products of characters}{45}{0}{5}

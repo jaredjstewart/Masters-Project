@@ -3,56 +3,114 @@
 \headcommand {\beamer@framepages {1}{1}}
 \headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
 \headcommand {\beamer@framepages {2}{2}}
-\headcommand {\sectionentry {1}{Introduction}{3}{Introduction}{0}}
+\headcommand {\sectionentry {1}{Basics of Rep. Theory}{3}{Basics of Rep. Theory}{0}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Motivation and Definitions}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/3}{Motivation and Definitions}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
+\headcommand {\slideentry {1}{1}{2}{4/4}{Motivation and Definitions}{0}}
 \headcommand {\beamer@framepages {4}{4}}
-\headcommand {\slideentry {1}{0}{3}{5/5}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Examples of Representations}}\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {1}{2}{1}{5/5}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {5}{5}}
-\headcommand {\sectionentry {2}{Section no.1}{7}{Section no.1}{0}}
-\headcommand {\beamer@sectionpages {3}{6}}
-\headcommand {\beamer@subsectionpages {3}{6}}
-\headcommand {\slideentry {2}{0}{1}{7/7}{}{0}}
+\headcommand {\slideentry {1}{2}{2}{6/6}{Examples of Representations}{0}}
+\headcommand {\beamer@framepages {6}{6}}
+\headcommand {\slideentry {1}{2}{3}{7/7}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{8}{Subsection no.1.1 }}\headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\sectionentry {3}{Section no. 2}{8}{Section no. 2}{0}}
-\headcommand {\beamer@sectionpages {7}{7}}
-\headcommand {\beamer@subsectionpages {8}{7}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{8}{Lists I}}\headcommand {\beamer@subsectionpages {8}{7}}
-\headcommand {\slideentry {3}{1}{1}{8/8}{Lists I}{0}}
+\headcommand {\slideentry {1}{2}{4}{8/8}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {3}{1}{2}{9/9}{Lists I}{0}}
+\headcommand {\slideentry {1}{2}{5}{9/9}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{10}{Lists II}}\headcommand {\beamer@subsectionpages {8}{9}}
-\headcommand {\slideentry {3}{2}{1}{10/10}{Lists II}{0}}
+\headcommand {\slideentry {1}{2}{6}{10/10}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {3}{2}{2}{11/11}{Lists II}{0}}
+\headcommand {\slideentry {1}{2}{7}{11/11}{Examples of Representations}{0}}
 \headcommand {\beamer@framepages {11}{11}}
-\headcommand {\sectionentry {4}{Section no.3}{12}{Section no.3}{0}}
-\headcommand {\beamer@sectionpages {8}{11}}
-\headcommand {\beamer@subsectionpages {10}{11}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{12}{Tables}}\headcommand {\beamer@subsectionpages {12}{11}}
-\headcommand {\slideentry {4}{1}{1}{12/12}{Tables}{0}}
+\headcommand {\sectionentry {2}{Reducibility}{12}{Reducibility}{0}}
+\headcommand {\beamer@sectionpages {3}{11}}
+\headcommand {\beamer@subsectionpages {5}{11}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{12}{Irreducible representations and complete reducibility}}\headcommand {\beamer@subsectionpages {12}{11}}
+\headcommand {\slideentry {2}{1}{1}{12/12}{Irreducible representations and complete reducibility}{0}}
 \headcommand {\beamer@framepages {12}{12}}
-\headcommand {\slideentry {4}{1}{2}{13/13}{Tables}{0}}
+\headcommand {\slideentry {2}{1}{2}{13/13}{Irreducible representations and complete reducibility}{0}}
 \headcommand {\beamer@framepages {13}{13}}
-\headcommand {\sectionentry {5}{Section no. 4}{14}{Section no. 4}{0}}
-\headcommand {\beamer@sectionpages {12}{13}}
-\headcommand {\beamer@subsectionpages {12}{13}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{14}{blocs}}\headcommand {\beamer@subsectionpages {14}{13}}
-\headcommand {\slideentry {5}{1}{1}{14/14}{blocs}{0}}
+\headcommand {\slideentry {2}{1}{3}{14/14}{Irreducible representations and complete reducibility}{0}}
 \headcommand {\beamer@framepages {14}{14}}
-\headcommand {\beamer@partpages {1}{15}}
-\headcommand {\beamer@subsectionpages {15}{15}}
-\headcommand {\beamer@sectionpages {15}{15}}
-\headcommand {\beamer@documentpages {15}}
-\headcommand {\def \inserttotalframenumber {14}}
-\headcommand {\sectionentry {6}{Section no. 5}{15}{Section no. 5}{0}}
-\headcommand {\beamer@sectionpages {14}{14}}
-\headcommand {\beamer@subsectionpages {14}{14}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{15}{split screen}}\headcommand {\beamer@subsectionpages {15}{14}}
-\headcommand {\slideentry {6}{1}{1}{15/15}{split screen}{0}}
+\headcommand {\slideentry {2}{1}{4}{15/15}{Irreducible representations and complete reducibility}{0}}
 \headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {2}{1}{5}{16/16}{Irreducible representations and complete reducibility}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{17}{Maschke's Theorem}}\headcommand {\beamer@subsectionpages {12}{16}}
+\headcommand {\slideentry {2}{2}{1}{17/17}{Maschke's Theorem}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {2}{2}{2}{18/18}{Maschke's Theorem}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {2}{2}{3}{19/19}{Maschke's Theorem}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {2}{2}{4}{20/20}{Maschke's Theorem}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\sectionentry {3}{Schur's Lemma}{21}{Schur's Lemma}{0}}
+\headcommand {\beamer@sectionpages {12}{20}}
+\headcommand {\beamer@subsectionpages {17}{20}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{21}{Vector Spaces of Linear Maps}}\headcommand {\beamer@subsectionpages {21}{20}}
+\headcommand {\slideentry {3}{1}{1}{21/21}{Vector Spaces of Linear Maps}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\slideentry {3}{1}{2}{22/22}{Vector Spaces of Linear Maps}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{23}{Schur's Lemma}}\headcommand {\beamer@subsectionpages {21}{22}}
+\headcommand {\slideentry {3}{2}{1}{23/23}{Schur's Lemma}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\slideentry {3}{2}{2}{25/25}{Schur's Lemma}{0}}
+\headcommand {\beamer@framepages {25}{25}}
+\headcommand {\sectionentry {4}{Isotypical Decomp.}{26}{Isotypical Decomp.}{0}}
+\headcommand {\beamer@sectionpages {21}{25}}
+\headcommand {\beamer@subsectionpages {23}{25}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{26}{Isotypical decomposition}}\headcommand {\beamer@subsectionpages {26}{25}}
+\headcommand {\slideentry {4}{1}{1}{26/26}{Isotypical decomposition}{0}}
+\headcommand {\beamer@framepages {26}{26}}
+\headcommand {\slideentry {4}{1}{2}{27/27}{Isotypical decomposition}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\slideentry {4}{1}{3}{28/28}{Isotypical decomposition}{0}}
+\headcommand {\beamer@framepages {28}{28}}
+\headcommand {\slideentry {4}{1}{4}{29/29}{Isotypical decomposition}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\sectionentry {5}{Character Theory}{31}{Character Theory}{0}}
+\headcommand {\beamer@sectionpages {26}{30}}
+\headcommand {\beamer@subsectionpages {26}{30}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{31}{Basics}}\headcommand {\beamer@subsectionpages {31}{30}}
+\headcommand {\slideentry {5}{1}{1}{31/31}{Basics}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\slideentry {5}{1}{2}{32/32}{Basics}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {5}{1}{3}{33/33}{Basics}{0}}
+\headcommand {\beamer@framepages {33}{33}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{34}{Inner products of characters}}\headcommand {\beamer@subsectionpages {31}{33}}
+\headcommand {\slideentry {5}{2}{1}{34/34}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\slideentry {5}{2}{2}{35/35}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {5}{2}{3}{36/36}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {5}{2}{4}{37/37}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {5}{2}{5}{38/38}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\slideentry {5}{2}{6}{39/39}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {5}{2}{7}{40/40}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {5}{2}{8}{41/41}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\slideentry {5}{2}{9}{42/42}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {42}{42}}
+\headcommand {\slideentry {5}{2}{10}{43/43}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\slideentry {5}{2}{11}{45/45}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@partpages {1}{46}}
+\headcommand {\beamer@subsectionpages {34}{46}}
+\headcommand {\beamer@sectionpages {31}{46}}
+\headcommand {\beamer@documentpages {46}}
+\headcommand {\def \inserttotalframenumber {43}}
+\headcommand {\slideentry {5}{2}{12}{46/46}{Inner products of characters}{0}}
+\headcommand {\beamer@framepages {46}{46}}

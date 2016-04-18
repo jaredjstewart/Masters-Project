@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  2 APR 2016 15:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  18 APR 2016 10:22
 entering extended mode
 **main.article.SplitPageWithNotes.tex
 (main.article.SplitPageWithNotes.tex
@@ -755,43 +755,48 @@ LaTeX Info: Redefining \addtolength on input line 81.
 
 (main.beamer.snm) (main.tex
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\theme\beamerth
-emeMadrid.sty"
-Package: beamerthemeMadrid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+emeFrankfurt.sty"
+Package: beamerthemeFrankfurt 2010/06/17  (rcs-revision d02a7cf4d8ae)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\color\beamerco
-lorthemewhale.sty"
-Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\color\beamerco
-lorthemeorchid.sty"
-Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\outer\beamerou
+terthemesmoothbars.sty"
+Package: beamerouterthemesmoothbars 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\inner\beamerin
 nerthemerounded.sty"
 Package: beamerinnerthemerounded 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\outer\beamerou
-terthemeinfolines.sty"
-Package: beamerouterthemeinfolines 2012/10/16  (rcs-revision 51a8c72084af)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\color\beamerco
+lorthemeorchid.sty"
+Package: beamercolorthemeorchid 2010/06/17  (rcs-revision d02a7cf4d8ae)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\color\beamerco
+lorthemewhale.sty"
+Package: beamercolorthemewhale 2010/06/17  (rcs-revision d02a7cf4d8ae)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\beamer\base\themes\font\beamerfon
 tthemeserif.sty"
 Package: beamerfontthemeserif 2010/06/17  (rcs-revision d02a7cf4d8ae)
-) (main.article.SplitPageWithNotes.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\\' on input line 41.
+
+(main.article.SplitPageWithNotes.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -801,14 +806,14 @@ LaTeX Font Info:    ... okay on input line 37.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(10.95003pt, 342.2953pt, 10.95003pt)
+* h-part:(L,W,R)=(28.45274pt, 307.28987pt, 28.45274pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=342.2953pt
+* \textwidth=307.28987pt
 * \textheight=244.6939pt
-* \oddsidemargin=-61.31996pt
-* \evensidemargin=-61.31996pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -842,7 +847,7 @@ LaTeX Font Info:    ... okay on input line 37.
 \everyMPtoPDFconversion=\toks44
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 37.
+Package hyperref Info: Link coloring OFF on input line 45.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -852,9 +857,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count168
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
 
 (main.article.SplitPageWithNotes.out) (main.article.SplitPageWithNotes.out)
 \@outlinefile=\write5
@@ -883,192 +888,136 @@ Dictionary: translator-numbers-dictionary, Language: English
 slator-theorem-dictionary\translator-theorem-dictionary-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 37.
+LaTeX Info: Redefining \includegraphics on input line 45.
 
 (main.article.SplitPageWithNotes.nav)
-Overfull \hbox (21.7551pt too wide) in paragraph at lines 37--37
- [][][][]  
- []
-
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 41.
+(Font)              size <5> substituted on input line 49.
 
+(main.article.SplitPageWithNotes.toc) [2{C:/Users/Jared/AppData/Local/MiKTeX/2.
+9/pdftex/config/pdftex.map}
 
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-(main.article.SplitPageWithNotes.toc)
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[2
-
-{C:/Users/Jared/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}pdfTeX warnin
-g (ext4): destination with the same identifier (name{Navigation1}) has been alr
-eady used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation1})
+ has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.44 \end{frame}
+l.52 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{page.1}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.44 \end{frame}
+l.52 \end{frame}
                 
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+LaTeX Font Info:    Try loading font information for U+msa on input line 64.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+LaTeX Font Info:    Try loading font information for U+msb on input line 64.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[3
+) [3
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation2})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.56 \end{frame}
+l.64 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{page.2}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.56 \end{frame}
+l.64 \end{frame}
                 
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[4
+] [4
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation3})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.69 \end{frame}
+l.75 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{page.3}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.69 \end{frame}
+l.75 \end{frame}
                 
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[5
+] [5
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.85 \end{frame}
+l.84 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
 me{page.4}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.85 \end{frame}
+l.84 \end{frame}
                 
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [6
 
-[6
-
-pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation5})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.85 \end{frame}
+l.90 \end{frame}
                 pdfTeX warning (ext4): destination with the same identifier (na
-me{page.4}) has been already used, duplicate ignored
+me{page.5}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.85 \end{frame}
+l.90 \end{frame}
                 
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
+] [7
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{Navigation6
-}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation6})
+ has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.91 \end{frame}
-                pdfTeX warning (ext4): destination with the same identifier (na
-me{page.6}) has been already used, duplicate ignored
+l.100 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.6}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.91 \end{frame}
-                
+l.100 \end{frame}
+                 
 
-]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 101
-.
-LaTeX Font Info:    No file OMScmss.fd. on input line 101.
-
-
-LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 101.
-
-
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[8
+] [8
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation7})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.109 \end{frame}
+l.111 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.7}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.109 \end{frame}
+l.111 \end{frame}
                  
 
 ]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (143.23741pt too high) detected at line 126
  []
 
 [9
@@ -1078,81 +1027,65 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation8})
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.118 \end{frame}
+l.126 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.8}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.118 \end{frame}
+l.126 \end{frame}
                  
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[10
+] [10
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation9})
  has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.128 \end{frame}
+l.141 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.9}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.128 \end{frame}
+l.141 \end{frame}
                  
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[11
+] [11
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation10}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.137 \end{frame}
+l.153 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.10}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.137 \end{frame}
+l.153 \end{frame}
                  
 
-]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[12
+] [12
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation11}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.151 \end{frame}
+l.165 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.11}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.151 \end{frame}
+l.165 \end{frame}
                  
 
 ]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (33.43155pt too high) detected at line 179
  []
 
 [13
@@ -1162,18 +1095,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation12}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.162 \end{frame}
+l.179 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.12}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.162 \end{frame}
+l.179 \end{frame}
                  
 
 ]
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (183.64594pt too high) detected at line 207
  []
 
 [14
@@ -1183,23 +1115,17 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation13}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.181 \end{frame}
+l.207 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.13}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.181 \end{frame}
+l.207 \end{frame}
                  
 
 ]
-Overfull \hbox (10.48088pt too wide) in paragraph at lines 207--207
-[][]  
- []
-
-
-Overfull \hbox (21.7551pt too wide) has occurred while \output is active
- [][][][]  
+Overfull \vbox (58.72662pt too high) detected at line 222
  []
 
 [15
@@ -1209,76 +1135,598 @@ pdfTeX warning (ext4): destination with the same identifier (name{Navigation14}
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.207 \end{frame}
+l.222 \end{frame}
                  pdfTeX warning (ext4): destination with the same identifier (n
 ame{page.14}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.207 \end{frame}
+l.222 \end{frame}
                  
 
-]
-\tf@nav=\write6
-\tf@toc=\write7
-\tf@snm=\write8
- [16
+] [16
 
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation15}
 ) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.210 \end{document}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{page.15}) has been already used, duplicate ignored
+l.235 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.15}) has been already used, duplicate ignored
 
 \pgfpages@shipoutshipoutbox ...physicalpagesizes }
                                                   \endgroup 
-l.210 \end{document}
+l.235 \end{frame}
+                 
+
+] [17
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation16}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.243 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.16}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.243 \end{frame}
+                 
+
+]
+Overfull \vbox (451.202pt too high) detected at line 280
+ []
+
+[18
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation17}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.280 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.17}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.280 \end{frame}
+                 
+
+] [19
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation18}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.291 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.18}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.291 \end{frame}
+                 
+
+] [20
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation19}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.303 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.19}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.303 \end{frame}
+                 
+
+] [21
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation20}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.316 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.20}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.316 \end{frame}
+                 
+
+] [22
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation21}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.327 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.21}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.327 \end{frame}
+                 
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation22}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.340 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.22}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.340 \end{frame}
+                 
+
+]
+Overfull \vbox (12.0pt too high) has occurred while \output is active []
+
+ [24
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation22}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.340 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.22}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.340 \end{frame}
+                 
+
+] [25pdfTeX warning (ext4): destination with the same identifier (name{Navigati
+on24}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.350 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.24}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.350 \end{frame}
+                 
+
+] [26
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation25}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.362 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.25}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.362 \end{frame}
+                 
+
+] [27
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation26}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.368 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.26}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.368 \end{frame}
+                 
+
+] [28
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation27}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.376 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.27}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.376 \end{frame}
+                 
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation28}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.393 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.28}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.393 \end{frame}
+                 
+
+] [30
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation28}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.393 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.28}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.393 \end{frame}
+                 
+
+] [31pdfTeX warning (ext4): destination with the same identifier (name{Navigati
+on30}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.404 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.30}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.404 \end{frame}
+                 
+
+] [32
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation31}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.423 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.31}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.423 \end{frame}
+                 
+
+] [33
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation32}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.432 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.32}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.432 \end{frame}
+                 
+
+] [34
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation33}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.449 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.33}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.449 \end{frame}
+                 
+
+] [35
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation34}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.456 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.34}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.456 \end{frame}
+                 
+
+] [36
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation35}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.467 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.35}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.467 \end{frame}
+                 
+
+] [37
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation36}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.481 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.36}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.481 \end{frame}
+                 
+
+] [38
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation37}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.497 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.37}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.497 \end{frame}
+                 
+
+] [39
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation38}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.517 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.38}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.517 \end{frame}
+                 
+
+] [40
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation39}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.533 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.39}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.533 \end{frame}
+                 
+
+] [41
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation40}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.543 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.40}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.543 \end{frame}
+                 
+
+] [42
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation41}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.559 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.41}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.559 \end{frame}
+                 
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation42}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.572 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.42}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.572 \end{frame}
+                 
+
+] [44
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation42}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.572 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.42}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.572 \end{frame}
+                 
+
+]
+Overfull \vbox (18.75412pt too high) detected at line 596
+ []
+
+[45pdfTeX warning (ext4): destination with the same identifier (name{Navigation
+44}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.596 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.44}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.596 \end{frame}
+                 
+
+]
+Overfull \vbox (84.93404pt too high) detected at line 626
+ []
+
+[46
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation45}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.626 \end{frame}
+                 pdfTeX warning (ext4): destination with the same identifier (n
+ame{page.45}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.626 \end{frame}
+                 
+
+]
+\tf@nav=\write6
+\tf@toc=\write7
+\tf@snm=\write8
+ [47
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation46}
+) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.629 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier
+ (name{page.46}) has been already used, duplicate ignored
+
+\pgfpages@shipoutshipoutbox ...physicalpagesizes }
+                                                  \endgroup 
+l.629 \end{document}
                     
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 210.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 210.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 629.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 629.
  (main.article.SplitPageWithNotes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 210.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 210.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 629.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 629.
 Package rerunfilecheck Info: File `main.article.SplitPageWithNotes.out' has not
  changed.
-(rerunfilecheck)             Checksum: 8E94BF3D509EBC8E4EA26ECD7B5285A7;654.
+(rerunfilecheck)             Checksum: F1F1C00EA9678CF1C0A93A1A4F84DC86;944.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 210.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 629.
  ) ) 
 Here is how much of TeX's memory you used:
- 17111 strings out of 493673
- 333877 string characters out of 3141529
- 416158 words of memory out of 3000000
- 20003 multiletter control sequences out of 15000+200000
- 11062 words of font info for 41 fonts, out of 3000000 for 9000
+ 17248 strings out of 493673
+ 334903 string characters out of 3141529
+ 499108 words of memory out of 3000000
+ 20076 multiletter control sequences out of 15000+200000
+ 16498 words of font info for 61 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,16n,66p,433b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on main.article.SplitPageWithNotes.pdf (15 pages, 152926 bytes).
+ 56i,20n,66p,700b,865s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmssi10.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.article.SplitPageWithNotes.pdf (46 pages, 736373 bytes).
 
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2482 PDF objects out of 2487 (max. 8388607)
+ 109 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
