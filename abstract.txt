@@ -1,0 +1,1 @@
+I will introduce the topic of representation theory of finite groups and give some examples.  We'll then discuss complete reducibility and Mashcke's theorem, Schur's Lemma, and the Isotypical Decomposition.  Finally we'll define the character table of a representation and compute the character tables of D_4 and D_5. 
