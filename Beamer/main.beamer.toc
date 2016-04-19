@@ -2,15 +2,15 @@
 \beamer@sectionintoc {1}{Basics of Rep. Theory}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Motivation and Definitions}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Examples of Representations}{5}{0}{1}
-\beamer@sectionintoc {2}{Reducibility}{16}{0}{2}
-\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{16}{0}{2}
-\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{27}{0}{2}
-\beamer@sectionintoc {3}{Schur's Lemma}{35}{0}{3}
-\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{35}{0}{3}
-\beamer@subsectionintoc {3}{2}{Schur's Lemma}{37}{0}{3}
-\beamer@sectionintoc {4}{Isotypical Decomp.}{39}{0}{4}
-\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{39}{0}{4}
-\beamer@sectionintoc {5}{Character Theory}{43}{0}{5}
-\beamer@subsectionintoc {5}{1}{Definitions and Basic Properties}{43}{0}{5}
-\beamer@subsectionintoc {5}{2}{Inner products of characters}{46}{0}{5}
-\beamer@subsectionintoc {5}{3}{Character Tables}{54}{0}{5}
+\beamer@sectionintoc {2}{Reducibility}{15}{0}{2}
+\beamer@subsectionintoc {2}{1}{Irreducible representations and complete reducibility}{15}{0}{2}
+\beamer@subsectionintoc {2}{2}{Maschke's Theorem}{23}{0}{2}
+\beamer@sectionintoc {3}{Schur's Lemma}{32}{0}{3}
+\beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{32}{0}{3}
+\beamer@subsectionintoc {3}{2}{Schur's Lemma}{34}{0}{3}
+\beamer@sectionintoc {4}{Isotypical Decomp.}{36}{0}{4}
+\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{36}{0}{4}
+\beamer@sectionintoc {5}{Character Theory}{40}{0}{5}
+\beamer@subsectionintoc {5}{1}{Definitions and Basic Properties}{40}{0}{5}
+\beamer@subsectionintoc {5}{2}{Inner products of characters}{43}{0}{5}
+\beamer@subsectionintoc {5}{3}{Character Tables}{51}{0}{5}

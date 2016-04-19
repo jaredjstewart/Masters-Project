@@ -85,19 +85,8 @@ Let $V$ be an $n$-dimensional vector space.  The map $\rho \colon G \to GL(V)$ d
 
 \begin{frame}{The Regular Representation}
 \begin{example}
-A special case of a permutation representation is that when a finite group acts on itself by left multiplication. We take the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by \[\rho_{\text{reg}}(h) (e_g) = e_{hg}.\]  This representation is called the \textbf{regular representation} of $G$, and has dimension $|G|$.  
+A special case of a permutation representation is that when a finite group acts on itself by left multiplication. Consider the vector space $V_{\text{reg}}$ which has a basis given by the formal symbols $\{ e_g | g \in G \}$, and let $h \in G$ act by \[\rho_{\text{reg}}(h) (e_g) = e_{hg}.\]  This representation is called the \textbf{regular representation} of $G$, has dimension $|G|$.  
  \end{example}
-\end{frame}
-
-\begin{frame}
-\begin{example}
-Let $G = \{ (1), (123), (132) \} \leq S_3$.  Let $V= \mathbb{C}^3$.  Then $G$ acts on the standard basis by $g \cdot e_i = e_ {gi}$.  Thus, the permutation representation of $G$ (with respect to the standard basis) is given by:
-\begin{align*}
-\rho((1)) &= \begin{bmatrix} 1 & 0 & 0 \\ 0 & 1 & 0 \\ 0 & 0 & 1 \end{bmatrix} \\
-\rho((123)) &= \begin{bmatrix} 0 & 0 & 1 \\ 1 & 0 & 0 \\ 0 & 1 & 0 \end{bmatrix} \\
-\rho((132)) &= \begin{bmatrix} 0 & 1  & 0 \\ 0 & 0 & 1 \\ 1 & 0 & 0 \end{bmatrix}.
-\end{align*}
-\end{example}
 \end{frame}
 
 \begin{frame}[plain]
@@ -121,7 +110,7 @@ For any symmetric group $S_n$, the \textbf{alternating representation} on $\math
 \begin{align*}
 \rho \colon S_n &\to GL(\mathbb{C})=\mathbb{C}^\times \\
 \sigma & \mapsto \text{sgn}(\sigma).
-\end{align*} More generally, for any group $G$ with a subgroup $H$ of index $2$, we can define an \textbf{alternating representation} $\rho \colon G \to GL(\mathbb{C})$ by letting $\rho(g) = 1$ if $g \in H$ and $\rho(g) = -1$ if $g \notin H$.  (We recover our original example  by taking $G= S_n$ and $H=A_n$.) 
+\end{align*}
 \end{example}
 \end{frame}
 
@@ -145,7 +134,7 @@ Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $
 
 \begin{frame}[plain]
 \begin{example}[$2$-dim rep of $D_4$.]
-Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$ be the symmetry group of the square.  \pause Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  \pause We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  \pause Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  \pause We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
 \begin{align*}
 \rho( e) &= \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}  &\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
 \rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} & \rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
@@ -168,51 +157,12 @@ Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural 
 \end{frame}
 
 \begin{frame}{Irreducible representations and complete reducibility}
-\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \leq V$; that is, a subspace $W \leq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action of the restriction of $\rho(g)$ on $W$.
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \leq V$; that is, a subspace $W \leq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action of the restriction of $\rho(g)$ to $W$.
 \end{definition}
 \begin{definition}
-A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \leq V$ and $V \leq V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
+A representation $V$ is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \leq V$ and $V \leq V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
 \end{definition}
 \end{frame}
-
-\begin{frame}
-\begin{definition}
-An \textbf{associative} $\mathbf{R}$\textbf{-algebra} is an $R$-module equipped with an $R$-bilinear muliplication map $A \times A \to A$ that makes $A$ into a ring, i.e. 
-\[ r * (ab) = (r*a) b = a(r*b) \quad \forall a,b \in A, r \in R, \]
-where $*$ denotes the $R$-action on $A$.
-\end{definition}
-
-\begin{definition}
-An $R$-module is said to be \textbf{semisimple} if it is a direct sum of simple $R$-submodules.
-\end{definition}
-
-\begin{definition}
-An \textbf{Artinian module} is a module that satisifes the descending chain condition on its poset of submodules.  
-\end{definition}
-\end{frame}
-
-\begin{frame}
-\begin{definition}
-Let $R$ be a ring.  The \textbf{Jacobson radical} $J(R)$ of $R$ is the intersection of the maximal ideals of $R$
-\end{definition}
-
-\begin{theorem} Let $R$ be a ring and $a \in R$.  The following are equivalent:
-\begin{enumerate}
-\item $a \in J(R)$
-\item $a$ annihilates every simple left $R$-module
-\item $a$ lies in every maximal left ideal of $R$
-\item $1 - xa$ has a a left inverse for every $x \in R$
-\end{enumerate}
-\end{theorem}
-\end{frame}
-
-\begin{frame}
-\begin{proposition}
-A left Artinian ring $R$ is semisimple if and only if it has no non-zero nilpotent ideals.
-\end{proposition}
-\end{frame}
-
-
 
 \begin{frame}
 \only<1>{
@@ -257,28 +207,26 @@ Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$
 }
 \end{frame}
 
+\begin{frame}
+\begin{block}{Question}
+Does every irreducible representation of a finite abelian group still have dimension $1$ when the field is not algebraically closed?
+\end{block}
+\begin{block}{Answer}
+No.  Consider the representation of the cyclic group of order $4$, $C_4 = \langle g \rangle$, on $\mathbb{R}^2$ given by \[ \rho(g) = \begin{bmatrix}
+0 & 1 \\ -1 & 0
+\end{bmatrix}. \]
+Then $\rho(g)$ is not diagonalizable over $\mathbb{R}$, since the characteristic polynomial of $\rho(g)$ is $x^2 +1$.  Thus, we cannot decompose $\rho$ into a direct sum of $1$ dimensional representations over $\mathbb{R}$.
+\end{block}
+\end{frame}
+
 
 \begin{frame}
 \begin{block}{Question:}
-Is every finite dimensional representation completely reducible? 
+Is every finite dimensional representation of a group completely reducible? 
 \end{block}
 \begin{block}{Answer:}
-\textbf{No}, in general.
+\textbf{No}, in general.  The full answer to this question is given by Maschke's Theorem.
 \end{block}
-\end{frame}
-
-\begin{frame}
-\begin{example}[Complete reducibility fails in the modular case]
-Let $F$ be a field whose characteristic divides $|G|$.  Consider the element \[x =  \sum_{g \in G} g \in FG.  \] Then $g x =x$ for every $g \in G$, and the ideal generated by $x$ is precisely the $F$-vector space spanned by $x$.  Moreover \[x^2 = |G| x = 0. \]  It follows that the ideal generated by $x$ is nilpotent, so the group algebra $FG$ is not semisimple.  (Recall that an algebra is semisimple iff it is artinian and contains no nonzero nilpotent ideals.)
-\end{example}
-\end{frame}
-
-\begin{frame}[plain]
-\begin{example}[Complete reducibility fails when the group is infinite]
-Consider the additive group $G = (F, +)$, which we can view as a subgroup of $GL_2 (F)$ by identifying $t \in F$ with the matrix 
-\[ \begin{bmatrix} 1 & t \\ 0 & 1 \end{bmatrix}.\]
-Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (x + ty, y)$. Any one-dimensional subspace spanned by a vector $(x_1, y_1) \in V$ is $G$-invariant precisely when for all $t \in F$ there exist $\lambda_t \in F$ such that \[ t \cdot (x_1, y_1) = \lambda_t (x_1, y_1). \]  But this requires $y_1=0$, so that the only one-dimensional $G$-subrepresentation of $V$ is spanned by $(1,0)$. This subrepresentation has no $G$-invariant direct complement. 
-\end{example}
 \end{frame}
 
 \subsection{Maschke's Theorem}
@@ -290,11 +238,27 @@ Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid
 \end{frame}
 
 \begin{frame}
+\begin{example}[Maschke's Theorem fails in the modular case]
+Let $F$ be a field whose characteristic divides $|G|$. Suppose that Maschke's Theorem holds in this case.  Then $FG$ is Artinian and semisimple.  Recall that a ring is Artinian and semisimple iff it has no nonzero nilpotent ideals.  We will obtain a contradiction by exhibiting a nonzero nilpotent ideal of $FG$. Consider the element \[x =  \sum_{g \in G} g \in FG.  \] Then $g x =x$ for every $g \in G$, and the ideal $(x)$ generated by $x$ is precisely the $F$-vector space $_{F} \langle x \rangle$ spanned by $x$.  Moreover \[x^2 = |G| x = 0. \]  It follows that the nonzero ideal $_{F} \langle x \rangle$ is nilpotent, so the group algebra $FG$ is not semisimple. 
+\end{example}
+\end{frame}
+
+\begin{frame}[plain]
+\begin{example}[Maschke's Theorem fails when the group is infinite]
+Consider the additive group $G = (F, +)$, which we can view as a subgroup of $GL_2 (F)$ by identifying $t \in F$ with the matrix 
+\[ \begin{bmatrix} 1 & t \\ 0 & 1 \end{bmatrix}.\]
+Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (x + ty, y)$. Any one-dimensional subspace spanned by a vector $(x_1, y_1) \in V$ is $G$-invariant precisely when for all $t \in F$ there exist $\lambda_t \in F$ such that \[ t \cdot (x_1, y_1) = \lambda_t (x_1, y_1). \]  But this requires $y_1=0$, so the only one-dimensional $G$-subrepresentation of $V$ is spanned by $(1,0)$. Therefore this subrepresentation has no $G$-invariant direct complement. 
+\end{example}
+\end{frame}
+
+
+
+\begin{frame}
 \begin{definition}
-Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the map $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
+Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the projection $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
 \end{definition}
 \begin{lemma} \label{maschke-lemma}
-Let $\rho \colon G \to GL(V)$ be a representation, and $W \leq V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
+Let $V$ be a $G$-representation, and $W \leq V$ be a $G$-subrepresentation.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
 Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ker}(f)$ is a $G$-invariant subspace of $V$ such that
 \[ V = \text{Ker}(f) \oplus W \]
@@ -304,7 +268,7 @@ Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ke
 \begin{frame}{Maschke's Theorem}
 \begin{proof}
 \only<1>{
-It will suffice to find a $G$-linear projection from $V$ onto $W$.  Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then $U$ is certainly a complementary subspace to $W$, and we have a natural projection $f \colon W \oplus U \to W$ of $V$ onto $W$ with kernel $U$.
+It will suffice to find a $G$-linear projection from $V$ onto $W$. Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U$ be the complementary subspace to $W$ given by $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then we have a natural projection $f \colon W \oplus U \to W$.
 There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\widetilde{f} \colon V \to V$ by
 \[\widetilde{f}(x) = \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x). \]
 We claim that $\widetilde{f}$ is a $G$-linear projection from $V$ onto $W$.   } 
@@ -347,18 +311,6 @@ Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreduc
 \begin{equation}  V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
 \end{proof}
-\end{frame}
-
-\begin{frame}
-\begin{example}
-Recall that for  $G= C_2$, we found a $1$-dim subrepresentation 
-\[ W = \left< \begin{bmatrix}1 \\ 1 \end{bmatrix} \right> \leq V_{\text{reg}}= \mathbb{C}^2 . \]
-We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so let's try to find one.  Consider
-\[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \leq V_{\text{reg}}. \]
-Then
-\[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
-so $U$ is $G$-invariant.  We see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.   (Note $U$ is isomorphic to the alternating representation $\rho_{\text{sgn}}$.)
-\end{example}
 \end{frame}
 
 \section{Schur's Lemma}
@@ -404,7 +356,7 @@ Let $\phi \colon V \to V$  be a $G$-linear endomorphism of $V$, and let $\lambda
 
 \begin{frame}
 \begin{block}{Corollary}
-Suppose $V$ and $W$ are irreducible. The space $\text{Hom}_G(V,W)$ is $1$-dimensional if the representations are isomorphic, and in this case any non-zero map is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
+Let $V$ and $W$ be irreducible representations. If $V$ and $W$ are isomorphic, the space $\text{Hom}_G(V,W)$ is $1$-dimensional, and in this case any non-zero $G$-linear map from $V$ to $W$ is an isomorphism. Otherwise,  $\text{Hom}_G(V,W)=\{0\}$.
 \end{block}
 \begin{proof}
 Suppose  $\text{Hom}_G(V,W) \neq \{0\}$ and let $\phi \in \text{Hom}_G(V,W)$ be a nonzero $G$-linear map. Since $\text{ker}(\phi)$ and $\text{im}(\phi)$ are both $G$-invariant, irreducibility yields ($\text{ker}(\phi) = 0$ or $V$) and ($\text{im}(\phi) = 0$ or $W$) as the only possibilities.  Since $\phi \neq 0$, then $\text{ker}(\phi)=0$, $\text{im}(\phi)=W$, and $\phi$ is an isomorphism.  
