@@ -168,10 +168,10 @@ Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural 
 \end{frame}
 
 \begin{frame}{Irreducible representations and complete reducibility}
-\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \subseteq V$; that is, a subspace $W \subseteq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action $\rho(g) \restriction_W$.
+\begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \leq V$; that is, a subspace $W \leq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action of the restriction of $\rho(g)$ on $W$.
 \end{definition}
 \begin{definition}
-A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \subset V$ and $V \subset V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
+A representation is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \leq V$ and $V \leq V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
 \end{definition}
 
 %\begin{block}{Note}
@@ -251,7 +251,7 @@ Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (
 \subsection{Maschke's Theorem}
 \begin{frame}{Maschke's Theorem}
 \begin{theorem}[Maschke's Theorem]
-Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite dimensional representation of $G$ over $F$, and $W \subset V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \subset V$ to $W$, i.e. there is  a $G$-invariant subspace $U \subset V$ such that 
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$.  If $V$ is any finite dimensional representation of $G$ over $F$, and $W \leq V$ is a subrepresentation of $V$, then there exists a complementary subrepresentation $U \leq V$ to $W$, i.e. there is  a $G$-invariant subspace $U \leq V$ such that 
 \[ V = W \oplus U. \]
 \end{theorem}
 \end{frame}
@@ -261,7 +261,7 @@ Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid
 Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the map $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
 \end{definition}
 \begin{lemma} \label{maschke-lemma}
-Let $\rho \colon G \to GL(V)$ be a representation, and $W \subset V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
+Let $\rho \colon G \to GL(V)$ be a representation, and $W \leq V$ be a subrepresentation.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
 Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ker}(f)$ is a $G$-invariant subspace of $V$ such that
 \[ V = \text{Ker}(f) \oplus W \]
@@ -278,7 +278,7 @@ We claim that $\widetilde{f}$ is a $G$-linear projection from $V$ onto $W$.   }
 
 \only<2>{
 
-First we check that $\text{Im}(\tilde{f}) \subset W$.  If $x \in V$ and $g \in G$, then
+First we check that $\text{Im}(\tilde{f}) \leq W$.  If $x \in V$ and $g \in G$, then
 \[ f (\rho (g^{-1})(x)) \in W \]
 and so
 \[ \rho(g) ( f ( \rho( g^{-1})(x))) \in W \]
@@ -310,7 +310,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. Then any finite-dimensional representation of $G$ over $F$ is completely reducible.
 \end{block}
 \begin{proof}
-Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \subset V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \subset V$ such that 
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \leq V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \leq V$ such that 
 \begin{equation}  V = W \oplus U. \end{equation}
 Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
 \end{proof}
@@ -319,9 +319,9 @@ Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ 
 \begin{frame}
 \begin{example}
 Recall that for  $G= C_2$, we found a $1$-dim subrepresentation 
-\[ W = \left< \begin{bmatrix}1 \\ 1 \end{bmatrix} \right> \subset V_{\text{reg}}= \mathbb{C}^2 . \]
+\[ W = \left< \begin{bmatrix}1 \\ 1 \end{bmatrix} \right> \leq V_{\text{reg}}= \mathbb{C}^2 . \]
 We know a complementary subrepresentation to $W$ exists by Machke's Theorem, so let's try to find one.  Consider
-\[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \subset V_{\text{reg}}. \]
+\[ U =  \left< \begin{bmatrix}1 \\ -1 \end{bmatrix} \right> \leq V_{\text{reg}}. \]
 Then
 \[ \rho_{\text{reg}}(\tau) \begin{bmatrix}1 \\ -1 \end{bmatrix} =  \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix}1 \\ -1 \end{bmatrix} = -  \begin{bmatrix}1 \\ -1 \end{bmatrix} \]
 so $U$ is $G$-invariant.  We see that $V = W \oplus U$, since $W \cap U = \{ 0 \}$ and $\text{dim } U + \text{dim } W = 2 = \text{dim } V$.   (Note $U$ is isomorphic to the alternating representation $\rho_{\text{sgn}}$.)
@@ -347,7 +347,7 @@ Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from 
 \end{definition} 
 
 \begin{definition}
-Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \subset V$ to be the set 
+Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \leq V$ to be the set 
 \[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
 \end{definition}
 
@@ -473,7 +473,7 @@ defined by
 \end{cases} \]
 \end{definition}
 \begin{definition}
-Let $\varphi, \psi \in \mathbb{C}^G$.  We define a \textbf{hermetian inner product}  on $\mathbb{C}^G$ by 
+Let $\varphi, \psi \in \mathbb{C}^G$.  We define a \textbf{Hermetian inner product}  on $\mathbb{C}^G$ by 
 \[ \langle \varphi | \psi \rangle = \frac{1}{|G|} \sum_{g \in G} \varphi(g) \overline{\psi(g)}.\]
 \end{definition}
 \end{frame}
