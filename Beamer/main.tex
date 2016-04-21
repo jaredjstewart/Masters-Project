@@ -267,7 +267,7 @@ Let $F$ be a field whose characteristic divides $|G|$. Suppose that Maschke's Th
 \begin{example}[Maschke's Theorem fails when the group is infinite]
 Consider the additive group $G = (F, +)$, which we can view as a subgroup of $GL_2 (F)$ by identifying $t \in F$ with the matrix 
 \[ \begin{bmatrix} 1 & t \\ 0 & 1 \end{bmatrix}.\]
-Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (x + ty, y)$. Any one-dimensional subspace spanned by a vector $(x_1, y_1) \in V$ is $G$-invariant precisely when for all $t \in F$ there exist $\lambda_t \in F$ such that \[ t \cdot (x_1, y_1) = \lambda_t (x_1, y_1). \]  But this requires $y_1=0$, so the only one-dimensional $G$-subrepresentation of $V$ is spanned by $(1,0)$. Therefore this subrepresentation has no $G$-invariant direct complement. 
+Then consider the linear action of $G$ on $V = F^2$ given by $t \cdot (x, y) = (x + ty, y)$. Any one-dimensional subspace spanned by a vector $(x_1, y_1) \in V$ is $G$-invariant precisely when for all $t \in F$ there exist $\lambda_t \in F$ such that \[ t \cdot (x_1, y_1) = \lambda_t (x_1, y_1). \]  But this requires $y_1=0$, so the only one-dimensional $G$-subrepresentation of $V$ is spanned by $(1,0)$. Therefore this subrepresentation has no $G$-invariant direct complement. 
 \end{example}
 \end{frame}
 
@@ -339,11 +339,11 @@ Suppose we have representations $\rho_V \colon G \to GL(V)$ and $\rho_W \colon G
 
 \begin{frame}
 \begin{definition}		
-Let $V$ and $W$ be two representations of $G$.  The set of $G$-linear maps from $V$ to $W$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$, forms a subspace of $\text{Hom}(V,W)$.  In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
+Let $V$ and $W$ be two representations of $G$.  An important subspace of $\text{Hom}(V,W)$ is the set of $G$-linear maps from $V$ to $W$, which we denote by $\textbf{Hom}_\mathbf{G}\mathbf{(V,W)}$. In other words, $\text{Hom}_{G}(V,W)$ is the vector space consisting of all \textit{homomorphisms of representations} between $V$ and $W$. 
 \end{definition} 
 
 \begin{definition}
-Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \leq V$ to be the set 
+Let $\rho \colon G \to GL(V)$ be a representation.  We define the \textbf{invariant subrepresentation} $V^G \leq V$ to be the subspace 
 \[ \{ v \in V  \mid \rho(g)(v) = v,  \quad \forall g \in G \}. \]
 \end{definition}
 
@@ -361,7 +361,7 @@ Note that $V^G$ is a subspace of $V$, and is also clearly a subrepresentation.  
 \begin{theorem}[Schur's Lemma over $\mathbb{C}$.] If $V$ is a complex irreducible representation of $G$, then $\text{End}_G(V) = \{ \lambda \text{Id}_v \vert \lambda \in \mathbb{C} \}$.
 \end{theorem}
 \begin{proof}
-Let $\phi \colon V \to V$  be a $G$-linear endomorphism of $V$, and let $\lambda$ be an eigenvalue of $\phi$.  We claim that the eigenspace $E_\lambda$ is $G$-invariant. If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  Now $E_\lambda \neq 0$, so since $V$ is irreducible, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
+Let $\phi \colon V \to V$  be a $G$-linear endomorphism of $V$, and let $\lambda$ be an eigenvalue of $\phi$.  We claim that the eigenspace $E_\lambda$ is $G$-invariant. If $v \in E_\lambda$, then $\phi(v) = \lambda v$.  This implies that $\phi(g v) = g \phi(v) = g (\lambda v) = \lambda (gv)$, i.e. $gv \in E_\lambda$. Since $g$ was arbitrary, $E_\lambda$ is indeed $G$-invariant.  We know $E_\lambda \neq 0$, so by irreducibility, $E_\lambda = V$.  Thus $\phi = \lambda \text{Id}$.  
 \end{proof}
 \end{frame}
 
@@ -375,8 +375,7 @@ Let $\psi$ be another nonzero $G$-linear map from $V$ to $W$.  Then $\phi ^{-1} 
 \end{proof}
 \end{frame}
 
-\section{Isotypical Decomp.}
-\subsection{Isotypical decomposition}
+\subsection{Isotypical Decomposition}
 \begin{frame}
 \begin{proposition}
 Let $V$ and $W$ be irreducible representations of $G$.  Then
@@ -450,10 +449,11 @@ Let $V$ and $W$ be representations of $G$.
 
 \begin{frame}
 \begin{proposition}
-Isomorphic representations have the same character.
+Let $V$ and $W$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{proposition}
 \begin{proof}
-Isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus each $\rho(g)$ has the same trace as $\widetilde{\rho(g)}$ for any representation $\widetilde{\rho}$ isomorphic to $\rho$.
+($\rightarrow$)
+Isomorphic representations can be described by the same set of matrices with the right choice of bases.  Thus each $\rho_V(g)$ has the same trace as $\rho_W(g)$.
 \end{proof}
 \end{frame}
 
@@ -493,16 +493,18 @@ Let $\chi_i$ and $\chi_j$ be the characters of the irreducible representations $
 \end{frame}
 
 \begin{frame}
-\begin{block}{Corollary}
+\begin{block}{Proposition}
 Let $\chi$ be any character of $G$.    Then $\chi$ is irreducible if and only if \[ \langle \chi | \chi \rangle = 1\]
 \end{block}
 \begin{proof}
-Write $\chi$ as a linear combination of irreducible characters \[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] where each $m_i$ is a non-negative integer.  Then
+If $\chi$ is the character of $V$, write $V$ as a linear combination of irreps
+\[ V = U_1 ^{m_1} \oplus \ldots \oplus U_k^{m_k} .\]
+Then
+\[ \chi = m_1 \chi_1 + \ldots + m_k \chi_k \] so
 \begin{align*}
-\langle \chi | \chi \rangle &= \sum_{i,j \in [1, k]} m_i m_j \langle \chi_i | \chi_j \rangle \\
-&= m_1^2 + \ldots + m_k^2.
+\langle \chi | \chi \rangle &= \sum_{i,j \in [1, k]} m_i m_j \langle \chi_i | \chi_j \rangle = m_1^2 + \ldots + m_k^2.
 \end{align*}
-So $\langle \chi | \chi \rangle = 1$ if and only if exactly one of the $m_i = 1$ and the rest are $0$.
+Thus $\langle \chi | \chi \rangle = 1$ iff one of the $m_i = 1$ and the rest are $0$.
 \end{proof}
 \end{frame}
 
@@ -528,6 +530,7 @@ so we conclude that $W$ is irreducible.
 Let $V$ and $W$ be representations of $G$.  Then $V$ and $W$ are isomorphic if and only if $\chi_V = \chi_W$.
 \end{block}
 \begin{proof}
+($\leftarrow$)
 Suppose $\chi_V = \chi_W$. We can find non-negative integers $m_i$ and $l_j$ such that
 \begin{align*}
 V = U_1^{m_1} \oplus \ldots \oplus U_r^{m_r} \quad \text{ and } \quad W = U_1^{l_1} \oplus \ldots \oplus U_r^{l_r}
@@ -543,12 +546,14 @@ for all $i \in \{1, \ldots, r \}$ since $\chi_V = \chi_W$.
 \end{frame}
 
 \begin{frame}
-\begin{block}{Lemma}
-$\chi_{\text{reg}}(g) = \begin{cases} |G| &\text{if } g=e \\ 0 &\text{if } g \neq e \end{cases}$
-\end{block}
 \begin{proposition}
 The multiplicity of any irreducible representation in the regular representation equals its dimension.
 \end{proposition}
+\pause
+\begin{block}{Lemma}
+$\chi_{\text{reg}}(g) = \begin{cases} |G| &\text{if } g=e \\ 0 &\text{if } g \neq e \end{cases}$
+\end{block}
+\pause
 \begin{proof}
 Let $V$ be an irreducible representation of $G$.  Then
 \begin{align*}
