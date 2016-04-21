@@ -114,6 +114,18 @@ For any symmetric group $S_n$, the \textbf{alternating representation} on $\math
 \end{example}
 \end{frame}
 
+\begin{frame}[plain]
+\begin{example}[$2$-dim rep of $D_4$.]
+Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
+\begin{align*}
+\rho( e) &= \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}  &\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
+\rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} & \rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
+\rho (\sigma^2) &= \begin{bmatrix} -1 & 0 \\ 0 & -1  \end{bmatrix} & \rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
+\rho (\sigma^3) &= \begin{bmatrix} 0 & 1 \\ -1 & 0  \end{bmatrix} & \rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix}
+\end{align*}
+\end{example}
+\end{frame}
+
 \begin{frame}{$G$-linear maps}
 \begin{definition}
 A \textbf{homomorphism} between two representations $\rho_1 \colon G \to GL(V)$ and $\rho_2 \colon G \to GL(W)$ is a linear map $\psi \colon V \to W$ that interwines with the action of $G$, i.e. such that
@@ -132,19 +144,7 @@ Given any representation $(\rho, V)$, where $V$ is a vector space of dimension $
 \end{frame}
 
 
-\begin{frame}[plain]
-\begin{example}[$2$-dim rep of $D_4$.]
-Let $G = D_4 = \langle \sigma, \tau |  \sigma^4 = \tau^2 = e, \tau \sigma \tau^{-1} = \sigma^{-1} \rangle$.  \pause Consider a square in the plane with vertices at $(1,1), (1,-1), (-1, -1)$, and $(-1, 1)$.  \pause We let $\sigma$ act on the square as a rotation by $\frac{\pi}{2}$, and let $\tau$ act by reflection over the $x$-axis.  This naturally gives rise to a linear action of $G$ on all of $\mathbb{C}^2$.  \pause  Under the standard basis, we get the matrices:
-\begin{align*}
-\rho( e) &= \begin{bmatrix} 1 & 0 \\ 0 & 1\end{bmatrix}  &\rho (\tau) &= \begin{bmatrix} 1 & 0 \\ 0 & -1\end{bmatrix} \\
-\rho (\sigma) &= \begin{bmatrix} 0 & -1 \\ 1 & 0  \end{bmatrix} & \rho (\sigma \tau ) &= \begin{bmatrix} 0 & 1 \\ 1 & 0\end{bmatrix} \\
-\rho (\sigma^2) &= \begin{bmatrix} -1 & 0 \\ 0 & -1  \end{bmatrix} & \rho (\sigma^2 \tau) &= \begin{bmatrix} -1 & 0 \\ 0 & 1\end{bmatrix} \\
-\rho (\sigma^3) &= \begin{bmatrix} 0 & 1 \\ -1 & 0  \end{bmatrix} & \rho (\sigma^3 \tau) &= \begin{bmatrix} 0 & -1 \\ -1 & 0\end{bmatrix}
-\end{align*}
-\end{example}
-\end{frame}
-
-\section{Reducibility}
+\section{Complete Reducibility}
 \subsection{Irreducible representations and complete reducibility}
 \begin{frame}{The direct sum of representations}
 \begin{definition}
@@ -159,9 +159,20 @@ Let $V$ and $W$ be representations of $G$.  Then $V \oplus W$ admits a  natural 
 \begin{frame}{Irreducible representations and complete reducibility}
 \begin{definition} A \textbf{subrepresentation} of $V$ is a $G$-invariant subspace $W \leq V$; that is, a subspace $W \leq V$ with the property that $\rho(g) (w) \in W$ for all $g \in G$ and $w \in W$.  Note that $W$ itself is a representation of $G$ under the action of the restriction of $\rho(g)$ to $W$.
 \end{definition}
+\pause
 \begin{definition}
 A representation $V$ is said to be \textbf{irreducible} if it has no subrepresentations other than the trivial subrepresentations $ 0 \leq V$ and $V \leq V$.  A representation is called \textbf{completely reducible} if it decomposes into a direct sum of irreducible representations.  We sometimes write \textbf{irrep} as shorthand for irreducible representation.
 \end{definition}
+\end{frame}
+
+\begin{frame}
+\begin{block}{Question}
+Any $1$-dimensional representation is, in particular, irreducible.  Is \textbf{every} irreducible representation $1$-dimensional?
+\end{block}
+\pause
+\begin{block}{Answer}
+No.
+\end{block}
 \end{frame}
 
 \begin{frame}
@@ -193,24 +204,21 @@ Thus we see that there is no such $W$, and our representation is irreducible.
 \end{frame}
 
 \begin{frame}{Representations of finite abelian groups}
-\only<1>{\begin{theorem}If $A_1, A_2, \ldots, A_r$ are linear operators on $V$ and each $A_i$ is diagonalizable, then $\{A_i\}$ are simultaneously diagonalizable if and only if they commute.
-\end{theorem}}
-
-\only<2>{
 \begin{theorem} Every complex representation of a finite abelian group is completely reducible into irreducible representations of dimension $1$.  
 \end {theorem}
+\pause
 \begin{proof}
 Take an arbitrary element $g \in G$.  Since $G$ is finite, we can find an integer $n$ such that $g^n = 1$ and $\rho(g)^n = Id$.    The minimal polynomial of $\rho(g)$ divides  $x^n -1$, which has $n$ distinct roots over $\mathbb{C}$, so it factors into distinct linear factors over $\mathbb{C}$,  i.e. $\rho(g)$ is diagonalizable.
 Now, given any two elements $g_1, g_2 \in G$ we have $\rho(g_1)\rho(g_2)=\rho(g_2)\rho(g_1)$.
 Since the matrices $\left\{ \rho(g)\right\}$ commute,  $\left\{ \rho(g)\right\}$ are simultaneously diagonalizable, say with respect to basis $\left\{ e_1, ..., e_k \right\}$.  Then we have $V= \mathbb{C}e_1 \oplus \mathbb{C} e_2 \oplus \ldots \oplus \mathbb{C} e_k$, with each subspace $ \mathbb{C}e_i$ invariant under the action of $G$ since $e_i$ is an eigenvector for every $\rho(g)$.
 \end{proof}
-}
 \end{frame}
 
 \begin{frame}
 \begin{block}{Question}
 Does every irreducible representation of a finite abelian group still have dimension $1$ when the field is not algebraically closed?
 \end{block}
+\pause
 \begin{block}{Answer}
 No.  Consider the representation of the cyclic group of order $4$, $C_4 = \langle g \rangle$, on $\mathbb{R}^2$ given by \[ \rho(g) = \begin{bmatrix}
 0 & 1 \\ -1 & 0
@@ -237,6 +245,18 @@ Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid
 \end{theorem}
 \end{frame}
 
+\begin{frame}{Consequences of Machke's Theorem}
+\begin{block}{Corollary}
+Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. Then any finite-dimensional representation of $G$ over $F$ is completely reducible.
+\end{block}
+\begin{proof}
+Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \leq V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \leq V$ such that 
+\begin{equation}  V = W \oplus U. \end{equation}
+Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
+\end{proof}
+\end{frame}
+
+
 \begin{frame}
 \begin{example}[Maschke's Theorem fails in the modular case]
 Let $F$ be a field whose characteristic divides $|G|$. Suppose that Maschke's Theorem holds in this case.  Then $FG$ is Artinian and semisimple.  Recall that a ring is Artinian and semisimple iff it has no nonzero nilpotent ideals.  We will obtain a contradiction by exhibiting a nonzero nilpotent ideal of $FG$. Consider the element \[x =  \sum_{g \in G} g \in FG.  \] Then $g x =x$ for every $g \in G$, and the ideal $(x)$ generated by $x$ is precisely the $F$-vector space $_{F} \langle x \rangle$ spanned by $x$.  Moreover \[x^2 = |G| x = 0. \]  It follows that the nonzero ideal $_{F} \langle x \rangle$ is nilpotent, so the group algebra $FG$ is not semisimple. 
@@ -258,7 +278,7 @@ Then consider the linear action of $G$ on $V = K^2$ given by $t \cdot (x, y) = (
 Let $W$ be a subspace of $V$.  A \textbf{linear projection} $V$ onto $W$ is a linear map $f \colon V \to W$ such that $f \restriction_{W} = \text{Id}_W$.  If $W$ is a subrepresentation of $V$ and the projection $f$ is $G$-invariant, then we say that $f$ is a $\mathbf{G}$\textbf{-linear projection}.
 \end{definition}
 \begin{lemma} \label{maschke-lemma}
-Let $V$ be a $G$-representation, and $W \leq V$ be a $G$-subrepresentation.  Suppose we have a $G$-linear projection 
+Let $V$ be a $G$-representation, and $W \leq V$ be a $G$-invariant subspace.  Suppose we have a $G$-linear projection 
 \[ f \colon V \to W. \]
 Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ker}(f)$ is a $G$-invariant subspace of $V$ such that
 \[ V = \text{Ker}(f) \oplus W \]
@@ -268,7 +288,7 @@ Then $\text{Ker}(f)$ is a complementary subrepresentation to $W$, i.e. $\text{Ke
 \begin{frame}{Maschke's Theorem}
 \begin{proof}
 \only<1>{
-It will suffice to find a $G$-linear projection from $V$ onto $W$. Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Let $U$ be the complementary subspace to $W$ given by $U = \langle b_{m+1}, \ldots, b_n \rangle$.  Then we have a natural projection $f \colon W \oplus U \to W$.
+It will suffice to find a $G$-linear projection from $V$ onto $W$. Fix a basis $\{ b_1, \ldots, b_m \}$ for $W$ and extend it to a basis  $\{ b_1, \ldots, b_m, b_{m+1}, \ldots, b_n \}$ for $V$.  Then we have a natural projection $f \colon V \to W$.
 There is no reason to think that $f$ should be $G$-linear, but we can fix this by averaging over $G$.  Define $\widetilde{f} \colon V \to V$ by
 \[\widetilde{f}(x) = \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x). \]
 We claim that $\widetilde{f}$ is a $G$-linear projection from $V$ onto $W$.   } 
@@ -279,7 +299,7 @@ First we check that $\text{Im}(\tilde{f}) \leq W$.  If $x \in V$ and $g \in G$, 
 \[ f (\rho (g^{-1})(x)) \in W \]
 and so
 \[ \rho(g) ( f ( \rho( g^{-1})(x))) \in W \]
-since $W$ is $G$-invariant.  Thus \[ \widetilde{f}(x) =  \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x) \in W. \] }
+since $W$ is $G$-invariant.  Therefore \[ \widetilde{f}(x) =  \frac{1}{|G|} \sum_{g \in G} (\rho(g) \circ f \circ \rho(g^{-1}))(x) \in W. \] }
 
 \only<3>{ Next we check that $\widetilde{f} \restriction_{W} = \text{Id}_W$. Let $y \in W$.  For any $g \in G$, we know that $\rho(g^{-1})(y)$ is also in $W$, so
 $ f (\rho(g^{-1})(y)) = \rho (g^{-1})(y)$.
@@ -287,9 +307,9 @@ Then
 \begin{align*}
 \widetilde{f}(y) &=  \frac{1}{|G|} \sum_{g \in G} \rho(g) (f ( \rho(g^{-1})(y))) \\
 &=\frac{1}{|G|} \sum_{g \in G} \rho(g) (\rho(g^{-1})(y)) \\
-&=\frac{1}{|G|} \sum_{g \in G} (y)  = \frac{|G| y} {|G|}  = y
+&=\frac{1}{|G|} \sum_{g \in G} (y)  = \frac{|G| y} {|G|}  = y.
 \end{align*}
-so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
+Thus $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 
 \only<4> { Finally, we check that $\widetilde{f}$ is $G$-linear.  If $x \in V$ and $h \in G$, then
 \begin{align*}
@@ -302,16 +322,7 @@ so indeed $\widetilde{f}$ is a linear projection of $V$ onto $W$. }
 \end{proof}
 \end{frame}
 
-\begin{frame}{Consequences of Machke's Theorem}
-\begin{block}{Corollary}
-Let $G$ be a finite group and let $F$ be a field such that $\text{char}(F) \nmid |G|$. Then any finite-dimensional representation of $G$ over $F$ is completely reducible.
-\end{block}
-\begin{proof}
-Let $V$ be a representation of $G$ over $F$ of dimension $n$.  If $V$ is irreducible, then $V$ is, in particular, completely reducible.  If not, then $V$ contains a proper subrepresentation $W \leq V$.  From Maschke's Theorem, we know there exists a subrepresentation $U \leq V$ such that 
-\begin{equation}  V = W \oplus U. \end{equation}
-Both $W$ and $U$ have dimension less than $n$, so by induction we know that $W$ and $U$ are completely reducible. We deduce that $V$ is completely reducible.
-\end{proof}
-\end{frame}
+
 
 \section{Schur's Lemma}
 \subsection{Vector Spaces of Linear Maps}
