@@ -8,9 +8,8 @@
 \beamer@sectionintoc {3}{Schur's Lemma}{34}{0}{3}
 \beamer@subsectionintoc {3}{1}{Vector Spaces of Linear Maps}{34}{0}{3}
 \beamer@subsectionintoc {3}{2}{Schur's Lemma}{36}{0}{3}
-\beamer@sectionintoc {4}{Isotypical Decomp.}{38}{0}{4}
-\beamer@subsectionintoc {4}{1}{Isotypical decomposition}{38}{0}{4}
-\beamer@sectionintoc {5}{Character Theory}{42}{0}{5}
-\beamer@subsectionintoc {5}{1}{Definitions and Basic Properties}{42}{0}{5}
-\beamer@subsectionintoc {5}{2}{Inner products of characters}{45}{0}{5}
-\beamer@subsectionintoc {5}{3}{Character Tables}{53}{0}{5}
+\beamer@subsectionintoc {3}{3}{Isotypical Decomposition}{38}{0}{3}
+\beamer@sectionintoc {4}{Character Theory}{42}{0}{4}
+\beamer@subsectionintoc {4}{1}{Definitions and Basic Properties}{42}{0}{4}
+\beamer@subsectionintoc {4}{2}{Inner products of characters}{45}{0}{4}
+\beamer@subsectionintoc {4}{3}{Character Tables}{55}{0}{4}

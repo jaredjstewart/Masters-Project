@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  21 APR 2016 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.26)  21 APR 2016 10:32
 entering extended mode
 **main.beamer.tex
 (main.beamer.tex
@@ -978,7 +978,7 @@ Overfull \vbox (5.7883pt too high) detected at line 257
 ] [47
 
 ]
-Overfull \vbox (3.94263pt too high) detected at line 507
+Overfull \vbox (7.68918pt too high) detected at line 509
  []
 
 [48
@@ -1001,29 +1001,33 @@ Overfull \vbox (3.94263pt too high) detected at line 507
 
 ] [57
 
+] [58
+
+] [59
+
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 644.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 644.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 649.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 649.
  (main.beamer.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 644.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 644.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 649.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 649.
 Package rerunfilecheck Info: File `main.beamer.out' has not changed.
-(rerunfilecheck)             Checksum: 33B333667705FB385E96C76FB3C384E5;1047.
+(rerunfilecheck)             Checksum: 48D8F006B1F0D66F1EE5D6BAE427F9AC;992.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 644.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 649.
  ) ) 
 Here is how much of TeX's memory you used:
- 17040 strings out of 493673
- 329234 string characters out of 3141529
- 443312 words of memory out of 3000000
- 19854 multiletter control sequences out of 15000+200000
+ 17039 strings out of 493673
+ 329223 string characters out of 3141529
+ 443078 words of memory out of 3000000
+ 19850 multiletter control sequences out of 15000+200000
  16193 words of font info for 60 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  56i,20n,66p,704b,760s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1048,9 +1052,9 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
 ype1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.beamer.pdf (57 pages, 872591 bytes).
+Output written on main.beamer.pdf (59 pages, 884643 bytes).
 PDF statistics:
- 3120 PDF objects out of 3580 (max. 8388607)
- 132 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3169 PDF objects out of 3580 (max. 8388607)
+ 135 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
